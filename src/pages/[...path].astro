@@ -1,0 +1,125 @@
+---
+// Renders every article and page at its permalink, e.g.
+// /2025/07/31/challenges-for-b2b-cmo/ and /de/2025/07/31/challenges-for-b2b-cmo/
+import { getCollection, render } from 'astro:content';
+import { marked } from 'marked';
+import Base from '../layouts/Base.astro';
+import { SITE, UI, abs, formatDate, type Lang } from '../lib/site';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('posts', (e) => !e.data.draft);
+  const pages = await getCollection('pages', (e) => !e.data.draft);
+  const all = [...posts.map((e) => ({ kind: 'post' as const, entry: e })), ...pages.map((e) => ({ kind: 'page' as const, entry: e }))];
+  return all
+    .filter(({ entry }) => entry.data.permalink !== '/' && entry.data.permalink !== '/de/')
+    .map(({ kind, entry }) => {
+      const siblings = all
+        .filter((o) => o.entry.data.key === entry.data.key && o.kind === kind)
+        .map((o) => ({ lang: o.entry.data.lang as Lang, href: o.entry.data.permalink }));
+      return {
+        params: { path: entry.data.permalink.replace(/^\/|\/$/g, '') },
+        props: { kind, entry, alternates: siblings },
+      };
+    });
+}
+
+const { kind, entry, alternates } = Astro.props as any;
+const d = entry.data;
+const lang: Lang = d.lang;
+const t = UI[lang];
+const { Content } = await render(entry);
+
+const url = abs(d.permalink);
+const homeUrl = abs(t.home);
+const faq = (d.faq ?? []).map((f: { q: string; a: string }) => ({ q: f.q, html: marked.parseInline(f.a) as string }));
+
+const jsonLd: object[] = [];
+if (kind === 'post') {
+  jsonLd.push({
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: d.title,
+    description: d.description,
+    inLanguage: t.htmlLang,
+    datePublished: d.published.toISOString(),
+    dateModified: d.updated.toISOString(),
+    mainEntityOfPage: url,
+    url,
+    image: d.image ? abs(d.image) : undefined,
+    author: { '@type': 'Person', name: SITE.author, url: abs(lang === 'de' ? '/de/b2b-marketing-experience/' : '/b2b-marketing-experience/') },
+    publisher: { '@type': 'Organization', name: SITE.name, url: SITE.url, logo: { '@type': 'ImageObject', url: abs(SITE.logo) } },
+    isPartOf: { '@type': 'WebSite', name: SITE.name, url: SITE.url },
+  });
+  if (faq.length) {
+    jsonLd.push({
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      inLanguage: t.htmlLang,
+      mainEntity: faq.map((f: { q: string; html: string }) => ({
+        '@type': 'Question',
+        name: f.q,
+        acceptedAnswer: { '@type': 'Answer', text: f.html },
+      })),
+    });
+  }
+}
+jsonLd.push({
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: SITE.name, item: homeUrl },
+    { '@type': 'ListItem', position: 2, name: d.title, item: url },
+  ],
+});
+---
+<Base
+  lang={lang}
+  seoTitle={d.seoTitle}
+  description={d.description}
+  permalink={d.permalink}
+  alternates={alternates}
+  image={d.image}
+  imageAlt={d.imageAlt}
+  ogType={kind === 'post' ? 'article' : 'website'}
+  jsonLd={jsonLd}
+>
+  <article class="article">
+    <h1>{d.title}</h1>
+    {kind === 'post' && (
+      <p class="article-meta">
+        {t.by} {SITE.author} · {t.updated} <time datetime={d.updated.toISOString()}>{formatDate(d.updated, lang)}</time>
+      </p>
+    )}
+    {d.image && (
+      <figure class="article-hero">
+        <img src={d.image} alt={d.imageAlt ?? ''} width="1200" height="675" fetchpriority="high" />
+      </figure>
+    )}
+    <div class="prose">
+      <Content />
+    </div>
+
+    {faq.length > 0 && (
+      <section class="faq" aria-labelledby="faq">
+        <h2 id="faq">{t.faq}</h2>
+        {faq.map((f: { q: string; html: string }) => (
+          <details open>
+            <summary>{f.q}</summary>
+            <p set:html={f.html} />
+          </details>
+        ))}
+      </section>
+    )}
+
+    {d.sources?.length > 0 && (
+      <section class="sources" aria-labelledby="sources">
+        <h2 id="sources">{t.sources}</h2>
+        <ul>
+          {d.sources.map((s: { author: string; title: string; url: string }) => (
+            <li>{s.author}: <a href={s.url}>{s.title}</a></li>
+          ))}
+        </ul>
+      </section>
+    )}
+  </article>
+</Base>

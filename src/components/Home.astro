@@ -1,0 +1,69 @@
+---
+// Temporary homepage for the test site. The final homepage text moves over in week 3.
+import Base from '../layouts/Base.astro';
+import { SITE, UI, type Lang } from '../lib/site';
+
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const t = UI[lang];
+const p = lang === 'de' ? '/de' : '';
+
+const copy = {
+  en: {
+    seoTitle: 'aimind.marketing – Strategy and Content for B2B Tech',
+    description: 'Christina Vontin translates technical complexity into commercial value: strategy, content, and AI search visibility for B2B technology companies.',
+    h1: 'Strategy and Content for B2B Tech',
+    intro: 'Christina Vontin translates technical complexity into commercial value.',
+    label: 'The six responsibilities',
+    more: 'Read the guide',
+    cards: [
+      { cat: 'Strategy', color: '#091944', meta: 'Guide · 14 min read', title: 'The Modern B2B CMO', text: 'Today’s B2B CMOs are expected to drive revenue, lead AI transformation, align sales and marketing, and shape business strategy. Discover the six responsibilities that define modern marketing leadership.', href: '/2025/07/31/challenges-for-b2b-cmo/', featured: true },
+      { cat: 'AI Operations', color: '#E05A47', meta: 'Guide · 17 min read', title: 'How AI in B2B Marketing Delivers Results', text: 'Nearly nine in ten companies use AI, but few see it in their operating profit. What sets the few apart is an operating model that defines what AI analyzes, creates, and executes, and who steers it.', href: '/2025/10/11/ai-in-b2b-marketing-guide/' },
+      { cat: 'Measurement', color: '#FBC737', meta: 'Guide · 15 min read', title: 'How to Calculate B2B Marketing ROI That Holds Up With Your Board', text: 'The ROI formula fits on one line. The hard part is the revenue that comes from marketing. Five KPIs make that contribution visible, and a calculator shows how much a campaign can afford to cost.', href: '/2025/10/13/b2b-marketing-roi-and-kpis/' },
+    ],
+  },
+  de: {
+    seoTitle: 'aimind.marketing – Strategie und Content für B2B-Technologie',
+    description: 'Christina Vontin übersetzt technische Komplexität in kommerziellen Wert: Strategie, Content und Sichtbarkeit in der KI-Suche für B2B-Technologieunternehmen.',
+    h1: 'Strategie und Content für B2B-Technologie',
+    intro: 'Christina Vontin übersetzt technische Komplexität in kommerziellen Wert.',
+    label: 'Die sechs Kernaufgaben',
+    more: 'Zum Leitfaden',
+    cards: [
+      { cat: 'Strategie', color: '#091944', meta: 'Leitfaden · 14 Min. Lesezeit', title: 'Der moderne B2B-CMO', text: 'Von B2B-CMOs wird heute erwartet, dass sie den Umsatz steigern, die KI-Transformation führen, Vertrieb und Marketing verzahnen und die Unternehmensstrategie mitgestalten. Der Leitfaden beschreibt die sechs Kernaufgaben, die moderne Marketingführung ausmachen.', href: '/de/2025/07/31/challenges-for-b2b-cmo/', featured: true },
+      { cat: 'KI-Betriebsmodell', color: '#E05A47', meta: 'Leitfaden · 17 Min. Lesezeit', title: 'Wie KI im B2B-Marketing Ergebnisse liefert', text: 'Fast neun von zehn Unternehmen nutzen KI, doch nur wenige sehen das im Geschäftsergebnis. Den Unterschied macht ein Betriebsmodell. Es legt fest, was KI auswertet, erstellt und ausführt und wer sie dabei steuert.', href: '/de/2025/10/11/ai-in-b2b-marketing-guide/' },
+      { cat: 'Controlling', color: '#FBC737', meta: 'Leitfaden · 15 Min. Lesezeit', title: 'B2B-Marketing-ROI, der die Geschäftsführung überzeugt', text: 'Die Formel für den Marketing-ROI passt in eine Zeile. Schwierig ist der Umsatz, der auf Marketing zurückgeht. Fünf Kennzahlen machen diesen Beitrag sichtbar, und ein Rechner zeigt, wie viel eine Kampagne kosten darf.', href: '/de/2025/10/13/b2b-marketing-roi-and-kpis/' },
+    ],
+  },
+}[lang];
+
+const jsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: SITE.name,
+    url: SITE.url,
+    inLanguage: t.htmlLang,
+    publisher: { '@type': 'Person', name: SITE.author },
+  },
+];
+---
+<Base lang={lang} seoTitle={copy.seoTitle} description={copy.description} permalink={`${p}/`} alternates={[{ lang: 'en', href: '/' }, { lang: 'de', href: '/de/' }]} jsonLd={jsonLd}>
+  <section class="hero">
+    <div class="wrap">
+      <h1>{copy.h1}</h1>
+      <p>{copy.intro}</p>
+    </div>
+  </section>
+  <div class="wrap cards">
+    {copy.cards.map((c) => (
+      <div class={c.featured ? 'card featured' : 'card'}>
+        <span class="cat" style={`--cat:${c.color}`}>{c.cat}</span>
+        <div class="meta">{c.meta}</div>
+        <h2>{c.title}</h2>
+        <p>{c.text}</p>
+        <a class="more" href={c.href}>{copy.more}</a>
+      </div>
+    ))}
+  </div>
+</Base>

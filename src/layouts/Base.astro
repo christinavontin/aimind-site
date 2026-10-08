@@ -1,0 +1,78 @@
+---
+import '@fontsource-variable/inter';
+import '@fontsource-variable/open-sans';
+import '../styles/global.css';
+import { SITE, UI, abs, type Lang } from '../lib/site';
+
+interface Alternate { lang: Lang; href: string }
+interface Props {
+  lang: Lang;
+  seoTitle: string;
+  description: string;
+  permalink: string;
+  alternates?: Alternate[]; // EN/DE versions of this page, including itself
+  image?: string;
+  imageAlt?: string;
+  ogType?: 'website' | 'article';
+  jsonLd?: object[];
+  noindex?: boolean;
+}
+
+const { lang, seoTitle, description, permalink, alternates = [], image, imageAlt, ogType = 'website', jsonLd = [], noindex = false } = Astro.props;
+const t = UI[lang];
+const canonical = abs(permalink);
+const ogImage = abs(image ?? SITE.defaultImage);
+const en = alternates.find((a) => a.lang === 'en');
+const other = alternates.find((a) => a.lang !== lang);
+const switchHref = other?.href ?? (lang === 'en' ? '/de/' : '/');
+---
+<!doctype html>
+<html lang={t.htmlLang}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{seoTitle}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    {noindex && <meta name="robots" content="noindex, follow" />}
+    {alternates.map((a) => <link rel="alternate" hreflang={UI[a.lang].htmlLang.slice(0, 2)} href={abs(a.href)} />)}
+    {en && <link rel="alternate" hreflang="x-default" href={abs(en.href)} />}
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+
+    <meta property="og:type" content={ogType} />
+    <meta property="og:site_name" content={SITE.name} />
+    <meta property="og:locale" content={t.ogLocale} />
+    <meta property="og:title" content={seoTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={ogImage} />
+    {imageAlt && <meta property="og:image:alt" content={imageAlt} />}
+    <meta name="twitter:card" content="summary_large_image" />
+
+    {jsonLd.map((data) => <script type="application/ld+json" set:html={JSON.stringify(data)} />)}
+  </head>
+  <body>
+    <a class="skip" href="#main">{lang === 'de' ? 'Zum Inhalt' : 'Skip to content'}</a>
+    <header class="site-header">
+      <div class="wrap header-inner">
+        <a class="brand" href={t.home} aria-label={`${SITE.name} – ${t.tagline}`}>
+          <img src={SITE.logo} alt={t.tagline} width="124" height="43" />
+        </a>
+        <nav aria-label={lang === 'de' ? 'Hauptnavigation' : 'Main navigation'}>
+          {t.nav.map((item) => <a href={item.href}>{item.label}</a>)}
+          <a class="lang" href={switchHref} hreflang={lang === 'en' ? 'de' : 'en'} lang={lang === 'en' ? 'de' : 'en'}>{t.switchTo}</a>
+        </nav>
+      </div>
+    </header>
+    <main id="main">
+      <slot />
+    </main>
+    <footer class="site-footer">
+      <div class="wrap footer-inner">
+        <span>© {new Date().getFullYear()} {SITE.author} · {SITE.name}</span>
+        <a href={t.privacy.href}>{t.privacy.label}</a>
+      </div>
+    </footer>
+  </body>
+</html>
