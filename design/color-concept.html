@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Color concept</title>
+
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@600;700&amp;family=Instrument+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+.g{margin:0 0 16px;font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#4A5568}
+.sw{border-radius:14px;overflow:hidden;border:1px solid #E7E2D6;display:flex;flex-direction:column;background:#FFFFFF}
+.chip{height:96px;display:flex;align-items:flex-end;padding:12px 14px;font-size:13px;font-weight:600}
+.info{padding:14px;display:flex;flex-direction:column;gap:4px}
+.n{margin:0;font-family:'Schibsted Grotesk',system-ui,sans-serif;font-size:17px;font-weight:700}
+.hex{margin:0;font-size:13px;color:#4A5568;font-variant-numeric:tabular-nums}
+.use{margin:4px 0 0;font-size:14px;line-height:1.45;color:#2B3550}
+table{width:100%;border-collapse:collapse;font-size:15px}
+th{text-align:left;font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#2A7B88;padding:0 12px 10px 0;border-bottom:1.5px solid #2A7B88}
+td{padding:11px 12px 11px 0;border-bottom:1px solid #E7E2D6;vertical-align:middle}
+.dot{display:inline-block;width:14px;height:14px;border-radius:50%;vertical-align:-2px;margin-right:6px;border:1px solid rgba(9,25,68,.15)}
+.tag{display:inline-block;font-size:12px;font-weight:600;padding:2px 8px;border-radius:999px}
+.p{background:#091944;color:#fff}.s{background:#EEF5F6;color:#1F5F69}.nn{background:#F1F0EC;color:#2B3550}
+</style>
+</helmet>
+<div style="width: 1440px; box-sizing: border-box; padding: 56px 64px; background: #FFFFFF; color: #091944; font-family: 'Instrument Sans', system-ui, sans-serif">
+
+  <div style="display: grid; grid-template-columns: 3fr 2fr 4fr; gap: 28px">
+    <div>
+      <p class="g">Primary · logo colors</p>
+      <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px">
+        <div class="sw"><div class="chip" style="background: #091944; color: #FFFFFF">Aa 17:1</div><div class="info"><p class="n">Navy</p><p class="hex">#091944</p><p class="use">Dominant. Text, headlines, buttons, lines</p></div></div>
+        <div class="sw"><div class="chip" style="background: #FBC737; color: #091944">Signal</div><div class="info"><p class="n">Yellow</p><p class="hex">#FBC737</p><p class="use">Small marks only: dot, underline, thin line, hover</p></div></div>
+        <div class="sw"><div class="chip" style="background: #FFEAA7; color: #091944">Surface</div><div class="info"><p class="n">Cream</p><p class="hex">#FFEAA7</p><p class="use">The yellow for large areas: contact band, toggles</p></div></div>
+      </div>
+    </div>
+    <div>
+      <p class="g">Secondary · functional</p>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px">
+        <div class="sw"><div class="chip" style="background: #2A7B88; color: #FFFFFF">Aa 4.9:1</div><div class="info"><p class="n">Slate Cyan</p><p class="hex">#2A7B88</p><p class="use">Orientation: labels, check marks, tables</p></div></div>
+        <div class="sw"><div class="chip" style="background: #E05A47; color: #FFFFFF">Aa 3.7:1</div><div class="info"><p class="n">Warm Coral</p><p class="hex">#E05A47</p><p class="use">Emphasis in articles and charts</p></div></div>
+      </div>
+    </div>
+    <div>
+      <p class="g">Neutrals · surfaces and text</p>
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px">
+        <div class="sw"><div class="chip" style="background: #FFFFFF; border-bottom: 1px solid #E7E2D6"></div><div class="info"><p class="n">White</p><p class="hex">#FFFFFF</p><p class="use">Page background</p></div></div>
+        <div class="sw"><div class="chip" style="background: #F8F6F0"></div><div class="info"><p class="n">Off-White</p><p class="hex">#F8F6F0</p><p class="use">Cards, hero, alternating sections</p></div></div>
+        <div class="sw"><div class="chip" style="background: #4A5568; color: #FFFFFF">Aa 7.5:1</div><div class="info"><p class="n">Steel Slate</p><p class="hex">#4A5568</p><p class="use">Secondary text, dates, captions</p></div></div>
+      </div>
+    </div>
+  </div>
+
+  <div style="margin-top: 48px; display: grid; grid-template-columns: 7fr 4fr; gap: 64px; align-items: start">
+    <div>
+      <p class="g">Where each color goes</p>
+      <table>
+        <thead><tr><th style="width: 34%">Element</th><th>Color</th><th style="width: 16%">Role</th></tr></thead>
+        <tbody>
+          <tr><td>Logo</td><td><span class="dot" style="background:#091944"></span>Navy and <span class="dot" style="background:#FBC737"></span>Yellow</td><td><span class="tag p">Primary</span></td></tr>
+          <tr><td>Headlines and body text</td><td><span class="dot" style="background:#091944"></span>Navy</td><td><span class="tag p">Primary</span></td></tr>
+          <tr><td>Primary button</td><td><span class="dot" style="background:#091944"></span>Navy text with a navy arrow circle, <span class="dot" style="background:#FBC737"></span>yellow on hover</td><td><span class="tag p">Primary</span></td></tr>
+          <tr><td>Text links</td><td><span class="dot" style="background:#091944"></span>Navy text, <span class="dot" style="background:#FBC737"></span>yellow underline</td><td><span class="tag p">Primary</span></td></tr>
+          <tr><td>Process steps and lines</td><td><span class="dot" style="background:#091944"></span>Navy markers and thin lines, <span class="dot" style="background:#FBC737"></span>yellow for the last step</td><td><span class="tag p">Primary</span></td></tr>
+          <tr><td>Contact band, toggle circles</td><td><span class="dot" style="background:#FFEAA7"></span>Cream</td><td><span class="tag p">Primary</span></td></tr>
+          <tr><td>Kickers, roles, check marks, link hover, focus ring</td><td><span class="dot" style="background:#2A7B88"></span>Slate Cyan</td><td><span class="tag s">Secondary</span></td></tr>
+          <tr><td>Table headers and lines</td><td><span class="dot" style="background:#2A7B88"></span>Slate Cyan</td><td><span class="tag s">Secondary</span></td></tr>
+          <tr><td>Pull quote bar, highlighted value in a chart</td><td><span class="dot" style="background:#E05A47"></span>Coral, once per screen</td><td><span class="tag s">Secondary</span></td></tr>
+          <tr><td>Dates, captions, meta lines</td><td><span class="dot" style="background:#4A5568"></span>Steel Slate</td><td><span class="tag nn">Neutral</span></td></tr>
+          <tr><td>Page, cards, sections</td><td><span class="dot" style="background:#FFFFFF"></span>White, <span class="dot" style="background:#F8F6F0"></span>Off-White</td><td><span class="tag nn">Neutral</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div>
+      <p class="g">Proportion · 60-30-10</p>
+      <div style="display: flex; height: 56px; border-radius: 12px; overflow: hidden; border: 1px solid #E7E2D6">
+        <span style="flex: 60; background: linear-gradient(90deg, #FFFFFF 0 55%, #F8F6F0 55%)"></span>
+        <span style="flex: 30; background: #091944"></span>
+        <span style="flex: 4; background: #FFEAA7"></span>
+        <span style="flex: 3; background: #FBC737"></span>
+        <span style="flex: 2; background: #2A7B88"></span>
+        <span style="flex: 1; background: #E05A47"></span>
+      </div>
+      <div style="display: flex; justify-content: space-between; margin-top: 10px; font-size: 14px; color: #4A5568">
+        <span>Neutrals 60%</span><span>Navy 30% · text and lines</span><span>Accents 10%</span>
+      </div>
+      <div style="margin-top: 32px; display: flex; flex-direction: column; gap: 14px; font-size: 15px; line-height: 1.55; color: #2B3550">
+        <p style="margin: 0"><strong style="color: #091944">Navy carries the brand.</strong> It appears as text, lines and small marks. Surfaces stay light, so every section reads dark on light.</p>
+        <p style="margin: 0"><strong style="color: #091944">Yellow is a signal.</strong> It stays small and appears where the eye should land. Large areas use Cream, the lighter tone of the same yellow.</p>
+        <p style="margin: 0"><strong style="color: #091944">Sections change by background.</strong> White and off-white alternate. Lines appear only inside content: lists, tables, toggles.</p>
+        <p style="margin: 0"><strong style="color: #091944">Colors carry no categories.</strong> Services, guides and tags look alike. Headlines and labels tell them apart.</p>
+      </div>
+    </div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1120}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {};
+  }
+}
+</script>
+</body>
+</html>
