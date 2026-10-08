@@ -4,6 +4,9 @@ export const SITE = {
   author: 'Christina Vontin',
   logo: '/images/logo.webp',
   defaultImage: '/images/logo.webp',
+  // Google Calendar appointment schedule, embedded on the contact page (loads only after a click)
+  bookingUrl:
+    'https://calendar.google.com/calendar/appointments/schedules/AcZssZ32Tgf4_1IZjGOKsA0esPqw1C29UsHNm_Z5aWNIf4ufMqN5vvIP4MFun3WqBRxvqKfm_iR1C2dw?gv=true',
 };
 
 export type Lang = 'en' | 'de';
