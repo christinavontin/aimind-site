@@ -1,4 +1,239 @@
-# aimind.marketing redirects (Cloudflare Pages / Netlify format)
-# One rule per line: <old path> <new path> <status>
-# Every rule exists twice: once for English and once for /de/.
-# The full list of retired articles is added in week 4, before launch.
+# aimind.marketing redirects (Cloudflare Pages format: <old path> <new path> <status>)
+# Every rule exists for English and for /de/ (German old URL → German target), with and without trailing slash.
+# Decided with Christina on October 9, 2026 (redirect decision workbook). 410 pages are handled in functions/[[path]].js.
+
+
+# Retired articles → AI hub
+/2025/10/24/ai-craftsmanship-workflow-guide/ /2025/10/11/ai-in-b2b-marketing-guide/ 301
+/2025/10/24/ai-craftsmanship-workflow-guide /2025/10/11/ai-in-b2b-marketing-guide/ 301
+/de/2025/10/24/ai-craftsmanship-workflow-guide/ /de/2025/10/11/ai-in-b2b-marketing-guide/ 301
+/de/2025/10/24/ai-craftsmanship-workflow-guide /de/2025/10/11/ai-in-b2b-marketing-guide/ 301
+/2025/09/29/from-ai-prompting-to-ai-craftmanship/ /2025/10/11/ai-in-b2b-marketing-guide/ 301
+/2025/09/29/from-ai-prompting-to-ai-craftmanship /2025/10/11/ai-in-b2b-marketing-guide/ 301
+/de/2025/09/29/from-ai-prompting-to-ai-craftmanship/ /de/2025/10/11/ai-in-b2b-marketing-guide/ 301
+/de/2025/09/29/from-ai-prompting-to-ai-craftmanship /de/2025/10/11/ai-in-b2b-marketing-guide/ 301
+/2025/09/08/discipline-of-prompting-ai-craftsmanship/ /2025/10/11/ai-in-b2b-marketing-guide/ 301
+/2025/09/08/discipline-of-prompting-ai-craftsmanship /2025/10/11/ai-in-b2b-marketing-guide/ 301
+/de/2025/09/08/discipline-of-prompting-ai-craftsmanship/ /de/2025/10/11/ai-in-b2b-marketing-guide/ 301
+/de/2025/09/08/discipline-of-prompting-ai-craftsmanship /de/2025/10/11/ai-in-b2b-marketing-guide/ 301
+/2025/10/12/gen-ai-b2b-marketing-risk/ /2025/10/11/ai-in-b2b-marketing-guide/ 301
+/2025/10/12/gen-ai-b2b-marketing-risk /2025/10/11/ai-in-b2b-marketing-guide/ 301
+/de/2025/10/12/gen-ai-b2b-marketing-risk/ /de/2025/10/11/ai-in-b2b-marketing-guide/ 301
+/de/2025/10/12/gen-ai-b2b-marketing-risk /de/2025/10/11/ai-in-b2b-marketing-guide/ 301
+/2025/09/22/what-is-secure-ai-driven-b2b-marketing/ /2025/10/11/ai-in-b2b-marketing-guide/ 301
+/2025/09/22/what-is-secure-ai-driven-b2b-marketing /2025/10/11/ai-in-b2b-marketing-guide/ 301
+/de/2025/09/22/what-is-secure-ai-driven-b2b-marketing/ /de/2025/10/11/ai-in-b2b-marketing-guide/ 301
+/de/2025/09/22/what-is-secure-ai-driven-b2b-marketing /de/2025/10/11/ai-in-b2b-marketing-guide/ 301
+/2025/09/07/generative-ai-and-data-protection/ /2025/10/11/ai-in-b2b-marketing-guide/ 301
+/2025/09/07/generative-ai-and-data-protection /2025/10/11/ai-in-b2b-marketing-guide/ 301
+/de/2025/09/07/generative-ai-and-data-protection/ /de/2025/10/11/ai-in-b2b-marketing-guide/ 301
+/de/2025/09/07/generative-ai-and-data-protection /de/2025/10/11/ai-in-b2b-marketing-guide/ 301
+/2025/09/08/how-to-use-gen-ai-with-client-information/ /2025/10/11/ai-in-b2b-marketing-guide/ 301
+/2025/09/08/how-to-use-gen-ai-with-client-information /2025/10/11/ai-in-b2b-marketing-guide/ 301
+/de/2025/09/08/how-to-use-gen-ai-with-client-information/ /de/2025/10/11/ai-in-b2b-marketing-guide/ 301
+/de/2025/09/08/how-to-use-gen-ai-with-client-information /de/2025/10/11/ai-in-b2b-marketing-guide/ 301
+/2024/11/25/how-ai-personalization-enhances-b2b-buyer-engagement/ /2025/10/11/ai-in-b2b-marketing-guide/ 301
+/2024/11/25/how-ai-personalization-enhances-b2b-buyer-engagement /2025/10/11/ai-in-b2b-marketing-guide/ 301
+/de/2024/11/25/how-ai-personalization-enhances-b2b-buyer-engagement/ /de/2025/10/11/ai-in-b2b-marketing-guide/ 301
+/de/2024/11/25/how-ai-personalization-enhances-b2b-buyer-engagement /de/2025/10/11/ai-in-b2b-marketing-guide/ 301
+/2026/01/02/ai-in-b2b-marketing/ /2025/10/11/ai-in-b2b-marketing-guide/ 301
+/2026/01/02/ai-in-b2b-marketing /2025/10/11/ai-in-b2b-marketing-guide/ 301
+/de/2026/01/02/ai-in-b2b-marketing/ /de/2025/10/11/ai-in-b2b-marketing-guide/ 301
+/de/2026/01/02/ai-in-b2b-marketing /de/2025/10/11/ai-in-b2b-marketing-guide/ 301
+/2025/01/17/seo-aeo-content/ /2025/10/11/ai-in-b2b-marketing-guide/ 301
+/2025/01/17/seo-aeo-content /2025/10/11/ai-in-b2b-marketing-guide/ 301
+/de/2025/01/17/seo-aeo-content/ /de/2025/10/11/ai-in-b2b-marketing-guide/ 301
+/de/2025/01/17/seo-aeo-content /de/2025/10/11/ai-in-b2b-marketing-guide/ 301
+/2025/08/10/how-ai-changes-search-and-b2b-content-strategies/ /2025/10/11/ai-in-b2b-marketing-guide/ 301
+/2025/08/10/how-ai-changes-search-and-b2b-content-strategies /2025/10/11/ai-in-b2b-marketing-guide/ 301
+/de/2025/08/10/how-ai-changes-search-and-b2b-content-strategies/ /de/2025/10/11/ai-in-b2b-marketing-guide/ 301
+/de/2025/08/10/how-ai-changes-search-and-b2b-content-strategies /de/2025/10/11/ai-in-b2b-marketing-guide/ 301
+/2023/11/01/how-to-optimise-your-content-for-seo/ /2025/10/11/ai-in-b2b-marketing-guide/ 301
+/2023/11/01/how-to-optimise-your-content-for-seo /2025/10/11/ai-in-b2b-marketing-guide/ 301
+/de/2023/11/01/how-to-optimise-your-content-for-seo/ /de/2025/10/11/ai-in-b2b-marketing-guide/ 301
+/de/2023/11/01/how-to-optimise-your-content-for-seo /de/2025/10/11/ai-in-b2b-marketing-guide/ 301
+/2025/10/10/ai-in-b2b-marketing/ /2025/10/11/ai-in-b2b-marketing-guide/ 301
+/2025/10/10/ai-in-b2b-marketing /2025/10/11/ai-in-b2b-marketing-guide/ 301
+/de/2025/10/10/ai-in-b2b-marketing/ /de/2025/10/11/ai-in-b2b-marketing-guide/ 301
+/de/2025/10/10/ai-in-b2b-marketing /de/2025/10/11/ai-in-b2b-marketing-guide/ 301
+
+# Retired articles → CMO hub
+/2025/07/31/challenges-for-b2b-cmos-in-2025/ /2025/07/31/challenges-for-b2b-cmo/ 301
+/2025/07/31/challenges-for-b2b-cmos-in-2025 /2025/07/31/challenges-for-b2b-cmo/ 301
+/de/2025/07/31/challenges-for-b2b-cmos-in-2025/ /de/2025/07/31/challenges-for-b2b-cmo/ 301
+/de/2025/07/31/challenges-for-b2b-cmos-in-2025 /de/2025/07/31/challenges-for-b2b-cmo/ 301
+/2025/10/06/the-new-b2b-buyer-journey/ /2025/07/31/challenges-for-b2b-cmo/ 301
+/2025/10/06/the-new-b2b-buyer-journey /2025/07/31/challenges-for-b2b-cmo/ 301
+/de/2025/10/06/the-new-b2b-buyer-journey/ /de/2025/07/31/challenges-for-b2b-cmo/ 301
+/de/2025/10/06/the-new-b2b-buyer-journey /de/2025/07/31/challenges-for-b2b-cmo/ 301
+/2025/01/18/b2b-buying-journey/ /2025/07/31/challenges-for-b2b-cmo/ 301
+/2025/01/18/b2b-buying-journey /2025/07/31/challenges-for-b2b-cmo/ 301
+/de/2025/01/18/b2b-buying-journey/ /de/2025/07/31/challenges-for-b2b-cmo/ 301
+/de/2025/01/18/b2b-buying-journey /de/2025/07/31/challenges-for-b2b-cmo/ 301
+/2024/07/27/b2b-buyer-journey/ /2025/07/31/challenges-for-b2b-cmo/ 301
+/2024/07/27/b2b-buyer-journey /2025/07/31/challenges-for-b2b-cmo/ 301
+/de/2024/07/27/b2b-buyer-journey/ /de/2025/07/31/challenges-for-b2b-cmo/ 301
+/de/2024/07/27/b2b-buyer-journey /de/2025/07/31/challenges-for-b2b-cmo/ 301
+/2023/11/01/content-personalization-in-b2b-marketing/ /2025/07/31/challenges-for-b2b-cmo/ 301
+/2023/11/01/content-personalization-in-b2b-marketing /2025/07/31/challenges-for-b2b-cmo/ 301
+/de/2023/11/01/content-personalization-in-b2b-marketing/ /de/2025/07/31/challenges-for-b2b-cmo/ 301
+/de/2023/11/01/content-personalization-in-b2b-marketing /de/2025/07/31/challenges-for-b2b-cmo/ 301
+/2025/08/25/from-cost-center-to-growth-engine-with-strategic-marketing/ /2025/07/31/challenges-for-b2b-cmo/ 301
+/2025/08/25/from-cost-center-to-growth-engine-with-strategic-marketing /2025/07/31/challenges-for-b2b-cmo/ 301
+/de/2025/08/25/from-cost-center-to-growth-engine-with-strategic-marketing/ /de/2025/07/31/challenges-for-b2b-cmo/ 301
+/de/2025/08/25/from-cost-center-to-growth-engine-with-strategic-marketing /de/2025/07/31/challenges-for-b2b-cmo/ 301
+/2025/09/02/c-level-b2b-marketing-strategy/ /2025/07/31/challenges-for-b2b-cmo/ 301
+/2025/09/02/c-level-b2b-marketing-strategy /2025/07/31/challenges-for-b2b-cmo/ 301
+/de/2025/09/02/c-level-b2b-marketing-strategy/ /de/2025/07/31/challenges-for-b2b-cmo/ 301
+/de/2025/09/02/c-level-b2b-marketing-strategy /de/2025/07/31/challenges-for-b2b-cmo/ 301
+/2025/01/09/b2b-marketing-strategy/ /2025/07/31/challenges-for-b2b-cmo/ 301
+/2025/01/09/b2b-marketing-strategy /2025/07/31/challenges-for-b2b-cmo/ 301
+/de/2025/01/09/b2b-marketing-strategy/ /de/2025/07/31/challenges-for-b2b-cmo/ 301
+/de/2025/01/09/b2b-marketing-strategy /de/2025/07/31/challenges-for-b2b-cmo/ 301
+/challenges-for-b2b-cmos-in-2025/ /2025/07/31/challenges-for-b2b-cmo/ 301
+/challenges-for-b2b-cmos-in-2025 /2025/07/31/challenges-for-b2b-cmo/ 301
+/de/challenges-for-b2b-cmos-in-2025/ /de/2025/07/31/challenges-for-b2b-cmo/ 301
+/de/challenges-for-b2b-cmos-in-2025 /de/2025/07/31/challenges-for-b2b-cmo/ 301
+/2025/01/10/key-b2b-marketing-trends-2025/ /2025/07/31/challenges-for-b2b-cmo/ 301
+/2025/01/10/key-b2b-marketing-trends-2025 /2025/07/31/challenges-for-b2b-cmo/ 301
+/de/2025/01/10/key-b2b-marketing-trends-2025/ /de/2025/07/31/challenges-for-b2b-cmo/ 301
+/de/2025/01/10/key-b2b-marketing-trends-2025 /de/2025/07/31/challenges-for-b2b-cmo/ 301
+/2023/11/13/key-b2b-marketing-trends-2024/ /2025/07/31/challenges-for-b2b-cmo/ 301
+/2023/11/13/key-b2b-marketing-trends-2024 /2025/07/31/challenges-for-b2b-cmo/ 301
+/de/2023/11/13/key-b2b-marketing-trends-2024/ /de/2025/07/31/challenges-for-b2b-cmo/ 301
+/de/2023/11/13/key-b2b-marketing-trends-2024 /de/2025/07/31/challenges-for-b2b-cmo/ 301
+/free-buyer-persona-generator/ /2025/07/31/challenges-for-b2b-cmo/ 301
+/free-buyer-persona-generator /2025/07/31/challenges-for-b2b-cmo/ 301
+/de/free-buyer-persona-generator/ /de/2025/07/31/challenges-for-b2b-cmo/ 301
+/de/free-buyer-persona-generator /de/2025/07/31/challenges-for-b2b-cmo/ 301
+/2024/07/27/navigating-the-complex-b2b-buying-journey/ /2025/07/31/challenges-for-b2b-cmo/ 301
+/2024/07/27/navigating-the-complex-b2b-buying-journey /2025/07/31/challenges-for-b2b-cmo/ 301
+/de/2024/07/27/navigating-the-complex-b2b-buying-journey/ /de/2025/07/31/challenges-for-b2b-cmo/ 301
+/de/2024/07/27/navigating-the-complex-b2b-buying-journey /de/2025/07/31/challenges-for-b2b-cmo/ 301
+/2025/01/18/mapping-the-b2b-buying-journey-and-creating-relevant-content-for-every-stage/ /2025/07/31/challenges-for-b2b-cmo/ 301
+/2025/01/18/mapping-the-b2b-buying-journey-and-creating-relevant-content-for-every-stage /2025/07/31/challenges-for-b2b-cmo/ 301
+/de/2025/01/18/mapping-the-b2b-buying-journey-and-creating-relevant-content-for-every-stage/ /de/2025/07/31/challenges-for-b2b-cmo/ 301
+/de/2025/01/18/mapping-the-b2b-buying-journey-and-creating-relevant-content-for-every-stage /de/2025/07/31/challenges-for-b2b-cmo/ 301
+
+# Retired articles → ROI hub
+/2025/10/15/what-is-marketing-influenced-revenue/ /2025/10/13/b2b-marketing-roi-and-kpis/ 301
+/2025/10/15/what-is-marketing-influenced-revenue /2025/10/13/b2b-marketing-roi-and-kpis/ 301
+/de/2025/10/15/what-is-marketing-influenced-revenue/ /de/2025/10/13/b2b-marketing-roi-and-kpis/ 301
+/de/2025/10/15/what-is-marketing-influenced-revenue /de/2025/10/13/b2b-marketing-roi-and-kpis/ 301
+/2023/10/31/how-to-choose-objectives-and-set-kpis/ /2025/10/13/b2b-marketing-roi-and-kpis/ 301
+/2023/10/31/how-to-choose-objectives-and-set-kpis /2025/10/13/b2b-marketing-roi-and-kpis/ 301
+/de/2023/10/31/how-to-choose-objectives-and-set-kpis/ /de/2025/10/13/b2b-marketing-roi-and-kpis/ 301
+/de/2023/10/31/how-to-choose-objectives-and-set-kpis /de/2025/10/13/b2b-marketing-roi-and-kpis/ 301
+/okr-framework-development/ /2025/10/13/b2b-marketing-roi-and-kpis/ 301
+/okr-framework-development /2025/10/13/b2b-marketing-roi-and-kpis/ 301
+/de/okr-framework-development/ /de/2025/10/13/b2b-marketing-roi-and-kpis/ 301
+/de/okr-framework-development /de/2025/10/13/b2b-marketing-roi-and-kpis/ 301
+/2024/01/08/kpi-framework/ /2025/10/13/b2b-marketing-roi-and-kpis/ 301
+/2024/01/08/kpi-framework /2025/10/13/b2b-marketing-roi-and-kpis/ 301
+/de/2024/01/08/kpi-framework/ /de/2025/10/13/b2b-marketing-roi-and-kpis/ 301
+/de/2024/01/08/kpi-framework /de/2025/10/13/b2b-marketing-roi-and-kpis/ 301
+/2023/12/28/marketing-roi-calculator/ /2025/10/13/b2b-marketing-roi-and-kpis/ 301
+/2023/12/28/marketing-roi-calculator /2025/10/13/b2b-marketing-roi-and-kpis/ 301
+/de/2023/12/28/marketing-roi-calculator/ /de/2025/10/13/b2b-marketing-roi-and-kpis/ 301
+/de/2023/12/28/marketing-roi-calculator /de/2025/10/13/b2b-marketing-roi-and-kpis/ 301
+/2023/12/28/streamline-your-saas-marketing-analysis-with-this-simple-marketing-roi-calculator/ /2025/10/13/b2b-marketing-roi-and-kpis/ 301
+/2023/12/28/streamline-your-saas-marketing-analysis-with-this-simple-marketing-roi-calculator /2025/10/13/b2b-marketing-roi-and-kpis/ 301
+/de/2023/12/28/streamline-your-saas-marketing-analysis-with-this-simple-marketing-roi-calculator/ /de/2025/10/13/b2b-marketing-roi-and-kpis/ 301
+/de/2023/12/28/streamline-your-saas-marketing-analysis-with-this-simple-marketing-roi-calculator /de/2025/10/13/b2b-marketing-roi-and-kpis/ 301
+/what-is-marketing-influenced-revenue/ /2025/10/13/b2b-marketing-roi-and-kpis/ 301
+/what-is-marketing-influenced-revenue /2025/10/13/b2b-marketing-roi-and-kpis/ 301
+/de/what-is-marketing-influenced-revenue/ /de/2025/10/13/b2b-marketing-roi-and-kpis/ 301
+/de/what-is-marketing-influenced-revenue /de/2025/10/13/b2b-marketing-roi-and-kpis/ 301
+
+# Content for technology companies → homepage services (until the new article exists)
+/2026/01/02/b2b-marketing-content-green-tech/ /#services 301
+/2026/01/02/b2b-marketing-content-green-tech /#services 301
+/de/2026/01/02/b2b-marketing-content-green-tech/ /de/#services 301
+/de/2026/01/02/b2b-marketing-content-green-tech /de/#services 301
+/2026/01/02/content-b2b-shorten-review-cycles/ /#services 301
+/2026/01/02/content-b2b-shorten-review-cycles /#services 301
+/de/2026/01/02/content-b2b-shorten-review-cycles/ /de/#services 301
+/de/2026/01/02/content-b2b-shorten-review-cycles /de/#services 301
+/2026/01/02/content-for-b2b-marketing/ /#services 301
+/2026/01/02/content-for-b2b-marketing /#services 301
+/de/2026/01/02/content-for-b2b-marketing/ /de/#services 301
+/de/2026/01/02/content-for-b2b-marketing /de/#services 301
+
+# Temporary until the reworked DPP article returns under its old URL
+/2026/07/19/digital-product-passports-infrastructure/ /2025/07/31/challenges-for-b2b-cmo/ 302
+/2026/07/19/digital-product-passports-infrastructure /2025/07/31/challenges-for-b2b-cmo/ 302
+/de/2026/07/19/digital-product-passports-infrastructure/ /de/2025/07/31/challenges-for-b2b-cmo/ 302
+/de/2026/07/19/digital-product-passports-infrastructure /de/2025/07/31/challenges-for-b2b-cmo/ 302
+/2026/04/12/cmos-guide-to-industrial-circularity-2026/ /2025/07/31/challenges-for-b2b-cmo/ 302
+/2026/04/12/cmos-guide-to-industrial-circularity-2026 /2025/07/31/challenges-for-b2b-cmo/ 302
+/de/2026/04/12/cmos-guide-to-industrial-circularity-2026/ /de/2025/07/31/challenges-for-b2b-cmo/ 302
+/de/2026/04/12/cmos-guide-to-industrial-circularity-2026 /de/2025/07/31/challenges-for-b2b-cmo/ 302
+/2026/04/06/repair-index-product-quality-espr/ /2025/07/31/challenges-for-b2b-cmo/ 302
+/2026/04/06/repair-index-product-quality-espr /2025/07/31/challenges-for-b2b-cmo/ 302
+/de/2026/04/06/repair-index-product-quality-espr/ /de/2025/07/31/challenges-for-b2b-cmo/ 302
+/de/2026/04/06/repair-index-product-quality-espr /de/2025/07/31/challenges-for-b2b-cmo/ 302
+/2026/04/04/dpp-digital-feedstock-circular-economy-branding/ /2025/07/31/challenges-for-b2b-cmo/ 302
+/2026/04/04/dpp-digital-feedstock-circular-economy-branding /2025/07/31/challenges-for-b2b-cmo/ 302
+/de/2026/04/04/dpp-digital-feedstock-circular-economy-branding/ /de/2025/07/31/challenges-for-b2b-cmo/ 302
+/de/2026/04/04/dpp-digital-feedstock-circular-economy-branding /de/2025/07/31/challenges-for-b2b-cmo/ 302
+/2026/04/04/iot-industrial-waste-management-2026/ /2025/07/31/challenges-for-b2b-cmo/ 302
+/2026/04/04/iot-industrial-waste-management-2026 /2025/07/31/challenges-for-b2b-cmo/ 302
+/de/2026/04/04/iot-industrial-waste-management-2026/ /de/2025/07/31/challenges-for-b2b-cmo/ 302
+/de/2026/04/04/iot-industrial-waste-management-2026 /de/2025/07/31/challenges-for-b2b-cmo/ 302
+
+/2026/04/05/psychology-of-the-circular-economy/ /2025/07/31/challenges-for-b2b-cmo/ 302
+/2026/04/05/psychology-of-the-circular-economy /2025/07/31/challenges-for-b2b-cmo/ 302
+/de/2026/04/05/psychology-of-the-circular-economy/ /de/2025/07/31/challenges-for-b2b-cmo/ 302
+/de/2026/04/05/psychology-of-the-circular-economy /de/2025/07/31/challenges-for-b2b-cmo/ 302
+
+# Glossary: temporary until it returns
+/b2b-marketing-glossary/ / 302
+/b2b-marketing-glossary / 302
+/de/b2b-marketing-glossary/ /de/ 302
+/de/b2b-marketing-glossary /de/ 302
+/2026/07/03/b2b-marketing-glossary/ / 302
+/2026/07/03/b2b-marketing-glossary / 302
+/de/2026/07/03/b2b-marketing-glossary/ /de/ 302
+/de/2026/07/03/b2b-marketing-glossary /de/ 302
+
+# Retired pages
+/b2b-marketing-experience/ /#career 301
+/b2b-marketing-experience /#career 301
+/de/b2b-marketing-experience/ /de/#career 301
+/de/b2b-marketing-experience /de/#career 301
+/who-i-am/ /#career 301
+/who-i-am /#career 301
+/de/who-i-am/ /de/#career 301
+/de/who-i-am /de/#career 301
+/b2b-marketing-insights/ /#resources 301
+/b2b-marketing-insights /#resources 301
+/de/b2b-marketing-insights/ /de/#resources 301
+/de/b2b-marketing-insights /de/#resources 301
+/blog-2/ /#resources 301
+/blog-2 /#resources 301
+/de/blog-2/ /de/#resources 301
+/de/blog-2 /de/#resources 301
+/b2b-technology-content/ /#services 301
+/b2b-technology-content /#services 301
+/de/b2b-technology-content/ /de/#services 301
+/de/b2b-technology-content /de/#services 301
+/green-tech-marketing/ /#services 301
+/green-tech-marketing /#services 301
+/de/green-tech-marketing/ /de/#services 301
+/de/green-tech-marketing /de/#services 301
+/messaging-framework-development/ /#services 301
+/messaging-framework-development /#services 301
+/de/messaging-framework-development/ /de/#services 301
+/de/messaging-framework-development /de/#services 301
+/marketing-health-check/ /contact/ 301
+/marketing-health-check /contact/ 301
+/de/marketing-health-check/ /de/contact/ 301
+/de/marketing-health-check /de/contact/ 301
+/author/christinavontin/ / 301
+/author/christinavontin / 301
+/de/author/christinavontin/ /de/ 301
+/de/author/christinavontin /de/ 301
+
+# Category archives
+/category/* /#resources 301
+/de/category/* /de/#resources 301
