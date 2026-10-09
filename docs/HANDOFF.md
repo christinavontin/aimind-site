@@ -21,8 +21,9 @@ Where the canvas, the Google Doc and the code differ, the **code** is the final 
 - Final design built into the site: header, footer, homepage, contact page, article layout, EN and DE.
 - Fonts self-hosted (Schibsted Grotesk, Newsreader, Instrument Sans). No Google request on page load. The Google Calendar loads only after a click.
 - New logo: sign, wordmark, favicon, JSON-LD logo.
-- Decisions on October 9: "ich" throughout, eight industries in a larger circle, English hero line "Complex technology, made clear, positioned and anchored in its market.", button "View My Services", sentence case for headlines and navigation.
+- Decisions on October 9: "ich" throughout, English hero line "Complex technology, made clear, positioned and anchored in its market.", button "View My Services", sentence case for navigation.
 - Repository cleaned: only final versions; the old test design and all design options removed.
+- Changes on October 9 (afternoon): four industries instead of eight, audience circle 15 % smaller (544 px) and centered vertically with the headline, English headlines in title case, drop cap in Slate Cyan for the first letter of every article.
 
 ## Open, in this order
 

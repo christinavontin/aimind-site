@@ -8,7 +8,7 @@ The reference for the final design is the **live code** (`src/`), deployed at ht
 
 - Name and logo: **aimind.marketing**, with "marketing" in italics and a yellow dot between the words.
 - Positioning: **Technology to Market.** / **Technologie im Markt.** Complex technology, made clear, positioned and anchored in its market.
-- Audience: companies whose products need explaining, in eight industries: Software & SaaS · Mechanical & Plant Engineering · Industrial Technology & IoT · IT & Technology Consulting · Energy & Environmental Technology · Management & Specialist Consulting · Telecom & Connectivity · Financial Services & FinTech. From start-ups and mid-size firms to business units of large corporations, especially where EU regulation shapes the market.
+- Audience: companies whose products need explaining, in four industries. EN: Digital Platforms & Software · Smart Industry & Automation · Professional & Technology Services · Financial Systems & Services. DE: Software & Digitale Technologien · Industrietechnologie & Automation · IT- & Managementberatung · Finanzdienstleistungen & FinTech. From start-ups and mid-size firms to business units of large corporations, especially where EU regulation shapes the market.
 - Christina's own name appears as a handwritten signature (author box, About, email), never as the logo.
 
 ## 2. Logo
@@ -61,6 +61,7 @@ Three fonts, one role each. On the website they are self-hosted through @fontsou
 | Meta (dates, captions) | Instrument 400 | 15 px · footer 14 px |
 | Label | Instrument 600, uppercase, letter-spacing 0.12em, Slate Cyan | 13 px |
 | Quote | Newsreader 400 | 34 px pull quote · 18 px references |
+| Drop cap (first letter of an article) | Newsreader 400, Slate Cyan, three lines deep | 4.6 × lead size |
 | Numbers | Schibsted 600, tabular | 18 px |
 
 Rules:
@@ -69,7 +70,7 @@ Rules:
 3. Bold (700) only in Schibsted headings. Running text is never bold; 600 only for buttons, links, labels and the lead-in term of a list item.
 4. Italic only in Newsreader.
 5. Uppercase only for labels.
-6. Capitalization (English): section headlines (H2), page headlines, intros and navigation use sentence case ("How I work", "Three ways to bring your technology to market"). Title case only for names: services and process steps (Go-To-Market, Market Authority, Thought Leadership), article and guide titles, and the action labels of buttons and links (Book a Strategy Call).
+6. Capitalization (English): headlines use title case ("How I Work", "Three Ways to Bring Your Technology to Market"); articles, short conjunctions and short prepositions stay lowercase (to, from, of, and). Title case also for names (services, process steps), article and guide titles, and the action labels of buttons and links (Book a Strategy Call). Intros, running text and navigation use sentence case.
 
 ## 5. Buttons and links
 
@@ -82,7 +83,7 @@ Rules:
 
 - Content width max 1280 px, side gutter 32 px (20 px on phones). Designed at 1440 px desktop and 390 px phone; fluid in between; checked at 1024 and 768 px.
 - Cards: off-white, radius 16 px, no border; equal heights in a row (CSS subgrid aligns title, text, toggle and link).
-- Hero: off-white with a large white circle behind the text and the cream audience circle (640 px, eight industries in one column) beside the headline; below 1180 px the circle moves under the text; on phones it becomes a rounded cream card below the button.
+- Hero: off-white with a large white circle behind the text and the cream audience circle (544 px, four industries in one column) beside the headline; headline and circle are centered vertically in the hero; below 1180 px the circle moves under the text; on phones it becomes a rounded cream card below the button.
 - Background circles are a brand motif (hero, contact band): large, soft (white, cream, yellow), cropped at the edge, text above them. Never navy circles behind text.
 - Timelines and process steps: a number or year above a thin line (#C9CCD6), no icons or symbols.
 - Homepage order: hero with audience · How I Work · services · resources · career and references · contact band · footer. No further sections on the homepage; new content gets its own page.

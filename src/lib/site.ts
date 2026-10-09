@@ -34,7 +34,7 @@ export const UI = {
     updated: 'Updated',
     published: 'Published',
     by: 'By',
-    faq: 'Questions and answers',
+    faq: 'Questions and Answers',
     sources: 'Sources',
     toc: 'In this guide',
     privacy: { label: 'Privacy Policy', href: '/privacy-policy/' },
