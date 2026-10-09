@@ -1,0 +1,16 @@
+---
+// Brand logo: overlap sign (navy = technology, yellow = market) + wordmark.
+// See docs/design-guide.md, section 2.
+interface Props { size?: 'header' | 'footer'; id: string }
+const { size = 'header', id } = Astro.props;
+const sign = size === 'header' ? 23 : 20;
+---
+<span class={`logo logo-${size}`}>
+  <svg width={sign} height={sign} viewBox="0 0 32 32" aria-hidden="true">
+    <defs><clipPath id={id}><circle cx="19.5" cy="12.5" r="11.5" /></clipPath></defs>
+    <circle cx="19.5" cy="12.5" r="11.5" fill="#091944" />
+    <circle cx="10.5" cy="22" r="8" fill="#FBC737" />
+    <circle cx="10.5" cy="22" r="8" fill="#FFFFFF" clip-path={`url(#${id})`} />
+  </svg>
+  <span class="wordmark"><span class="wm-a">aimind</span><span class="wm-dot"></span><span class="wm-b">marketing</span></span>
+</span>

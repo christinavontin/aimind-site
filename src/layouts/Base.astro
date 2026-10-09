@@ -1,7 +1,10 @@
 ---
-import '@fontsource-variable/inter';
-import '@fontsource-variable/open-sans';
+import '@fontsource-variable/schibsted-grotesk';
+import '@fontsource-variable/instrument-sans';
+import '@fontsource-variable/newsreader/opsz.css';
+import '@fontsource-variable/newsreader/opsz-italic.css';
 import '../styles/global.css';
+import Logo from '../components/Logo.astro';
 import { SITE, UI, abs, type Lang } from '../lib/site';
 
 interface Alternate { lang: Lang; href: string }
@@ -24,7 +27,9 @@ const canonical = abs(permalink);
 const ogImage = abs(image ?? SITE.defaultImage);
 const en = alternates.find((a) => a.lang === 'en');
 const other = alternates.find((a) => a.lang !== lang);
-const switchHref = other?.href ?? (lang === 'en' ? '/de/' : '/');
+const enHref = lang === 'en' ? permalink : (other?.href ?? '/');
+const deHref = lang === 'de' ? permalink : (other?.href ?? '/de/');
+const year = new Date().getFullYear();
 ---
 <!doctype html>
 <html lang={t.htmlLang}>
@@ -37,6 +42,7 @@ const switchHref = other?.href ?? (lang === 'en' ? '/de/' : '/');
     {noindex && <meta name="robots" content="noindex, follow" />}
     {alternates.map((a) => <link rel="alternate" hreflang={UI[a.lang].htmlLang.slice(0, 2)} href={abs(a.href)} />)}
     {en && <link rel="alternate" hreflang="x-default" href={abs(en.href)} />}
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="icon" type="image/png" href="/favicon.png" />
     <link rel="sitemap" href="/sitemap-index.xml" />
 
@@ -54,24 +60,44 @@ const switchHref = other?.href ?? (lang === 'en' ? '/de/' : '/');
   </head>
   <body>
     <a class="skip" href="#main">{lang === 'de' ? 'Zum Inhalt' : 'Skip to content'}</a>
-    <header class="site-header">
+    <header class="site">
       <div class="wrap header-inner">
-        <a class="brand" href={t.home} aria-label={`${SITE.name} – ${t.tagline}`}>
-          <img src={SITE.logo} alt={t.tagline} width="124" height="43" />
-        </a>
-        <nav aria-label={lang === 'de' ? 'Hauptnavigation' : 'Main navigation'}>
-          {t.nav.map((item) => <a href={item.href}>{item.label}</a>)}
-          <a class="lang" href={switchHref} hreflang={lang === 'en' ? 'de' : 'en'} lang={lang === 'en' ? 'de' : 'en'}>{t.switchTo}</a>
+        <a class="brand" href={t.home} aria-label={`${SITE.name} – ${t.tagline}`}><Logo id="lg-h" /></a>
+        <nav class="navlinks" aria-label={lang === 'de' ? 'Hauptnavigation' : 'Main navigation'}>
+          {t.nav.map((item) => <a class="nl" href={item.href}>{item.label}</a>)}
+          <span class="langs">
+            {lang === 'en' ? <span aria-current="true">EN</span> : <a class="nl" href={enHref} hreflang="en" lang="en">EN</a>}
+            <span aria-hidden="true">/</span>
+            {lang === 'de' ? <span aria-current="true">DE</span> : <a class="nl" href={deHref} hreflang="de" lang="de">DE</a>}
+          </span>
+          <a href={t.cta.href} class="btn sm">{t.cta.label}</a>
         </nav>
+        <details class="mmenu">
+          <summary class="menu">{t.menu}
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M2 4h12M2 8h12M2 12h12" /></svg>
+          </summary>
+          <nav class="mpanel" aria-label={lang === 'de' ? 'Menü' : 'Menu'}>
+            {t.nav.map((item) => <a class="nl" href={item.href}>{item.label}</a>)}
+            <a class="nl" href={lang === 'en' ? deHref : enHref} hreflang={lang === 'en' ? 'de' : 'en'}>{t.switchTo}</a>
+            <a href={t.cta.href} class="btn">{t.cta.label}</a>
+          </nav>
+        </details>
       </div>
+      <span class="prog" aria-hidden="true"></span>
     </header>
     <main id="main">
       <slot />
     </main>
     <footer class="site-footer">
       <div class="wrap footer-inner">
-        <span>© {new Date().getFullYear()} {SITE.author} · {SITE.name}</span>
-        <a href={t.privacy.href}>{t.privacy.label}</a>
+        <span class="footer-brand">
+          <Logo size="footer" id="lg-f" />
+          <span>© {year} {SITE.author} · {t.license} <a class="nl" href="https://creativecommons.org/licenses/by-nc/4.0/" rel="license noopener" target="_blank">CC BY-NC 4.0</a></span>
+        </span>
+        <span class="footer-links">
+          {t.footer.map((item) => <a class="nl" href={item.href}>{item.label}</a>)}
+          <a class="nl" href={lang === 'en' ? deHref : enHref} hreflang={lang === 'en' ? 'de' : 'en'}>{t.switchTo}</a>
+        </span>
       </div>
     </footer>
   </body>

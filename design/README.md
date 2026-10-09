@@ -1,9 +1,9 @@
-# Final designs (October 8, 2026)
+# Design files (final, October 9, 2026)
 
-Static exports of the agreed design boards. Open any file in a browser (fonts load from Google Fonts). Rules: `docs/design-guide.md`. Live canvas: https://claude.ai/artifact/9ysPDL1AqTgN52jaHjGVMY
+Only final versions live here. The rules are in `docs/design-guide.md`. The live code in `src/` is the reference; deployed at https://aimind-site.pages.dev/.
 
-- homepage.html / homepage-mobile.html: final homepage (desktop, phone)
-- article.html: article page (CMO hub)
-- contact.html: contact page with Google Calendar booking
-- color-concept.html, typography.html, buttons.html: style guide boards
-- logo-system.html (sign, sizes; option 1 "Overlap" chosen), logo-wordmark.html (version C, italic "marketing", chosen)
+- `screens/` – screenshots of the final pages (homepage EN and DE on desktop and phone, contact page, article page)
+- `logo/` – final logo: overlap sign (SVG, 512 px PNG) and full logo with wordmark (PNG)
+- `style-guide/colors.html`, `style-guide/typography.html` – color concept and typography guide; open in a browser
+
+Explorations and rejected options are not kept in the repository. They remain only on the design canvas (https://claude.ai/artifact/9ysPDL1AqTgN52jaHjGVMY) as history.

@@ -38,6 +38,10 @@ Retired articles get `410` if no page answers their question.
 2. Read the changed pages in both languages.
 3. Open every new external link and check it against the text it supports.
 
+## Design
+
+Binding rules: `docs/design-guide.md`. The code in `src/` is the reference for the final design; `design/` holds only final screenshots, logo files and style guide boards. Never add explorations or alternative versions to the repository.
+
 ## Status
 
-Migration from WordPress.com, planned launch late November 2026. See README.md for the plan.
+Migration from WordPress.com, planned launch late November 2026. Homepage and contact page are final (October 9, 2026). Current state and next steps: `docs/HANDOFF.md`. Plan: README.md.

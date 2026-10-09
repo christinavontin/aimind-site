@@ -1,5 +1,6 @@
 ---
-// Temporary homepage for the test site. The final homepage text moves over in week 3.
+// Homepage, EN and DE. Texts: Google Doc "aimind.marketing Homepage Texts DE/EN" (German first).
+// Design: design/homepage.html and docs/design-guide.md.
 import Base from '../layouts/Base.astro';
 import { SITE, UI, type Lang } from '../lib/site';
 
@@ -7,35 +8,185 @@ interface Props { lang: Lang }
 const { lang } = Astro.props;
 const t = UI[lang];
 const p = lang === 'de' ? '/de' : '';
+const linkedin = 'https://www.linkedin.com/in/christinavontin/';
 
-const copy = {
-  en: {
-    seoTitle: 'aimind.marketing – Strategy and Content for B2B Tech',
-    description: 'Christina Vontin translates technical complexity into commercial value: strategy, content, and AI search visibility for B2B technology companies.',
-    h1: 'Strategy and Content for B2B Tech',
-    intro: 'Christina Vontin translates technical complexity into commercial value.',
-    label: 'The six responsibilities',
-    more: 'Read the guide',
-    cards: [
-      { cat: 'Strategy', color: '#091944', meta: 'Guide · 14 min read', title: 'The Modern B2B CMO', text: 'Today’s B2B CMOs are expected to drive revenue, lead AI transformation, align sales and marketing, and shape business strategy. Discover the six responsibilities that define modern marketing leadership.', href: '/2025/07/31/challenges-for-b2b-cmo/', featured: true },
-      { cat: 'AI Operations', color: '#E05A47', meta: 'Guide · 17 min read', title: 'How AI in B2B Marketing Delivers Results', text: 'Nearly nine in ten companies use AI, but few see it in their operating profit. What sets the few apart is an operating model that defines what AI analyzes, creates, and executes, and who steers it.', href: '/2025/10/11/ai-in-b2b-marketing-guide/' },
-      { cat: 'Measurement', color: '#FBC737', meta: 'Guide · 15 min read', title: 'How to Calculate B2B Marketing ROI That Holds Up With Your Board', text: 'The ROI formula fits on one line. The hard part is the revenue that comes from marketing. Five KPIs make that contribution visible, and a calculator shows how much a campaign can afford to cost.', href: '/2025/10/13/b2b-marketing-roi-and-kpis/' },
-    ],
-  },
-  de: {
-    seoTitle: 'aimind.marketing – Strategie und Content für B2B-Technologie',
-    description: 'Christina Vontin übersetzt technische Komplexität in kommerziellen Wert: Strategie, Content und Sichtbarkeit in der KI-Suche für B2B-Technologieunternehmen.',
-    h1: 'Strategie und Content für B2B-Technologie',
-    intro: 'Christina Vontin übersetzt technische Komplexität in kommerziellen Wert.',
-    label: 'Die sechs Kernaufgaben',
-    more: 'Zum Leitfaden',
-    cards: [
-      { cat: 'Strategie', color: '#091944', meta: 'Leitfaden · 14 Min. Lesezeit', title: 'Der moderne B2B-CMO', text: 'Von B2B-CMOs wird heute erwartet, dass sie den Umsatz steigern, die KI-Transformation führen, Vertrieb und Marketing verzahnen und die Unternehmensstrategie mitgestalten. Der Leitfaden beschreibt die sechs Kernaufgaben, die moderne Marketingführung ausmachen.', href: '/de/2025/07/31/challenges-for-b2b-cmo/', featured: true },
-      { cat: 'KI-Betriebsmodell', color: '#E05A47', meta: 'Leitfaden · 17 Min. Lesezeit', title: 'Wie KI im B2B-Marketing Ergebnisse liefert', text: 'Fast neun von zehn Unternehmen nutzen KI, doch nur wenige sehen das im Geschäftsergebnis. Den Unterschied macht ein Betriebsmodell. Es legt fest, was KI auswertet, erstellt und ausführt und wer sie dabei steuert.', href: '/de/2025/10/11/ai-in-b2b-marketing-guide/' },
-      { cat: 'Controlling', color: '#FBC737', meta: 'Leitfaden · 15 Min. Lesezeit', title: 'B2B-Marketing-ROI, der die Geschäftsführung überzeugt', text: 'Die Formel für den Marketing-ROI passt in eine Zeile. Schwierig ist der Umsatz, der auf Marketing zurückgeht. Fünf Kennzahlen machen diesen Beitrag sichtbar, und ein Rechner zeigt, wie viel eine Kampagne kosten darf.', href: '/de/2025/10/13/b2b-marketing-roi-and-kpis/' },
-    ],
-  },
-}[lang];
+const en = {
+  seoTitle: 'aimind.marketing – B2B Technology Marketing Strategy',
+  description: 'Christina Vontin helps B2B technology companies with positioning, expert content and AI search presence, from start-ups to business units of large corporations.',
+  h1: ['Technology to', 'Market.'],
+  lead: 'Complex technology, made clear, positioned and anchored in its market.',
+  heroCta: 'View My Services',
+  audLabel: 'Who I work with',
+  audLead: 'For companies whose products need explaining',
+  industries: ['Software & SaaS', 'Mechanical & Plant Engineering', 'Industrial Technology & IoT', 'IT & Technology Consulting', 'Energy & Environmental Technology', 'Management & Specialist Consulting', 'Telecom & Connectivity', 'Financial Services & FinTech'],
+  audNote: 'From start-ups and mid-size firms to business units of large corporations. Especially where EU regulation shapes the market.',
+  howTitle: 'How I work',
+  howIntro: 'Even the most advanced technology can struggle to gain market traction when its value is not clearly communicated. I connect strategic positioning, deep subject-matter expertise and purposeful communication to turn technological strengths into a compelling market advantage.',
+  steps: [
+    { t: 'Positioning', x: 'I define the strategic positioning and core messaging that connect your technology to the business value it delivers to customers.', link: 'Service · Go-To-Market', href: '#svc-gtm' },
+    { t: 'Thought Leadership', x: 'I turn your experts’ knowledge into strategic content that demonstrates your expertise and establishes your company as a credible voice in the market.', link: 'Service · Market Authority', href: '#svc-auth' },
+    { t: 'Visibility', x: 'I optimize your content for AI-powered search so AI systems can better discover, understand and reference your expertise in their responses.', link: 'Service · AI Search Presence', href: '#svc-ai' },
+  ],
+  svcTitle: 'Three ways to bring your technology to market',
+  toggle: 'Key deliverables',
+  services: [
+    {
+      id: 'svc-gtm', name: 'Go-To-Market',
+      text: 'When a new product or market is on the table, sales, marketing and product often tell three different stories. A go-to-market strategy gives them one foundation, grounded in technical depth and the realities of your market.',
+      items: [
+        ['Core Narrative', 'A framework that defines how you stand apart from competitors and which arguments matter to which buyer group.'],
+        ['GTM Execution & Channels', 'Campaigns that reach buyers where they research and decide.'],
+        ['Bids & RFPs', 'Proposal content that shows the buyer the commercial value of your technology.'],
+        ['Sales Enablement', 'Battle cards and one-pagers that equip your sales team to answer the most common objections.'],
+      ],
+    },
+    {
+      id: 'svc-auth', name: 'Market Authority',
+      text: 'Your experts have deep industry knowledge and hands-on experience. Yet this expertise often remains underrepresented in your marketing. One 30-minute briefing becomes a month of content that establishes your company as the authority in its field.',
+      items: [
+        ['Subject Matter Briefings', 'A structured interview that captures your experts’ knowledge in 30 minutes, without tying them up for weeks.'],
+        ['Deep Tech / Commercial Paper', 'The core document every other piece of content on your topic builds on.'],
+        ['Topic Cluster', 'Articles that help buyers find you in Google search and in AI answers.'],
+        ['Amplification Kit', 'Short-form posts and ads that carry your insights into the social channels your buyers use.'],
+      ],
+    },
+    {
+      id: 'svc-ai', name: 'AI Search Presence',
+      text: 'Buyers ask ChatGPT, Claude, Perplexity and Google’s AI Overviews which providers to consider in their market. The answers name companies whose content AI systems can find, understand and trust as a source. I prepare your content to meet all three conditions.',
+      items: [
+        ['Content Audit', 'A page-by-page assessment of where AI systems can extract clear answers from your content, and where they can’t.'],
+        ['Content Optimization', 'Your priority pages reworked into clear answers that AI systems can cite.'],
+        ['Knowledge Graph', 'An internal link structure that connects your content by topic and shows how deep your expertise runs.'],
+        ['GEO Assistant', 'A custom assistant inside your team’s AI tool that drafts GEO-optimized text ready to work into your existing articles.'],
+      ],
+    },
+  ],
+  resTitle: 'Resources',
+  guides: [
+    {
+      kick: 'Strategy · 14 min read', title: 'The Modern B2B CMO', href: '/2025/07/31/challenges-for-b2b-cmo/', more: 'Read the Playbook',
+      text: 'Today’s B2B CMOs are expected to drive revenue, lead AI transformation, align sales and marketing, and shape business strategy. Discover the six responsibilities that define modern marketing leadership.',
+      sixLabel: 'The six responsibilities',
+      six: ['Capital allocation', 'Measurable impact', 'Sales and marketing alignment', 'Market signals', 'Org design', 'Market shaping'],
+    },
+    {
+      kick: 'AI Operations · 17 min read', title: 'How AI in B2B Marketing Delivers Results', href: '/2025/10/11/ai-in-b2b-marketing-guide/', more: 'Read the Guide',
+      text: 'Nearly nine in ten companies use AI, but few see it in their operating profit. What sets the few apart is an operating model that defines what AI analyzes, creates, and executes, and who steers it.',
+    },
+    {
+      kick: 'Measurement · 15 min read', title: 'How to Calculate B2B Marketing ROI That Holds Up With Your Board', href: '/2025/10/13/b2b-marketing-roi-and-kpis/', more: 'Read the Guide',
+      text: 'The ROI formula fits on one line. The hard part is the revenue that comes from marketing. Five KPIs make that contribution visible, and a calculator shows how much a campaign can afford to cost.',
+    },
+  ],
+  careerTitle: 'Experience from inside technology companies',
+  careerIntro: 'I have worked in marketing for international technology and consulting companies since 2000, in leadership roles since 2007. Today I bring that experience to companies that need marketing at this level without building a large team.',
+  careerLink: 'Full career on LinkedIn',
+  refsIntro: 'Recommendations from my in-house marketing career at TomTom and Cognizant and from agency partners I’ve collaborated with along the way.',
+  refsLink: 'More recommendations on LinkedIn',
+  refs: [
+    { q: 'Christina brings business smartness and marketing together. She has great expertise in several marketing disciplines, is an excellent problem solver at both strategic and operational level.', n: 'Wilbert van der Lans', r: 'Colleague at TomTom' },
+    { q: 'Christina used the latest digital strategies and channels. She combined ongoing innovations in the digital advertisement space with our client preferences.', n: 'Sandra Kaspar', r: 'Colleague at Cognizant' },
+    { q: 'Christina brings creativity and analytical thinking and has a unique ability to identify new opportunities in B2B digital environment.', n: 'Vesna Radulovic', r: 'OMD' },
+    { q: 'Tina is a highly skilled marketer and is a joy to work with. She has a wealth of experience that spans digital marketing, PR and many associated areas.', n: 'André Labadie', r: 'Brands to life' },
+    { q: 'Under Christina’s leadership, I was able to fully harness and expand my skills and expertise as a Marketeer, significantly enhancing my professional growth.', n: 'Magnolia Restrepo', r: 'Colleague at TomTom' },
+  ],
+  bandTitle: 'Where does your technology need to be understood?',
+  bandText: 'A 30-minute conversation. You leave with a clear next step.',
+};
+
+const de: typeof en = {
+  seoTitle: 'aimind.marketing – Strategie für B2B-Technologiemarketing',
+  description: 'Christina Vontin unterstützt B2B-Technologieunternehmen bei Positionierung, Fachinhalten und Präsenz in der KI-Suche, vom Start-up bis zum Konzernbereich.',
+  h1: ['Technologie im', 'Markt.'],
+  lead: 'Komplexe Technologie verständlich machen, positionieren und im Markt verankern.',
+  heroCta: 'Meine Services ansehen',
+  audLabel: 'Für wen ich arbeite',
+  audLead: 'Für Unternehmen, deren Produkte erklärt werden müssen',
+  industries: ['Software & SaaS', 'Maschinen- und Anlagenbau', 'Industrietechnologie & IoT', 'IT- und Technologieberatung', 'Energie- und Umwelttechnologie', 'Management- und Fachberatung', 'Telekommunikation & Konnektivität', 'Finanzdienstleistungen & FinTech'],
+  audNote: 'Ich arbeite für Start-ups, Mittelständler und Geschäftsbereiche großer Konzerne, besonders dort, wo EU-Regulierung den Markt prägt.',
+  howTitle: 'Wie ich arbeite',
+  howIntro: 'Selbst die leistungsstärkste Technologie hat es am Markt schwer, wenn ihre Vorteile nicht klar kommuniziert werden. Ich verbinde strategische Positionierung, fundiertes Fachwissen und gezielte Kommunikation, um technische Stärken in einen überzeugenden Marktvorteil zu übersetzen.',
+  steps: [
+    { t: 'Positionierung', x: 'Ich entwickle strategische Positionierung und Kernbotschaft, die Ihre Technologie mit dem geschäftlichen Nutzen für Ihre Kunden verbinden.', link: 'Service · Go-To-Market', href: '#svc-gtm' },
+    { t: 'Thought Leadership', x: 'Ich mache das Wissen Ihrer Experten durch strategische Fachinhalte sichtbar und stärke Ihre Position als relevante Stimme im Markt.', link: 'Service · Marktpräsenz', href: '#svc-auth' },
+    { t: 'Sichtbarkeit', x: 'Ich optimiere Ihre Inhalte für die KI-Suche, damit KI-Systeme Ihre Expertise besser erkennen, einordnen und in ihren Antworten berücksichtigen können.', link: 'Service · Präsenz in der KI-Suche', href: '#svc-ai' },
+  ],
+  svcTitle: 'Drei Wege, Ihre Technologie in den Markt zu bringen',
+  toggle: 'Leistungen',
+  services: [
+    {
+      id: 'svc-gtm', name: 'Go-To-Market',
+      text: 'Wenn ein neues Produkt oder ein neuer Markt ansteht, erzählen Vertrieb, Marketing und Produktteam oft drei verschiedene Geschichten. Die Go-To-Market-Strategie gibt ihnen eine gemeinsame Grundlage, die auf technischem Verständnis und den Gegebenheiten Ihres Marktes beruht.',
+      items: [
+        ['Kernbotschaften', 'Ein Rahmen legt fest, wodurch Sie sich vom Wettbewerb unterscheiden und welche Argumente für welche Kundengruppe zählen.'],
+        ['Umsetzung und Kanäle', 'Kampagnen erreichen Ihre Käufer dort, wo sie sich informieren und entscheiden.'],
+        ['Angebote und Ausschreibungen', 'Angebotstexte zeigen dem Auftraggeber, welchen wirtschaftlichen Nutzen Ihre Technologie bringt.'],
+        ['Vertriebsunterstützung', 'Mit Battle Cards und One-Pagern beantwortet Ihr Vertrieb die häufigsten Einwände.'],
+      ],
+    },
+    {
+      id: 'svc-auth', name: 'Marktpräsenz',
+      text: 'Ihre Fachleute verfügen über tiefes Branchenwissen und praktische Erfahrung. Doch dieses Wissen wird im Marketing oft nicht ausreichend sichtbar. Aus einem 30-minütigen Fachgespräch entstehen Inhalte für einen ganzen Monat, mit denen Ihr Unternehmen als Fachautorität wahrgenommen wird.',
+      items: [
+        ['Fachgespräche', 'Ein strukturiertes Interview erfasst das Wissen Ihrer Fachleute in 30 Minuten.'],
+        ['Grundlagendokument', 'Ein Deep-Tech- oder Commercial Paper bildet die Basis, auf die sich alle weiteren Inhalte zu Ihrem Thema stützen.'],
+        ['Themen-Cluster', 'Über diese Artikel finden Käufer Sie in der Google-Suche und in KI-Antworten.'],
+        ['Multiplikator-Set', 'Kurztexte und Anzeigen tragen Ihre Inhalte in die sozialen Netzwerke, in denen Ihre Käufer unterwegs sind.'],
+      ],
+    },
+    {
+      id: 'svc-ai', name: 'Präsenz in der KI-Suche',
+      text: 'Käufer fragen ChatGPT, Claude, Perplexity oder die KI-Übersichten von Google nach Anbietern in ihrem Markt. In den Antworten erscheinen Unternehmen, deren Inhalte KI-Systeme finden, verstehen und als verlässliche Quelle einstufen. Ich bereite Ihre Inhalte so auf, dass sie alle drei Voraussetzungen erfüllen.',
+      items: [
+        ['Content-Audit', 'Eine Analyse Seite für Seite zeigt, aus welchen Ihrer Inhalte KI-Systeme klare Antworten entnehmen können und wo nicht.'],
+        ['Optimierung der Inhalte', 'Ihre wichtigsten Seiten werden so überarbeitet, dass sie klare, zitierfähige Antworten enthalten.'],
+        ['Wissensgraph', 'Eine interne Linkstruktur verknüpft Ihre Inhalte nach Themen und zeigt, wie tief Ihr Wissen reicht.'],
+        ['GEO-Assistent', 'Ein KI-Assistent im KI-Werkzeug Ihres Teams erstellt GEO-optimierte Texte, die in bestehende Artikel eingebaut werden können.'],
+      ],
+    },
+  ],
+  resTitle: 'Ressourcen',
+  guides: [
+    {
+      kick: 'Strategie · 14 Min. Lesezeit', title: 'Der moderne B2B-CMO', href: '/de/2025/07/31/challenges-for-b2b-cmo/', more: 'Zum Leitfaden',
+      text: 'Von B2B-CMOs wird heute erwartet, dass sie den Umsatz steigern, die KI-Transformation führen, Vertrieb und Marketing verzahnen und die Unternehmensstrategie mitgestalten. Der Leitfaden beschreibt die sechs Kernaufgaben, die moderne Marketingführung ausmachen.',
+      sixLabel: 'Die sechs Kernaufgaben',
+      six: ['Kapitaleinsatz', 'Messbare Wirkung', 'Verzahnung von Vertrieb und Marketing', 'Marktsignale', 'Marketingorganisation', 'Marktgestaltung'],
+    },
+    {
+      kick: 'KI-Betriebsmodell · 17 Min. Lesezeit', title: 'Wie KI im B2B-Marketing Ergebnisse liefert', href: '/de/2025/10/11/ai-in-b2b-marketing-guide/', more: 'Zum Leitfaden',
+      text: 'Fast neun von zehn Unternehmen nutzen KI, doch nur wenige sehen das im Geschäftsergebnis. Den Unterschied macht ein Betriebsmodell. Es legt fest, was KI auswertet, erstellt und ausführt und wer sie dabei steuert.',
+    },
+    {
+      kick: 'Controlling · 15 Min. Lesezeit', title: 'B2B-Marketing-ROI, der die Geschäftsführung überzeugt', href: '/de/2025/10/13/b2b-marketing-roi-and-kpis/', more: 'Zum Leitfaden',
+      text: 'Die Formel für den Marketing-ROI passt in eine Zeile. Schwierig ist der Umsatz, der auf Marketing zurückgeht. Fünf Kennzahlen machen diesen Beitrag sichtbar, und ein Rechner zeigt, wie viel eine Kampagne kosten darf.',
+    },
+  ],
+  careerTitle: 'Erfahrung aus Technologie\u00ADunternehmen',
+  careerIntro: 'Seit 2000 arbeite ich im Marketing internationaler Technologie- und Beratungsunternehmen, seit 2007 in leitenden Rollen. Heute bringe ich diese Erfahrung in Unternehmen ein, die Marketing auf diesem Niveau brauchen, ohne dafür ein großes Team aufzubauen.',
+  careerLink: 'Werdegang auf LinkedIn',
+  refsIntro: 'Empfehlungen aus meiner Zeit im Marketing bei TomTom und Cognizant und von Agenturpartnern, mit denen ich zusammengearbeitet habe.',
+  refsLink: 'Weitere Empfehlungen auf LinkedIn',
+  refs: [
+    { q: 'Christina vereint Geschäftssinn und Marketing. Sie besitzt große Expertise in mehreren Marketingdisziplinen und ist eine hervorragende Problemlöserin, strategisch wie operativ.', n: 'Wilbert van der Lans', r: 'Kollege bei TomTom' },
+    { q: 'Christina nutzte die neuesten digitalen Strategien und Kanäle. Sie kombinierte fortlaufende Innovationen im digitalen Werbemarkt mit den Präferenzen unserer Kunden.', n: 'Sandra Kaspar', r: 'Kollegin bei Cognizant' },
+    { q: 'Christina vereint Kreativität und analytisches Denken und besitzt die einzigartige Fähigkeit, neue Chancen im digitalen B2B-Umfeld zu erkennen.', n: 'Vesna Radulovic', r: 'OMD' },
+    { q: 'Tina ist äußerst kompetent im Bereich Marketing, und die Zusammenarbeit mit ihr macht große Freude. Ihre umfassende Erfahrung reicht von digitalem Marketing über PR bis zu vielen angrenzenden Bereichen.', n: 'André Labadie', r: 'Brands to life' },
+    { q: 'Unter Christinas Führung konnte ich meine Fähigkeiten und mein Fachwissen im Marketing voll entfalten und ausbauen. Das hat meine berufliche Entwicklung deutlich vorangebracht.', n: 'Magnolia Restrepo', r: 'Kollegin bei TomTom' },
+  ],
+  bandTitle: 'Wo muss Ihre Technologie verstanden werden?',
+  bandText: '30 Minuten, um zu erkennen, wo Ihr Marketing mehr erreichen kann.',
+};
+
+const c = lang === 'de' ? de : en;
+const career = [
+  ['2000–2007', 'CGI', 'Digital Marketing Manager'],
+  ['2007–2012', 'GFT Technologies', 'Head of Marketing'],
+  ['2012–2015', 'TomTom', 'Director Field Marketing'],
+  ['2015–2022', 'Cognizant', 'Director Paid Media'],
+];
+const [main, ...side] = c.guides;
+const q = lang === 'de' ? ['„', '“'] : ['“', '”'];
 
 const jsonLd = [
   {
@@ -46,24 +197,140 @@ const jsonLd = [
     inLanguage: t.htmlLang,
     publisher: { '@type': 'Person', name: SITE.author },
   },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'ProfessionalService',
+    name: SITE.name,
+    url: SITE.url,
+    founder: { '@type': 'Person', name: SITE.author, sameAs: [linkedin] },
+    areaServed: 'Europe',
+    knowsLanguage: ['de', 'en'],
+  },
 ];
 ---
-<Base lang={lang} seoTitle={copy.seoTitle} description={copy.description} permalink={`${p}/`} alternates={[{ lang: 'en', href: '/' }, { lang: 'de', href: '/de/' }]} jsonLd={jsonLd}>
-  <section class="hero">
-    <div class="wrap">
-      <h1>{copy.h1}</h1>
-      <p>{copy.intro}</p>
+<Base lang={lang} seoTitle={c.seoTitle} description={c.description} permalink={`${p}/`} alternates={[{ lang: 'en', href: '/' }, { lang: 'de', href: '/de/' }]} jsonLd={jsonLd}>
+  <section class="hero-sec">
+    <div class="wrap hero">
+      <div class="c-white" aria-hidden="true"></div>
+      <div class="htext">
+        <h1><span class="hl"><span>{c.h1[0]}</span></span><span class="hl"><span class="it">{c.h1[1]}</span></span></h1>
+        <p class="lead in d1">{c.lead}</p>
+        <div class="cta in d2"><a href="#services" class="btn">{c.heroCta}</a></div>
+      </div>
+      <aside class="aud" aria-label={c.audLabel}>
+        <span class="lens" aria-hidden="true"></span>
+        <div class="aud-in">
+          <p class="aud-lead">{c.audLead}</p>
+          <ul>{c.industries.map((i) => <li>{i}</li>)}</ul>
+          <p class="aud-note">{c.audNote}</p>
+        </div>
+      </aside>
     </div>
   </section>
-  <div class="wrap cards">
-    {copy.cards.map((c) => (
-      <div class={c.featured ? 'card featured' : 'card'}>
-        <span class="cat" style={`--cat:${c.color}`}>{c.cat}</span>
-        <div class="meta">{c.meta}</div>
-        <h2>{c.title}</h2>
-        <p>{c.text}</p>
-        <a class="more" href={c.href}>{copy.more}</a>
+
+  <section id="approach" class="wrap sec" style="padding-bottom: 24px">
+    <div class="head-row">
+      <h2 class="h2 rv">{c.howTitle}</h2>
+      <div class="intro"><p>{c.howIntro}</p></div>
+    </div>
+    <ol class="steps">
+      {c.steps.map((s, i) => (
+        <li class="rv">
+          <span class="num-row"><span class="num">{String(i + 1).padStart(2, '0')}</span><span class="ln"></span></span>
+          <span class="step-t">{s.t}</span>
+          <span class="step-x">{s.x}</span>
+          <a href={s.href} class="txt">{s.link}</a>
+        </li>
+      ))}
+    </ol>
+  </section>
+
+  <section id="services" class="wrap sec" style="padding-top: 88px">
+    <h2 class="h2 rv" style="max-width: 16ch; margin-bottom: 40px">{c.svcTitle}</h2>
+    <div class="svcgrid">
+      {c.services.map((s) => (
+        <article id={s.id} class="svc rv">
+          <h3>{s.name}</h3>
+          <p>{s.text}</p>
+          <details>
+            <summary>{c.toggle}<span class="chev"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="#091944" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6l4 4 4-4" /></svg></span></summary>
+            <ul class="dl">{s.items.map(([k, v]) => <li><strong>{k}</strong>{v}</li>)}</ul>
+          </details>
+          <a href={t.cta.href} class="txt">{t.cta.label}</a>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section id="resources" class="bg-off">
+    <div class="wrap sec">
+      <div class="res-head"><h2 class="h2 rv">{c.resTitle}</h2></div>
+      <div class="res">
+        <article class="res-main rv">
+          <p class="kick">{main.kick}</p>
+          <h3><a href={main.href} class="nl">{main.title}</a></h3>
+          <p class="tease">{main.text}</p>
+          <p class="six-label">{main.sixLabel}</p>
+          <ol class="six">{main.six!.map((x, i) => <li><span>{String(i + 1).padStart(2, '0')}</span>{x}</li>)}</ol>
+          <a href={main.href} class="txt">{main.more}</a>
+        </article>
+        <div class="res-side">
+          {side.map((g) => (
+            <article class="rv">
+              <p class="kick">{g.kick}</p>
+              <h3><a href={g.href} class="nl">{g.title}</a></h3>
+              <p class="tease">{g.text}</p>
+              <a href={g.href} class="txt">{g.more}</a>
+            </article>
+          ))}
+        </div>
       </div>
-    ))}
-  </div>
+    </div>
+  </section>
+
+  <section id="career">
+    <div class="wrap sec">
+      <div class="head-row">
+        <h2 class="h2 rv">{c.careerTitle}</h2>
+        <div class="intro">
+          <p>{c.careerIntro}</p>
+          <a href={linkedin} class="txt" target="_blank" rel="noopener">{c.careerLink}</a>
+        </div>
+      </div>
+      <ol class="tl">
+        {career.map(([y, co, r]) => (
+          <li class="rv">
+            <span class="num-row"><span class="yr">{y}</span><span class="ln"></span></span>
+            <span class="co">{co}</span>
+            <span class="role">{r}</span>
+          </li>
+        ))}
+      </ol>
+      <div class="refs-head">
+        <p>{c.refsIntro}</p>
+        <a href={`${linkedin}details/recommendations/`} class="txt" target="_blank" rel="noopener">{c.refsLink}</a>
+      </div>
+      <div class="refs">
+        <div class="track">
+          {[...c.refs, ...c.refs].map((r, i) => (
+            <figure class="ref" aria-hidden={i >= c.refs.length ? 'true' : undefined}>
+              <blockquote>{q[0]}{r.q}{q[1]}</blockquote>
+              <figcaption><strong>{r.n}</strong><span>{r.r}</span></figcaption>
+            </figure>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="wrap sec" style="padding-top: 24px">
+    <div class="band rv">
+      <span class="deco1" aria-hidden="true"></span><span class="deco2" aria-hidden="true"></span>
+      <div class="band-text">
+        <h2 class="h2">{c.bandTitle}</h2>
+        <p>{c.bandText}</p>
+      </div>
+      <a href={t.cta.href} class="btn">{t.cta.label}</a>
+    </div>
+  </section>
 </Base>

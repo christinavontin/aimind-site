@@ -27,7 +27,12 @@ const { kind, entry, alternates } = Astro.props as any;
 const d = entry.data;
 const lang: Lang = d.lang;
 const t = UI[lang];
-const { Content } = await render(entry);
+const { Content, headings } = await render(entry);
+const toc = headings.filter((h) => h.depth === 2);
+const words = (entry.body ?? '').split(/\s+/).length;
+const minutes = Math.max(1, Math.round(words / 220));
+const readLabel = lang === 'de' ? `${minutes} Min. Lesezeit` : `${minutes} min read`;
+const kicker = lang === 'de' ? 'Leitfaden' : 'Guide';
 
 const url = abs(d.permalink);
 const homeUrl = abs(t.home);
@@ -83,43 +88,68 @@ jsonLd.push({
   ogType={kind === 'post' ? 'article' : 'website'}
   jsonLd={jsonLd}
 >
-  <article class="article">
-    <h1>{d.title}</h1>
-    {kind === 'post' && (
-      <p class="article-meta">
-        {t.by} {SITE.author} · {t.updated} <time datetime={d.updated.toISOString()}>{formatDate(d.updated, lang)}</time>
-      </p>
-    )}
-    {d.image && (
-      <figure class="article-hero">
-        <img src={d.image} alt={d.imageAlt ?? ''} width="1200" height="675" fetchpriority="high" />
-      </figure>
-    )}
-    <div class="prose">
-      <Content />
-    </div>
-
-    {faq.length > 0 && (
-      <section class="faq" aria-labelledby="faq">
-        <h2 id="faq">{t.faq}</h2>
-        {faq.map((f: { q: string; html: string }) => (
-          <details open>
-            <summary>{f.q}</summary>
-            <p set:html={f.html} />
-          </details>
-        ))}
+  {kind === 'post' ? (
+    <>
+      <section class="a-head">
+        <div class="inner">
+          <p class="kick">{kicker}</p>
+          <h1>{d.title}</h1>
+          <p class="a-meta"><strong>{SITE.author}</strong> · {t.updated} <time datetime={d.updated.toISOString()}>{formatDate(d.updated, lang)}</time> · {readLabel}</p>
+        </div>
       </section>
-    )}
+      <div class="a-body">
+        {toc.length > 2 && (
+          <aside class="toc" aria-label={t.toc}>
+            <p>{t.toc}</p>
+            <ol>
+              {toc.map((h: { slug: string; text: string }) => <li><a href={`#${h.slug}`}>{h.text}</a></li>)}
+              {faq.length > 0 && <li><a href="#faq">{t.faq}</a></li>}
+            </ol>
+          </aside>
+        )}
+        <article class="article">
+          {d.image && (
+            <figure class="article-hero">
+              <img src={d.image} alt={d.imageAlt ?? ''} width="1200" height="675" fetchpriority="high" />
+            </figure>
+          )}
+          <div class="prose"><Content /></div>
 
-    {d.sources?.length > 0 && (
-      <section class="sources" aria-labelledby="sources">
-        <h2 id="sources">{t.sources}</h2>
-        <ul>
-          {d.sources.map((s: { author: string; title: string; url: string }) => (
-            <li>{s.author}: <a href={s.url}>{s.title}</a></li>
-          ))}
-        </ul>
-      </section>
-    )}
-  </article>
+          {faq.length > 0 && (
+            <section class="faq" aria-labelledby="faq">
+              <h2 id="faq">{t.faq}</h2>
+              {faq.map((f: { q: string; html: string }, i: number) => (
+                <details open={i === 0}>
+                  <summary>{f.q}<span class="chev"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="#091944" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6l4 4 4-4" /></svg></span></summary>
+                  <p set:html={f.html} />
+                </details>
+              ))}
+            </section>
+          )}
+
+          <section class="author">
+            <p class="name">{SITE.author}</p>
+            <p>{t.authorBio}</p>
+            <a href={t.cta.href} class="btn" style="font-size: 15px">{t.cta.label}</a>
+          </section>
+
+          {d.sources?.length > 0 && (
+            <section class="sources" aria-labelledby="sources">
+              <h2 id="sources">{t.sources}</h2>
+              <ul>
+                {d.sources.map((s: { author: string; title: string; url: string }) => (
+                  <li>{s.author}: <a href={s.url}>{s.title}</a></li>
+                ))}
+              </ul>
+            </section>
+          )}
+        </article>
+      </div>
+    </>
+  ) : (
+    <>
+      <section class="a-head"><div class="inner"><h1>{d.title}</h1></div></section>
+      <div class="a-body"><article class="article"><div class="prose"><Content /></div></article></div>
+    </>
+  )}
 </Base>

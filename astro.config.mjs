@@ -18,7 +18,7 @@ export default defineConfig({
       // Pairs EN and DE URLs as hreflang alternates in the sitemap.
       i18n: {
         defaultLocale: 'en',
-        locales: { en: 'en-GB', de: 'de-DE' },
+        locales: { en: 'en-US', de: 'de-DE' },
       },
     }),
   ],

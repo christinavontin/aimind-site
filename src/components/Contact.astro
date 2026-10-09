@@ -1,0 +1,74 @@
+---
+// Contact page, EN and DE. The Google Calendar booking page loads only after a click (GDPR).
+import Base from '../layouts/Base.astro';
+import { SITE, UI, type Lang } from '../lib/site';
+
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const t = UI[lang];
+
+const c = {
+  en: {
+    seoTitle: 'Book a Strategy Call – aimind.marketing',
+    description: 'Book a 30-minute strategy call with Christina Vontin via Google Meet, in English or German, about your product, your market and your next step.',
+    h1: ['Book a', 'Strategy Call.'],
+    lead: '30 minutes to discover where your marketing can have a greater impact.',
+    calTitle: 'Choose a time',
+    calNote: ['The booking calendar is provided by Google. It loads only after you click, and Google then receives your connection data. Details are in the ', '.'],
+    calBtn: 'Show the calendar',
+    privacyLabel: 'Privacy Policy',
+    iframeTitle: 'Book a Strategy Call with Christina Vontin',
+    factsTitle: 'What to expect',
+    facts: [
+      ['30 minutes, online', 'Via Google Meet, in English or German.'],
+      ['Your situation first', 'We talk about your product, your market and what isn’t working yet.'],
+      ['A clear next step', 'You leave knowing which service fits, or whether none does.'],
+    ],
+  },
+  de: {
+    seoTitle: 'Strategiegespräch vereinbaren – aimind.marketing',
+    description: 'Vereinbaren Sie ein 30-minütiges Strategiegespräch mit Christina Vontin über Google Meet, auf Deutsch oder Englisch, zu Produkt, Markt und nächstem Schritt.',
+    h1: ['Strategiegespräch', 'vereinbaren.'],
+    lead: 'Ein Gespräch von 30 Minuten über Ihr Produkt, Ihren Markt und die Frage, wo Ihre Technologie verstanden werden muss. Danach kennen Sie den nächsten Schritt.',
+    calTitle: 'Termin wählen',
+    calNote: ['Der Buchungskalender kommt von Google. Er lädt erst nach Ihrem Klick, und Google erhält dann Ihre Verbindungsdaten. Details stehen in der ', '.'],
+    calBtn: 'Kalender anzeigen',
+    privacyLabel: 'Datenschutzerklärung',
+    iframeTitle: 'Strategiegespräch mit Christina Vontin vereinbaren',
+    factsTitle: 'Was Sie erwartet',
+    facts: [
+      ['30 Minuten, online', 'Über Google Meet, auf Deutsch oder Englisch.'],
+      ['Ihre Situation zuerst', 'Wir sprechen über Ihr Produkt, Ihren Markt und das, was noch nicht funktioniert.'],
+      ['Ein klarer nächster Schritt', 'Sie wissen danach, welcher Service passt oder ob keiner passt.'],
+    ],
+  },
+}[lang];
+const permalink = lang === 'de' ? '/de/contact/' : '/contact/';
+---
+<Base lang={lang} seoTitle={c.seoTitle} description={c.description} permalink={permalink} alternates={[{ lang: 'en', href: '/contact/' }, { lang: 'de', href: '/de/contact/' }]}>
+  <section class="page-hero">
+    <div class="wrap">
+      <h1><span class="hl"><span>{c.h1[0]}</span></span><span class="hl"><span class="it">{c.h1[1]}</span></span></h1>
+      <p class="lead in d1">{c.lead}</p>
+    </div>
+  </section>
+  <section class="wrap sec" style="padding-top: 72px">
+    <div class="contact-grid">
+      <div>
+        <details class="calwrap">
+          <summary class="cal">
+            <svg width="44" height="44" viewBox="0 0 32 32" aria-hidden="true"><defs><clipPath id="cal-ov"><circle cx="19.5" cy="12.5" r="11.5" /></clipPath></defs><circle cx="19.5" cy="12.5" r="11.5" fill="#091944" /><circle cx="10.5" cy="22" r="8" fill="#FBC737" /><circle cx="10.5" cy="22" r="8" fill="#FFFFFF" clip-path="url(#cal-ov)" /></svg>
+            <span class="h">{c.calTitle}</span>
+            <p class="note">{c.calNote[0]}<a href={t.privacy.href} class="nl" style="text-decoration: underline">{c.privacyLabel}</a>{c.calNote[1]}</p>
+            <span class="btn">{c.calBtn}</span>
+          </summary>
+          <iframe src={SITE.bookingUrl} title={c.iframeTitle} loading="lazy"></iframe>
+        </details>
+      </div>
+      <aside>
+        <p class="kick" style="margin: 0 0 16px">{c.factsTitle}</p>
+        <ul class="facts">{c.facts.map(([k, v]) => <li><strong>{k}</strong>{v}</li>)}</ul>
+      </aside>
+    </div>
+  </section>
+</Base>

@@ -1,12 +1,14 @@
 # aimind.marketing design guide
 
-Agreed with Christina on October 8, 2026. This guide is binding for the website and for any other material (documents, slides, LinkedIn). The final designs are in `design/` (open the `.html` files in a browser) and on the design canvas: https://claude.ai/artifact/9ysPDL1AqTgN52jaHjGVMY
+Agreed with Christina on October 8–9, 2026. This guide is binding for the website and for any other material (documents, slides, LinkedIn).
+
+The reference for the final design is the **live code** (`src/`), deployed at https://aimind-site.pages.dev/. Screenshots of the final pages: `design/screens/`. Logo files: `design/logo/`. Style guide boards: `design/style-guide/`. The design canvas (https://claude.ai/artifact/9ysPDL1AqTgN52jaHjGVMY) holds the exploration history; where it differs from the code, the code wins.
 
 ## 1. Brand
 
 - Name and logo: **aimind.marketing**, with "marketing" in italics and a yellow dot between the words.
-- Positioning: **Technology to Market.** Translating complex technology into market positioning, authority and demand.
-- Audience: companies whose products need explaining (software and SaaS, industrial technology and IoT, IT and engineering services, energy and green tech), from start-ups and mid-size firms to business units of large corporations, especially where EU regulation shapes the market.
+- Positioning: **Technology to Market.** / **Technologie im Markt.** Complex technology, made clear, positioned and anchored in its market.
+- Audience: companies whose products need explaining, in eight industries: Software & SaaS · Mechanical & Plant Engineering · Industrial Technology & IoT · IT & Technology Consulting · Energy & Environmental Technology · Management & Specialist Consulting · Telecom & Connectivity · Financial Services & FinTech. From start-ups and mid-size firms to business units of large corporations, especially where EU regulation shapes the market.
 - Christina's own name appears as a handwritten signature (author box, About, email), never as the logo.
 
 ## 2. Logo
@@ -14,6 +16,7 @@ Agreed with Christina on October 8, 2026. This guide is binding for the website 
 - **Sign:** two overlapping circles. Large navy circle (technology) top right, smaller yellow circle (market) bottom left; the overlap is white on light backgrounds. SVG (viewBox 0 0 32 32): navy `circle cx=19.5 cy=12.5 r=11.5`, yellow `circle cx=10.5 cy=22 r=8`, overlap = yellow circle clipped by the navy circle, filled with the background color.
 - **Wordmark:** Newsreader. "aimind" weight 500, yellow dot (diameter 0.17 em), "marketing" italic 400. Navy on light, white on navy.
 - **Three sizes:** full (sign + wordmark) for header and footer; sign only for favicon, app icon, profile picture and anything below email-signature size.
+- Files: `design/logo/aimind-sign.svg` (sign), `aimind-sign-on-offwhite.svg`, `aimind-sign-512.png` (profile picture, app icon), `aimind-logo.png` (full logo, transparent). Favicon: `public/favicon.svg` and `favicon.png`. In the site the logo is `src/components/Logo.astro`.
 - Never: the old "aimX", a separate "MARKETING" line, the sign with the circles apart.
 
 ## 3. Colors
@@ -38,7 +41,7 @@ Rules:
 
 ## 4. Typography
 
-Three fonts, one role each (Google Fonts):
+Three fonts, one role each. On the website they are self-hosted through @fontsource (no Google request, GDPR); for documents and slides use the Google Fonts versions.
 - **Schibsted Grotesk** (600, 700): headings on pages, service names, numbers. Site structure.
 - **Newsreader** (400, 500, italic 400): everything people read as editorial content: article headings, guide titles everywhere, quotes, the logo, one emphasized word in a headline.
 - **Instrument Sans** (400, 500, 600): all running text and interface.
@@ -79,7 +82,7 @@ Rules:
 
 - Content width max 1280 px, side gutter 32 px (20 px on phones). Designed at 1440 px desktop and 390 px phone; fluid in between; checked at 1024 and 768 px.
 - Cards: off-white, radius 16 px, no border; equal heights in a row (CSS subgrid aligns title, text, toggle and link).
-- Hero: off-white with a large white circle behind the text and the cream audience circle beside the headline; on phones the audience becomes a rounded cream card below the button.
+- Hero: off-white with a large white circle behind the text and the cream audience circle (640 px, eight industries in one column) beside the headline; below 1180 px the circle moves under the text; on phones it becomes a rounded cream card below the button.
 - Background circles are a brand motif (hero, contact band): large, soft (white, cream, yellow), cropped at the edge, text above them. Never navy circles behind text.
 - Timelines and process steps: a number or year above a thin line (#C9CCD6), no icons or symbols.
 - Homepage order: hero with audience · How I Work · services · resources · career and references · contact band · footer. No further sections on the homepage; new content gets its own page.
@@ -98,7 +101,7 @@ Subtle and slow; switches off with `prefers-reduced-motion`.
 - German first, English is a rewrite in American thought-leadership English.
 - Service copy starts with the client's concrete problem, then the solution.
 - No "X not Y" constructions, no hype words, no colons in headings, never "free of charge".
-- "ich" / "I" throughout (pending final confirmation).
+- "ich" / "I" throughout, also in the How I work steps and service cards (confirmed October 9, 2026).
 - Percentages with the % sign; German with a space before it (25 %).
 
 ## 9. Contact
