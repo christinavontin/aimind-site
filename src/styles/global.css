@@ -235,6 +235,7 @@ h1 .hl > span { display: inline-block; position: relative; padding-right: .12em;
 .a-meta { margin-top: 36px; font-size: 15px; color: var(--slate); }
 .a-meta strong { color: var(--navy); font-weight: 600; }
 .a-body { max-width: var(--wide); margin: 0 auto; padding: 72px 32px; display: flex; flex-wrap: wrap; gap: 64px; align-items: flex-start; }
+.a-body.page-body { max-width: 1040px; }
 .toc { flex: 1 1 220px; max-width: 260px; position: sticky; top: 96px; }
 .toc p { margin: 0 0 16px; font-size: 13px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--slate); }
 .toc ol { margin: 0; padding: 0; list-style: none; font-size: 15px; line-height: 1.4; display: flex; flex-direction: column; gap: 14px; border-left: 1px solid var(--line-strong); }
@@ -245,8 +246,8 @@ h1 .hl > span { display: inline-block; position: relative; padding-right: .12em;
 .article-hero { margin: 0 0 40px; }
 .article-hero img { display: block; width: 100%; border-radius: 16px; }
 .prose { color: var(--navy); }
-.prose > p:first-child { font-size: 22px; line-height: 1.6; }
-.prose > p:first-child::first-letter { float: left; margin: .085em .08em 0 -.02em; font-family: var(--font-serif); font-weight: 400; font-size: 4.6em; line-height: .78; color: var(--cyan); }
+.prose:not(.page-prose) > p:first-child { font-size: 22px; line-height: 1.6; }
+.prose:not(.page-prose) > p:first-child::first-letter { float: left; margin: .085em .08em 0 -.02em; font-family: var(--font-serif); font-weight: 400; font-size: 4.6em; line-height: .78; color: var(--cyan); }
 .prose p, .prose ul, .prose ol { margin: 0 0 24px; }
 .prose li { margin-bottom: 8px; }
 .prose a, .faq a, .sources a { color: var(--navy); text-decoration: underline; text-decoration-color: var(--yellow); text-decoration-thickness: 2px; text-underline-offset: .2em; }
@@ -341,7 +342,7 @@ h1 .hl > span { display: inline-block; position: relative; padding-right: .12em;
   .aud-note { font-size: 15px; }
   .a-head .inner { padding: 56px 20px 48px; }
   .a-body { padding: 48px 20px; }
-  .prose > p:first-child { font-size: 20px; }
+  .prose:not(.page-prose) > p:first-child { font-size: 20px; }
   .prose h2, .faq h2 { font-size: 32px; }
   .faq summary { font-size: 19px; }
   .refs-head { margin-top: 64px; }
