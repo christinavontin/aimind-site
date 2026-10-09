@@ -8,7 +8,7 @@ description: Welche Daten aimind.marketing verarbeitet, wenn Sie die Website bes
 updated: 2026-10-09
 ---
 
-Diese Erklärung beschreibt, welche personenbezogenen Daten verarbeitet werden, wenn Sie aimind.marketing besuchen, über die Website einen Termin buchen oder mir eine E-Mail schreiben. Die Website setzt keine Cookies, nutzt keine Webanalyse und bindet keine Werbung oder Tracking-Dienste ein.
+Diese Erklärung beschreibt, welche personenbezogenen Daten verarbeitet werden, wenn Sie aimind.marketing besuchen, über die Website einen Termin buchen oder mir eine E-Mail schreiben. Die Website setzt keine Cookies und bindet keine Werbung oder Tracking-Dienste ein. Für die Statistik nutze ich einen Dienst ohne Cookies.
 
 ## Verantwortliche
 
@@ -26,6 +26,12 @@ E-Mail: christina.vontin@gmail.com
 Die Website wird über Cloudflare Pages ausgeliefert, einen Dienst der Cloudflare, Inc., 101 Townsend St., San Francisco, CA 94107, USA. Damit die Seiten in Ihrem Browser erscheinen und die Website vor Angriffen geschützt bleibt, verarbeitet Cloudflare technische Daten Ihres Aufrufs, insbesondere Ihre IP-Adresse, die aufgerufene Seite, Datum und Uhrzeit sowie Angaben zu Browser und Betriebssystem. Rechtsgrundlage ist mein berechtigtes Interesse an einer sicheren und zuverlässigen Bereitstellung der Website (Art. 6 Abs. 1 lit. f DSGVO).
 
 Cloudflare kann Daten in die USA übermitteln. Nach eigenen Angaben stützt sich Cloudflare dabei auf seine Zertifizierung nach dem EU-US Data Privacy Framework und hilfsweise auf die Standardvertragsklauseln der EU-Kommission. Weitere Informationen finden Sie in der [Datenschutzerklärung von Cloudflare](https://www.cloudflare.com/de-de/privacypolicy/).
+
+## Statistik mit Cloudflare Web Analytics
+
+Um zu sehen, wie oft welche Seiten aufgerufen werden und über welche Websites Besucher kommen, nutze ich Cloudflare Web Analytics. Dafür lädt jede Seite ein kleines Skript von Cloudflare, das anonyme Angaben zum Aufruf übermittelt, etwa die aufgerufene Seite, die verweisende Website, Land, Gerätetyp und Ladezeit. Nach Angaben von Cloudflare setzt der Dienst keine Cookies, speichert nichts im Browser und erstellt keine Profile einzelner Besucher. Rechtsgrundlage ist mein berechtigtes Interesse, die Nutzung meiner Website auszuwerten und die Inhalte zu verbessern (Art. 6 Abs. 1 lit. f DSGVO).
+
+## Schriftarten
 
 Schriftarten und alle anderen Bestandteile der Website liegen auf demselben Server. Beim Aufruf einer Seite werden deshalb keine Daten an Google Fonts oder andere Dritte übertragen.
 

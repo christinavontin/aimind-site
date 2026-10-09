@@ -8,6 +8,8 @@ description: Six B2B CMO responsibilities, from capital allocation to market sha
 keyphrase: B2B CMO responsibilities
 published: 2025-07-31
 updated: 2026-10-08
+socialImage: /images/social/cmo-hub-en.jpg
+socialImageAlt: "The six responsibilities of the B2B CMO around a marketing leader at her desk"
 role: hub
 faq:
   - q: What does a B2B CMO do?

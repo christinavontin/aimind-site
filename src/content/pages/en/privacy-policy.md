@@ -8,7 +8,7 @@ description: What data aimind.marketing processes when you visit the site, book 
 updated: 2026-10-09
 ---
 
-This policy explains which personal data is processed when you visit aimind.marketing, book a call through the site, or send me an email. The site sets no cookies, uses no web analytics, and runs no advertising or tracking services.
+This policy explains which personal data is processed when you visit aimind.marketing, book a call through the site, or send me an email. The site sets no cookies and runs no advertising or tracking services. For statistics, I use a service that works without cookies.
 
 ## Data Controller
 
@@ -26,6 +26,12 @@ Email: christina.vontin@gmail.com
 The site is delivered through Cloudflare Pages, a service of Cloudflare, Inc., 101 Townsend St., San Francisco, CA 94107, USA. To display the pages in your browser and protect the site against attacks, Cloudflare processes technical data about your visit, in particular your IP address, the page requested, the date and time, and information about your browser and operating system. The legal basis is my legitimate interest in providing the site securely and reliably (Art. 6(1)(f) GDPR).
 
 Cloudflare may transfer data to the United States. According to Cloudflare, these transfers rely on its certification under the EU-U.S. Data Privacy Framework and, as a fallback, on the European Commission’s Standard Contractual Clauses. More information is available in [Cloudflare’s privacy policy](https://www.cloudflare.com/privacypolicy/).
+
+## Statistics with Cloudflare Web Analytics
+
+To see how often pages are viewed and which websites send visitors, I use Cloudflare Web Analytics. Each page loads a small script from Cloudflare that sends anonymous details about the visit, such as the page viewed, the referring website, country, device type, and load time. According to Cloudflare, the service sets no cookies, stores nothing in your browser, and builds no profiles of individual visitors. The legal basis is my legitimate interest in understanding how the site is used and improving its content (Art. 6(1)(f) GDPR).
+
+## Fonts
 
 Fonts and all other parts of the site are served from the same server. Loading a page therefore sends no data to Google Fonts or any other third party.
 

@@ -34,9 +34,10 @@ Where the canvas, the Google Doc and the code differ, the **code** is the final 
 3. **Migrate the missing pages** (they return 404 on the test site today, linked from the homepage and footer):
    - About `/who-i-am/` (removed from the footer on October 9; decide where it is linked once the page exists) and Glossary, each EN and `/de/`
    - Privacy Policy EN/DE: rewritten on October 9 for the new site (Cloudflare Pages, no cookies, Google Calendar booking on click, Google Meet, Google Workspace email). The WordPress version described comments, Gravatar and login cookies. Christina reviews it; the contact email in it is still the Gmail address from the old policy.
-4. **Photo and signature.** No photo yet; the author box in articles has none. A handwritten signature is planned for the author box, About and email.
-5. Digital Product Passport article (revised), complete `public/_redirects`.
-6. Launch: DNS to Cloudflare (keep the Google Workspace email records), custom domain on the Pages project, Search Console, then cancel WordPress.com. Planned for late November 2026.
+4. **Cloudflare Web Analytics** (decided October 9: no Google Analytics, no consent banner). Switch it on in the Cloudflare dashboard for the Pages project `aimind-site` (Metrics → Web Analytics); Cloudflare then adds its script to every page. The privacy policy already describes it.
+5. **Photo and signature.** No photo yet; the author box in articles has none. A handwritten signature is planned for the author box, About and email.
+6. Digital Product Passport article (revised), complete `public/_redirects`.
+7. Launch: DNS to Cloudflare (keep the Google Workspace email records), custom domain on the Pages project, Search Console, then cancel WordPress.com. Planned for late November 2026.
 
 ## Small notes
 
