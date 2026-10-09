@@ -37,6 +37,7 @@ const t = {
     },
     missing: 'Please fill in the fields to see your campaign budget.',
     invalid: 'Please check your entries. Percentages must be between 0 and 100, and the target ROI cannot be negative.',
+    live: ['Campaign budget', 'per lead'],
     tiles: ['Campaign budget from the marketing share', 'Per won order', 'Per opportunity', 'Per lead'],
     rows: ['Expected won orders', 'Revenue including follow-on business', 'Gross profit', 'Acquisition cost that still reaches your target ROI', 'Marketing share', 'Remaining for sales, proposals and presales', 'Leads needed'],
   },
@@ -71,6 +72,7 @@ const t = {
     },
     missing: 'Bitte füllen Sie die Felder aus, um Ihr Kampagnenbudget zu sehen.',
     invalid: 'Bitte prüfen Sie Ihre Eingaben. Prozentwerte müssen zwischen 0 und 100 liegen, und der Ziel-ROI darf nicht negativ sein.',
+    live: ['Kampagnenbudget', 'pro Lead'],
     tiles: ['Kampagnenbudget des Marketings', 'Pro gewonnenem Auftrag', 'Pro Opportunity', 'Pro Lead'],
     rows: ['Erwartete gewonnene Aufträge', 'Umsatz einschließlich Folgegeschäft', 'Rohertrag', 'Kosten der Kundengewinnung, mit denen der Ziel-ROI erreicht wird', 'Anteil des Marketings', 'Rest für Vertrieb, Angebotserstellung und Presales', 'Benötigte Leads'],
   },
@@ -129,6 +131,8 @@ const chev = '<svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke
     ))}
   </div>
 
+  <p class="calc-live" id="aim-cbc-live" hidden aria-hidden="true"><span>{t.live[0]}</span> <strong data-v="mkt"></strong><span id="aim-cbc-live-lead"> · <strong data-v="perLead"></strong> {t.live[1]}</span></p>
+
   <div class="calc-result" aria-live="polite">
     <p id="aim-cbc-missing" class="calc-msg">{t.missing}</p>
     <p id="aim-cbc-invalid" class="calc-msg" hidden>{t.invalid}</p>
@@ -170,6 +174,7 @@ const chev = '<svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke
       hide(document.getElementById('aim-cbc-missing'), state !== 'missing');
       hide(document.getElementById('aim-cbc-invalid'), state !== 'invalid');
       hide(document.getElementById('aim-cbc-ok'), state !== 'ok');
+      hide(document.getElementById('aim-cbc-live'), state !== 'ok');
     };
     function update() {
       const p = { opps: num('aim-cbc-opps'), win: num('aim-cbc-win'), value: num('aim-cbc-value'), follow: num('aim-cbc-follow'), lead: num('aim-cbc-lead'), margin: num('aim-cbc-margin'), roi: num('aim-cbc-roi'), mshare: num('aim-cbc-mshare') };
@@ -201,6 +206,7 @@ const chev = '<svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke
       }
       hide(document.getElementById('aim-cbc-tile-lead'), noLead);
       hide(document.getElementById('aim-cbc-row-leads'), noLead);
+      hide(document.getElementById('aim-cbc-live-lead'), noLead);
       show('ok');
     }
     el('aim-cbc-example').addEventListener('click', () => {

@@ -1,0 +1,28 @@
+# aimind.marketing
+
+> Christina Vontin helps B2B technology companies make complex technology clear, position it, and anchor it in its market: positioning and messaging, expert content and thought leadership, and content that AI search systems can find, understand, and cite. Former marketing leader at CGI, GFT Technologies, TomTom, and Cognizant. Every page exists in English and German (German under /de/).
+
+Industries: digital platforms and software, smart industry and automation, professional and technology services, financial systems and services. Clients range from start-ups and mid-size firms to business units of large corporations, especially where EU regulation shapes the market.
+
+## Guides
+
+- [B2B CMO: The Six Responsibilities That Define Strategic Leaders](https://aimind.marketing/2025/07/31/challenges-for-b2b-cmo/): capital allocation, measurable impact, sales and marketing alignment, market signals, org design, and market shaping, and why judgment matters more as AI makes output cheap.
+- [How AI in B2B Marketing Delivers Results](https://aimind.marketing/2025/10/11/ai-in-b2b-marketing-guide/): an operating model for analyzing, creating, and executing with AI, governance including the EU AI Act, the roles of Architect, Orchestrator, Content Engineer, and Production Team, and how to measure the value of AI.
+- [How to Calculate B2B Marketing ROI That Holds Up With Your Board](https://aimind.marketing/2025/10/13/b2b-marketing-roi-and-kpis/): five KPIs (CAC, LTV:CAC, payback period, marketing-influenced pipeline and revenue), measurement when data has gaps, and a calculator for the budget a campaign can afford.
+
+## Leitfäden (Deutsch)
+
+- [B2B-CMO: Die sechs Kernaufgaben strategischer Führung](https://aimind.marketing/de/2025/07/31/challenges-for-b2b-cmo/)
+- [Wie KI im B2B-Marketing Ergebnisse liefert](https://aimind.marketing/de/2025/10/11/ai-in-b2b-marketing-guide/)
+- [B2B-Marketing-ROI, der die Geschäftsführung überzeugt](https://aimind.marketing/de/2025/10/13/b2b-marketing-roi-and-kpis/)
+
+## Services and contact
+
+- [Home](https://aimind.marketing/): services Go-To-Market, Market Authority, and AI Search Presence, how Christina works, and her career.
+- [Book a Strategy Call](https://aimind.marketing/contact/): a 30-minute call on Google Meet, in English or German.
+
+## Optional
+
+- [AI Ethics and Data Protection](https://aimind.marketing/ai-data-protection/): how client data is protected when AI is used.
+- [Privacy Policy](https://aimind.marketing/privacy-policy/)
+- [Sitemap](https://aimind.marketing/sitemap-index.xml)

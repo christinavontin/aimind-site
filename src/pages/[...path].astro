@@ -51,7 +51,7 @@ if (kind === 'post') {
     mainEntityOfPage: url,
     url,
     image: d.socialImage ?? d.image ? abs(d.socialImage ?? d.image) : undefined,
-    author: { '@type': 'Person', name: SITE.author, url: abs(lang === 'de' ? '/de/b2b-marketing-experience/' : '/b2b-marketing-experience/') },
+    author: { '@type': 'Person', name: SITE.author, url: abs(t.home), sameAs: ['https://www.linkedin.com/in/christinavontin/'], description: t.authorBio },
     publisher: { '@type': 'Organization', name: SITE.name, url: SITE.url, logo: { '@type': 'ImageObject', url: abs(SITE.logo) } },
     isPartOf: { '@type': 'WebSite', name: SITE.name, url: SITE.url },
   });
@@ -95,6 +95,7 @@ jsonLd.push({
           <p class="kick">{kicker}</p>
           <h1>{d.title}</h1>
           <p class="a-meta"><strong>{SITE.author}</strong> · {t.updated} <time datetime={d.updated.toISOString()}>{formatDate(d.updated, lang)}</time> · {readLabel}</p>
+          <p class="a-bio"><span>{t.aboutAuthor}</span>{t.authorBio}</p>
         </div>
       </section>
       <div class="a-body">
@@ -129,7 +130,6 @@ jsonLd.push({
 
           <section class="author">
             <p class="name">{SITE.author}</p>
-            <p>{t.authorBio}</p>
             <a href={t.cta.href} class="btn" style="font-size: 15px">{t.cta.label}</a>
           </section>
 

@@ -32,23 +32,21 @@ Where the canvas, the Google Doc and the code differ, the **code** is the final 
 1. **Christina checks the test site** in both languages, on a laptop and a phone.
 2. **German recommendations.** The live site showed them only in shortened form, so Claude completed four German quotes and translated Magnolia Restrepo's (English on the live site). Christina checks the wording in `src/components/Home.astro` (`de.refs`).
 3. **Migrate the missing pages** (they return 404 on the test site today, linked from the homepage and footer):
-   - About `/who-i-am/` (removed from the footer on October 9; decide where it is linked once the page exists) and Glossary, each EN and `/de/`
+   - About and Glossary retired at launch (October 9 decision); the glossary comes back after the hub passes.
    - Privacy Policy EN/DE: rewritten on October 9 for the new site (Cloudflare Pages, no cookies, Google Calendar booking on click, Google Meet, Google Workspace email). The WordPress version described comments, Gravatar and login cookies. Christina reviews it; the contact email in it is still the Gmail address from the old policy.
 4. **Cloudflare Web Analytics** (decided October 9: no Google Analytics, no consent banner). Switch it on in the Cloudflare dashboard for the Pages project `aimind-site` (Metrics → Web Analytics); Cloudflare then adds its script to every page. The privacy policy already describes it.
 5. **Photo and signature.** No photo yet; the author box in articles has none. A handwritten signature is planned for the author box, About and email.
 6. Digital Product Passport article (revised), complete `public/_redirects`.
 7. Launch: DNS to Cloudflare (keep the Google Workspace email records), custom domain on the Pages project, Search Console, then cancel WordPress.com. Planned for late November 2026.
 
-## Before the domain moves (checklist, October 9)
+## Before the domain moves (checklist, updated October 9 evening)
 
-The WordPress sitemap lists 56 URLs (each also under `/de/`). Every one of them must either exist on the new site, redirect (301) or return 410 before DNS changes.
+**Decided October 9:** the site goes live with the three hubs (CMO, AI, ROI), homepage, contact, privacy policy and AI ethics page. Every other WordPress page is retired: About, Glossary, landing pages, categories, author page, blog overview. The Digital Product Passport article and about 25 older, unlinked articles are reworked one by one after launch and only then come back. The author text from WordPress now sits under the title of every article ("About the Author" / "Über die Autorin"); the article JSON-LD names the homepage and LinkedIn as the author's pages.
 
-- **Still to migrate:** About (`/b2b-marketing-experience/`; `/who-i-am/` redirects there), Glossary (`/b2b-marketing-glossary/`), Digital Product Passport article (`/2026/07/19/digital-product-passports-infrastructure/`, revised). The article JSON-LD already points to `/b2b-marketing-experience/` as the author page.
-- **Decide (keep, redirect or 410):** `/b2b-technology-content/` (landing page), `/marketing-health-check/`, `/green-tech-marketing/`, `/personal-esg/`, `/b2b-marketing-insights/` (blog overview), eight `/category/…` pages, `/author/christinavontin/`.
-- **Redirects:** write `public/_redirects` from the October 8 redirect plan (retired posts to the three hubs and the DPP article, 410 for four posts), plus the pages above. Test every old URL against the test site.
-- **Christina reviews:** test site on laptop and phone, German recommendations, privacy policy (contact email, deletion practice).
-- **Analytics:** check after the next deployment that Cloudflare Web Analytics appears on the pages.
-- **Launch day:** domain aimind.marketing is registered at WordPress.com. Point it to Cloudflare (nameservers or transfer), copy the Google Workspace email records (MX, SPF, DKIM, DMARC) first, add the custom domain to the Pages project, check HTTPS, `www` and the `/de/` pages, submit the sitemap in Search Console, then cancel the WordPress.com plan.
+- **Redirects:** Christina exports the redirect file of her WordPress redirect plugin. Claude merges it with the October 8 redirect plan and the WordPress sitemap (56 URLs, each also under `/de/`): every old URL points straight to its final target (no chains), retired pages without a matching hub get 410, every rule exists for EN and `/de/`. Then every old URL is tested against the test site. Articles that come back later replace their redirect.
+- **Christina reviews:** German recommendations on the homepage (`de.refs` in `src/components/Home.astro`), privacy policy (contact email, deletion practice).
+- **LLMs and robots:** `public/llms.txt` (written by hand, replaces the Yoast file) and `public/robots.txt` (all crawlers allowed, AI crawlers listed). On launch day, check in Cloudflare that the zone settings do not block AI crawlers (Security → Bots, "AI Crawl Control" / "Block AI bots", "Managed robots.txt") — Cloudflare can switch these on for new domains.
+- **Launch day:** domain aimind.marketing is registered at WordPress.com. Copy the Google Workspace email records (MX, SPF, DKIM, DMARC) to Cloudflare first, point the domain to Cloudflare (nameservers or transfer), add the custom domain to the Pages project, check HTTPS, `www` and the `/de/` pages, submit the sitemap in Search Console, then cancel the WordPress.com plan.
 
 ## Small notes
 

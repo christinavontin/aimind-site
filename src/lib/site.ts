@@ -39,7 +39,8 @@ export const UI = {
     privacy: { label: 'Privacy Policy', href: '/privacy-policy/' },
     switchTo: 'Deutsch',
     tagline: 'Technology to Market',
-    authorBio: 'B2B technology marketing strategist. Senior marketing roles at CGI, GFT, TomTom and Cognizant since 2000.',
+    aboutAuthor: 'About the Author',
+    authorBio: 'Christina Vontin is a B2B technology marketing strategist and former marketing leader at Cognizant, TomTom, and CGI. She translates complex technology, regulatory change, and industry transformation into clear market narratives and thought leadership for executive audiences. Her work combines thought leadership strategy, LLM optimization, and AI-enabled marketing workflows to help technology companies build visibility with both decision makers and AI-driven discovery platforms.',
   },
   de: {
     htmlLang: 'de-DE',
@@ -68,7 +69,8 @@ export const UI = {
     privacy: { label: 'Datenschutz', href: '/de/privacy-policy/' },
     switchTo: 'English',
     tagline: 'Technologie im Markt',
-    authorBio: 'Strategin für B2B-Technologiemarketing. Leitende Marketingrollen bei CGI, GFT, TomTom und Cognizant seit 2000.',
+    aboutAuthor: 'Über die Autorin',
+    authorBio: 'Christina Vontin ist B2B-Marketingstrategin für Technologieunternehmen und war in leitenden Marketingpositionen bei Cognizant, TomTom und CGI tätig. Sie übersetzt komplexe Technologien, regulatorische Veränderungen und den Wandel ganzer Branchen in klare Marktbotschaften und Fachbeiträge für Führungskräfte. Ihre Arbeit verbindet Strategien für Thought Leadership, die Optimierung von Inhalten für Sprachmodelle (LLMO) und Marketingabläufe mit KI, und macht Technologieunternehmen sichtbar, bei Entscheidern ebenso wie in Suchsystemen, die mit KI arbeiten.',
   },
 } as const;
 

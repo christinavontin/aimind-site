@@ -234,6 +234,8 @@ h1 .hl > span { display: inline-block; position: relative; padding-right: .12em;
 .a-head h1 { margin: 0; font-family: var(--font-serif); font-weight: 400; font-size: clamp(44px, 6vw, 76px); line-height: 1.04; letter-spacing: -0.025em; text-wrap: balance; }
 .a-meta { margin-top: 36px; font-size: 15px; color: var(--slate); }
 .a-meta strong { color: var(--navy); font-weight: 600; }
+.a-bio { margin: 20px 0 0; max-width: 68ch; font-size: 15px; line-height: 1.55; color: var(--slate); }
+.a-bio span { display: block; margin-bottom: 4px; font-size: 13px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--cyan); }
 .a-body { max-width: var(--wide); margin: 0 auto; padding: 72px 32px; display: flex; flex-wrap: wrap; gap: 64px; align-items: flex-start; }
 .a-body.page-body { max-width: 1040px; }
 .toc { flex: 1 1 220px; max-width: 260px; position: sticky; top: 96px; }
@@ -311,6 +313,14 @@ h1 .hl > span { display: inline-block; position: relative; padding-right: .12em;
 .calc-row { display: grid; grid-template-columns: minmax(0, 1fr) 7.5em; gap: 14px; align-items: center; padding: 10px 0; border-top: 1px solid var(--line); }
 .calc-row label { line-height: 1.35; }
 .calc-hint { display: block; margin-top: 2px; font-size: 14px; color: var(--slate); }
+.calc-live { display: none; }
+/* Phones: the inputs stack into one long column, so the current budget stays visible at the bottom edge while typing */
+@media (max-width: 700px) {
+  .calc-live:not([hidden]) { display: block; position: sticky; bottom: 0; z-index: 2; margin: 16px -24px 0; padding: 12px 24px calc(12px + env(safe-area-inset-bottom)); background: var(--cream); color: var(--navy); font-size: 15px; line-height: 1.4; border-radius: 12px; box-shadow: 0 -8px 20px -12px rgba(9, 25, 68, .25); }
+  .calc-live strong { font-family: var(--font-head); font-weight: 600; font-size: 18px; white-space: nowrap; }
+  .calc-live span { white-space: nowrap; }
+  .calc-live span:first-child { color: var(--body); }
+}
 .calc-result { margin-top: 28px; background: #fff; border-radius: 12px; padding: 20px 24px; }
 .calc-msg { margin: 0; color: var(--slate); }
 .calc-tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 12px 20px; margin-bottom: 18px; }
