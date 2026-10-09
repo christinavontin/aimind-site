@@ -19,9 +19,10 @@ interface Props {
   ogType?: 'website' | 'article';
   jsonLd?: object[];
   noindex?: boolean;
+  hideCtaBar?: boolean; // phones: the contact page needs no booking bar
 }
 
-const { lang, seoTitle, description, permalink, alternates = [], image, imageAlt, ogType = 'website', jsonLd = [], noindex = false } = Astro.props;
+const { lang, seoTitle, description, permalink, alternates = [], image, imageAlt, ogType = 'website', jsonLd = [], noindex = false, hideCtaBar = false } = Astro.props;
 const t = UI[lang];
 const canonical = abs(permalink);
 const ogImage = abs(image ?? SITE.defaultImage);
@@ -35,7 +36,7 @@ const year = new Date().getFullYear();
 <html lang={t.htmlLang}>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <title>{seoTitle}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
@@ -72,22 +73,26 @@ const year = new Date().getFullYear();
           </span>
           <a href={t.cta.href} class="btn sm">{t.cta.label}</a>
         </nav>
-        <details class="mmenu">
-          <summary class="menu">{t.menu}
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M2 4h12M2 8h12M2 12h12" /></svg>
-          </summary>
-          <nav class="mpanel" aria-label={lang === 'de' ? 'Menü' : 'Menu'}>
-            {t.nav.map((item) => <a class="nl" href={item.href}>{item.label}</a>)}
-            <a class="nl" href={lang === 'en' ? deHref : enHref} hreflang={lang === 'en' ? 'de' : 'en'}>{t.switchTo}</a>
-            <a href={t.cta.href} class="btn">{t.cta.label}</a>
-          </nav>
-        </details>
+        <div class="mbar">
+          <span class="langs">
+            {lang === 'en' ? <span aria-current="true">EN</span> : <a class="nl" href={enHref} hreflang="en" lang="en">EN</a>}
+            <span aria-hidden="true">/</span>
+            {lang === 'de' ? <span aria-current="true">DE</span> : <a class="nl" href={deHref} hreflang="de" lang="de">DE</a>}
+          </span>
+          <details class="mmenu">
+            <summary class="menu">{t.menu}<span class="chev"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="#091944" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M2 4h12M2 8h12M2 12h12" /></svg></span></summary>
+            <nav class="mpanel" aria-label={lang === 'de' ? 'Menü' : 'Menu'}>
+              {t.nav.map((item) => <a class="nl" href={item.href}>{item.label}</a>)}
+            </nav>
+          </details>
+        </div>
       </div>
       <span class="prog" aria-hidden="true"></span>
     </header>
     <main id="main">
       <slot />
     </main>
+    {!hideCtaBar && <div class="ctabar"><a href={t.cta.href} class="btn sm">{t.cta.label}</a></div>}
     <footer class="site-footer">
       <div class="wrap footer-inner">
         <span class="footer-brand">

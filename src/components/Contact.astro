@@ -45,7 +45,7 @@ const c = {
 }[lang];
 const permalink = lang === 'de' ? '/de/contact/' : '/contact/';
 ---
-<Base lang={lang} seoTitle={c.seoTitle} description={c.description} permalink={permalink} alternates={[{ lang: 'en', href: '/contact/' }, { lang: 'de', href: '/de/contact/' }]}>
+<Base lang={lang} seoTitle={c.seoTitle} description={c.description} permalink={permalink} alternates={[{ lang: 'en', href: '/contact/' }, { lang: 'de', href: '/de/contact/' }]} hideCtaBar>
   <section class="page-hero">
     <div class="wrap">
       <h1><span class="hl"><span>{c.h1[0]}</span></span>{' '}<span class="hl"><span class="it">{c.h1[1]}</span></span></h1>

@@ -23,7 +23,7 @@ Where the canvas, the Google Doc and the code differ, the **code** is the final 
 - New logo: sign, wordmark, favicon, JSON-LD logo.
 - Decisions on October 9: "ich" throughout, English hero line "Complex technology, made clear, positioned and anchored in its market.", button "View My Services", sentence case for navigation.
 - Repository cleaned: only final versions; the old test design and all design options removed.
-- Changes on October 9 (afternoon): four industries instead of eight, audience circle 15 % smaller (544 px) and centered vertically with the headline, English headlines in title case, drop cap in Slate Cyan for the first letter of every article.
+- Changes on October 9 (afternoon): four industries instead of eight, audience circle 15 % smaller (544 px) and centered vertically with the headline, English headlines in title case, drop cap in Slate Cyan for the first letter of every article. On phones EN / DE sits in the header and the booking action in a bar fixed to the bottom of the screen (option A of two mockups).
 
 ## Open, in this order
 
