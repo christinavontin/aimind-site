@@ -19,6 +19,8 @@ const posts = defineCollection({
     updated: z.coerce.date(),
     image: z.string().optional(), // path under /public, e.g. /images/cmo-hub-en.webp
     imageAlt: z.string().optional(),
+    socialImage: z.string().optional(), // preview image for LinkedIn and other shares only (1200×628 JPEG under /public/images/social), not shown in the article
+    socialImageAlt: z.string().optional(),
     role: z.enum(['hub', 'spoke']).default('hub'),
     faq: z.array(z.object({ q: z.string(), a: z.string() })).default([]),
     sources: z

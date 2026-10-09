@@ -8,6 +8,8 @@ description: Die meisten Unternehmen nutzen KI im B2B-Marketing, doch nur wenige
 keyphrase: KI im B2B-Marketing
 published: 2025-10-11
 updated: 2026-10-08
+socialImage: /images/social/ai-hub.jpg
+socialImageAlt: "Drei Kolleginnen und Kollegen prüfen am Laptop einen KI-gestützten Arbeitsablauf im Marketing"
 role: hub
 faq:
   - q: Was ist ein KI-Betriebsmodell im B2B-Marketing?

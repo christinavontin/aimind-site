@@ -8,6 +8,8 @@ description: Sechs Kernaufgaben des B2B-CMO, vom Kapitaleinsatz bis zur Marktges
 keyphrase: B2B-CMO Aufgaben
 published: 2025-07-31
 updated: 2026-10-08
+socialImage: /images/social/cmo-hub-de.jpg
+socialImageAlt: "Die sechs Kernaufgaben des B2B-CMO rund um eine Marketingleiterin am Schreibtisch"
 role: hub
 faq:
   - q: Was macht ein B2B-CMO?

@@ -8,6 +8,8 @@ description: Most companies use AI in B2B marketing, few see results. An operati
 keyphrase: AI in B2B marketing
 published: 2025-10-11
 updated: 2026-10-08
+socialImage: /images/social/ai-hub.jpg
+socialImageAlt: "Three colleagues review an AI-supported marketing workflow on a laptop"
 role: hub
 faq:
   - q: What is an AI operating model in B2B marketing?
