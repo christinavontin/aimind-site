@@ -85,7 +85,7 @@ Rules:
 - Content width max 1280 px, side gutter 32 px (20 px on phones). Designed at 1440 px desktop and 390 px phone; fluid in between; checked at 1024 and 768 px.
 - Cards: off-white, radius 16 px, no border; equal heights in a row (CSS subgrid aligns title, text, toggle and link).
 - Hero: off-white with a large white circle behind the text and the cream audience circle (544 px, four industries in one column) beside the headline; headline and circle are centered vertically in the hero; below 1180 px the circle moves under the text; on phones it becomes a rounded cream card below the button.
-- Header on phones (below 820 px): logo · EN / DE · menu circle in one row, all on the logo's center line; the menu holds the four page links. The booking action sits in a slim white bar fixed to the bottom of the screen (soft upward shadow), on every page except the contact page.
+- Header on phones (below 820 px): logo · EN / DE · menu circle in one row, all on the logo's center line; the menu holds the four page links and the booking action. No fixed bar at the bottom of the screen.
 - Background circles are a brand motif (hero, contact band): large, soft (white, cream, yellow), cropped at the edge, text above them. Never navy circles behind text.
 - Timelines and process steps: a number or year above a thin line (#C9CCD6), no icons or symbols.
 - Homepage order: hero with audience · How I Work · services · resources · career and references · contact band · footer. No further sections on the homepage; new content gets its own page.
@@ -93,7 +93,7 @@ Rules:
 ## 7. Motion
 
 Subtle and slow; switches off with `prefers-reduced-motion`.
-- Hero: headline lines rise from a mask; circles fade in and grow slightly like a spotlight (white first, then the audience circle, then the overlap glows), about 2.5 s in total.
+- Hero: headline lines rise from a mask (animated with `top`, not `transform`, so Safari never cuts a letter during the motion); circles fade in and grow slightly like a spotlight (white first, then the audience circle, then the overlap glows), about 2.5 s in total.
 - On scroll: headings, cards, steps and rows rise gently into view; cards and steps stagger; timeline lines draw left to right.
 - Header stays at the top with a soft shadow; a 2 px yellow reading-progress line fills under it.
 - References glide slowly in an endless row and pause on hover.

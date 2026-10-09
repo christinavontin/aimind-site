@@ -52,7 +52,7 @@ export const UI = {
       { label: 'Ressourcen', href: '/de/#resources' },
       { label: 'Werdegang', href: '/de/#career' },
     ],
-    cta: { label: 'Strategiegespräch vereinbaren', href: '/de/contact/' },
+    cta: { label: 'Strategietermin buchen', href: '/de/contact/' },
     menu: 'Menü',
     footer: [
       { label: 'Über mich', href: '/de/who-i-am/' },

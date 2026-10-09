@@ -26,15 +26,15 @@ const c = {
     ],
   },
   de: {
-    seoTitle: 'Strategiegespräch vereinbaren – aimind.marketing',
+    seoTitle: 'Strategietermin buchen – aimind.marketing',
     description: 'Vereinbaren Sie ein 30-minütiges Strategiegespräch mit Christina Vontin über Google Meet, auf Deutsch oder Englisch, zu Produkt, Markt und nächstem Schritt.',
-    h1: ['Strategiegespräch', 'vereinbaren.'],
+    h1: ['Strategietermin', 'buchen.'],
     lead: 'Ein Gespräch von 30 Minuten über Ihr Produkt, Ihren Markt und die Frage, wo Ihre Technologie verstanden werden muss. Danach kennen Sie den nächsten Schritt.',
     calTitle: 'Termin wählen',
     calNote: ['Der Buchungskalender kommt von Google. Er lädt erst nach Ihrem Klick, und Google erhält dann Ihre Verbindungsdaten. Details stehen in der ', '.'],
     calBtn: 'Kalender anzeigen',
     privacyLabel: 'Datenschutzerklärung',
-    iframeTitle: 'Strategiegespräch mit Christina Vontin vereinbaren',
+    iframeTitle: 'Strategietermin mit Christina Vontin buchen',
     factsTitle: 'Was Sie erwartet',
     facts: [
       ['30 Minuten, online', 'Über Google Meet, auf Deutsch oder Englisch.'],
@@ -45,7 +45,7 @@ const c = {
 }[lang];
 const permalink = lang === 'de' ? '/de/contact/' : '/contact/';
 ---
-<Base lang={lang} seoTitle={c.seoTitle} description={c.description} permalink={permalink} alternates={[{ lang: 'en', href: '/contact/' }, { lang: 'de', href: '/de/contact/' }]} hideCtaBar>
+<Base lang={lang} seoTitle={c.seoTitle} description={c.description} permalink={permalink} alternates={[{ lang: 'en', href: '/contact/' }, { lang: 'de', href: '/de/contact/' }]}>
   <section class="page-hero">
     <div class="wrap">
       <h1><span class="hl"><span>{c.h1[0]}</span></span>{' '}<span class="hl"><span class="it">{c.h1[1]}</span></span></h1>

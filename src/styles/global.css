@@ -85,8 +85,8 @@ header.site { position: sticky; top: 0; z-index: 20; background: #fff; }
 .mmenu { position: relative; }
 .menu { list-style: none; display: flex; cursor: pointer; }
 .menu .chev { width: 32px; height: 32px; }
-.ctabar { display: none; }
 .menu::-webkit-details-marker { display: none; }
+.mpanel .btn { margin-top: 6px; }
 .mpanel { position: absolute; right: 0; top: calc(100% + 12px); width: min(330px, calc(100vw - 40px)); background: #fff; border-radius: 16px; box-shadow: 0 16px 40px -12px rgba(9, 25, 68, .25); padding: 20px 24px; display: flex; flex-direction: column; gap: 14px; font-size: 17px; font-weight: 500; }
 
 /* Footer */
@@ -114,7 +114,7 @@ html:lang(de) .hero h1 { font-size: clamp(40px, 5.6vw, 80px); }
 .hl { display: block; overflow: hidden; padding-bottom: .1em; margin-bottom: -.1em; }
 /* the rise mask clips only top and bottom, so no browser can cut a letter's right edge */
 @supports (overflow: clip) { .hl { overflow: visible; overflow-y: clip; overflow-x: visible; } }
-.hl > span { display: inline-block; padding-right: .12em; margin-right: -.12em; } /* room for glyph ink: Safari clips it on animated layers */
+.hl > span { display: inline-block; position: relative; padding-right: .12em; margin-right: -.12em; } /* room for glyph ink: Safari clips it on animated layers */
 .hero .lead { margin: 28px 0 0; max-width: 30ch; font-size: clamp(19px, 2vw, 22px); line-height: 1.45; color: var(--body); }
 .hero .cta { margin-top: 36px; }
 .c-white { position: absolute; left: -150px; top: -60px; width: 800px; height: 800px; border-radius: 50%; background: #fff; z-index: 0; pointer-events: none; }
@@ -292,8 +292,6 @@ html:lang(de) .hero h1 { font-size: clamp(40px, 5.6vw, 80px); }
   .navlinks { display: none; }
   .mbar { display: flex; }
   .mbar .langs { font-size: 15px; font-weight: 500; }
-  .ctabar { display: flex; position: fixed; left: 0; right: 0; bottom: 0; z-index: 20; background: #fff; box-shadow: 0 -8px 24px -12px rgba(9, 25, 68, .18); padding: 12px 20px calc(12px + env(safe-area-inset-bottom)); }
-  body:has(.ctabar) .site-footer { padding-bottom: 64px; }
   .hero { padding-top: 48px; padding-bottom: 56px; }
   .sec { padding-top: 64px; padding-bottom: 64px; }
   .svc { padding: 24px; }
@@ -316,7 +314,8 @@ html:lang(de) .hero h1 { font-size: clamp(40px, 5.6vw, 80px); }
 @keyframes up { from { opacity: 0; transform: translateY(28px); } to { opacity: 1; transform: none; } }
 @keyframes draw { from { transform: scaleX(0); } to { transform: scaleX(1); } }
 @keyframes sh { to { box-shadow: 0 8px 24px -12px rgba(9, 25, 68, .18); } }
-@keyframes rise { from { transform: translateY(105%); } to { transform: none; } }
+/* rise moves the line with top instead of transform: no separate layer, so Safari cannot cut the last letter mid-animation */
+@keyframes rise { from { top: 1.15em; } to { top: 0; } }
 @keyframes grow { to { transform: scaleX(1); } }
 @keyframes marq { to { transform: translateX(calc(-50% - 20px)); } }
 @keyframes glow { from { opacity: 0; transform: scale(.94); } to { opacity: 1; transform: none; } }

@@ -23,7 +23,7 @@ Where the canvas, the Google Doc and the code differ, the **code** is the final 
 - New logo: sign, wordmark, favicon, JSON-LD logo.
 - Decisions on October 9: "ich" throughout, English hero line "Complex technology, made clear, positioned and anchored in its market.", button "View My Services", sentence case for navigation.
 - Repository cleaned: only final versions; the old test design and all design options removed.
-- Changes on October 9 (afternoon): four industries instead of eight, audience circle 15 % smaller (544 px) and centered vertically with the headline, English headlines in title case, drop cap in Slate Cyan for the first letter of every article. On phones EN / DE sits in the header and the booking action in a bar fixed to the bottom of the screen (option A of two mockups).
+- Changes on October 9 (afternoon): four industries instead of eight, audience circle 15 % smaller (544 px) and centered vertically with the headline, English headlines in title case, drop cap in Slate Cyan for the first letter of every article. On phones EN / DE and the menu circle sit in the header; the booking action is in the menu (a fixed bottom bar was tried and dropped). German booking label is now „Strategietermin buchen“ (header, cards, band, contact page title).
 
 ## Open, in this order
 
@@ -39,7 +39,7 @@ Where the canvas, the Google Doc and the code differ, the **code** is the final 
 
 ## Small notes
 
-- Contact texts differ slightly by language on purpose (as in the Google Doc): the English band says "A 30-minute conversation. You leave with a clear next step.", the German band "30 Minuten, um zu erkennen, wo Ihr Marketing mehr erreichen kann."; the contact pages swap these ideas.
+- Contact texts differ slightly by language on purpose (as in the Google Doc): the English band says "A 30-minute conversation. You leave with a clear next step.", the German band "Am Ende des Gesprächs wissen Sie den nächsten Schritt."; the contact pages swap these ideas.
 - German "Thought Leadership" as the second step name is Christina's choice.
 - The design canvas is history. New design work goes into the code and, if needed, a new board.
 
