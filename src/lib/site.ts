@@ -58,7 +58,7 @@ export const UI = {
       { label: 'Datenschutz', href: '/de/privacy-policy/' },
       { label: 'KI-Ethik und Datenschutz', href: '/de/ai-data-protection/' },
     ],
-    license: 'Dieses Werk ist lizenziert unter',
+    license: 'Diese Arbeit ist lizenziert unter',
     updated: 'Aktualisiert',
     published: 'Veröffentlicht',
     by: 'Von',

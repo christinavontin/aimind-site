@@ -274,6 +274,8 @@ h1 .hl > span { display: inline-block; position: relative; padding-right: .12em;
 
 /* Editorial table template (binding since 7 Oct 2026) */
 .aim-tbl { margin: 32px 0; overflow-x: auto; font-size: 16px; }
+/* Tables with five or more columns run into the free space right of the text column on wide screens */
+@media (min-width: 1140px) { .article .aim-tbl.wide { width: calc(100% + max(0px, min(176px, 100vw - 1130px))); } }
 .aim-tbl table { width: 100%; min-width: 560px; border-collapse: collapse; border-top: 2px solid var(--cyan); }
 .aim-tbl th { color: var(--cyan); font-weight: 600; font-size: 12px; letter-spacing: .1em; text-transform: uppercase; text-align: left; vertical-align: bottom; padding: 12px 12px 10px 0; border-bottom: 1px solid var(--line-strong); }
 .aim-tbl td { padding: 12px 12px 12px 0; vertical-align: top; border-bottom: 1px solid var(--line); color: var(--body); }

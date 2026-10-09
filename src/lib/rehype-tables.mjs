@@ -16,10 +16,13 @@ function walk(node, parent) {
   for (let i = 0; i < node.children.length; i++) {
     const child = node.children[i];
     if (child.type === 'element' && child.tagName === 'table' && !(parent && parent.tagName === 'figure')) {
+      const firstRow = findFirst(child, 'tr');
+      const cols = firstRow ? firstRow.children.filter((c) => c.type === 'element').length : 0;
       node.children[i] = {
         type: 'element',
         tagName: 'figure',
-        properties: { className: ['aim-tbl'] },
+        // five or more columns: the table may run wider than the text column (see global.css)
+        properties: { className: cols >= 5 ? ['aim-tbl', 'wide'] : ['aim-tbl'] },
         children: [child],
       };
       markNumbers(child);
@@ -27,6 +30,12 @@ function walk(node, parent) {
     }
     walk(child, node);
   }
+}
+
+function findFirst(n, tag) {
+  if (n.type === 'element' && n.tagName === tag) return n;
+  for (const c of n.children || []) { const f = findFirst(c, tag); if (f) return f; }
+  return null;
 }
 
 function markNumbers(table) {
