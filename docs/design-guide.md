@@ -66,6 +66,7 @@ Rules:
 3. Bold (700) only in Schibsted headings. Running text is never bold; 600 only for buttons, links, labels and the lead-in term of a list item.
 4. Italic only in Newsreader.
 5. Uppercase only for labels.
+6. Capitalization (English): section headlines (H2), page headlines, intros and navigation use sentence case ("How I work", "Three ways to bring your technology to market"). Title case only for names: services and process steps (Go-To-Market, Market Authority, Thought Leadership), article and guide titles, and the action labels of buttons and links (Book a Strategy Call).
 
 ## 5. Buttons and links
 
