@@ -110,7 +110,7 @@ header.site { position: sticky; top: 0; z-index: 20; background: #fff; }
 .hero h1 { margin: 0; font-family: var(--font-head); font-weight: 700; font-size: clamp(44px, 6vw, 88px); line-height: 1; letter-spacing: -0.035em; }
 html:lang(de) .hero h1 { font-size: clamp(40px, 5.6vw, 80px); }
 .hl { display: block; overflow: hidden; padding-bottom: .1em; margin-bottom: -.1em; }
-.hl > span { display: inline-block; }
+.hl > span { display: inline-block; padding-right: .08em; margin-right: -.08em; } /* room for glyph ink: Safari clips it on animated layers */
 .hero .lead { margin: 28px 0 0; max-width: 30ch; font-size: clamp(19px, 2vw, 22px); line-height: 1.45; color: var(--body); }
 .hero .cta { margin-top: 36px; }
 .c-white { position: absolute; left: -150px; top: -60px; width: 800px; height: 800px; border-radius: 50%; background: #fff; z-index: 0; pointer-events: none; }
