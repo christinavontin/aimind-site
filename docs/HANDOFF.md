@@ -39,6 +39,17 @@ Where the canvas, the Google Doc and the code differ, the **code** is the final 
 6. Digital Product Passport article (revised), complete `public/_redirects`.
 7. Launch: DNS to Cloudflare (keep the Google Workspace email records), custom domain on the Pages project, Search Console, then cancel WordPress.com. Planned for late November 2026.
 
+## Before the domain moves (checklist, October 9)
+
+The WordPress sitemap lists 56 URLs (each also under `/de/`). Every one of them must either exist on the new site, redirect (301) or return 410 before DNS changes.
+
+- **Still to migrate:** About (`/b2b-marketing-experience/`; `/who-i-am/` redirects there), Glossary (`/b2b-marketing-glossary/`), Digital Product Passport article (`/2026/07/19/digital-product-passports-infrastructure/`, revised). The article JSON-LD already points to `/b2b-marketing-experience/` as the author page.
+- **Decide (keep, redirect or 410):** `/b2b-technology-content/` (landing page), `/marketing-health-check/`, `/green-tech-marketing/`, `/personal-esg/`, `/b2b-marketing-insights/` (blog overview), eight `/category/…` pages, `/author/christinavontin/`.
+- **Redirects:** write `public/_redirects` from the October 8 redirect plan (retired posts to the three hubs and the DPP article, 410 for four posts), plus the pages above. Test every old URL against the test site.
+- **Christina reviews:** test site on laptop and phone, German recommendations, privacy policy (contact email, deletion practice).
+- **Analytics:** check after the next deployment that Cloudflare Web Analytics appears on the pages.
+- **Launch day:** domain aimind.marketing is registered at WordPress.com. Point it to Cloudflare (nameservers or transfer), copy the Google Workspace email records (MX, SPF, DKIM, DMARC) first, add the custom domain to the Pages project, check HTTPS, `www` and the `/de/` pages, submit the sitemap in Search Console, then cancel the WordPress.com plan.
+
 ## Small notes
 
 - Contact texts differ slightly by language on purpose (as in the Google Doc): the English band says "A 30-minute conversation. You leave with a clear next step.", the German band "Am Ende des Gesprächs kennen Sie den nächsten Schritt."; the contact pages swap these ideas.
