@@ -19,7 +19,7 @@ Konyhadűlő 42
 6120 Kiskunmajsa  
 Ungarn
 
-E-Mail: christina.vontin@gmail.com
+E-Mail: info@aimind.marketing
 
 ## Besuch der Website
 
