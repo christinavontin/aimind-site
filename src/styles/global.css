@@ -75,7 +75,7 @@ details[open] > summary .chev { transform: rotate(180deg); }
 /* Header */
 header.site { position: sticky; top: 0; z-index: 20; background: #fff; }
 .header-inner { padding-top: 16px; padding-bottom: 16px; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
-.brand { text-decoration: none; }
+.brand { display: flex; text-decoration: none; }
 .navlinks { display: flex; align-items: center; gap: 28px; font-size: 15px; font-weight: 500; }
 .langs { display: inline-flex; gap: 4px; color: var(--slate); }
 .langs [aria-current] { color: var(--navy); font-weight: 600; }
@@ -83,7 +83,8 @@ header.site { position: sticky; top: 0; z-index: 20; background: #fff; }
 .prog { position: absolute; left: 0; right: 0; bottom: 0; height: 2px; background: var(--yellow); transform: scaleX(0); transform-origin: left; }
 .mbar { display: none; align-items: center; gap: 18px; }
 .mmenu { position: relative; }
-.menu { list-style: none; display: inline-flex; align-items: center; gap: 8px; font-weight: 600; font-size: 15px; color: var(--navy); cursor: pointer; }
+.menu { list-style: none; display: flex; cursor: pointer; }
+.menu .chev { width: 32px; height: 32px; }
 .ctabar { display: none; }
 .menu::-webkit-details-marker { display: none; }
 .mpanel { position: absolute; right: 0; top: calc(100% + 12px); width: min(330px, calc(100vw - 40px)); background: #fff; border-radius: 16px; box-shadow: 0 16px 40px -12px rgba(9, 25, 68, .25); padding: 20px 24px; display: flex; flex-direction: column; gap: 14px; font-size: 17px; font-weight: 500; }

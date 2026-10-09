@@ -77,7 +77,7 @@ Rules:
 - **Primary action** (booking only): no box. Navy text 15 px / 600 followed by a 28 px navy circle with a white arrow; on hover the circle turns yellow with a navy arrow and moves 4 px right. Header size: 14 px text, 24 px circle. On navy: white text, white circle with navy arrow.
 - **Text link** (every secondary action): navy text with a 2 px yellow underline; on hover a navy underline draws over it from left to right.
 - **Toggle** (deliverables, FAQ): label 16 px / 600 with a 28 px cream circle and a navy chevron; circle turns yellow on hover and when open, chevron rotates 180°.
-- **Menu** (phones): label 15 px / 600 with a 28 px cream circle holding a navy menu icon, same behavior as the toggle.
+- **Menu** (phones): a 32 px cream circle with a navy menu icon, no visible label (screen readers read "Menu"), same behavior as the toggle.
 - Never pill buttons, boxes or filled rectangles.
 
 ## 6. Layout
@@ -85,7 +85,7 @@ Rules:
 - Content width max 1280 px, side gutter 32 px (20 px on phones). Designed at 1440 px desktop and 390 px phone; fluid in between; checked at 1024 and 768 px.
 - Cards: off-white, radius 16 px, no border; equal heights in a row (CSS subgrid aligns title, text, toggle and link).
 - Hero: off-white with a large white circle behind the text and the cream audience circle (544 px, four industries in one column) beside the headline; headline and circle are centered vertically in the hero; below 1180 px the circle moves under the text; on phones it becomes a rounded cream card below the button.
-- Header on phones (below 820 px): logo · EN / DE · Menu in one row; the menu holds the four page links. The booking action sits in a slim white bar fixed to the bottom of the screen (soft upward shadow), on every page except the contact page.
+- Header on phones (below 820 px): logo · EN / DE · menu circle in one row, all on the logo's center line; the menu holds the four page links. The booking action sits in a slim white bar fixed to the bottom of the screen (soft upward shadow), on every page except the contact page.
 - Background circles are a brand motif (hero, contact band): large, soft (white, cream, yellow), cropped at the edge, text above them. Never navy circles behind text.
 - Timelines and process steps: a number or year above a thin line (#C9CCD6), no icons or symbols.
 - Homepage order: hero with audience · How I Work · services · resources · career and references · contact band · footer. No further sections on the homepage; new content gets its own page.
