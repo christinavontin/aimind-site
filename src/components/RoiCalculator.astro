@@ -1,0 +1,215 @@
+---
+// Campaign budget calculator for the ROI hub, EN and DE.
+// Logic and texts migrated 1:1 from the WordPress Custom HTML block (October 2026).
+// Design: docs/design-guide.md (off-white card, toggle, text-link action, Schibsted numbers).
+interface Props { lang: 'en' | 'de' }
+const { lang } = Astro.props;
+
+const t = {
+  en: {
+    title: 'How much can a campaign cost and still reach your target ROI?',
+    currency: 'Currency',
+    example: 'Use the example from the article',
+    how: 'How this calculator works',
+    howA: 'Where it starts',
+    howAItems: [
+      'It starts from the number of opportunities a campaign should bring and calculates what they are worth: orders, revenue and gross profit.',
+      'Your target ROI decides how much of this gross profit can go into winning the customers. The marketing share of this amount is the campaign budget.',
+    ],
+    howB: 'What you can use it for',
+    howBItems: [
+      'Set an upper limit for a campaign before you commit any spend.',
+      'Brief agencies with target costs per lead and per opportunity.',
+      'Check a campaign against them. Compare the budget per lead with what your channels or agencies actually charge per lead. If they deliver below this value, the campaign reaches your target ROI.',
+      'Test what a higher win rate or larger orders are worth.',
+    ],
+    legendA: 'What the campaign should bring',
+    legendB: 'Your targets',
+    fields: {
+      opps: ['Expected opportunities', ''],
+      win: ['Win rate (%)', 'From your CRM: won ÷ (won + lost)'],
+      value: ['Average order value', ''],
+      follow: ['Follow-on business (% of order value)', 'Service, spare parts, extensions. Optional'],
+      lead: ['Leads that become opportunities (%)', 'Optional, for the budget per lead'],
+      margin: ['Gross margin (%)', 'From your finance team'],
+      roi: ['Target ROI on acquisition cost (%)', '200% means gross profit is three times the acquisition cost'],
+      mshare: ['Marketing share of acquisition cost (%)', 'The rest goes to sales, proposals and presales'],
+    },
+    missing: 'Please fill in the fields to see your campaign budget.',
+    invalid: 'Please check your entries. Percentages must be between 0 and 100, and the target ROI cannot be negative.',
+    tiles: ['Campaign budget from the marketing share', 'Per won order', 'Per opportunity', 'Per lead'],
+    rows: ['Expected won orders', 'Revenue including follow-on business', 'Gross profit', 'Acquisition cost that still reaches your target ROI', 'Marketing share', 'Remaining for sales, proposals and presales', 'Leads needed'],
+  },
+  de: {
+    title: 'Wie viel darf eine Kampagne kosten, damit sie den Ziel-ROI erreicht?',
+    currency: 'Währung',
+    example: 'Beispiel aus dem Artikel übernehmen',
+    how: 'Wie der Rechner funktioniert',
+    howA: 'Wovon er ausgeht',
+    howAItems: [
+      'Er geht von der Zahl der Opportunities aus, die eine Kampagne bringen soll, und berechnet daraus Aufträge, Umsatz und Rohertrag.',
+      'Ihr Ziel-ROI bestimmt, welcher Teil dieses Rohertrags in die Gewinnung der Kunden fließen darf. Der Anteil des Marketings daran ist das Kampagnenbudget.',
+    ],
+    howB: 'Wofür Sie ihn nutzen können',
+    howBItems: [
+      'Sie legen eine Obergrenze für eine Kampagne fest, bevor Sie Budget freigeben.',
+      'Sie briefen Agenturen mit Zielkosten pro Lead und pro Opportunity.',
+      'Sie prüfen Kampagnen anhand dieser Werte. Vergleichen Sie das Budget pro Lead mit dem, was Ihre Kanäle oder Agenturen tatsächlich pro Lead berechnen. Liegen diese darunter, erreicht die Kampagne Ihren Ziel-ROI.',
+      'Sie sehen, was eine höhere Abschlussquote oder größere Aufträge wert sind.',
+    ],
+    legendA: 'Was die Kampagne bringen soll',
+    legendB: 'Ihre Ziele',
+    fields: {
+      opps: ['Erwartete Opportunities', ''],
+      win: ['Abschlussquote (%)', 'Aus dem CRM: gewonnen ÷ (gewonnen + verloren)'],
+      value: ['Durchschnittlicher Auftragswert', ''],
+      follow: ['Folgegeschäft (% des Auftragswerts)', 'Service, Ersatzteile, Erweiterungen. Optional'],
+      lead: ['Leads, die zur Opportunity werden (%)', 'Optional, für das Budget pro Lead'],
+      margin: ['Bruttomarge (%)', 'Vom Controlling'],
+      roi: ['Ziel-ROI auf die Kosten der Kundengewinnung (%)', 'Bei 200 % ist der Rohertrag dreimal so hoch wie die Kosten der Kundengewinnung'],
+      mshare: ['Anteil des Marketings an den Kosten der Kundengewinnung (%)', 'Der Rest entfällt auf Vertrieb, Angebotserstellung und Presales'],
+    },
+    missing: 'Bitte füllen Sie die Felder aus, um Ihr Kampagnenbudget zu sehen.',
+    invalid: 'Bitte prüfen Sie Ihre Eingaben. Prozentwerte müssen zwischen 0 und 100 liegen, und der Ziel-ROI darf nicht negativ sein.',
+    tiles: ['Kampagnenbudget des Marketings', 'Pro gewonnenem Auftrag', 'Pro Opportunity', 'Pro Lead'],
+    rows: ['Erwartete gewonnene Aufträge', 'Umsatz einschließlich Folgegeschäft', 'Rohertrag', 'Kosten der Kundengewinnung, mit denen der Ziel-ROI erreicht wird', 'Anteil des Marketings', 'Rest für Vertrieb, Angebotserstellung und Presales', 'Benötigte Leads'],
+  },
+}[lang];
+
+type Key = keyof typeof t.fields;
+const groupA: Key[] = ['opps', 'win', 'value', 'follow', 'lead'];
+const groupB: Key[] = ['margin', 'roi', 'mshare'];
+const attrs: Record<Key, { min?: string; max?: string; step: string }> = {
+  opps: { min: '1', step: '1' },
+  win: { min: '0', max: '100', step: 'any' },
+  value: { min: '0', step: 'any' },
+  follow: { min: '0', step: 'any' },
+  lead: { min: '0', max: '100', step: 'any' },
+  margin: { min: '0', max: '100', step: 'any' },
+  roi: { min: '0', step: 'any' },
+  mshare: { min: '0', max: '100', step: 'any' },
+};
+const rowKeys = ['orders', 'revenue', 'profit', 'acq', 'mkt', 'rest', 'leads'];
+const tileKeys = ['mkt', 'perOrder', 'perOpp', 'perLead'];
+const chev = '<svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="#091944" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6l4 4 4-4" /></svg>';
+---
+<section class="calc" id="aim-cbc" aria-labelledby="aim-cbc-title">
+  <div class="calc-head">
+    <p class="kick">{lang === 'de' ? 'ROI-Rechner' : 'ROI calculator'}</p>
+    <h3 id="aim-cbc-title" class="calc-title">{t.title}</h3>
+    <div class="calc-bar">
+      <label class="calc-cur">{t.currency}
+        <select id="aim-cbc-currency">
+          <option value="EUR">EUR (€)</option><option value="USD">USD ($)</option><option value="GBP">GBP (£)</option><option value="CHF">CHF</option>
+        </select>
+      </label>
+      <button type="button" id="aim-cbc-example" class="txt">{t.example}</button>
+    </div>
+  </div>
+
+  <details class="calc-how">
+    <summary>{t.how}<span class="chev" set:html={chev} /></summary>
+    <p class="calc-how-h">{t.howA}</p>
+    <ul>{t.howAItems.map((x) => <li>{x}</li>)}</ul>
+    <p class="calc-how-h">{t.howB}</p>
+    <ul>{t.howBItems.map((x) => <li>{x}</li>)}</ul>
+  </details>
+
+  <div class="calc-cols">
+    {[[t.legendA, groupA], [t.legendB, groupB]].map(([legend, keys]) => (
+      <fieldset>
+        <legend>{legend as string}</legend>
+        {(keys as Key[]).map((k) => (
+          <div class="calc-row">
+            <label for={`aim-cbc-${k}`}>{t.fields[k][0]}{t.fields[k][1] && <span class="calc-hint">{t.fields[k][1]}</span>}</label>
+            <input type="number" inputmode="decimal" id={`aim-cbc-${k}`} {...attrs[k]} />
+          </div>
+        ))}
+      </fieldset>
+    ))}
+  </div>
+
+  <div class="calc-result" aria-live="polite">
+    <p id="aim-cbc-missing" class="calc-msg">{t.missing}</p>
+    <p id="aim-cbc-invalid" class="calc-msg" hidden>{t.invalid}</p>
+    <div id="aim-cbc-ok" hidden>
+      <div class="calc-tiles">
+        {tileKeys.map((k, i) => (
+          <div class="calc-tile" id={k === 'perLead' ? 'aim-cbc-tile-lead' : undefined}><span>{t.tiles[i]}</span><strong data-v={k}></strong></div>
+        ))}
+      </div>
+      <table class="calc-table"><tbody>
+        {rowKeys.map((k, i) => (
+          <tr id={k === 'leads' ? 'aim-cbc-row-leads' : undefined}><td>{t.rows[i]}</td><td class="calc-num" data-v={k}></td></tr>
+        ))}
+      </tbody></table>
+    </div>
+  </div>
+</section>
+
+<script>
+  function start() {
+    const root = document.getElementById('aim-cbc');
+    if (!root || root.dataset.ready) return;
+    root.dataset.ready = '1';
+    const lang = document.documentElement.lang || 'en';
+    const el = (id: string) => document.getElementById(id) as HTMLInputElement | HTMLSelectElement;
+    const hide = (node: HTMLElement | null, yes: boolean) => { if (node) node.hidden = yes; };
+    const num = (id: string) => { const v = el(id).value; if (v === '') return null; const n = Number(v); return isNaN(n) ? null : n; };
+    const money = (v: number) => {
+      const c = el('aim-cbc-currency').value;
+      try { return new Intl.NumberFormat(lang, { style: 'currency', currency: c, maximumFractionDigits: 0 }).format(v); }
+      catch { return Math.round(v) + ' ' + c; }
+    };
+    const count = (v: number) => {
+      try { return new Intl.NumberFormat(lang, { maximumFractionDigits: 1 }).format(v); }
+      catch { return String(Math.round(v * 10) / 10); }
+    };
+    const setValue = (key: string, text: string) => root.querySelectorAll(`[data-v="${key}"]`).forEach((n) => { n.textContent = text; });
+    const show = (state: 'missing' | 'invalid' | 'ok') => {
+      hide(document.getElementById('aim-cbc-missing'), state !== 'missing');
+      hide(document.getElementById('aim-cbc-invalid'), state !== 'invalid');
+      hide(document.getElementById('aim-cbc-ok'), state !== 'ok');
+    };
+    function update() {
+      const p = { opps: num('aim-cbc-opps'), win: num('aim-cbc-win'), value: num('aim-cbc-value'), follow: num('aim-cbc-follow'), lead: num('aim-cbc-lead'), margin: num('aim-cbc-margin'), roi: num('aim-cbc-roi'), mshare: num('aim-cbc-mshare') };
+      if ([p.opps, p.win, p.value, p.margin, p.roi, p.mshare].some((v) => v === null)) { show('missing'); return; }
+      const opps = p.opps!, win = p.win!, value = p.value!, margin = p.margin!, roi = p.roi!, mshare = p.mshare!;
+      const follow = p.follow ?? 0;
+      const pct = [win, margin, mshare];
+      if (p.lead !== null) pct.push(p.lead);
+      const bad = pct.some((v) => v < 0 || v > 100) || !(opps > 0) || roi < 0 || follow < 0 || p.lead === 0;
+      if (bad) { show('invalid'); return; }
+      const orders = opps * win / 100;
+      const revenue = orders * value * (1 + follow / 100);
+      const profit = revenue * margin / 100;
+      const acq = profit / (1 + roi / 100);
+      const mkt = acq * mshare / 100;
+      setValue('orders', count(orders));
+      setValue('revenue', money(revenue));
+      setValue('profit', money(profit));
+      setValue('acq', money(acq));
+      setValue('mkt', money(mkt));
+      setValue('rest', money(acq - mkt));
+      setValue('perOrder', orders === 0 ? '' : money(mkt / orders));
+      setValue('perOpp', money(mkt / opps));
+      const noLead = p.lead === null;
+      if (!noLead) {
+        const leads = opps / (p.lead! / 100);
+        setValue('leads', count(leads));
+        setValue('perLead', money(mkt / leads));
+      }
+      hide(document.getElementById('aim-cbc-tile-lead'), noLead);
+      hide(document.getElementById('aim-cbc-row-leads'), noLead);
+      show('ok');
+    }
+    el('aim-cbc-example').addEventListener('click', () => {
+      const ex: Record<string, number> = { 'aim-cbc-opps': 20, 'aim-cbc-win': 25, 'aim-cbc-value': 125000, 'aim-cbc-follow': 60, 'aim-cbc-lead': 25, 'aim-cbc-margin': 36, 'aim-cbc-roi': 200, 'aim-cbc-mshare': 25 };
+      for (const k in ex) el(k).value = String(ex[k]);
+      update();
+    });
+    root.querySelectorAll('input, select').forEach((n) => { n.addEventListener('input', update); n.addEventListener('change', update); });
+    update();
+  }
+  start();
+</script>

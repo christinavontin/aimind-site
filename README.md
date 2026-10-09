@@ -19,7 +19,7 @@ npm run build    # static site in dist/
 | Week | Content |
 | --- | --- |
 | 1 | ✓ Foundation: Astro, SEO template, layout, table template. CMO hub EN/DE as pilot. |
-| 2 | AI hub and ROI hub (EN/DE), ROI calculator as component. |
+| 2 | ✓ AI hub and ROI hub (EN/DE), ROI calculator as component. |
 | 3 | ✓ Homepage and Contact (EN/DE, final design). Open: About, Privacy Policy, AI Ethics, Glossary. |
 | 4 | Digital Product Passport article (revised), complete `_redirects`, final checks. |
 | 5 | DNS to Cloudflare (incl. Google Workspace email records), launch. |

@@ -23,6 +23,7 @@ Where the canvas, the Google Doc and the code differ, the **code** is the final 
 - New logo: sign, wordmark, favicon, JSON-LD logo.
 - Decisions on October 9: "ich" throughout, English hero line "Complex technology, made clear, positioned and anchored in its market.", button "View My Services", sentence case for navigation.
 - Repository cleaned: only final versions; the old test design and all design options removed.
+- AI hub and ROI hub migrated in EN and DE (October 9). Text checked block by block against the live WordPress pages (`scripts/text-hashes.mjs`). ROI calculator is `src/components/RoiCalculator.astro` (same logic and texts as the WordPress block, new design). German SEO fields written in German; German source dates now in German format. No hero images migrated yet (the live AI hub has one as its social image).
 - Changes on October 9 (afternoon): four industries instead of eight, audience circle 15 % smaller (544 px) and centered vertically with the headline, English headlines in title case, drop cap in Slate Cyan for the first letter of every article. On phones EN / DE and the menu circle sit in the header; the booking action is in the menu (a fixed bottom bar was tried and dropped). German booking label is now „Strategietermin buchen“ (header, cards, band, contact page title).
 
 ## Open, in this order
@@ -30,7 +31,6 @@ Where the canvas, the Google Doc and the code differ, the **code** is the final 
 1. **Christina checks the test site** in both languages, on a laptop and a phone.
 2. **German recommendations.** The live site showed them only in shortened form, so Claude completed four German quotes and translated Magnolia Restrepo's (English on the live site). Christina checks the wording in `src/components/Home.astro` (`de.refs`).
 3. **Migrate the missing pages** (they return 404 on the test site today, linked from the homepage and footer):
-   - AI hub `/2025/10/11/ai-in-b2b-marketing-guide/` and ROI hub `/2025/10/13/b2b-marketing-roi-and-kpis/`, EN and DE, ROI calculator as a component
    - About `/who-i-am/` (removed from the footer on October 9; decide where it is linked once the page exists), Privacy Policy `/privacy-policy/`, AI Ethics `/ai-data-protection/`, Glossary, each EN and `/de/`
    - Privacy Policy needs a new paragraph on Google Calendar and Google Meet (booking on the contact page).
 4. **Photo and signature.** No photo yet; the author box in articles has none. A handwritten signature is planned for the author box, About and email.

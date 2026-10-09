@@ -137,8 +137,8 @@ jsonLd.push({
             <section class="sources" aria-labelledby="sources">
               <h2 id="sources">{t.sources}</h2>
               <ul>
-                {d.sources.map((s: { author: string; title: string; url: string }) => (
-                  <li>{s.author}: <a href={s.url}>{s.title}</a></li>
+                {d.sources.map((s: { author: string; title: string; url?: string; meta?: string }) => (
+                  <li>{s.author}: {s.url ? <a href={s.url}>{s.title}</a> : s.title}{s.meta && `, ${s.meta}`}</li>
                 ))}
               </ul>
             </section>

@@ -22,7 +22,8 @@ const posts = defineCollection({
     role: z.enum(['hub', 'spoke']).default('hub'),
     faq: z.array(z.object({ q: z.string(), a: z.string() })).default([]),
     sources: z
-      .array(z.object({ author: z.string(), title: z.string(), url: z.string().url() }))
+      // meta: publisher and/or date after the title, e.g. "Ehrenberg-Bass Institute, May 2021"; url is optional for print sources
+      .array(z.object({ author: z.string(), title: z.string(), url: z.string().url().optional(), meta: z.string().optional() }))
       .default([]),
     draft: z.boolean().default(false),
   }),

@@ -1,0 +1,242 @@
+---
+key: roi-hub
+lang: en
+permalink: /2025/10/13/b2b-marketing-roi-and-kpis/
+title: How to Calculate B2B Marketing ROI That Holds Up With Your Board
+seoTitle: B2B Marketing ROI and the KPIs That Prove It to Your CEO
+description: "Five KPIs prove B2B marketing ROI to your CEO: CAC, LTV:CAC, payback period, marketing-influenced pipeline & revenue, plus ROI Calculator."
+keyphrase: B2B marketing ROI
+published: 2025-10-13
+updated: 2026-10-07
+role: hub
+faq:
+  - q: What marketing KPIs should I track to prove ROI to my CEO?
+    a: >-
+      Five KPIs prove marketing’s contribution: customer acquisition cost (CAC), the ratio of customer lifetime value to that cost (LTV:CAC), the payback period, marketing-influenced pipeline, and marketing-influenced revenue. In subscription businesses, all five work for ongoing reporting. With only a few large orders a year, marketing-influenced pipeline and revenue carry more weight. The case convinces when the executive team has agreed to the rules in advance and outcome metrics are kept separate from demand indicators.
+  - q: What is marketing-influenced revenue?
+    a: >-
+      Marketing-influenced revenue is revenue from won opportunities that marketing was involved in. Marketing and sales agree in advance on what counts as involvement, such as meetings, talks, reading a study, article, or white paper, or attending a webinar. In project businesses, the CRM records this involvement for each opportunity.
+  - q: Why is LTV:CAC better suited to planning than to reporting in project businesses?
+    a: >-
+      Project businesses close only a few orders a year, so a single large order can swing the ratio sharply. As an ongoing KPI, LTV:CAC fluctuates too much. Before a campaign, though, the same calculation shows how much you can afford to spend to win an order.
+  - q: How much should a B2B lead cost?
+    a: >-
+      How much you can pay for a lead depends on the gross profit a campaign is expected to generate. The target ROI determines how much of that gross profit can go into winning customers. Marketing’s share of that amount is the campaign budget. Divide it by the number of leads needed for the expected opportunities, and you get the budget per lead. That is why no single figure applies to every company.
+  - q: What are early indicators of B2B marketing demand?
+    a: >-
+      Early indicators show whether marketing is reaching the right companies before an opportunity appears. They include website visits from target companies, unprompted inquiries, requests for proposals, and new customers’ answers when asked how they found the company. Visibility in AI answers also shows reach, but not which companies are asking. Surveys that test whether buyers think of the brand in typical buying situations take more effort.
+sources:
+  - author: John Dawes
+    title: "Advertising effectiveness and the 95-5 rule: most B2B buyers are not in the market right now"
+    url: https://marketingscience.info/news-and-insights/advertising-effectiveness-and-the-95-5-rule-most-b2b-buyers-are-not-in-the-market-right-now
+    meta: Ehrenberg-Bass Institute, May 2021
+  - author: Eurostat
+    title: How internet users protected their data in 2023
+    url: https://ec.europa.eu/eurostat/web/products-eurostat-news/w/ddn-20240126-1
+    meta: January 26, 2024
+  - author: David Skok
+    title: SaaS Metrics 2.0 – A Guide to Measuring and Improving What Matters
+    url: https://www.forentrepreneurs.com/saas-metrics-2/
+    meta: For Entrepreneurs
+  - author: Klaus Backhaus, Markus Voeth
+    title: Industriegütermarketing
+    meta: 10th edition, Vahlen, 2014
+  - author: Les Binet, Peter Field
+    title: The 5 Principles of Growth in B2B Marketing
+    url: https://news.linkedin.com/content/dam/me/news/en-us/linkedin-pressroom-page/LIN_B2B-Marketing-Report-Digital.pdf
+    meta: LinkedIn B2B Institute
+  - author: Gartner
+    title: Gartner Survey Finds Only 52% of Senior Marketing Leaders Can Prove Marketing’s Value
+    url: https://www.gartner.com/en/newsroom/press-releases/2024-09-18-gartner-survey-finds-only-52-of-senior-marketing-leaders-can-prove-marketings-value-and-receive-credit-for-its-contribution-to-business-outcomes
+    meta: September 18, 2024
+  - author: Google
+    title: Select attribution settings
+    url: https://support.google.com/analytics/answer/10597962?hl=en
+    meta: Google Analytics Help
+  - author: Forrester
+    title: To Master B2B Buying Mayhem, Providers Must Prioritize Buyers’ Needs
+    url: https://www.forrester.com/press-newsroom/forrester-the-state-of-business-buying-2024
+    meta: December 4, 2024
+  - author: Salesforce
+    title: Setting Up Campaign Influence
+    url: https://developer.salesforce.com/docs/atlas.en-us.192.0.salesforce_campaign_implementation_guide.meta/salesforce_campaign_implementation_guide/campaign_setup_influence.htm
+    meta: Salesforce Developers
+  - author: OpenAI
+    title: Overview of OpenAI Crawlers
+    url: https://developers.openai.com/docs/bots
+  - author: OpenAI
+    title: "Ads in ChatGPT: The Basics"
+    url: https://help.openai.com/en/articles/20001207
+    meta: OpenAI Help Center
+  - author: Google Search Central
+    title: Introducing Search Generative AI performance reports in Search Console
+    url: https://developers.google.com/search/blog/2026/06/gen-ai-performance-reports
+    meta: June 3, 2026
+  - author: Jenni Romaniuk
+    title: Category Entry Points in a B2B World
+    url: https://business.linkedin.com/content/dam/lem/business/en/advertise/resources/b2b-institute/b2bi-cepinb2b-final.pdf
+    meta: LinkedIn B2B Institute, June 2022
+---
+import RoiCalculator from '../../../components/RoiCalculator.astro';
+
+The formula for marketing ROI fits on a single line. The hard part is pinning down one of its inputs: the revenue that comes from marketing. In capital goods and large service contracts, a rule of thumb from marketing researcher [John Dawes](https://marketingscience.info/news-and-insights/advertising-effectiveness-and-the-95-5-rule-most-b2b-buyers-are-not-in-the-market-right-now) suggests that only about 5% of buyers are in the market at any given time. Whatever a campaign does for the other 95% often doesn’t pay off until years later, when they start looking for a new supplier. Much of marketing’s impact therefore lands outside any single reporting period.
+
+Five KPIs can still make that contribution visible: customer acquisition cost (CAC), the ratio of customer lifetime value to that cost (LTV:CAC), the payback period, marketing-influenced pipeline, and marketing-influenced revenue. The first three capture what a customer costs and what they are worth. The other two show how much of the return traces back to marketing.
+
+How much these KPIs tell you depends on your type of business. In subscription businesses, high deal volumes produce stable averages. In project businesses, a handful of orders a year is typical, and months or even years pass between first contact and signed contract. In Europe, the data available for measurement is limited as well. According to [Eurostat](https://ec.europa.eu/eurostat/web/products-eurostat-news/w/ddn-20240126-1), more than half of internet users in the EU refuse to let their data be used for advertising. But the same KPIs also answer a second question before any campaign starts: how much can you afford to spend to win a new customer?
+
+## Which KPIs Prove B2B Marketing ROI
+
+**These KPIs only convince if marketing and sales agree up front on what counts as a marketing contribution.**
+
+<figure class="aim-tbl">
+<table>
+<thead><tr><th>KPI</th><th>Calculation</th><th>What it shows</th></tr></thead>
+<tbody>
+<tr><td>Customer acquisition cost (CAC)</td><td>Marketing and sales costs for new business ÷ number of new customers</td><td>What a new customer costs</td></tr>
+<tr><td>LTV:CAC</td><td>Gross profit over the entire customer relationship ÷ CAC</td><td>What a customer is worth relative to the cost of winning them</td></tr>
+<tr><td>Payback period</td><td>CAC ÷ monthly gross profit per customer</td><td>How many months it takes to recover that cost</td></tr>
+<tr><td>Marketing-influenced pipeline</td><td>Value of open opportunities marketing was involved in</td><td>Which opportunities marketing helped bring about</td></tr>
+<tr><td>Marketing-influenced revenue</td><td>Revenue from won opportunities marketing was involved in</td><td>The return that goes into the ROI calculation</td></tr>
+</tbody>
+</table>
+</figure>
+
+A contribution can be a personal touchpoint, such as a meeting, workshop, or talk, or a digital one, such as reading an article, white paper, or study, or attending a webinar. What matters is that someone engages with the product or service. An opened email doesn’t count. If it did, almost any deal could be credited to marketing.
+
+### How Do Marketing KPIs Differ by Business Type?
+
+**Subscription businesses can track the cost and value of a customer continuously. In project businesses, the same KPIs are mainly a planning tool.**
+
+This article draws on the classification by German B2B marketing scholars Klaus Backhaus and Markus Voeth. It distinguishes three types of business that differ mainly in deal volume and in how revenue comes in:
+
+<figure class="aim-tbl">
+<table>
+<thead><tr><th></th><th>Project business</th><th>Product business</th><th>Subscription business</th></tr></thead>
+<tbody>
+<tr><td>Examples</td><td>Industrial plants, large IT and service projects, multi-year service contracts</td><td>Machinery, large equipment, software licenses</td><td>Software as a service</td></tr>
+<tr><td>Revenue</td><td>Large order plus follow-on business</td><td>One-time sale plus service and spare parts</td><td>Recurring, as long as the customer stays</td></tr>
+<tr><td>Deals per year</td><td>Few</td><td>Moderate to many</td><td>Many</td></tr>
+</tbody>
+</table>
+</figure>
+
+For subscription businesses, investor David Skok of Matrix Partners sets two benchmarks in his guide [SaaS Metrics 2.0](https://www.forentrepreneurs.com/saas-metrics-2/). Over the life of the relationship, a customer should bring in more than three times what it cost to win them. And that cost should be recovered within 12 months.
+
+In project businesses, marketing-influenced pipeline and revenue make the stronger case to the executive team. Customer acquisition cost and customer value are more useful for planning. Before a campaign, they show how much you can afford to spend to win an order.
+
+### Why Does Marketing Mainly Build Demand When Orders Are Large and Rare?
+
+**In capital goods and large contracts, marketing mostly reaches companies that aren’t buying right now. Its job is to make sure they know a supplier and put it on their shortlist as soon as a need arises.**
+
+Dawes estimates that only about 20% of B2B buyers are in the market over the course of a year. The rest are tied to existing contracts or have no investment coming up.
+
+In their report for the [LinkedIn B2B Institute](https://news.linkedin.com/content/dam/me/news/en-us/linkedin-pressroom-page/LIN_B2B-Marketing-Report-Digital.pdf), Les Binet and Peter Field show that brand building creates demand and pays off over years, while activation, such as lead generation, turns existing demand into revenue quickly. Companies need both.
+
+That has an uncomfortable implication for ROI. If you measure marketing’s contribution by leads alone, you can’t see where the demand came from.
+
+### How Do You Prove Marketing ROI to the Executive Team?
+
+**Executives trust a measurement when they agreed to its rules in advance and when it keeps outcome metrics clearly separate from demand indicators.**
+
+I learned what such rules can look like when I led field marketing in Europe for TomTom Telematics from 2012 to 2015. Marketing booked meetings with prospects through a telemarketing team. After each meeting, sales decided whether it qualified as an opportunity. Part of marketing’s compensation was tied to the number of these opportunities, measured every quarter. A quarterly rhythm worked because orders were relatively small and customers decided within a few months.
+
+With large orders, it often takes more than a quarter for a first contact to become an opportunity, so proving impact needs a longer time frame. A [Gartner survey](https://www.gartner.com/en/newsroom/press-releases/2024-09-18-gartner-survey-finds-only-52-of-senior-marketing-leaders-can-prove-marketings-value-and-receive-credit-for-its-contribution-to-business-outcomes) of 378 CMOs and other senior marketing leaders shows how hard that proof is. Only 52% of them can prove marketing’s contribution to business outcomes and get credit for it. They name CFOs and CEOs as their biggest skeptics. Leaders who present marketing’s value over the long term and show its impact on sales and customer relationships fare better. More than two-thirds of them succeed.
+
+Over a longer time frame, two kinds of figures need to be kept apart. Outcome metrics are marketing-influenced revenue, marketing-influenced pipeline, and customer acquisition cost. Demand indicators show early on whether marketing is reaching the right companies, long before an opportunity appears.
+
+## What You Can Measure When Marketing Data Has Gaps
+
+No single method captures the full path to an order. Which one fits depends on your type of business and on what you want to see: results in pipeline and revenue, or early signs of new demand.
+
+### How Do You Measure Marketing’s Contribution to Revenue?
+
+**When buying decisions are quick, web analytics can measure marketing’s contribution to pipeline and revenue. When customers take months to decide on a large order, the CRM has to take over.**
+
+Web analytics credits a purchase to the visits and clicks that preceded it. In [Google Analytics](https://support.google.com/analytics/answer/10597962?hl=en), this lookback window is 90 days at most. A customer who buys within a few weeks is captured in full. For an order signed after nine months, web analytics sees only the last third of the journey.
+
+Then there is the number of people involved. According to [Forrester](https://www.forrester.com/press-newsroom/forrester-the-state-of-business-buying-2024), an average of 13 people are involved in a B2B purchase, and 89% of purchases span two or more departments. Web analytics tracks each visitor separately and cannot see the buying committee as a whole.
+
+In project businesses, marketing’s contribution is therefore best measured in the CRM. Each opportunity records which campaigns the customer’s stakeholders engaged with. The lookback can be set to match the length of the buying cycle. [Salesforce](https://developer.salesforce.com/docs/atlas.en-us.192.0.salesforce_campaign_implementation_guide.meta/salesforce_campaign_implementation_guide/campaign_setup_influence.htm), for example, allows up to 9,999 days between the first campaign touch and the creation of an opportunity. This only works if sales adds the stakeholders to the opportunity, which is why [reliable measurement starts with CRM discipline](/2025/07/31/challenges-for-b2b-cmo/).
+
+### How Do You Measure Whether Marketing Builds Demand?
+
+**Demand indicators show, long before an opportunity appears, whether marketing is reaching the right companies and whether they think of the brand.**
+
+Companies visiting a website can be identified by the IP address of their corporate network. When I led paid media at Cognizant from 2015 to 2022, we judged campaigns in media and search by how many target companies visited our website afterward. For each campaign, this showed how precise the targeting was and which channels reached the companies we were after. The results then shaped our choice of target companies and channels for the next round. The match gets less precise when employees browse from home or on mobile devices.
+
+In AI search, this matching fails. When ChatGPT reads a page to answer a question, the request comes [from OpenAI’s own servers](https://developers.openai.com/docs/bots) and reveals nothing about the company asking. Only when someone clicks a link in the answer does a visit reach the website directly. Whether a company reaches the right prospects through AI is hard to measure, but it can be influenced. What matters is whether its [content answers the exact questions target customers ask](/2025/10/11/ai-in-b2b-marketing-guide/). The ads [OpenAI now runs in ChatGPT](https://help.openai.com/en/articles/20001207) follow the same logic. According to OpenAI, they are selected mainly by the context and intent of the conversation.
+
+Measurement in AI search is still in its infancy. Since [June 2026](https://developers.google.com/search/blog/2026/06/gen-ai-performance-reports), Search Console has shown how often pages appear in Google’s AI Overviews and AI Mode. It is worth watching what data providers make available next. I expect, however, that the same EU data protection limits will apply as for web analytics.
+
+Whether buyers think of a company when a need arises can only be measured through surveys. Jenni Romaniuk of the Ehrenberg-Bass Institute explains how such surveys work in a [study for the B2B Institute](https://business.linkedin.com/content/dam/lem/business/en/advertise/resources/b2b-institute/b2bi-cepinb2b-final.pdf). She specifically names thought leadership as one way to link a brand to typical buying situations. These surveys take effort. They show how present a brand is in buyers’ minds, but they don’t prove revenue, which makes them more useful for steering marketing than for proving its impact.
+
+Signals from your own business are easier to capture. Sales can log unprompted inquiries and requests for proposals as a separate source in the CRM. Add one more question for every new customer: how did you find us? The answer also captures touchpoints no measurement sees, such as a referral.
+
+### Which Measurement Method Fits Which Business Type?
+
+Here is what each method captures and where it falls short:
+
+<figure class="aim-tbl">
+<table>
+<thead><tr><th>Method</th><th>What it shows</th><th>Type</th><th>Limits</th><th>Best fit</th></tr></thead>
+<tbody>
+<tr><td>Web analytics</td><td>Visitor paths to an inquiry or purchase</td><td><span class="pill pill-out">Outcome metric</span></td><td>90-day maximum lookback in Google Analytics, tracks individuals rather than the buying committee, requires consent</td><td>Subscription and product business</td></tr>
+<tr><td>Campaign influence in the CRM</td><td>Which opportunities marketing helped bring about</td><td><span class="pill pill-out">Outcome metric</span></td><td>Only as good as the data sales enters</td><td>Project business</td></tr>
+<tr><td>Matching visits to companies</td><td>Whether campaigns and content reach the right companies</td><td><span class="pill pill-dem">Demand indicator</span></td><td>Less precise with remote work and mobile devices, fails for AI requests</td><td>Project and product business</td></tr>
+<tr><td>Visibility in AI answers</td><td>How often content appears in AI answers</td><td><span class="pill pill-dem">Demand indicator</span></td><td>Doesn’t show which companies are asking</td><td>All business types</td></tr>
+<tr><td>Brand survey</td><td>Whether buyers think of the brand in typical buying situations</td><td><span class="pill pill-dem">Demand indicator</span></td><td>Takes effort, doesn’t prove revenue</td><td>Project and product business</td></tr>
+<tr><td>Signals in the CRM</td><td>Unprompted inquiries, requests for proposals</td><td><span class="pill pill-dem">Demand indicator</span></td><td>Only if sales logs them as a separate source</td><td>Project business</td></tr>
+<tr><td>New customer survey</td><td>How customers found the company, including touchpoints without a click</td><td><span class="pill pill-both">Both</span></td><td>Relies on respondents’ memory</td><td>All business types</td></tr>
+</tbody>
+</table>
+</figure>
+
+## How Much a Marketing Campaign Should Cost
+
+**Expected order value, win rate, gross margin, and target ROI tell you before a campaign starts how much marketing can spend per lead, opportunity, and order.**
+
+Proving impact looks back. Planning looks ahead and starts with what a campaign should deliver. How many opportunities should it generate, how many will turn into orders, and how much gross profit will those orders bring in, including follow-on business? Part of that gross profit can go into winning the customers.
+
+How large that part is depends on the target ROI each company sets. By definition, an ROI of 200% means gross profit is three times the customer acquisition cost.
+
+### How Much Can You Pay for a Lead in the Project Business?
+
+Here is a worked example with assumed figures:
+
+<figure class="aim-tbl">
+<table>
+<thead><tr><th>Step</th><th>Calculation</th><th class="num">Result</th></tr></thead>
+<tbody>
+<tr><td>Pipeline</td><td>20 opportunities × €125,000 order value</td><td class="num">€2,500,000</td></tr>
+<tr><td>Won orders</td><td>20 × 25% win rate</td><td class="num">5 orders, €625,000</td></tr>
+<tr><td>Including follow-on business</td><td>€625,000 + 60% follow-on business</td><td class="num">€1,000,000</td></tr>
+<tr><td>Gross profit</td><td>€1,000,000 × 36% gross margin</td><td class="num">€360,000</td></tr>
+<tr><td>Maximum acquisition cost at target ROI</td><td>€360,000 ÷ 3 (target ROI of 200%)</td><td class="num">€120,000</td></tr>
+<tr class="hl"><td>Marketing’s share</td><td>€120,000 × 25%</td><td class="num">€30,000</td></tr>
+<tr><td>Marketing budget per order</td><td>€30,000 ÷ 5</td><td class="num">€6,000</td></tr>
+<tr><td>Marketing budget per opportunity</td><td>€30,000 ÷ 20</td><td class="num">€1,500</td></tr>
+<tr><td>Marketing budget per lead</td><td>€30,000 ÷ 80 leads, assuming one in four leads becomes an opportunity</td><td class="num">€375</td></tr>
+</tbody>
+</table>
+</figure>
+
+The remaining €90,000 covers sales, proposals, and presales.
+
+### How to Calculate Your Own Campaign Budget
+
+Most of the figures already exist in your company. Order value, win rate, and follow-on business are in the CRM or can come from sales. Finance knows the gross margin, and the split between marketing and sales budgets shows how much of the acquisition cost falls to marketing. The ROI calculator below brings these figures together.
+
+<RoiCalculator lang="en" />
+
+If the actual cost per lead comes in above the calculated value, the campaign will miss its target ROI. That is the moment to review audience, channels, and content.
+
+The first plan is an estimate, often a rough one. Feed in the actual figures after each campaign, and the next plan gets more precise. Over time, the estimate becomes a reliable basis for planning.
+
+## Where Reliable Marketing ROI Begins
+
+**Marketing ROI becomes reliable when KPIs, measurement, and planning fit your type of business, and when marketing, sales, and the executive team agree on the rules in advance.**
+
+ROI then becomes a figure the company decides on before it invests, instead of one marketing has to justify afterward.
+
+A first step takes half an hour. Run your next planned campaign through the calculator using your own figures. Every figure you cannot fill in shows which data marketing, sales, and finance should start tracking together.
