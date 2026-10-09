@@ -25,7 +25,6 @@ export const UI = {
     cta: { label: 'Book a Strategy Call', href: '/contact/' },
     menu: 'Menu',
     footer: [
-      { label: 'About', href: '/who-i-am/' },
       { label: 'Contact', href: '/contact/' },
       { label: 'Privacy Policy', href: '/privacy-policy/' },
       { label: 'AI Ethics and Data Protection', href: '/ai-data-protection/' },
@@ -55,7 +54,6 @@ export const UI = {
     cta: { label: 'Strategietermin buchen', href: '/de/contact/' },
     menu: 'Menü',
     footer: [
-      { label: 'Über mich', href: '/de/who-i-am/' },
       { label: 'Kontakt', href: '/de/contact/' },
       { label: 'Datenschutz', href: '/de/privacy-policy/' },
       { label: 'KI-Ethik und Datenschutz', href: '/de/ai-data-protection/' },

@@ -31,7 +31,7 @@ Where the canvas, the Google Doc and the code differ, the **code** is the final 
 2. **German recommendations.** The live site showed them only in shortened form, so Claude completed four German quotes and translated Magnolia Restrepo's (English on the live site). Christina checks the wording in `src/components/Home.astro` (`de.refs`).
 3. **Migrate the missing pages** (they return 404 on the test site today, linked from the homepage and footer):
    - AI hub `/2025/10/11/ai-in-b2b-marketing-guide/` and ROI hub `/2025/10/13/b2b-marketing-roi-and-kpis/`, EN and DE, ROI calculator as a component
-   - About `/who-i-am/`, Privacy Policy `/privacy-policy/`, AI Ethics `/ai-data-protection/`, Glossary, each EN and `/de/`
+   - About `/who-i-am/` (removed from the footer on October 9; decide where it is linked once the page exists), Privacy Policy `/privacy-policy/`, AI Ethics `/ai-data-protection/`, Glossary, each EN and `/de/`
    - Privacy Policy needs a new paragraph on Google Calendar and Google Meet (booking on the contact page).
 4. **Photo and signature.** No photo yet; the author box in articles has none. A handwritten signature is planned for the author box, About and email.
 5. Digital Product Passport article (revised), complete `public/_redirects`.

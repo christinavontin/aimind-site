@@ -114,6 +114,8 @@ html:lang(de) .hero h1 { font-size: clamp(40px, 5.6vw, 80px); }
 .hl { display: block; overflow: hidden; padding-bottom: .1em; margin-bottom: -.1em; }
 /* the rise mask clips only top and bottom, so no browser can cut a letter's right edge */
 @supports (overflow: clip) { .hl { overflow: visible; overflow-y: clip; overflow-x: visible; } }
+/* last letter of a headline line keeps its natural spacing, so its edge always sits inside its box */
+.hl .le { letter-spacing: 0; }
 .hl > span { display: inline-block; position: relative; padding-right: .12em; margin-right: -.12em; } /* room for glyph ink: Safari clips it on animated layers */
 .hero .lead { margin: 28px 0 0; max-width: 30ch; font-size: clamp(19px, 2vw, 22px); line-height: 1.45; color: var(--body); }
 .hero .cta { margin-top: 36px; }
