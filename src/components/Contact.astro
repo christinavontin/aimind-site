@@ -62,7 +62,7 @@ const permalink = lang === 'de' ? '/de/contact/' : '/contact/';
             <p class="note">{c.calNote[0]}<a href={t.privacy.href} class="nl" style="text-decoration: underline">{c.privacyLabel}</a>{c.calNote[1]}</p>
             <span class="btn">{c.calBtn}</span>
           </summary>
-          <iframe src={SITE.bookingUrl} title={c.iframeTitle} loading="lazy"></iframe>
+          <iframe data-src={SITE.bookingUrl} title={c.iframeTitle}></iframe>
         </details>
       </div>
       <aside>
@@ -71,4 +71,13 @@ const permalink = lang === 'de' ? '/de/contact/' : '/contact/';
       </aside>
     </div>
   </section>
+  <script>
+    // GDPR: the Google calendar gets its address only when the visitor opens it.
+    // (An iframe inside a closed <details> would otherwise still be loaded by the browser.)
+    const cal = document.querySelector<HTMLDetailsElement>('details.calwrap');
+    cal?.addEventListener('toggle', () => {
+      const f = cal.querySelector<HTMLIFrameElement>('iframe[data-src]');
+      if (cal.open && f && !f.src) f.src = f.dataset.src!;
+    });
+  </script>
 </Base>
