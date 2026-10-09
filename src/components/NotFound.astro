@@ -1,0 +1,46 @@
+---
+// 404 page, EN and DE. Cloudflare Pages serves the nearest 404.html with status 404.
+import Base from '../layouts/Base.astro';
+import { UI, type Lang } from '../lib/site';
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const t = UI[lang];
+const c = {
+  en: {
+    title: 'Page not found – aimind.marketing',
+    h1: ['Page not', 'found.'],
+    lead: 'This page does not exist or has moved. The three guides and the homepage are a good place to continue.',
+    guides: [
+      ['B2B CMO: The Six Responsibilities That Define Strategic Leaders', '/2025/07/31/challenges-for-b2b-cmo/'],
+      ['How AI in B2B Marketing Delivers Results', '/2025/10/11/ai-in-b2b-marketing-guide/'],
+      ['How to Calculate B2B Marketing ROI That Holds Up With Your Board', '/2025/10/13/b2b-marketing-roi-and-kpis/'],
+    ],
+    home: 'Go to the Homepage',
+  },
+  de: {
+    title: 'Seite nicht gefunden – aimind.marketing',
+    h1: ['Seite nicht', 'gefunden.'],
+    lead: 'Diese Seite gibt es nicht oder sie ist umgezogen. Weiter geht es mit den drei Leitfäden oder auf der Startseite.',
+    guides: [
+      ['B2B-CMO: Die sechs Kernaufgaben strategischer Führung', '/de/2025/07/31/challenges-for-b2b-cmo/'],
+      ['Wie KI im B2B-Marketing Ergebnisse liefert', '/de/2025/10/11/ai-in-b2b-marketing-guide/'],
+      ['B2B-Marketing-ROI, der die Geschäftsführung überzeugt', '/de/2025/10/13/b2b-marketing-roi-and-kpis/'],
+    ],
+    home: 'Zur Startseite',
+  },
+}[lang];
+---
+<Base lang={lang} seoTitle={c.title} description={c.lead} permalink={lang === 'de' ? '/de/404/' : '/404/'} noindex>
+  <section class="page-hero">
+    <div class="wrap">
+      <h1><span class="hl"><span>{c.h1[0]}</span></span>{' '}<span class="hl"><span class="it">{c.h1[1]}</span></span></h1>
+      <p class="lead">{c.lead}</p>
+    </div>
+  </section>
+  <section class="wrap sec" style="padding-top: 56px">
+    <ul class="facts" style="max-width: 720px">
+      {c.guides.map(([title, href]) => <li><a href={href} class="nl" style="font-family: var(--font-serif); font-size: 22px">{title}</a></li>)}
+    </ul>
+    <p style="margin-top: 32px"><a href={t.home} class="btn">{c.home}</a></p>
+  </section>
+</Base>
