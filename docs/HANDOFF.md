@@ -39,7 +39,7 @@ Where the canvas, the Google Doc and the code differ, the **code** is the final 
 
 ## Small notes
 
-- Contact texts differ slightly by language on purpose (as in the Google Doc): the English band says "A 30-minute conversation. You leave with a clear next step.", the German band "Am Ende des Gesprächs wissen Sie den nächsten Schritt."; the contact pages swap these ideas.
+- Contact texts differ slightly by language on purpose (as in the Google Doc): the English band says "A 30-minute conversation. You leave with a clear next step.", the German band "Am Ende des Gesprächs kennen Sie den nächsten Schritt."; the contact pages swap these ideas.
 - German "Thought Leadership" as the second step name is Christina's choice.
 - The design canvas is history. New design work goes into the code and, if needed, a new board.
 
