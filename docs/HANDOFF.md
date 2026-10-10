@@ -38,20 +38,18 @@ Status on October 10, 2026. Read this file first in every new chat.
 
 ## Next, in this order
 
-### 1. Launch follow-up (Christina, in Cloudflare and Google)
+### 1. Launch housekeeping (Christina, outside the code)
 
-- [ ] Cloudflare → Rules → Redirect Rules: template "Redirect from WWW to root" deployed (so `www` never shows a duplicate site).
-- [ ] Cloudflare → Security → Bots: "Block AI bots" off, "Managed robots.txt" off.
-- [ ] Send and receive a test email at info@aimind.marketing.
-- [ ] Google Search Console (domain property aimind.marketing): submit `https://aimind.marketing/sitemap-index.xml`.
-- [ ] Check Search Console weekly for about six weeks (Pages report: 404s, "redirect error", drops in the three hubs). Keep all redirects for good.
-- [ ] WordPress.com: cancel the hosting plan, **keep the domain registration** (or transfer the domain to Cloudflare Registrar later). Check first that nothing else (email forwarding) still runs there.
+Done on October 10: `www` redirects permanently to the root domain (Cloudflare redirect rule), info@aimind.marketing sends and receives.
 
-### 2. Site improvements (open points)
+- Cloudflare → Security → Bots: keep "Block AI bots" and "Managed robots.txt" off.
+- Google Search Console (domain property aimind.marketing): submit `https://aimind.marketing/sitemap-index.xml`, then check the Pages report weekly for about six weeks (404s, redirect errors, the three hubs). Keep all redirects for good.
+- WordPress.com: cancel the hosting plan, **keep the domain registration** (or transfer it to Cloudflare Registrar later).
 
-- German recommendations on the homepage: Claude completed four German quotes and translated Magnolia Restrepo's; Christina checks the wording (`de.refs` in `src/components/Home.astro`). André Labadie's quote says "Tina" in both languages (original wording).
-- CMO hub: the intro says "only 14% of CMOs do this effectively", the section text says "only 14% of CMOs manage it" (same Gartner source). Align the wording in EN and DE.
-- Handwritten signature for the author box, About and email (planned, not made yet).
+### 2. Site enhancements
+
+- German recommendations on the homepage: four quotes were completed and Magnolia Restrepo's translated by Claude; Christina may refine the wording (`de.refs` in `src/components/Home.astro`). André Labadie's quote says "Tina" in both languages (his original wording).
+- Handwritten signature for the author box, About and email.
 - About page and Glossary are retired for now; they come back later (About as its own page, Glossary after the hubs).
 - When a design decision changes anything: update the private brand guide (plus decisions log), `docs/design-guide.md`, the board in `design/style-guide/` and `design/screens/` in the same step (rule in `CLAUDE.md`).
 

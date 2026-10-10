@@ -161,7 +161,7 @@ Graphic design follows a similar line. The core design, meaning brand identity, 
 
 ## When Does Market Shaping Start?
 
-Gartner describes market shaping as the ability to influence market dynamics by identifying and fulfilling unmet customer needs. According to a [Gartner survey of 125 CEOs and CFOs](https://www.gartner.com/en/newsroom/press-releases/2024-12-03-gartner-identifies-top-three-priorities-for-cmos-to-deliver-marketing-excellence-in-2025), only 14% of CMOs manage it. It pays off: companies whose CMO shapes the market are 2.6 times more likely to exceed their revenue and profit goals. Market shaping starts where the analysis of market signals ends, with the decision to turn a recognized need into your own story before competitors do.
+Gartner describes market shaping as the ability to influence market dynamics by identifying and fulfilling unmet customer needs. According to a [Gartner survey of 125 CEOs and CFOs](https://www.gartner.com/en/newsroom/press-releases/2024-12-03-gartner-identifies-top-three-priorities-for-cmos-to-deliver-marketing-excellence-in-2025), only 14% of CMOs do this effectively. It pays off: companies whose CMO shapes the market are 2.6 times more likely to exceed their revenue and profit goals. Market shaping starts where the analysis of market signals ends, with the decision to turn a recognized need into your own story before competitors do.
 
 ### Claiming the Story Before Competitors Do
 
