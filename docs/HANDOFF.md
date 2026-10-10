@@ -1,62 +1,74 @@
 # Handoff · aimind.marketing website
 
-Status on October 9, 2026. Read this file first in every new chat.
+Status on October 10, 2026. Read this file first in every new chat.
+
+**The site is live at https://aimind.marketing/** (since October 10, 2026). WordPress.com is no longer serving the domain.
 
 ## Where everything is
 
 | What | Where |
 | --- | --- |
-| Code (single source of truth) | GitHub `christinavontin/aimind-site`, branch `main` |
-| Test site (deploys on every push to `main`) | https://aimind-site.pages.dev/ (German: `/de/`) |
-| Design rules (colors, logo, fonts, buttons, layout, motion, copy) | `docs/design-guide.md` |
-| Brand guide (private, basis for all design work) | https://claude.ai/artifact/YF53i9hKw85J8WeKjGjGmP |
-| Design files (logo set, boards, screenshots, banners) | `design/` |
-| Homepage texts DE/EN (Christina comments here) | Google Doc: https://docs.google.com/document/d/1tgTjJd0rT7fu_y7nhdMj5vF5rMV23Xj-3MW23rAoAUI/edit |
-| Design canvas (exploration history only) | https://claude.ai/artifact/9ysPDL1AqTgN52jaHjGVMY |
+| Code (single source of truth) | GitHub `christinavontin/aimind-site`, branch `main`. Every push deploys straight to the live site. |
+| Live site | https://aimind.marketing/ (German: `/de/`); same build also at https://aimind-site.pages.dev/ |
+| Hosting, DNS, analytics | Cloudflare account christina.vontin@gmail.com: zone `aimind.marketing`, Pages project `aimind-site` (custom domains `aimind.marketing` and `www`), Web Analytics on |
+| Domain registration | Still at WordPress.com (nameservers point to Cloudflare: nelly / patrick.ns.cloudflare.com) |
+| Email | Google Workspace, info@aimind.marketing (MX/TXT records in Cloudflare DNS, never touch them) |
+| Brand guide (private, basis for all design and copy work) | https://claude.ai/artifact/YF53i9hKw85J8WeKjGjGmP — read `project/README.md` first |
+| Binding website design rules | `docs/design-guide.md` |
+| Design files (logo set, boards, screenshots, banners) | `design/` (file list in `design/README.md`) |
 | Writing rules | Skill "schreibstil" and `CLAUDE.md` |
+| Homepage texts DE/EN (history of Christina's comments) | Google Doc https://docs.google.com/document/d/1tgTjJd0rT7fu_y7nhdMj5vF5rMV23Xj-3MW23rAoAUI/edit — the code is newer and wins |
 
-Where the canvas, the Google Doc and the code differ, the **code** is the final version. The homepage texts in the code match the Google Doc as of October 9, including all of Christina's comments.
+## What is live
 
-## Done
+- Homepage and contact page (EN/DE), final.
+- Three hubs in EN and DE: CMO (`/2025/07/31/challenges-for-b2b-cmo/`), AI (`/2025/10/11/ai-in-b2b-marketing-guide/`), ROI with calculator (`/2025/10/13/b2b-marketing-roi-and-kpis/`). German under `/de/` + same path.
+- Privacy Policy and AI Ethics and Data Protection (EN/DE).
+- 404 pages per language; `public/llms.txt`; `public/robots.txt` (all crawlers allowed, AI crawlers listed); sitemap.
+- All other WordPress URLs are retired: 301 to the closest hub (`public/_redirects`), 410 where nothing fits (`functions/[[path]].js` + `public/_routes.json`). 294 local checks passed before launch; on the live domain a retired article was confirmed to land on its hub.
+- Author text from WordPress sits under the title of every article ("About the Author" / "Über die Autorin").
+- Profile photo for LinkedIn (own cutout on cream) and banners: in the private brand guide only, never in this public repository.
 
-- Final design built into the site: header, footer, homepage, contact page, article layout, EN and DE.
-- Fonts self-hosted (Schibsted Grotesk, Newsreader, Instrument Sans). No Google request on page load. The Google Calendar loads only after a click.
-- New logo: sign, wordmark, favicon, JSON-LD logo.
-- Decisions on October 9: "ich" throughout, English hero line "Complex technology, made clear, positioned and anchored in its market.", button "View My Services", sentence case for navigation.
-- Repository cleaned: only final versions; the old test design and all design options removed.
-- AI Ethics and Data Protection page migrated EN/DE (October 9, text unchanged).
-- AI hub and ROI hub migrated in EN and DE (October 9). Text checked block by block against the live WordPress pages (`scripts/text-hashes.mjs`). ROI calculator is `src/components/RoiCalculator.astro` (same logic and texts as the WordPress block, new design). German SEO fields written in German; German source dates now in German format. No hero images migrated yet (the live AI hub has one as its social image).
-- Changes on October 9 (afternoon): four industries instead of eight, audience circle 15 % smaller (544 px) and centered vertically with the headline, English headlines in title case, drop cap in Slate Cyan for the first letter of every article. On phones EN / DE and the menu circle sit in the header; the booking action is in the menu (a fixed bottom bar was tried and dropped). German booking label is now „Strategietermin buchen“ (header, cards, band, contact page title).
+## How the site is built (short)
 
-## Open, in this order
+- Articles: `src/content/posts/en|de/`, one file per language, paired by `key`; `permalink` is the full path. `.mdx` when a component is needed (ROI calculator: `<RoiCalculator lang="de" />`). SEO fields, `faq` and `sources` in the frontmatter; the layout renders FAQ, sources and JSON-LD.
+- Pages: `src/content/pages/en|de/`. Homepage `src/components/Home.astro`, contact `src/components/Contact.astro`, shared labels `src/lib/site.ts`.
+- Tables: Markdown tables are wrapped automatically; in MDX wrap them by hand in `<figure class="aim-tbl">`.
+- Before every push: `npm run build`, read changed pages in both languages, open every new external link. Redirect changes: test with `npx wrangler@3 pages dev dist`.
 
-1. **Christina checks the test site** in both languages, on a laptop and a phone.
-2. **German recommendations.** The live site showed them only in shortened form, so Claude completed four German quotes and translated Magnolia Restrepo's (English on the live site). Christina checks the wording in `src/components/Home.astro` (`de.refs`).
-3. **Migrate the missing pages** (they return 404 on the test site today, linked from the homepage and footer):
-   - About and Glossary retired at launch (October 9 decision); the glossary comes back after the hub passes.
-   - Privacy Policy EN/DE: rewritten on October 9 for the new site (Cloudflare Pages, no cookies, Google Calendar booking on click, Google Meet, Google Workspace email). The WordPress version described comments, Gravatar and login cookies. Contact email: info@aimind.marketing (live since October 10).
-4. **Cloudflare Web Analytics** (decided October 9: no Google Analytics, no consent banner). Switch it on in the Cloudflare dashboard for the Pages project `aimind-site` (Metrics → Web Analytics); Cloudflare then adds its script to every page. The privacy policy already describes it.
-5. **Photo and signature.** No photo yet; the author box in articles has none. A handwritten signature is planned for the author box, About and email.
-6. Digital Product Passport article (revised), complete `public/_redirects`.
-7. Launch: DNS to Cloudflare (keep the Google Workspace email records), custom domain on the Pages project, Search Console, then cancel WordPress.com. Planned for late November 2026.
+## Next, in this order
 
-## Before the domain moves (checklist, updated October 9 evening)
+### 1. Launch follow-up (Christina, in Cloudflare and Google)
 
-**Decided October 9:** the site goes live with the three hubs (CMO, AI, ROI), homepage, contact, privacy policy and AI ethics page. Every other WordPress page is retired: About, Glossary, landing pages, categories, author page, blog overview. The Digital Product Passport article and about 25 older, unlinked articles are reworked one by one after launch and only then come back. The author text from WordPress now sits under the title of every article ("About the Author" / "Über die Autorin"); the article JSON-LD names the homepage and LinkedIn as the author's pages.
+- [ ] Cloudflare → Rules → Redirect Rules: template "Redirect from WWW to root" deployed (so `www` never shows a duplicate site).
+- [ ] Cloudflare → Security → Bots: "Block AI bots" off, "Managed robots.txt" off.
+- [ ] Send and receive a test email at info@aimind.marketing.
+- [ ] Google Search Console (domain property aimind.marketing): submit `https://aimind.marketing/sitemap-index.xml`.
+- [ ] Check Search Console weekly for about six weeks (Pages report: 404s, "redirect error", drops in the three hubs). Keep all redirects for good.
+- [ ] WordPress.com: cancel the hosting plan, **keep the domain registration** (or transfer the domain to Cloudflare Registrar later). Check first that nothing else (email forwarding) still runs there.
 
-- **Redirects: done October 9, revised October 10.** All rules are permanent (301), as Google recommends for site moves: each retired article points to the hub that covers its topic (the three content-for-technology articles to the AI hub, the DPP and circularity articles to the CMO hub). When a new article covers a retired topic, repoint the matching redirects to it; when an article returns under its old URL, delete its lines. 12 paths answer 410. 294 local checks passed (every rule, every target, all 54 Search Console pages: 12 stay, 38 redirect, 4 gone). Keep the redirects for good (Google: at least one year). After launch, check Search Console weekly for about six weeks.
-- **Christina reviews:** German recommendations on the homepage (`de.refs` in `src/components/Home.astro`).
-- **LLMs and robots:** `public/llms.txt` (written by hand, replaces the Yoast file) and `public/robots.txt` (all crawlers allowed, AI crawlers listed). On launch day, check in Cloudflare that the zone settings do not block AI crawlers (Security → Bots, "AI Crawl Control" / "Block AI bots", "Managed robots.txt") — Cloudflare can switch these on for new domains.
-- **Launch day:** domain aimind.marketing is registered at WordPress.com. Copy the Google Workspace email records (MX, SPF, DKIM, DMARC) to Cloudflare first, point the domain to Cloudflare (nameservers or transfer), add the custom domain to the Pages project, check HTTPS, `www` and the `/de/` pages, submit the sitemap in Search Console, then cancel the WordPress.com plan.
+### 2. Site improvements (open points)
 
-## Small notes
+- German recommendations on the homepage: Claude completed four German quotes and translated Magnolia Restrepo's; Christina checks the wording (`de.refs` in `src/components/Home.astro`). André Labadie's quote says "Tina" in both languages (original wording).
+- CMO hub: the intro says "only 14% of CMOs do this effectively", the section text says "only 14% of CMOs manage it" (same Gartner source). Align the wording in EN and DE.
+- Handwritten signature for the author box, About and email (planned, not made yet).
+- About page and Glossary are retired for now; they come back later (About as its own page, Glossary after the hubs).
+- When a design decision changes anything: update the private brand guide (plus decisions log), `docs/design-guide.md`, the board in `design/style-guide/` and `design/screens/` in the same step (rule in `CLAUDE.md`).
 
-- Contact texts differ slightly by language on purpose (as in the Google Doc): the English band says "A 30-minute conversation. You leave with a clear next step.", the German band "Am Ende des Gesprächs kennen Sie den nächsten Schritt."; the contact pages swap these ideas.
-- German "Thought Leadership" as the second step name is Christina's choice.
-- The design canvas is history. New design work goes into the code and, if needed, a new board.
+### 3. Blog posts (agreed clusters, keep it simple)
 
-## Prompt for a new chat
+1. **GEO / AI search article** — demand in Search Console for GEO and content topics; fits the service "AI Search Presence"; links to the AI hub.
+2. **B2B content for technology companies** — with the Digital Product Passport as the compliance example the content must meet (Christina writes about content marketing, not law). Links to the CMO hub.
+3. Go-To-Market topics stay in the CMO hub for now.
 
-Copy this into a new chat (Claude Code with the repository `christinavontin/aimind-site`):
+Workflow per article: German first (discussed and drafted in chat), then the English rewrite; SEO fields per language; primary sources only, every link opened and checked; FAQ and sources in the frontmatter. When a new article covers a retired topic, repoint the matching lines in `public/_redirects` to it (EN and DE, with and without trailing slash). When an old article comes back under its old URL, delete its redirect lines.
 
-> I'm continuing the migration of my website aimind.marketing from WordPress.com to Astro on Cloudflare Pages. Repository: christinavontin/aimind-site (branch main, every push deploys to https://aimind-site.pages.dev/). First read `CLAUDE.md`, `docs/HANDOFF.md` and `docs/design-guide.md`. The homepage and contact page are final in EN and DE; the code is the reference for the design. Follow the design guide exactly and apply the skill "schreibstil" to every text. German first, English as a rewrite. Keep only final versions in the repository. Next task: [for example "migrate the AI hub EN and DE" or "the About page"].
+After launch, the DPP article and about 25 older articles are reworked one at a time; each returns only when it is reworked.
+
+## Search Console baseline (before launch)
+
+The ROI topic is strongest; German AI queries rank around position 80; demand exists for GEO and content topics. 54 indexed pages at launch: 12 stay, 38 redirect (301), 4 gone (410).
+
+## Prompt for the next chat
+
+> I'm continuing work on my website aimind.marketing (Astro on Cloudflare Pages, live since October 10, 2026). Repository: christinavontin/aimind-site, branch main; every push deploys to the live site. First read `CLAUDE.md`, `docs/HANDOFF.md`, `docs/design-guide.md` and the `project/README.md` of my private brand guide. Apply the skill "schreibstil" to every text, German first, English as a rewrite. Keep only final versions in the repository. Next task: [for example "the GEO article, start with an outline in German" or "launch follow-up checks"].

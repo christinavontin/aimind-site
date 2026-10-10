@@ -47,4 +47,4 @@ After every design decision, update in the same step: the private brand guide (t
 
 ## Status
 
-Migration from WordPress.com, planned launch late November 2026. Homepage and contact page are final (October 9, 2026). Current state and next steps: `docs/HANDOFF.md`. Plan: README.md.
+Live at https://aimind.marketing/ since October 10, 2026 (migrated from WordPress.com). Every push to `main` changes the live site. Current state and next steps: `docs/HANDOFF.md`. Plan: README.md.
