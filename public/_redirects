@@ -1,6 +1,6 @@
 # aimind.marketing redirects (Cloudflare Pages format: <old path> <new path> <status>)
 # Every rule exists for English and for /de/ (German old URL → German target), with and without trailing slash.
-# Decided with Christina on October 9, 2026 (redirect decision workbook). 410 pages are handled in functions/[[path]].js.
+# Decided with Christina on October 9, 2026 (redirect decision workbook); all permanent (301) since October 10, as Google recommends for site moves. 410 pages are handled in functions/[[path]].js.
 
 
 # Retired articles → AI hub
@@ -145,56 +145,56 @@
 /de/what-is-marketing-influenced-revenue/ /de/2025/10/13/b2b-marketing-roi-and-kpis/ 301
 /de/what-is-marketing-influenced-revenue /de/2025/10/13/b2b-marketing-roi-and-kpis/ 301
 
-# Content for technology companies → homepage services (until the new article exists)
-/2026/01/02/b2b-marketing-content-green-tech/ /#services 301
-/2026/01/02/b2b-marketing-content-green-tech /#services 301
-/de/2026/01/02/b2b-marketing-content-green-tech/ /de/#services 301
-/de/2026/01/02/b2b-marketing-content-green-tech /de/#services 301
-/2026/01/02/content-b2b-shorten-review-cycles/ /#services 301
-/2026/01/02/content-b2b-shorten-review-cycles /#services 301
-/de/2026/01/02/content-b2b-shorten-review-cycles/ /de/#services 301
-/de/2026/01/02/content-b2b-shorten-review-cycles /de/#services 301
-/2026/01/02/content-for-b2b-marketing/ /#services 301
-/2026/01/02/content-for-b2b-marketing /#services 301
-/de/2026/01/02/content-for-b2b-marketing/ /de/#services 301
-/de/2026/01/02/content-for-b2b-marketing /de/#services 301
+# Content for technology companies → AI hub (blueprint, verified facts); move to the new content article once it exists
+/2026/01/02/b2b-marketing-content-green-tech/ /2025/10/11/ai-in-b2b-marketing-guide/ 301
+/2026/01/02/b2b-marketing-content-green-tech /2025/10/11/ai-in-b2b-marketing-guide/ 301
+/de/2026/01/02/b2b-marketing-content-green-tech/ /de/2025/10/11/ai-in-b2b-marketing-guide/ 301
+/de/2026/01/02/b2b-marketing-content-green-tech /de/2025/10/11/ai-in-b2b-marketing-guide/ 301
+/2026/01/02/content-b2b-shorten-review-cycles/ /2025/10/11/ai-in-b2b-marketing-guide/ 301
+/2026/01/02/content-b2b-shorten-review-cycles /2025/10/11/ai-in-b2b-marketing-guide/ 301
+/de/2026/01/02/content-b2b-shorten-review-cycles/ /de/2025/10/11/ai-in-b2b-marketing-guide/ 301
+/de/2026/01/02/content-b2b-shorten-review-cycles /de/2025/10/11/ai-in-b2b-marketing-guide/ 301
+/2026/01/02/content-for-b2b-marketing/ /2025/10/11/ai-in-b2b-marketing-guide/ 301
+/2026/01/02/content-for-b2b-marketing /2025/10/11/ai-in-b2b-marketing-guide/ 301
+/de/2026/01/02/content-for-b2b-marketing/ /de/2025/10/11/ai-in-b2b-marketing-guide/ 301
+/de/2026/01/02/content-for-b2b-marketing /de/2025/10/11/ai-in-b2b-marketing-guide/ 301
 
-# Temporary until the reworked DPP article returns under its old URL
-/2026/07/19/digital-product-passports-infrastructure/ /2025/07/31/challenges-for-b2b-cmo/ 302
-/2026/07/19/digital-product-passports-infrastructure /2025/07/31/challenges-for-b2b-cmo/ 302
-/de/2026/07/19/digital-product-passports-infrastructure/ /de/2025/07/31/challenges-for-b2b-cmo/ 302
-/de/2026/07/19/digital-product-passports-infrastructure /de/2025/07/31/challenges-for-b2b-cmo/ 302
-/2026/04/12/cmos-guide-to-industrial-circularity-2026/ /2025/07/31/challenges-for-b2b-cmo/ 302
-/2026/04/12/cmos-guide-to-industrial-circularity-2026 /2025/07/31/challenges-for-b2b-cmo/ 302
-/de/2026/04/12/cmos-guide-to-industrial-circularity-2026/ /de/2025/07/31/challenges-for-b2b-cmo/ 302
-/de/2026/04/12/cmos-guide-to-industrial-circularity-2026 /de/2025/07/31/challenges-for-b2b-cmo/ 302
-/2026/04/06/repair-index-product-quality-espr/ /2025/07/31/challenges-for-b2b-cmo/ 302
-/2026/04/06/repair-index-product-quality-espr /2025/07/31/challenges-for-b2b-cmo/ 302
-/de/2026/04/06/repair-index-product-quality-espr/ /de/2025/07/31/challenges-for-b2b-cmo/ 302
-/de/2026/04/06/repair-index-product-quality-espr /de/2025/07/31/challenges-for-b2b-cmo/ 302
-/2026/04/04/dpp-digital-feedstock-circular-economy-branding/ /2025/07/31/challenges-for-b2b-cmo/ 302
-/2026/04/04/dpp-digital-feedstock-circular-economy-branding /2025/07/31/challenges-for-b2b-cmo/ 302
-/de/2026/04/04/dpp-digital-feedstock-circular-economy-branding/ /de/2025/07/31/challenges-for-b2b-cmo/ 302
-/de/2026/04/04/dpp-digital-feedstock-circular-economy-branding /de/2025/07/31/challenges-for-b2b-cmo/ 302
-/2026/04/04/iot-industrial-waste-management-2026/ /2025/07/31/challenges-for-b2b-cmo/ 302
-/2026/04/04/iot-industrial-waste-management-2026 /2025/07/31/challenges-for-b2b-cmo/ 302
-/de/2026/04/04/iot-industrial-waste-management-2026/ /de/2025/07/31/challenges-for-b2b-cmo/ 302
-/de/2026/04/04/iot-industrial-waste-management-2026 /de/2025/07/31/challenges-for-b2b-cmo/ 302
+# DPP and circularity → CMO hub; delete these lines when the reworked DPP article returns, and point the circularity articles to it
+/2026/07/19/digital-product-passports-infrastructure/ /2025/07/31/challenges-for-b2b-cmo/ 301
+/2026/07/19/digital-product-passports-infrastructure /2025/07/31/challenges-for-b2b-cmo/ 301
+/de/2026/07/19/digital-product-passports-infrastructure/ /de/2025/07/31/challenges-for-b2b-cmo/ 301
+/de/2026/07/19/digital-product-passports-infrastructure /de/2025/07/31/challenges-for-b2b-cmo/ 301
+/2026/04/12/cmos-guide-to-industrial-circularity-2026/ /2025/07/31/challenges-for-b2b-cmo/ 301
+/2026/04/12/cmos-guide-to-industrial-circularity-2026 /2025/07/31/challenges-for-b2b-cmo/ 301
+/de/2026/04/12/cmos-guide-to-industrial-circularity-2026/ /de/2025/07/31/challenges-for-b2b-cmo/ 301
+/de/2026/04/12/cmos-guide-to-industrial-circularity-2026 /de/2025/07/31/challenges-for-b2b-cmo/ 301
+/2026/04/06/repair-index-product-quality-espr/ /2025/07/31/challenges-for-b2b-cmo/ 301
+/2026/04/06/repair-index-product-quality-espr /2025/07/31/challenges-for-b2b-cmo/ 301
+/de/2026/04/06/repair-index-product-quality-espr/ /de/2025/07/31/challenges-for-b2b-cmo/ 301
+/de/2026/04/06/repair-index-product-quality-espr /de/2025/07/31/challenges-for-b2b-cmo/ 301
+/2026/04/04/dpp-digital-feedstock-circular-economy-branding/ /2025/07/31/challenges-for-b2b-cmo/ 301
+/2026/04/04/dpp-digital-feedstock-circular-economy-branding /2025/07/31/challenges-for-b2b-cmo/ 301
+/de/2026/04/04/dpp-digital-feedstock-circular-economy-branding/ /de/2025/07/31/challenges-for-b2b-cmo/ 301
+/de/2026/04/04/dpp-digital-feedstock-circular-economy-branding /de/2025/07/31/challenges-for-b2b-cmo/ 301
+/2026/04/04/iot-industrial-waste-management-2026/ /2025/07/31/challenges-for-b2b-cmo/ 301
+/2026/04/04/iot-industrial-waste-management-2026 /2025/07/31/challenges-for-b2b-cmo/ 301
+/de/2026/04/04/iot-industrial-waste-management-2026/ /de/2025/07/31/challenges-for-b2b-cmo/ 301
+/de/2026/04/04/iot-industrial-waste-management-2026 /de/2025/07/31/challenges-for-b2b-cmo/ 301
 
-/2026/04/05/psychology-of-the-circular-economy/ /2025/07/31/challenges-for-b2b-cmo/ 302
-/2026/04/05/psychology-of-the-circular-economy /2025/07/31/challenges-for-b2b-cmo/ 302
-/de/2026/04/05/psychology-of-the-circular-economy/ /de/2025/07/31/challenges-for-b2b-cmo/ 302
-/de/2026/04/05/psychology-of-the-circular-economy /de/2025/07/31/challenges-for-b2b-cmo/ 302
+/2026/04/05/psychology-of-the-circular-economy/ /2025/07/31/challenges-for-b2b-cmo/ 301
+/2026/04/05/psychology-of-the-circular-economy /2025/07/31/challenges-for-b2b-cmo/ 301
+/de/2026/04/05/psychology-of-the-circular-economy/ /de/2025/07/31/challenges-for-b2b-cmo/ 301
+/de/2026/04/05/psychology-of-the-circular-economy /de/2025/07/31/challenges-for-b2b-cmo/ 301
 
-# Glossary: temporary until it returns
-/b2b-marketing-glossary/ / 302
-/b2b-marketing-glossary / 302
-/de/b2b-marketing-glossary/ /de/ 302
-/de/b2b-marketing-glossary /de/ 302
-/2026/07/03/b2b-marketing-glossary/ / 302
-/2026/07/03/b2b-marketing-glossary / 302
-/de/2026/07/03/b2b-marketing-glossary/ /de/ 302
-/de/2026/07/03/b2b-marketing-glossary /de/ 302
+# Glossary → homepage; delete these lines when the glossary returns
+/b2b-marketing-glossary/ / 301
+/b2b-marketing-glossary / 301
+/de/b2b-marketing-glossary/ /de/ 301
+/de/b2b-marketing-glossary /de/ 301
+/2026/07/03/b2b-marketing-glossary/ / 301
+/2026/07/03/b2b-marketing-glossary / 301
+/de/2026/07/03/b2b-marketing-glossary/ /de/ 301
+/de/2026/07/03/b2b-marketing-glossary /de/ 301
 
 # Retired pages
 /b2b-marketing-experience/ /#career 301

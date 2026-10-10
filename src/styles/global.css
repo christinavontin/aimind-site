@@ -142,7 +142,6 @@ h1 .hl > span { display: inline-block; position: relative; padding-right: .12em;
 .ln { flex: 1; height: 1.5px; background: var(--line-step); }
 .step-t { font-family: var(--font-head); font-size: 28px; font-weight: 700; letter-spacing: -0.02em; line-height: 1.1; }
 .step-x { font-size: 17px; color: var(--body); max-width: 36ch; }
-.steps .txt { margin-top: 6px; align-self: flex-start; }
 
 /* Services */
 .svcgrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); column-gap: 24px; row-gap: 0; }

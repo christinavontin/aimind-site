@@ -24,11 +24,11 @@ const en = {
   howTitle: 'How I Work',
   howIntro: 'Even the most advanced technology can struggle to gain market traction when its value is not clearly communicated. I connect strategic positioning, deep subject-matter expertise and purposeful communication to turn technological strengths into a compelling market advantage.',
   steps: [
-    { t: 'Positioning', x: 'I define the strategic positioning and core messaging that connect your technology to the business value it delivers to customers.', link: 'Service · Go-To-Market', href: '#svc-gtm' },
-    { t: 'Thought Leadership', x: 'I turn your experts’ knowledge into strategic content that demonstrates your expertise and establishes your company as a credible voice in the market.', link: 'Service · Market Authority', href: '#svc-auth' },
-    { t: 'Visibility', x: 'I optimize your content for AI-powered search so AI systems can better discover, understand and reference your expertise in their responses.', link: 'Service · AI Search Presence', href: '#svc-ai' },
+    { t: 'Positioning', x: 'I define the strategic positioning and core messaging that connect your technology to the business value it delivers to customers.' },
+    { t: 'Thought Leadership', x: 'I turn your experts’ knowledge into strategic content that demonstrates your expertise and establishes your company as a credible voice in the market.' },
+    { t: 'Visibility', x: 'I optimize your content for AI-powered search so AI systems can better discover, understand and reference your expertise in their responses.' },
   ],
-  svcTitle: 'Three Ways to Bring Your Technology to Market',
+  svcTitle: 'Three Steps to Bring Your Technology to Market',
   toggle: 'Key deliverables',
   services: [
     {
@@ -109,11 +109,11 @@ const de: typeof en = {
   howTitle: 'Wie ich arbeite',
   howIntro: 'Selbst die leistungsstärkste Technologie hat es am Markt schwer, wenn ihre Vorteile nicht klar kommuniziert werden. Ich verbinde strategische Positionierung, fundiertes Fachwissen und gezielte Kommunikation, um technische Stärken in einen überzeugenden Marktvorteil zu übersetzen.',
   steps: [
-    { t: 'Positionierung', x: 'Ich entwickle strategische Positionierung und Kernbotschaft, die Ihre Technologie mit dem geschäftlichen Nutzen für Ihre Kunden verbinden.', link: 'Service · Go-To-Market', href: '#svc-gtm' },
-    { t: 'Thought Leadership', x: 'Ich mache das Wissen Ihrer Experten durch strategische Fachinhalte sichtbar und stärke Ihre Position als relevante Stimme im Markt.', link: 'Service · Marktpräsenz', href: '#svc-auth' },
-    { t: 'Sichtbarkeit', x: 'Ich optimiere Ihre Inhalte für die KI-Suche, damit KI-Systeme Ihre Expertise besser erkennen, einordnen und in ihren Antworten berücksichtigen können.', link: 'Service · Präsenz in der KI-Suche', href: '#svc-ai' },
+    { t: 'Positionierung', x: 'Ich entwickle strategische Positionierung und Kernbotschaft, die Ihre Technologie mit dem geschäftlichen Nutzen für Ihre Kunden verbinden.' },
+    { t: 'Thought Leadership', x: 'Ich mache das Wissen Ihrer Experten durch strategische Fachinhalte sichtbar und stärke Ihre Position als relevante Stimme im Markt.' },
+    { t: 'Sichtbarkeit', x: 'Ich optimiere Ihre Inhalte für die KI-Suche, damit KI-Systeme Ihre Expertise besser erkennen, einordnen und in ihren Antworten berücksichtigen können.' },
   ],
-  svcTitle: 'Drei Wege, Ihre Technologie in den Markt zu bringen',
+  svcTitle: 'Drei Schritte, Ihre Technologie in den Markt zu bringen',
   toggle: 'Leistungen',
   services: [
     {
@@ -241,7 +241,6 @@ const jsonLd = [
           <span class="num-row"><span class="num">{String(i + 1).padStart(2, '0')}</span><span class="ln"></span></span>
           <span class="step-t">{s.t}</span>
           <span class="step-x">{s.x}</span>
-          <a href={s.href} class="txt">{s.link}</a>
         </li>
       ))}
     </ol>

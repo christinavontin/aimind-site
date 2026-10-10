@@ -29,7 +29,7 @@ with `<tr class="hl">` or `<span class="pill pill-out">`.
 
 ## Redirects
 
-`public/_redirects`, one rule per line: `<old path> <new path> 301` (or `302` for articles that come back later). Every rule exists for EN and `/de/`, with and without trailing slash.
+`public/_redirects`, one rule per line: `<old path> <new path> 301`. Always permanent and always to the closest matching article, never many URLs to the homepage (Google may treat that as a soft 404). When a new article covers a retired topic, repoint the matching redirects to it. Every rule exists for EN and `/de/`, with and without trailing slash.
 Retired articles without a successor get `410`: Cloudflare's redirect file cannot send 410, so these paths are listed in `functions/[[path]].js` and `public/_routes.json` (the function runs only on those paths).
 When a retired article comes back, delete its redirect lines. Test locally before pushing: `npx wrangler@3 pages dev dist`.
 
