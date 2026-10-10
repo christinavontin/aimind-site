@@ -144,15 +144,34 @@ h1 .hl > span { display: inline-block; position: relative; padding-right: .12em;
 .step-x { font-size: 17px; color: var(--body); max-width: 36ch; }
 
 /* Services */
-.svcgrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); column-gap: 24px; row-gap: 0; }
-.svc { display: grid; grid-row: span 4; grid-template-rows: subgrid; row-gap: 0; align-content: start; margin-bottom: 24px; background: var(--offwhite); border-radius: 16px; padding: 32px; transition: translate .25s, box-shadow .25s; }
+.svcgrid { display: grid; grid-template-columns: 1fr; column-gap: 24px; row-gap: 0; }
+@media (min-width: 960px) {
+  .svcgrid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .svc { grid-column: var(--col); grid-row: 1 / span 4; }
+  .svc-panel { grid-column: 1 / -1; grid-row: 5; }
+}
+.svc { display: grid; grid-row: span 4; grid-template-rows: subgrid; position: relative; row-gap: 0; align-content: start; margin-bottom: 24px; background: var(--offwhite); border-radius: 16px; padding: 32px; transition: translate .25s, box-shadow .25s; }
 .svc:hover { translate: 0 -3px; box-shadow: 0 12px 20px -4px rgba(9, 25, 68, .08); }
 .svc h3 { margin: 0 0 16px; font-family: var(--font-head); font-size: 28px; font-weight: 700; letter-spacing: -0.02em; line-height: 1.15; }
 .svc > p { margin: 0; font-size: 17px; color: var(--slate); }
-.svc > details { align-self: start; margin-top: 28px; padding-top: 20px; border-top: 1px solid var(--line); }
+.svc > .svc-toggle { align-self: start; margin-top: 28px; padding-top: 20px; border-top: 1px solid var(--line); }
 .svc > .txt { align-self: end; justify-self: start; margin-top: 28px; }
-.svc summary { list-style: none; cursor: pointer; display: inline-flex; align-items: center; gap: 12px; font-weight: 600; font-size: 16px; }
-.svc summary::-webkit-details-marker { display: none; }
+.svc-btn { display: inline-flex; align-items: center; gap: 12px; padding: 0; border: 0; background: none; cursor: pointer; font: inherit; font-weight: 600; font-size: 16px; color: var(--navy); }
+.svc-btn:hover .chev, .svc-btn[aria-expanded="true"] .chev { background: var(--yellow); }
+.svc-btn[aria-expanded="true"] .chev { transform: rotate(180deg); }
+/* Deliverables panel: off-white like the cards, a cream marker points to the open card */
+.svc-panel { position: relative; margin-bottom: 24px; background: var(--offwhite); border-radius: 16px; padding: 28px 32px 32px; }
+.svc-panel .kick { margin: 0 0 4px; }
+.svc-panel .dl { margin-top: 16px; }
+@media (min-width: 960px) {
+  .svc.open { box-shadow: inset 0 -4px 0 var(--yellow); }
+  .svc-panel::before { content: ""; position: absolute; top: -12px; left: calc((100% + 24px) / 3 * (var(--col) - 1) + (100% - 48px) / 6 - 12px); border: 12px solid transparent; border-top: 0; border-bottom-color: var(--offwhite); }
+  .svc-panel .dl { flex-direction: row; gap: 32px; }
+  .svc-panel .dl li { flex: 1 1 0; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .svc-panel:not([hidden]) { animation: up .45s var(--ease) both; }
+}
 .dl { list-style: none; margin: 20px 0 0; padding: 0; display: flex; flex-direction: column; gap: 16px; font-size: 16px; line-height: 1.5; color: var(--body); }
 .dl li { position: relative; padding-left: 28px; }
 .dl li::before { content: "✓"; position: absolute; left: 0; top: 0; color: var(--cyan); font-weight: 600; }

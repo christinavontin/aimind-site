@@ -249,18 +249,42 @@ const jsonLd = [
   <section id="services" class="wrap sec" style="padding-top: 88px">
     <h2 class="h2 rv" style="max-width: 16ch; margin-bottom: 40px">{c.svcTitle}</h2>
     <div class="svcgrid">
-      {c.services.map((s) => (
-        <article id={s.id} class="svc rv">
-          <h3>{s.name}</h3>
-          <p>{s.text}</p>
-          <details>
-            <summary>{c.toggle}<span class="chev"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="#091944" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6l4 4 4-4" /></svg></span></summary>
+      {c.services.map((s, i) => (
+        <>
+          <article id={s.id} class="svc rv" style={`--col: ${i + 1}`}>
+            <h3>{s.name}</h3>
+            <p>{s.text}</p>
+            <div class="svc-toggle">
+              <button type="button" class="svc-btn" aria-expanded="false" aria-controls={`${s.id}-dl`}>{c.toggle}<span class="chev"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="#091944" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6l4 4 4-4" /></svg></span></button>
+            </div>
+            <a href={t.cta.href} class="txt">{t.cta.label}</a>
+          </article>
+          {/* Desktop: one full-width panel under the row; phones: directly under its own card */}
+          <div id={`${s.id}-dl`} class="svc-panel" role="region" aria-label={`${c.toggle} · ${s.name}`} style={`--col: ${i + 1}`} hidden>
+            <p class="kick">{c.toggle} · {s.name}</p>
             <ul class="dl">{s.items.map(([k, v]) => <li><strong>{k}</strong>{v}</li>)}</ul>
-          </details>
-          <a href={t.cta.href} class="txt">{t.cta.label}</a>
-        </article>
+          </div>
+        </>
       ))}
     </div>
+    <script>
+      // Services: one deliverables panel open at a time. The open card's button controls its panel.
+      const btns = [...document.querySelectorAll<HTMLButtonElement>('.svc-btn')];
+      const closeAll = () => btns.forEach((b) => {
+        b.setAttribute('aria-expanded', 'false');
+        b.closest('.svc')?.classList.remove('open');
+        document.getElementById(b.getAttribute('aria-controls')!)!.hidden = true;
+      });
+      btns.forEach((b) => b.addEventListener('click', () => {
+        const wasOpen = b.getAttribute('aria-expanded') === 'true';
+        closeAll();
+        if (wasOpen) return;
+        b.setAttribute('aria-expanded', 'true');
+        b.closest('.svc')?.classList.add('open');
+        document.getElementById(b.getAttribute('aria-controls')!)!.hidden = false;
+      }));
+      document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeAll(); });
+    </script>
   </section>
 
   <section id="resources" class="bg-off">

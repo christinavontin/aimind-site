@@ -76,7 +76,8 @@ Rules:
 
 - **Primary action** (booking only): no box. Navy text 15 px / 600 followed by a 28 px navy circle with a white arrow; on hover the circle turns yellow with a navy arrow and moves 4 px right. Header size: 14 px text, 24 px circle. On navy: white text, white circle with navy arrow.
 - **Text link** (every secondary action): navy text with a 2 px yellow underline; on hover a navy underline draws over it from left to right.
-- **Toggle** (deliverables, FAQ): label 16 px / 600 with a 28 px cream circle and a navy chevron; circle turns yellow on hover and when open, chevron rotates 180°.
+- **Service deliverables:** the "Key deliverables" button in a service card opens one full-width panel under the three cards (four deliverables side by side, a small marker points to the open card, the card gets a yellow bottom line). One panel at a time; a second click or Esc closes it. On phones the panel opens directly under its card.
+- **Toggle** (FAQ, calculator help): label 16 px / 600 with a 28 px cream circle and a navy chevron; circle turns yellow on hover and when open, chevron rotates 180°.
 - **Menu** (phones): a 32 px cream circle with a navy menu icon, no visible label (screen readers read "Menu"), same behavior as the toggle.
 - Never pill buttons, boxes or filled rectangles.
 
