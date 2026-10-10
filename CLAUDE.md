@@ -41,7 +41,9 @@ When a retired article comes back, delete its redirect lines. Test locally befor
 
 ## Design
 
-Binding rules: `docs/design-guide.md`. The code in `src/` is the reference for the final design; `design/` holds only final screenshots, logo files and style guide boards. Never add explorations or alternative versions to the repository.
+Binding rules: `docs/design-guide.md`. Visual brand guide (shown on GitHub when the `design` folder is opened): `design/README.md`, with logo set, boards, screenshots and social media images. The code in `src/` is the reference for the final design. Never add explorations or alternative versions to the repository.
+
+After every design change, update in the same push: the rule in `docs/design-guide.md`, the matching board in `design/style-guide/` and its PNG preview in `design/style-guide/previews/`, and the screenshots in `design/screens/` if pages changed. Fonts for previews come from `node_modules/@fontsource-variable/`, never from Google.
 
 ## Status
 

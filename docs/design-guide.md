@@ -2,7 +2,7 @@
 
 Agreed with Christina on October 8–9, 2026. This guide is binding for the website and for any other material (documents, slides, LinkedIn).
 
-The reference for the final design is the **live code** (`src/`), deployed at https://aimind-site.pages.dev/. Screenshots of the final pages: `design/screens/`. Logo files: `design/logo/`. Style guide boards: `design/style-guide/`. The design canvas (https://claude.ai/artifact/9ysPDL1AqTgN52jaHjGVMY) holds the exploration history; where it differs from the code, the code wins.
+The reference for the final design is the **live code** (`src/`), deployed at https://aimind-site.pages.dev/. Visual overview of everything below, with logo set, boards, screenshots and social media images: `design/README.md` (opens on GitHub as the brand guide). The design canvas (https://claude.ai/artifact/9ysPDL1AqTgN52jaHjGVMY) holds the exploration history; where it differs from the code, the code wins.
 
 ## 1. Brand
 

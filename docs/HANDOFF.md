@@ -9,7 +9,7 @@ Status on October 9, 2026. Read this file first in every new chat.
 | Code (single source of truth) | GitHub `christinavontin/aimind-site`, branch `main` |
 | Test site (deploys on every push to `main`) | https://aimind-site.pages.dev/ (German: `/de/`) |
 | Design rules (colors, logo, fonts, buttons, layout, motion, copy) | `docs/design-guide.md` |
-| Final screenshots, logo files, style guide boards | `design/` |
+| Brand guide (logo set, colors, fonts, screenshots, social media images) | `design/README.md`, opens on GitHub in the `design` folder |
 | Homepage texts DE/EN (Christina comments here) | Google Doc: https://docs.google.com/document/d/1tgTjJd0rT7fu_y7nhdMj5vF5rMV23Xj-3MW23rAoAUI/edit |
 | Design canvas (exploration history only) | https://claude.ai/artifact/9ysPDL1AqTgN52jaHjGVMY |
 | Writing rules | Skill "schreibstil" and `CLAUDE.md` |
