@@ -41,7 +41,7 @@ When a retired article comes back, delete its redirect lines. Test locally befor
 
 ## Design
 
-The basis for all design and copy work is Christina's private brand guide (a Design System artifact, readable only by her and by Claude in her sessions): https://claude.ai/artifact/YF53i9hKw85J8WeKjGjGmP. Read its `project/README.md` before any design, layout, asset or copy work. Binding rules for the website: `docs/design-guide.md`. The code in `src/` is the reference for the final website design. Never add explorations or alternative versions to the repository.
+The basis for all design and copy work is Christina's private brand guide (a Design System artifact, readable only by her and by Claude in her sessions): https://claude.ai/artifact/YF53i9hKw85J8WeKjGjGmP. Read its `project/README.md` before any design, layout, asset or copy work. It is the only place where design rules are written down (including the website specifics); `docs/design-guide.md` only points to it. The code in `src/` implements the guide. Never add explorations or alternative versions to the repository.
 
 After every design decision, update in the same step: the private brand guide (tokens, README or component, and a line in its decisions log), `docs/design-guide.md`, the matching board in `design/style-guide/` with its PNG preview, and the screenshots in `design/screens/` if pages changed. Fonts for previews come from `node_modules/@fontsource-variable/`, never from Google. Personal photos stay in the private guide, not in this public repository.
 

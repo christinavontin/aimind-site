@@ -13,8 +13,7 @@ Status on October 10, 2026. Read this file first in every new chat.
 | Hosting, DNS, analytics | Cloudflare account christina.vontin@gmail.com: zone `aimind.marketing`, Pages project `aimind-site` (custom domains `aimind.marketing` and `www`), Web Analytics on |
 | Domain registration | Still at WordPress.com (nameservers point to Cloudflare: nelly / patrick.ns.cloudflare.com) |
 | Email | Google Workspace, info@aimind.marketing (MX/TXT records in Cloudflare DNS, never touch them) |
-| Brand guide (private, basis for all design and copy work) | https://claude.ai/artifact/YF53i9hKw85J8WeKjGjGmP — read `project/README.md` first |
-| Binding website design rules | `docs/design-guide.md` |
+| **Design and brand rules (the one place)** | Private brand guide https://claude.ai/artifact/YF53i9hKw85J8WeKjGjGmP — read `project/README.md` first. Includes website specifics, tokens, components, logos, social images and the decisions log. `docs/design-guide.md` only points here. |
 | Design files (logo set, boards, screenshots, banners) | `design/` (file list in `design/README.md`) |
 | Writing rules | Skill "schreibstil" and `CLAUDE.md` |
 | Homepage texts DE/EN (history of Christina's comments) | Google Doc https://docs.google.com/document/d/1tgTjJd0rT7fu_y7nhdMj5vF5rMV23Xj-3MW23rAoAUI/edit — the code is newer and wins |
@@ -51,7 +50,7 @@ Done on October 10: `www` redirects permanently to the root domain (Cloudflare r
 - German recommendations on the homepage: four quotes were completed and Magnolia Restrepo's translated by Claude; Christina may refine the wording (`de.refs` in `src/components/Home.astro`). André Labadie's quote says "Tina" in both languages (his original wording).
 - Handwritten signature for the author box, About and email.
 - About page and Glossary are retired for now; they come back later (About as its own page, Glossary after the hubs).
-- When a design decision changes anything: update the private brand guide (plus decisions log), `docs/design-guide.md`, the board in `design/style-guide/` and `design/screens/` in the same step (rule in `CLAUDE.md`).
+- When a design decision changes anything: update the private brand guide (plus decisions log), the code, the board in `design/style-guide/` and `design/screens/` in the same step (rule in `CLAUDE.md`).
 
 ### 3. Blog posts (agreed clusters, keep it simple)
 
@@ -69,4 +68,4 @@ The ROI topic is strongest; German AI queries rank around position 80; demand ex
 
 ## Prompt for the next chat
 
-> I'm continuing work on my website aimind.marketing (Astro on Cloudflare Pages, live since October 10, 2026). Repository: christinavontin/aimind-site, branch main; every push deploys to the live site. First read `CLAUDE.md`, `docs/HANDOFF.md`, `docs/design-guide.md` and the `project/README.md` of my private brand guide. Apply the skill "schreibstil" to every text, German first, English as a rewrite. Keep only final versions in the repository. Next task: [for example "the GEO article, start with an outline in German" or "launch follow-up checks"].
+> I'm continuing work on my website aimind.marketing (Astro on Cloudflare Pages, live since October 10, 2026). Repository: christinavontin/aimind-site, branch main; every push deploys to the live site. First read `CLAUDE.md`, `docs/HANDOFF.md` and the `project/README.md` of my private brand guide (https://claude.ai/artifact/YF53i9hKw85J8WeKjGjGmP), which is the only place for design rules. Apply the skill "schreibstil" to every text, German first, English as a rewrite. Keep only final versions in the repository. Next task: [for example "the GEO article, start with an outline in German" or "the signature for the author box"].

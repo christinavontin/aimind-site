@@ -1,6 +1,6 @@
 # Design files
 
-Final files for aimind.marketing. The complete brand guide is private (Christina's brand guide on claude.ai); the binding website rules are in [`docs/design-guide.md`](../docs/design-guide.md). The live code in `src/` is the reference; test site https://aimind-site.pages.dev/.
+Final files for aimind.marketing. All design rules live in Christina's private brand guide on claude.ai (see [`docs/design-guide.md`](../docs/design-guide.md)); the code in `src/` implements them; live site https://aimind.marketing/.
 
 | Folder | Content |
 | --- | --- |
