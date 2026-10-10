@@ -70,7 +70,7 @@ Rules:
 3. Bold (700) only in Schibsted headings. Running text is never bold; 600 only for buttons, links, labels and the lead-in term of a list item.
 4. Italic only in Newsreader.
 5. Uppercase only for labels.
-6. Capitalization (English): headlines use title case ("How I Work", "Three Ways to Bring Your Technology to Market"); articles, short conjunctions and short prepositions stay lowercase (to, from, of, and). Title case also for names (services, process steps), article and guide titles, and the action labels of buttons and links (Book a Strategy Call). Intros, running text and navigation use sentence case.
+6. Capitalization (English): headlines use title case ("How I Work", "Experience from Inside Technology Companies"); articles, short conjunctions and short prepositions stay lowercase (to, from, of, and). Title case also for names (services, process steps), article and guide titles, and the action labels of buttons and links (Book a Strategy Call). Intros, running text and navigation use sentence case.
 
 ## 5. Buttons and links
 
