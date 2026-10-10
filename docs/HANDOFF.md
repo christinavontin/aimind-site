@@ -79,7 +79,7 @@ Safe rules: change only the words between quotation marks or in the running text
 Done on October 10: `www` redirects permanently to the root domain (Cloudflare redirect rule), info@aimind.marketing sends and receives.
 
 - Cloudflare → Security → Bots: keep "Block AI bots" and "Managed robots.txt" off.
-- Google Search Console (domain property aimind.marketing): submit `https://aimind.marketing/sitemap-index.xml`, then check the Pages report weekly for about six weeks (404s, redirect errors, the three hubs). Keep all redirects for good.
+- Google Search Console (domain property aimind.marketing): sitemap submitted on October 10. `https://aimind.marketing/sitemap-0.xml` reads "Success" with 14 pages (the index file `sitemap-index.xml` was read during the domain switch and may show "Couldn't fetch" for a while; it is harmless). Check the Pages report weekly for about six weeks (404s, redirect errors, the three hubs). Keep all redirects for good.
 - WordPress.com: cancel the hosting plan, **keep the domain registration** (or transfer it to Cloudflare Registrar later).
 
 ### 2. Site enhancements
