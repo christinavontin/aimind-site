@@ -43,7 +43,9 @@ const year = new Date().getFullYear();
     {alternates.map((a) => <link rel="alternate" hreflang={UI[a.lang].htmlLang.slice(0, 2)} href={abs(a.href)} />)}
     {en && <link rel="alternate" hreflang="x-default" href={abs(en.href)} />}
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="icon" href="/favicon.ico" sizes="48x48" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
     <link rel="sitemap" href="/sitemap-index.xml" />
 
     <meta property="og:type" content={ogType} />

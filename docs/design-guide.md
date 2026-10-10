@@ -13,10 +13,11 @@ The reference for the final design is the **live code** (`src/`), deployed at ht
 
 ## 2. Logo
 
-- **Sign:** two overlapping circles. Large navy circle (technology) top right, smaller yellow circle (market) bottom left; the overlap is white on light backgrounds. SVG (viewBox 0 0 32 32): navy `circle cx=19.5 cy=12.5 r=11.5`, yellow `circle cx=10.5 cy=22 r=8`, overlap = yellow circle clipped by the navy circle, filled with the background color.
+- **Sign:** two overlapping circles. Large navy circle (technology) top right, smaller yellow circle (market) bottom left. Geometry on a 32-unit grid: navy center 19.5/12.5, radius 11.5; yellow center 10.5/22, radius 8. The overlap is cut out (since October 10, 2026), so it always shows the background. In SVG both shapes are drawn as crescent paths without masks, so every program displays them.
 - **Wordmark:** Newsreader. "aimind" weight 500, yellow dot (diameter 0.17 em), "marketing" italic 400. Navy on light, white on navy.
 - **Three sizes:** full (sign + wordmark) for header and footer; sign only for favicon, app icon, profile picture and anything below email-signature size.
-- Files: `design/logo/aimind-sign.svg` (sign), `aimind-sign-on-offwhite.svg`, `aimind-sign-512.png` (profile picture, app icon), `aimind-logo.png` (full logo, transparent). Favicon: `public/favicon.svg` and `favicon.png`. In the site the logo is `src/components/Logo.astro`.
+- Files: `design/logo/svg/` and `design/logo/png/` (full logo navy, white and on white; sign transparent, white and on white; PNGs from 64 to 2400 px). The wordmark is outlined, so the files work without the font. Guide: `design/style-guide/logo.html`. Browser and app icons in `public/`: `favicon.svg` (navy in light tabs, white in dark tabs), `favicon.ico`, `apple-touch-icon.png`, `icon-192/512.png`, `site.webmanifest`. In the site the logo is `src/components/Logo.astro`.
+- Clear space: half the diameter of the yellow circle on every side. Minimum width: full logo 120 px (30 mm in print), sign 16 px (5 mm).
 - Never: the old "aimX", a separate "MARKETING" line, the sign with the circles apart.
 
 ## 3. Colors
