@@ -35,6 +35,43 @@ Status on October 10, 2026. Read this file first in every new chat.
 - Tables: Markdown tables are wrapped automatically; in MDX wrap them by hand in `<figure class="aim-tbl">`.
 - Before every push: `npm run build`, read changed pages in both languages, open every new external link. Redirect changes: test with `npx wrangler@3 pages dev dist`.
 
+## Redirects
+
+All redirects live in the repository; Cloudflare reads them on every push. The only rule in the Cloudflare dashboard is the `www` → root redirect (Rules → Redirect Rules).
+
+| File | What it does |
+| --- | --- |
+| `public/_redirects` | Permanent redirects (301), one rule per line: `<old path> <new path> 301`. Every rule exists four times: EN and `/de/`, with and without trailing slash. |
+| `functions/[[path]].js` | Retired addresses with no fitting successor; they answer 410 ("gone"). |
+| `public/_routes.json` | Makes the 410 script run only on those addresses. Every 410 path must be listed here too. |
+
+Redirected and gone addresses are not in the sitemap; it lists only pages that exist.
+
+**Process when content changes:**
+
+1. **A new article covers a retired topic:** repoint the matching lines in `public/_redirects` from the hub to the new article (all four variants).
+2. **An old article comes back under its old address:** delete its lines in `public/_redirects`; if it was a 410, remove it from `functions/[[path]].js` and `public/_routes.json`.
+3. **A page is renamed or retired:** add a 301 to the closest matching article. Never many addresses to the homepage (Google may treat that as a soft 404). 410 only when nothing fits.
+4. Build, test every rule locally with `npx wrangler@3 pages dev dist`, then push. Check Search Console a week later.
+
+## Small text changes without Claude
+
+Christina can edit text directly on GitHub; every saved change goes live in about a minute.
+
+1. Open https://github.com/christinavontin/aimind-site and go to the file (table below).
+2. Click the pencil icon (Edit this file), change the text, then **Commit changes** (commit directly to `main`).
+3. Check the page on https://aimind.marketing/ after a minute or two (private window). The build status is under Cloudflare → Workers & Pages → aimind-site → Deployments.
+
+| Text | File |
+| --- | --- |
+| Article (EN / DE) | `src/content/posts/en/…` and `src/content/posts/de/…` (`cmo-hub.md`, `ai-hub.md`, `roi-hub.mdx`) |
+| Homepage (both languages) | `src/components/Home.astro` (English block `en:`, German block `de:`) |
+| Contact page | `src/components/Contact.astro` |
+| Navigation, footer, buttons, author text | `src/lib/site.ts` |
+| Privacy policy, AI ethics page | `src/content/pages/en/…` and `src/content/pages/de/…` |
+
+Safe rules: change only the words between quotation marks or in the running text; leave the lines between the two `---` at the top of an article, indentation, `'` and `"` marks, links `[text](url)` and tags `< >` intact. Inside a text in single quotes, write a typographic apostrophe (’) instead of `'`. If a change breaks the build, the site simply stays on the previous version; Deployments shows "Failed", and the file can be corrected on GitHub (the file’s History shows what changed) or fixed in the next chat. Change both languages if the text exists in both.
+
 ## Next, in this order
 
 ### 1. Launch housekeeping (Christina, outside the code)
