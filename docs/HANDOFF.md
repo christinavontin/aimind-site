@@ -25,6 +25,7 @@ Status on October 11, 2026. Read this file first in every new chat.
 - Privacy Policy and AI Ethics and Data Protection (EN/DE).
 - 404 pages per language; `public/llms.txt`; `public/robots.txt` (all crawlers allowed, AI crawlers listed); sitemap.
 - All other WordPress URLs are retired: 301 to the closest hub (`public/_redirects`), 410 where nothing fits (`functions/[[path]].js` + `public/_routes.json`). 294 local checks passed before launch; on the live domain a retired article was confirmed to land on its hub.
+- Article header: label, title, dek (optional `dek` field in the frontmatter: one or two sentences on what the reader takes away, never a repeat of the opening; DE first, EN rewrite) and the meta line. On screens from 1280px the header has the same height on every article and its content is centered vertically.
 - Articles: the author name in the line under the title links to the author page `/about/` (DE `/de/about/`), which shows the author text and a LinkedIn link. Articles end with FAQ and sources; there is no author box or booking button at the end. A booking call to action goes into an article only when the article is about selling a service, written individually in its text.
 - Profile photo for LinkedIn (own cutout on cream) and banners: in the private brand guide only, never in this public repository.
 
