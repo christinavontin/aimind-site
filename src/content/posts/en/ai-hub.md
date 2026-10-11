@@ -3,6 +3,7 @@ key: ai-hub
 lang: en
 permalink: /2025/10/11/ai-in-b2b-marketing-guide/
 title: How AI in B2B Marketing Delivers Results
+dek: "AI delivers results in B2B marketing only once an operating model governs how it is used. That model defines who is accountable for what, which rules apply to data and security, and how the value of AI is measured."
 seoTitle: How AI in B2B Marketing Delivers Results
 description: Most companies use AI in B2B marketing, few see results. An operating model for analyzing, creating, and executing turns AI into value.
 keyphrase: AI in B2B marketing
