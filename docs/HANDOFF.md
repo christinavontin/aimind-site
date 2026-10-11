@@ -39,6 +39,7 @@ Started October 11, 2026: a LinkedIn campaign per hub (hub post, Pulse article, 
 | Strategy, formats, languages, workflow, measurement, status per hub | Private document "LinkedIn Campaign aimind.marketing" https://claude.ai/artifact/QT3CPmmuhRYpmhxFeF9DpB (contains performance figures, so it stays out of this public repository) |
 | Design rules for infographics and article illustrations | Private brand guide, section "Infographics" |
 | Final files | `design/infographics/` (HTML, PNG, `render.py`); article illustrations as components in `src/components/` |
+| Ready-to-post assets (images, post texts, Pulse articles) | Folder `~/Documents/aimind LinkedIn Campaign/<article>/` on Christina's iMac, reached through the device bridge. ROI is complete (October 11, 2026); AI and CMO follow. |
 
 **Production in this repository**
 
@@ -124,4 +125,4 @@ The ROI topic is strongest; German AI queries rank around position 80; demand ex
 
 ## Prompt for the next chat
 
-> I'm continuing work on my website aimind.marketing (Astro on Cloudflare Pages, live since October 10, 2026). Repository: christinavontin/aimind-site, branch main; every push deploys to the live site. First read `CLAUDE.md`, `docs/HANDOFF.md` and the `project/README.md` of my private brand guide (https://claude.ai/artifact/YF53i9hKw85J8WeKjGjGmP), which is the only place for design rules. Apply the skill "schreibstil" to every text, German first, English as a rewrite. Keep only final versions in the repository. Next task: [for example "the GEO article, start with an outline in German" "the signature for the author page" or "continue the LinkedIn campaign with the ROI campaign map, see the section LinkedIn campaign in the handoff"].
+> I'm continuing work on my website aimind.marketing (Astro on Cloudflare Pages, live since October 10, 2026). Repository: christinavontin/aimind-site, branch main; every push deploys to the live site. First read `CLAUDE.md`, `docs/HANDOFF.md` and the `project/README.md` of my private brand guide (https://claude.ai/artifact/YF53i9hKw85J8WeKjGjGmP), which is the only place for design rules. Apply the skill "schreibstil" to every text, German first, English as a rewrite. Keep only final versions in the repository. Next task: [for example "the GEO article, start with an outline in German" "the signature for the author page" or "the LinkedIn campaign for the AI hub, starting with the campaign map; workflow and finished ROI example in the campaign document"].
