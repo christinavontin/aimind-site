@@ -1,8 +1,10 @@
 ---
 import '@fontsource-variable/schibsted-grotesk';
 import '@fontsource-variable/instrument-sans';
-import '@fontsource-variable/newsreader/opsz.css';
-import '@fontsource-variable/newsreader/opsz-italic.css';
+import '../styles/fonts.css';
+// Preloaded so the headline and body text get their fonts without waiting for the stylesheet.
+import newsreaderUrl from '../assets/fonts/newsreader-latin-opsz-normal-400-500.woff2?url';
+import instrumentUrl from '@fontsource-variable/instrument-sans/files/instrument-sans-latin-wght-normal.woff2?url';
 import '../styles/global.css';
 import Logo from '../components/Logo.astro';
 import { SITE, UI, abs, type Lang } from '../lib/site';
@@ -36,6 +38,8 @@ const year = new Date().getFullYear();
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <link rel="preload" href={newsreaderUrl} as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href={instrumentUrl} as="font" type="font/woff2" crossorigin />
     <title>{seoTitle}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />

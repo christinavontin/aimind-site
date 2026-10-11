@@ -8,7 +8,8 @@ export default defineConfig({
   site: 'https://aimind.marketing',
   // Keep the WordPress URL style: every path ends with a slash.
   trailingSlash: 'always',
-  build: { format: 'directory' },
+  // CSS is inlined into each page: no render-blocking stylesheet request (Lighthouse, mobile).
+  build: { format: 'directory', inlineStylesheets: 'always' },
   markdown: {
     rehypePlugins: [rehypeTables],
   },

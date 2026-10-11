@@ -57,6 +57,7 @@ Started October 11, 2026: turning the three hubs into infographics for C-suite r
 
 - Articles: `src/content/posts/en|de/`, one file per language, paired by `key`; `permalink` is the full path. `.mdx` when a component is needed (ROI calculator: `<RoiCalculator lang="de" />`). SEO fields, `faq` and `sources` in the frontmatter; the layout renders FAQ, sources and JSON-LD.
 - Pages: `src/content/pages/en|de/`. Homepage `src/components/Home.astro`, contact `src/components/Contact.astro`, author page `src/components/About.astro` (its text is `authorBio` in `src/lib/site.ts`, also used in the article schema), shared labels `src/lib/site.ts`.
+- Performance (Lighthouse mobile 98–99 locally, October 11): CSS is inlined into every page (`inlineStylesheets: 'always'` in `astro.config.mjs`), the Newsreader and Instrument Sans text fonts are preloaded in `src/layouts/Base.astro`, and Newsreader is limited to the weights the site uses (upright 400–500, italic 400) by `scripts/newsreader-fonts.py` into `src/assets/fonts/` (rerun after a Fontsource update). Build assets under `/_astro/` are cached for a year (`public/_headers`). The remaining Lighthouse notes concern Cloudflare's analytics script, which Cloudflare controls.
 - Tables: Markdown tables are wrapped automatically; in MDX wrap them by hand in `<figure class="aim-tbl">`.
 - Before every push: `npm run build`, read changed pages in both languages, open every new external link. Redirect changes: test with `npx wrangler@3 pages dev dist`.
 
