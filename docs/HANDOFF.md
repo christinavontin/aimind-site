@@ -30,28 +30,21 @@ Status on October 11, 2026. Read this file first in every new chat.
 - ROI hub: an illustration (timeline of a nine-month buying decision, web analytics versus CRM) at the end of the section on measuring marketing’s contribution to revenue, EN and DE, with alt text. Built in HTML as the component `src/components/JourneyTimeline.astro` (off-white card like the ROI calculator, text readable for search and AI); the poster version for sharing is in `design/infographics/`.
 - Profile photo for LinkedIn (own cutout on cream) and banners: in the private brand guide only, never in this public repository.
 
-## Infographics for LinkedIn and articles
+## LinkedIn campaign, infographics and article illustrations
 
-Started October 11, 2026: turning the three hubs into infographics for C-suite readers on LinkedIn. The design rules are in the private brand guide, section "Infographics"; this is the status and what was learned.
+Started October 11, 2026: a LinkedIn campaign per hub (hub post, Pulse article, infographic posts) that brings executives to the hubs. Three places, one job each:
 
-**Status**
+| What | Where |
+| --- | --- |
+| Strategy, formats, languages, workflow, measurement, status per hub | Private document "LinkedIn Campaign aimind.marketing" https://claude.ai/artifact/QT3CPmmuhRYpmhxFeF9DpB (contains performance figures, so it stays out of this public repository) |
+| Design rules for infographics and article illustrations | Private brand guide, section "Infographics" |
+| Final files | `design/infographics/` (HTML, PNG, `render.py`); article illustrations as components in `src/components/` |
 
-| Hub | Infographic | State |
-| --- | --- | --- |
-| ROI | Web analytics timeline (nine-month buying decision, 90-day window) | Final, but used as an **article illustration**, not on LinkedIn: it shows one fact, the argument sits in the text. Live in the ROI hub, EN and DE. |
-| ROI | Measurement methods on the buying process (span map) | Open. Draft not approved. The axis mixed two levels (buyer journey and the seller’s pipeline). Discussed next: mapping the methods onto Gartner’s buying jobs. Not in the repository, no draft is kept. |
-| ROI | Business types and the role of the five KPIs (spectrum) | Concept approved, not built. |
-| AI, CMO | – | Not started. |
+**Production in this repository**
 
-**How an infographic is made**
-
-1. Concept per article first: each infographic answers one question an executive would ask and shows a relation (a mechanism, a comparison, a gap), never a single figure or a promoted opinion. Old, well-known concepts are not infographic material.
-2. One axis, one level. A timeline is either the buyer’s journey or the seller’s pipeline, never both.
-3. Single images, no carousels. Detail that does not fit goes into the post text.
-4. Build as HTML at 1080 × 1350 in `design/infographics/`, render with `render.py` to 2160 × 2700 PNG, check at phone size.
-5. German first, agreed with Christina, then the English version (title case title, native American English).
-6. Every figure from the originator; illustrative sequences say so on the image ("Verlauf als Beispiel" / "Sequence shown as an example"). Alt text in both languages.
-7. In an article, never place the poster image. Rebuild the content as an Astro component in the style of the ROI calculator card (kicker, serif title, diagram at article type sizes, sources as caption, no logo or circle), placed where it sums up its section. Example: `src/components/JourneyTimeline.astro`.
+1. Build the infographic as HTML at 1080 × 1350 in `design/infographics/`, render with `render.py` to 2160 × 2700 PNG, check at phone size.
+2. In an article, never place the poster image. Rebuild the content as an Astro component in the style of the ROI calculator card (kicker, serif title, diagram at article type sizes, sources as caption, no logo or circle), placed where it sums up its section. Example: `src/components/JourneyTimeline.astro`.
+3. Only final files are committed; concepts, sketches and drafts stay in the chat and the campaign document.
 
 ## How the site is built (short)
 
@@ -131,4 +124,4 @@ The ROI topic is strongest; German AI queries rank around position 80; demand ex
 
 ## Prompt for the next chat
 
-> I'm continuing work on my website aimind.marketing (Astro on Cloudflare Pages, live since October 10, 2026). Repository: christinavontin/aimind-site, branch main; every push deploys to the live site. First read `CLAUDE.md`, `docs/HANDOFF.md` and the `project/README.md` of my private brand guide (https://claude.ai/artifact/YF53i9hKw85J8WeKjGjGmP), which is the only place for design rules. Apply the skill "schreibstil" to every text, German first, English as a rewrite. Keep only final versions in the repository. Next task: [for example "the GEO article, start with an outline in German" "the signature for the author page" or "continue the infographics, see the section Infographics in the handoff"].
+> I'm continuing work on my website aimind.marketing (Astro on Cloudflare Pages, live since October 10, 2026). Repository: christinavontin/aimind-site, branch main; every push deploys to the live site. First read `CLAUDE.md`, `docs/HANDOFF.md` and the `project/README.md` of my private brand guide (https://claude.ai/artifact/YF53i9hKw85J8WeKjGjGmP), which is the only place for design rules. Apply the skill "schreibstil" to every text, German first, English as a rewrite. Keep only final versions in the repository. Next task: [for example "the GEO article, start with an outline in German" "the signature for the author page" or "continue the LinkedIn campaign with the ROI campaign map, see the section LinkedIn campaign in the handoff"].
