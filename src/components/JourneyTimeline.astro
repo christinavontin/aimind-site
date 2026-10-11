@@ -1,0 +1,139 @@
+---
+// Article illustration for the ROI hub, EN and DE: what web analytics sees of a nine-month buying decision.
+// Built in HTML so the text stays readable for search and AI and the figure follows the article layout.
+// Design rules: private brand guide, section "Infographics" → "On the website".
+interface Props { lang: 'en' | 'de' }
+const { lang } = Astro.props;
+
+type Step = { m: number; what: string; who?: string; kind?: 'opp' | 'order' };
+
+const t = {
+  de: {
+    kick: 'Beispiel',
+    title: 'Bei einer Kaufentscheidung über neun Monate sieht die Webanalyse nur die letzten drei.',
+    month: 'Monat',
+    steps: [
+      { m: 1, what: 'Fachartikel gelesen', who: 'Leiter der Produktion' },
+      { m: 2, what: 'Studie heruntergeladen', who: 'IT-Leiterin' },
+      { m: 3, what: 'Fachvortrag auf einer Messe', who: 'Technischer Leiter' },
+      { m: 4, what: 'Webinar', who: 'zwei Ingenieure' },
+      { m: 5, what: 'Termin mit dem Vertrieb', who: 'Leiter der Produktion' },
+      { m: 6, what: 'Opportunity im CRM', kind: 'opp' },
+      { m: 7, what: 'Workshop zur Lösung', who: 'Einkauf und Controlling' },
+      { m: 8, what: 'Whitepaper gelesen', who: 'Geschäftsführer' },
+      { m: 9, what: 'Auftrag unterschrieben', kind: 'order' },
+    ] as Step[],
+    outBig: '⅔',
+    outText: 'des Weges bleiben für Google Analytics unsichtbar.',
+    inBig: '90 Tage',
+    inText: 'So weit reicht der Rückblick von Google Analytics höchstens.',
+    caption: 'Quellen: Google Analytics-Hilfe, Forrester. Verlauf als Beispiel.',
+  },
+  en: {
+    kick: 'Example',
+    title: 'In a Nine-Month Buying Decision, Web Analytics Sees Only the Last Three.',
+    month: 'Month',
+    steps: [
+      { m: 1, what: 'Industry article', who: 'Head of production' },
+      { m: 2, what: 'Study download', who: 'Head of IT' },
+      { m: 3, what: 'Talk at a trade fair', who: 'Technical director' },
+      { m: 4, what: 'Webinar', who: 'Two engineers' },
+      { m: 5, what: 'Meeting with sales', who: 'Head of production' },
+      { m: 6, what: 'Opportunity in the CRM', kind: 'opp' },
+      { m: 7, what: 'Solution workshop', who: 'Procurement and finance' },
+      { m: 8, what: 'White paper', who: 'CEO' },
+      { m: 9, what: 'Contract signed', kind: 'order' },
+    ] as Step[],
+    outBig: '⅔',
+    outText: 'of the journey stays invisible to Google Analytics.',
+    inBig: '90 days',
+    inText: 'The furthest Google Analytics looks back.',
+    caption: 'Sources: Google Analytics Help, Forrester. Sequence shown as an example.',
+  },
+}[lang];
+
+const before = t.steps.filter((s) => s.m <= 6);
+const window = t.steps.filter((s) => s.m > 6);
+---
+<figure class="jt" aria-labelledby={`jt-title-${lang}`}>
+  <p class="kick">{t.kick}</p>
+  <h4 id={`jt-title-${lang}`} class="jt-title">{t.title}</h4>
+  <p class="jt-month" aria-hidden="true">{t.month}</p>
+
+  <div class="jt-part">
+    <ol class="jt-steps">
+      {before.map((s) => (
+        <li class={`jt-step ${s.kind ?? ''}`}>
+          <span class="jt-m">{s.m}</span><span class="jt-dot" aria-hidden="true"></span>
+          <span class="jt-txt"><span class="jt-what">{s.what}</span>{s.who && <span class="jt-who">{s.who}</span>}</span>
+        </li>
+      ))}
+    </ol>
+    <p class="jt-note out"><span class="jt-big">{t.outBig}</span>{t.outText}</p>
+  </div>
+
+  <div class="jt-part in">
+    <ol class="jt-steps" start="7">
+      {window.map((s) => (
+        <li class={`jt-step ${s.kind ?? ''}`}>
+          <span class="jt-m">{s.m}</span><span class="jt-dot" aria-hidden="true"></span>
+          <span class="jt-txt"><span class="jt-what">{s.what}</span>{s.who && <span class="jt-who">{s.who}</span>}</span>
+        </li>
+      ))}
+    </ol>
+    <p class="jt-note in"><span class="jt-big">{t.inBig}</span>{t.inText}</p>
+  </div>
+
+  <figcaption class="jt-cap">{t.caption}</figcaption>
+</figure>
+
+<style>
+  .jt { margin: 48px 0; background: var(--offwhite); border-radius: 16px; padding: clamp(24px, 4vw, 40px) 0 0; overflow: hidden; }
+  .jt > .kick, .jt-title, .jt-month, .jt-cap { margin-left: clamp(24px, 4vw, 40px); margin-right: clamp(24px, 4vw, 40px); }
+  .jt > .kick { margin-top: 0; margin-bottom: 10px; }
+  .jt-title { margin-top: 0; margin-bottom: 28px; font-family: var(--font-serif); font-weight: 400; font-size: clamp(24px, 3vw, 30px); line-height: 1.2; letter-spacing: -0.01em; color: var(--navy); }
+  .jt-month { margin-top: 0; margin-bottom: 8px; font-size: 12px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--slate); }
+
+  .jt-part { display: grid; grid-template-columns: 1fr minmax(170px, 34%); gap: 0 28px; padding: 0 clamp(24px, 4vw, 40px); }
+  .jt-part.in { background: #fff; padding-top: 14px; padding-bottom: 14px; }
+  .jt-part:not(.in) { padding-bottom: 14px; }
+
+  .jt-steps { list-style: none; margin: 0; padding: 0; }
+  .jt-step { margin: 0; position: relative; display: grid; grid-template-columns: 22px 22px 1fr; align-items: start; gap: 0 14px; padding: 6px 0; min-height: 52px; }
+  /* the spine: one line through every row, continued across the band */
+  .jt-step::before { content: ''; position: absolute; left: calc(22px + 14px + 10px); top: 0; bottom: 0; width: 2px; background: var(--navy); }
+  .jt-part:not(.in) .jt-step:first-child::before { top: 14px; }
+  .jt-part.in .jt-step:last-child::before { bottom: auto; height: 18px; }
+  .jt-part.in .jt-step:first-child::before { top: -14px; }
+  .jt-part:not(.in) .jt-step:last-child::before { bottom: -14px; }
+
+  .jt-m { font-size: 15px; font-weight: 600; color: var(--slate); text-align: right; font-variant-numeric: tabular-nums; line-height: 26px; }
+  .jt-dot { position: relative; z-index: 1; width: 18px; height: 18px; margin: 4px 2px 0; border-radius: 50%; background: var(--offwhite); border: 2px solid var(--navy); }
+  .jt-part.in .jt-dot { background: var(--navy); }
+  .jt-step.opp .jt-dot { width: 14px; height: 14px; margin: 6px 4px 0; border-radius: 2px; transform: rotate(45deg); background: var(--cyan); border-color: var(--cyan); }
+  .jt-step.opp .jt-what { color: var(--cyan); font-weight: 600; }
+  .jt-step.order .jt-dot { width: 24px; height: 24px; margin: 1px -1px 0; }
+  .jt-step.order .jt-what { font-weight: 600; }
+
+  .jt-txt { display: flex; flex-direction: column; }
+  .jt-what { font-size: 17px; line-height: 26px; color: var(--navy); }
+  .jt-who { font-size: 15px; line-height: 1.35; color: var(--slate); }
+
+  .jt-note { margin: 6px 0; padding-left: 20px; border-left: 2px solid var(--line-step); font-size: 16px; line-height: 1.4; color: var(--slate); align-self: start; }
+  .jt-note.in { border-left-color: var(--coral); color: var(--navy); font-weight: 600; }
+  .jt-big { display: block; margin-bottom: 6px; font-family: var(--font-serif); font-weight: 400; font-size: clamp(40px, 5vw, 56px); line-height: 1; letter-spacing: -0.02em; color: var(--line-step); }
+  .jt-note.in .jt-big { color: var(--coral); }
+
+  .jt-cap { margin-top: 0; padding: 14px 0 clamp(20px, 3vw, 28px); font-size: 14px; line-height: 1.5; color: var(--slate); }
+
+  /* Phones: notes move into the flow; the spine runs through them as one line per part */
+  @media (max-width: 640px) {
+    .jt-part { position: relative; grid-template-columns: 1fr; }
+    .jt-step::before { display: none; }
+    .jt-part::before { content: ''; position: absolute; left: calc(clamp(24px, 4vw, 40px) + 46px); width: 2px; background: var(--navy); top: 0; bottom: 0; }
+    .jt-part:not(.in)::before { top: 19px; }
+    .jt-part.in::before { bottom: 47px; }
+    .jt-note { margin: 10px 0 14px 60px; }
+    .jt-note.in { order: -1; margin-top: 8px; }
+  }
+</style>

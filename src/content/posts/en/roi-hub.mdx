@@ -81,6 +81,7 @@ sources:
     meta: LinkedIn B2B Institute, June 2022
 ---
 import RoiCalculator from '../../../components/RoiCalculator.astro';
+import JourneyTimeline from '../../../components/JourneyTimeline.astro';
 
 The formula for marketing ROI fits on a single line. The hard part is pinning down one of its inputs: the revenue that comes from marketing. In capital goods and large service contracts, a rule of thumb from marketing researcher [John Dawes](https://marketingscience.info/news-and-insights/advertising-effectiveness-and-the-95-5-rule-most-b2b-buyers-are-not-in-the-market-right-now) suggests that only about 5% of buyers are in the market at any given time. Whatever a campaign does for the other 95% often doesn’t pay off until years later, when they start looking for a new supplier. Much of marketing’s impact therefore lands outside any single reporting period.
 
@@ -162,9 +163,7 @@ Then there is the number of people involved. According to [Forrester](https://ww
 
 In project businesses, marketing’s contribution is therefore best measured in the CRM. Each opportunity records which campaigns the customer’s stakeholders engaged with. The lookback can be set to match the length of the buying cycle. [Salesforce](https://developer.salesforce.com/docs/atlas.en-us.192.0.salesforce_campaign_implementation_guide.meta/salesforce_campaign_implementation_guide/campaign_setup_influence.htm), for example, allows up to 9,999 days between the first campaign touch and the creation of an opportunity. This only works if sales adds the stakeholders to the opportunity, which is why [reliable measurement starts with CRM discipline](/2025/07/31/challenges-for-b2b-cmo/).
 
-<figure class="aim-fig">
-  <img src="/images/articles/roi-web-analytics-en.webp" width="1440" height="1800" loading="lazy" decoding="async" alt="Timeline of a nine-month buying decision, from the first industry article to the signed contract. Google Analytics looks back 90 days at most and captures only the last three months. The CRM can record the entire journey at the opportunity, provided sales links the people involved to it." />
-</figure>
+<JourneyTimeline lang="en" />
 
 ### How Do You Measure Whether Marketing Builds Demand?
 

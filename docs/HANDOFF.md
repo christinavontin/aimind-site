@@ -27,7 +27,7 @@ Status on October 11, 2026. Read this file first in every new chat.
 - All other WordPress URLs are retired: 301 to the closest hub (`public/_redirects`), 410 where nothing fits (`functions/[[path]].js` + `public/_routes.json`). 294 local checks passed before launch; on the live domain a retired article was confirmed to land on its hub.
 - Article header: label, title, dek (optional `dek` field in the frontmatter: one or two sentences on what the reader takes away, never a repeat of the opening; DE first, EN rewrite) and the meta line. On screens from 1280px the header has the same height on every article and its content is centered vertically.
 - Articles: the author name in the line under the title links to the author page `/about/` (DE `/de/about/`), which shows the author text and a LinkedIn link. Articles end with FAQ and sources; there is no author box or booking button at the end. A booking call to action goes into an article only when the article is about selling a service, written individually in its text.
-- ROI hub: an illustration (timeline of a nine-month buying decision, web analytics versus CRM) at the end of the section on measuring marketing’s contribution to revenue, EN and DE, with alt text. Files in `public/images/articles/`, style `.aim-fig` in `src/styles/global.css`, sources in `design/infographics/`.
+- ROI hub: an illustration (timeline of a nine-month buying decision, web analytics versus CRM) at the end of the section on measuring marketing’s contribution to revenue, EN and DE, with alt text. Built in HTML as the component `src/components/JourneyTimeline.astro` (off-white card like the ROI calculator, text readable for search and AI); the poster version for sharing is in `design/infographics/`.
 - Profile photo for LinkedIn (own cutout on cream) and banners: in the private brand guide only, never in this public repository.
 
 ## Infographics for LinkedIn and articles
@@ -51,7 +51,7 @@ Started October 11, 2026: turning the three hubs into infographics for C-suite r
 4. Build as HTML at 1080 × 1350 in `design/infographics/`, render with `render.py` to 2160 × 2700 PNG, check at phone size.
 5. German first, agreed with Christina, then the English version (title case title, native American English).
 6. Every figure from the originator; illustrative sequences say so on the image ("Verlauf als Beispiel" / "Sequence shown as an example"). Alt text in both languages.
-7. An image that illustrates the article goes into the hub as WebP (1440 × 1800) in `<figure class="aim-fig">` with alt text, placed where it sums up its section.
+7. In an article, never place the poster image. Rebuild the content as an Astro component in the style of the ROI calculator card (kicker, serif title, diagram at article type sizes, sources as caption, no logo or circle), placed where it sums up its section. Example: `src/components/JourneyTimeline.astro`.
 
 ## How the site is built (short)
 
