@@ -3,6 +3,7 @@ key: ai-hub
 lang: de
 permalink: /de/2025/10/11/ai-in-b2b-marketing-guide/
 title: Wie KI im B2B-Marketing Ergebnisse liefert
+dek: "Ergebnisse liefert KI im B2B-Marketing erst, wenn ein Betriebsmodell ihren Einsatz ordnet. Es legt fest, wer wofür verantwortlich ist, welche Regeln für Daten und Sicherheit gelten und woran sich der Wert der KI messen lässt."
 seoTitle: Wie KI im B2B-Marketing Ergebnisse liefert
 description: Die meisten Unternehmen nutzen KI im B2B-Marketing, doch nur wenige sehen Ergebnisse. Ein Betriebsmodell für Auswerten, Erstellen und Ausführen ändert das.
 keyphrase: KI im B2B-Marketing

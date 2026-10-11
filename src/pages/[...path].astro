@@ -94,7 +94,8 @@ jsonLd.push({
         <div class="inner">
           <p class="kick">{kicker}</p>
           <h1>{d.title}</h1>
-          <p class="a-meta"><a href={t.about.href} rel="author">{SITE.author}</a> · {t.updated} <time datetime={d.updated.toISOString()}>{formatDate(d.updated, lang)}</time> · {readLabel}</p>
+          {d.dek && <p class="a-dek">{d.dek}</p>}
+          <p class="a-meta"><a href={t.about.href} rel="author">{SITE.author}</a> · {t.updated} <time datetime={d.updated.toISOString()}>{formatDate(d.updated, lang)}</time> · <span class="nw">{readLabel}</span></p>
         </div>
       </section>
       <div class="a-body">

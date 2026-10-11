@@ -3,6 +3,7 @@ key: cmo-hub
 lang: en
 permalink: /2025/07/31/challenges-for-b2b-cmo/
 title: "B2B CMO: The Six Responsibilities That Define Strategic Leaders"
+dek: "Boards and sales teams now judge a B2B CMO by six responsibilities, from capital allocation to shaping the market. The cheaper AI makes output, the more judgment counts."
 seoTitle: B2B CMO Responsibilities That Define Strategic Leaders
 description: Six B2B CMO responsibilities, from capital allocation to market shaping, and why judgment matters more as AI makes output cheap.
 keyphrase: B2B CMO responsibilities

@@ -12,6 +12,7 @@ const posts = defineCollection({
     lang,
     permalink: z.string().regex(/^\/.*\/$/), // full path incl. /de/ for German, must end with /
     title: z.string(), // H1
+    dek: z.string().optional(), // one or two sentences under the H1: what the reader takes away (never a repeat of the opening)
     seoTitle: z.string(), // <title>, max. ~60 characters
     description: z.string(), // meta description, max. ~155 characters
     keyphrase: z.string().optional(), // focus keyphrase (for our own checks)
