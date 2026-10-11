@@ -8,7 +8,7 @@ seoTitle: Wie KI im B2B-Marketing Ergebnisse liefert
 description: Die meisten Unternehmen nutzen KI im B2B-Marketing, doch nur wenige sehen Ergebnisse. Ein Betriebsmodell für Auswerten, Erstellen und Ausführen ändert das.
 keyphrase: KI im B2B-Marketing
 published: 2025-10-11
-updated: 2026-10-08
+updated: 2026-10-11
 socialImage: /images/social/ai-hub.jpg
 socialImageAlt: "Drei Kolleginnen und Kollegen prüfen am Laptop einen KI-gestützten Arbeitsablauf im Marketing"
 role: hub
@@ -27,7 +27,7 @@ faq:
       Der Orchestrator gestaltet die Abläufe, in denen Menschen, KI-Werkzeuge und Agenten zusammenarbeiten. Er legt fest, auf welche Daten die KI zugreifen darf, nach welchen Anweisungen sie arbeitet, was Agenten allein erledigen dürfen und wo ein Mensch prüft. Am nächsten kommt ihm heute der Marketing Automation Manager. Für Inhalte übernimmt diese Aufgabe der Content Engineer.
   - q: Welche Pflichten des EU AI Act betreffen Marketingteams?
     a: >-
-      Seit Februar 2025 müssen Unternehmen, die KI einsetzen, dafür sorgen, dass ihre Mitarbeitenden ausreichend mit KI umgehen können. Nationale Behörden überwachen das seit August 2026. Seit dem 2. August 2026 gelten außerdem [Pflichten zur Transparenz](https://digital-strategy.ec.europa.eu/en/policies/guidelines-ai-transparency-obligations): Menschen müssen erkennen können, wenn sie mit einer KI sprechen, und realistisch wirkende Bilder oder Videos, die eine KI erzeugt hat, müssen gekennzeichnet sein.
+      Seit Februar 2025 müssen Unternehmen, die KI einsetzen, ihre Mitarbeitenden darin unterstützen, kompetent mit KI umzugehen; ein bestimmtes Niveau schreibt das Gesetz nicht vor. Nationale Behörden überwachen das seit August 2026. Seit dem 2. August 2026 gelten außerdem [Pflichten zur Transparenz](https://digital-strategy.ec.europa.eu/en/policies/guidelines-ai-transparency-obligations): Menschen müssen erkennen können, wenn sie mit einer KI sprechen, und realistisch wirkende Bilder oder Videos, die eine KI erzeugt hat, müssen gekennzeichnet sein.
   - q: Wie werden Inhalte für die KI-Suche sichtbar?
     a: >-
       Google nennt für seine KI-Funktionen keine Sonderanforderungen, es gelten die Grundlagen der Suchmaschinenoptimierung. Inhalte, die eine Frage direkt beantworten, ihre Quellen nennen und klar gegliedert sind, lassen sich von KI-Systemen leichter auswerten. Neue Inhalte entstehen idealerweise schon so, bestehende lassen sich nachrüsten.
@@ -53,6 +53,9 @@ sources:
   - author: European Commission
     title: AI Literacy – Questions & Answers
     url: https://digital-strategy.ec.europa.eu/en/faqs/ai-literacy-questions-answers
+  - author: European Parliament and Council of the European Union
+    title: "Regulation (EU) 2026/1744 of the European Parliament and of the Council of 8 July 2026 amending Regulations (EU) 2024/1689, (EU) 2018/1139 and (EU) 2023/1230 as regards the simplification of the implementation of harmonised rules on artificial intelligence (Digital Omnibus on AI)"
+    url: https://eur-lex.europa.eu/eli/reg/2026/1744/oj/eng
   - author: European Commission
     title: Guidelines on AI Transparency Obligations
     url: https://digital-strategy.ec.europa.eu/en/policies/guidelines-ai-transparency-obligations
@@ -133,7 +136,7 @@ Fehlen solche Regeln, suchen sich Teams eigene Wege. Dann kann es passieren, das
 
 ### Was der EU AI Act für Marketingteams bedeutet
 
-Für Unternehmen in der EU gibt der EU AI Act den Rahmen vor. Zwei Pflichten betreffen Marketingteams direkt. Seit Februar 2025 müssen Unternehmen, die KI einsetzen, dafür sorgen, dass ihre Mitarbeitenden ausreichend mit KI umgehen können. Seit August 2026 überwachen nationale Behörden diese Pflicht, und laut den [Fragen und Antworten der EU-Kommission](https://digital-strategy.ec.europa.eu/en/faqs/ai-literacy-questions-answers) genügen interne Aufzeichnungen über Schulungen als Nachweis. Seit dem 2. August 2026 gelten außerdem [Pflichten zur Transparenz](https://digital-strategy.ec.europa.eu/en/policies/guidelines-ai-transparency-obligations): Menschen müssen erkennen können, wenn sie mit einer KI sprechen, und realistisch wirkende Bilder oder Videos, die eine KI erzeugt hat, müssen als solche gekennzeichnet sein. Daneben gilt die Datenschutz-Grundverordnung, auch beim Einsatz generativer KI mit Kundendaten.
+Für Unternehmen in der EU gibt der EU AI Act den Rahmen vor. Zwei Pflichten betreffen Marketingteams direkt. Seit Februar 2025 müssen Unternehmen, die KI einsetzen, ihre Mitarbeitenden darin unterstützen, kompetent mit KI umzugehen. Ein bestimmtes Niveau schreibt das Gesetz dabei nicht vor, wie eine [Änderung vom Juli 2026](https://eur-lex.europa.eu/eli/reg/2026/1744/oj/eng) ausdrücklich festhält. Seit August 2026 überwachen nationale Behörden diese Pflicht, und laut den [Fragen und Antworten der EU-Kommission](https://digital-strategy.ec.europa.eu/en/faqs/ai-literacy-questions-answers) genügen interne Aufzeichnungen über Schulungen als Nachweis, ein Zertifikat ist nicht nötig. Seit dem 2. August 2026 gelten außerdem [Pflichten zur Transparenz](https://digital-strategy.ec.europa.eu/en/policies/guidelines-ai-transparency-obligations): Menschen müssen erkennen können, wenn sie mit einer KI sprechen, und realistisch wirkende Bilder oder Videos, die eine KI erzeugt hat, müssen als solche gekennzeichnet sein. Daneben gilt die Datenschutz-Grundverordnung, auch beim Einsatz generativer KI mit Kundendaten.
 
 ### Governance im Arbeitsablauf
 
