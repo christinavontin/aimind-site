@@ -8,5 +8,6 @@ Final files for aimind.marketing. All design rules live in Christina's private b
 | `style-guide/` | Boards for logo, colors and typography (HTML) with PNG previews in `style-guide/previews/` |
 | `screens/` | Screenshots of the current pages |
 | `social/` | LinkedIn banners and company logo |
+| `infographics/` | Infographics and article illustrations: HTML source per language, final PNG (2160 × 2700) and `render.py` to rebuild a PNG from its source |
 
 Only final versions live here.

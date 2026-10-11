@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<style>
+@font-face{font-family:"Newsreader";src:url(../../node_modules/@fontsource-variable/newsreader/files/newsreader-latin-opsz-normal.woff2) format("woff2");font-weight:200 800;font-style:normal}
+@font-face{font-family:"Newsreader";src:url(../../node_modules/@fontsource-variable/newsreader/files/newsreader-latin-opsz-italic.woff2) format("woff2");font-weight:200 800;font-style:italic}
+@font-face{font-family:"Instrument Sans";src:url(../../node_modules/@fontsource-variable/instrument-sans/files/instrument-sans-latin-wght-normal.woff2) format("woff2");font-weight:400 700}
+:root{--navy:#091944;--yellow:#fbc737;--cream:#ffeaa7;--cyan:#2a7b88;--coral:#e05a47;--off:#f8f6f0;--slate:#4a5568;--ink:#2b3550;--step:#c9ccd6;--line:#e7e2d6}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1350px}
+body{background:var(--off);font-family:"Instrument Sans",sans-serif;color:var(--navy);position:relative;overflow:hidden}
+.circle{position:absolute;width:820px;height:820px;border-radius:50%;background:var(--cream);right:-330px;top:-380px;display:block}
+.kicker{position:absolute;left:80px;top:80px;font-size:24px;font-weight:600;letter-spacing:.12em;color:var(--cyan);text-transform:uppercase}
+h1{position:absolute;left:80px;top:124px;width:880px;font-family:"Newsreader",serif;font-weight:400;font-size:64px;line-height:1.06;letter-spacing:-.02em}
+h1 em{font-style:italic}
+.band{position:absolute;left:0;right:0;top:812px;height:236px;background:#fff}
+.spine{position:absolute;left:150px;top:392px;width:2px;height:646px;background:var(--navy)}
+.mlabel{position:absolute;left:80px;top:352px;font-size:22px;font-weight:600;letter-spacing:.12em;color:var(--slate);text-transform:uppercase}
+.m{position:absolute;left:80px;width:44px;text-align:right;font-size:26px;font-weight:600;color:var(--slate);font-variant-numeric:tabular-nums}
+.tp{position:absolute;left:138px;display:flex;align-items:center;gap:22px}
+.dot{width:26px;height:26px;border-radius:50%;background:var(--off);border:3px solid var(--navy);flex:none}
+.in .dot{background:var(--navy)}
+.tp .t{font-size:28px;line-height:1.1;color:var(--navy)}
+.tp .p{font-size:22px;line-height:1.2;color:var(--slate);margin-top:3px}
+.ms .dot{border-radius:3px;transform:rotate(45deg);background:var(--cyan);border-color:var(--cyan);width:22px;height:22px;margin:0 2px}
+.ms .t{color:var(--cyan);font-weight:600}
+.order .dot{width:34px;height:34px;background:var(--navy);margin-left:-4px}
+.order .t{font-weight:600;font-size:30px}
+.br{position:absolute;left:700px;width:3px}
+.br.out{top:398px;height:398px;background:var(--step)}
+.br.in{top:820px;height:212px;background:var(--coral)}
+.note{position:absolute;left:728px;width:290px;font-size:28px;line-height:1.2}
+.note.out{top:398px;color:var(--slate)}
+.note.in{top:820px;color:var(--navy);font-weight:600}
+.big{white-space:nowrap;font-family:"Newsreader",serif;font-size:84px;line-height:.9;font-weight:400;display:block;margin-bottom:10px;letter-spacing:-.03em}
+.note.out .big{color:var(--step)}
+.note.in .big{color:var(--coral)}
+.take{position:absolute;left:80px;top:1088px;width:920px;font-size:28px;line-height:1.32;color:var(--ink)}
+.foot{position:absolute;left:80px;right:80px;bottom:56px;display:flex;justify-content:space-between;align-items:flex-end}
+.src{font-size:20px;line-height:1.35;color:var(--slate);width:660px}
+.foot img{width:230px}
+</style></head><body>
+<div class="circle"></div>
+<div class="kicker">Proving marketing ROI</div>
+<h1>In a Nine-Month Buying Decision, Web Analytics Sees Only <em>the Last Three.</em></h1>
+
+<div class="band"></div>
+<div class="mlabel">Month</div>
+<div class="spine"></div>
+<!-- months: start y=392, 70px each -->
+<div class="m" style="top:409px">1</div><div class="m" style="top:479px">2</div><div class="m" style="top:549px">3</div>
+<div class="m" style="top:619px">4</div><div class="m" style="top:689px">5</div><div class="m" style="top:759px">6</div>
+<div class="m" style="top:839px">7</div><div class="m" style="top:909px">8</div><div class="m" style="top:979px">9</div>
+
+<div class="tp" style="top:401px"><div class="dot"></div><div><div class="t">Industry article</div><div class="p">Head of production</div></div></div>
+<div class="tp" style="top:471px"><div class="dot"></div><div><div class="t">Study download</div><div class="p">Head of IT</div></div></div>
+<div class="tp" style="top:541px"><div class="dot"></div><div><div class="t">Talk at a trade fair</div><div class="p">Technical director</div></div></div>
+<div class="tp" style="top:611px"><div class="dot"></div><div><div class="t">Webinar</div><div class="p">Two engineers</div></div></div>
+<div class="tp" style="top:681px"><div class="dot"></div><div><div class="t">Meeting with sales</div><div class="p">Head of production</div></div></div>
+<div class="tp ms" style="top:758px"><div class="dot"></div><div><div class="t">Opportunity in the CRM</div></div></div>
+<div class="tp in" style="top:831px"><div class="dot"></div><div><div class="t">Solution workshop</div><div class="p">Procurement and finance</div></div></div>
+<div class="tp in" style="top:901px"><div class="dot"></div><div><div class="t">White paper</div><div class="p">CEO</div></div></div>
+<div class="tp in order" style="top:1009px"><div class="dot"></div><div><div class="t">Contract signed</div></div></div>
+
+<div class="br out"></div>
+<div class="note out"><span class="big">⅔</span>of the journey stays invisible to Google Analytics.</div>
+<div class="br in"></div>
+<div class="note in"><span class="big">90 days</span>The furthest Google Analytics looks back.</div>
+
+<p class="take">On average, 13 people take part in a purchase decision, and web analytics records each of them separately. The CRM connects them at the opportunity across the entire journey, provided sales links them to it.</p>
+
+<div class="foot"><div class="src">Sources: Google Analytics Help, Forrester “The State of Business Buying 2024.” Sequence shown as an example.</div><img src="../logo/svg/aimind-logo.svg" alt="aimind.marketing"></div>
+<script>
+const r6=document.querySelector('.tp.ms').getBoundingClientRect(), r7=document.querySelector('.tp.in').getBoundingClientRect();
+const ord=document.querySelector('.order').getBoundingClientRect();
+const mid=Math.round((r6.bottom+r7.top)/2), end=Math.round(ord.bottom)+14;
+const q=s=>document.querySelector(s);
+q('.band').style.top=mid+'px'; q('.band').style.height=(end-mid)+'px';
+q('.br.out').style.height=(mid-12-398)+'px';
+q('.br.in').style.top=(mid+10)+'px'; q('.br.in').style.height=(end-mid-24)+'px';
+q('.note.in').style.top=(mid+10)+'px';
+</script></body></html>

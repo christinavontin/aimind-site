@@ -27,7 +27,31 @@ Status on October 11, 2026. Read this file first in every new chat.
 - All other WordPress URLs are retired: 301 to the closest hub (`public/_redirects`), 410 where nothing fits (`functions/[[path]].js` + `public/_routes.json`). 294 local checks passed before launch; on the live domain a retired article was confirmed to land on its hub.
 - Article header: label, title, dek (optional `dek` field in the frontmatter: one or two sentences on what the reader takes away, never a repeat of the opening; DE first, EN rewrite) and the meta line. On screens from 1280px the header has the same height on every article and its content is centered vertically.
 - Articles: the author name in the line under the title links to the author page `/about/` (DE `/de/about/`), which shows the author text and a LinkedIn link. Articles end with FAQ and sources; there is no author box or booking button at the end. A booking call to action goes into an article only when the article is about selling a service, written individually in its text.
+- ROI hub: an illustration (timeline of a nine-month buying decision, web analytics versus CRM) at the end of the section on measuring marketing’s contribution to revenue, EN and DE, with alt text. Files in `public/images/articles/`, style `.aim-fig` in `src/styles/global.css`, sources in `design/infographics/`.
 - Profile photo for LinkedIn (own cutout on cream) and banners: in the private brand guide only, never in this public repository.
+
+## Infographics for LinkedIn and articles
+
+Started October 11, 2026: turning the three hubs into infographics for C-suite readers on LinkedIn. The design rules are in the private brand guide, section "Infographics"; this is the status and what was learned.
+
+**Status**
+
+| Hub | Infographic | State |
+| --- | --- | --- |
+| ROI | Web analytics timeline (nine-month buying decision, 90-day window) | Final, but used as an **article illustration**, not on LinkedIn: it shows one fact, the argument sits in the text. Live in the ROI hub, EN and DE. |
+| ROI | Measurement methods on the buying process (span map) | Open. Draft not approved. The axis mixed two levels (buyer journey and the seller’s pipeline). Discussed next: mapping the methods onto Gartner’s buying jobs. Not in the repository, no draft is kept. |
+| ROI | Business types and the role of the five KPIs (spectrum) | Concept approved, not built. |
+| AI, CMO | – | Not started. |
+
+**How an infographic is made**
+
+1. Concept per article first: each infographic answers one question an executive would ask and shows a relation (a mechanism, a comparison, a gap), never a single figure or a promoted opinion. Old, well-known concepts are not infographic material.
+2. One axis, one level. A timeline is either the buyer’s journey or the seller’s pipeline, never both.
+3. Single images, no carousels. Detail that does not fit goes into the post text.
+4. Build as HTML at 1080 × 1350 in `design/infographics/`, render with `render.py` to 2160 × 2700 PNG, check at phone size.
+5. German first, agreed with Christina, then the English version (title case title, native American English).
+6. Every figure from the originator; illustrative sequences say so on the image ("Verlauf als Beispiel" / "Sequence shown as an example"). Alt text in both languages.
+7. An image that illustrates the article goes into the hub as WebP (1440 × 1800) in `<figure class="aim-fig">` with alt text, placed where it sums up its section.
 
 ## How the site is built (short)
 
@@ -106,4 +130,4 @@ The ROI topic is strongest; German AI queries rank around position 80; demand ex
 
 ## Prompt for the next chat
 
-> I'm continuing work on my website aimind.marketing (Astro on Cloudflare Pages, live since October 10, 2026). Repository: christinavontin/aimind-site, branch main; every push deploys to the live site. First read `CLAUDE.md`, `docs/HANDOFF.md` and the `project/README.md` of my private brand guide (https://claude.ai/artifact/YF53i9hKw85J8WeKjGjGmP), which is the only place for design rules. Apply the skill "schreibstil" to every text, German first, English as a rewrite. Keep only final versions in the repository. Next task: [for example "the GEO article, start with an outline in German" or "the signature for the author page"].
+> I'm continuing work on my website aimind.marketing (Astro on Cloudflare Pages, live since October 10, 2026). Repository: christinavontin/aimind-site, branch main; every push deploys to the live site. First read `CLAUDE.md`, `docs/HANDOFF.md` and the `project/README.md` of my private brand guide (https://claude.ai/artifact/YF53i9hKw85J8WeKjGjGmP), which is the only place for design rules. Apply the skill "schreibstil" to every text, German first, English as a rewrite. Keep only final versions in the repository. Next task: [for example "the GEO article, start with an outline in German" "the signature for the author page" or "continue the infographics, see the section Infographics in the handoff"].
