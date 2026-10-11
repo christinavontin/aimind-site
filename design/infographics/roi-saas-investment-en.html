@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<style>
+@font-face{font-family:"Newsreader";src:url(../../node_modules/@fontsource-variable/newsreader/files/newsreader-latin-opsz-normal.woff2) format("woff2");font-weight:200 800;font-style:normal}
+@font-face{font-family:"Newsreader";src:url(../../node_modules/@fontsource-variable/newsreader/files/newsreader-latin-opsz-italic.woff2) format("woff2");font-weight:200 800;font-style:italic}
+@font-face{font-family:"Instrument Sans";src:url(../../node_modules/@fontsource-variable/instrument-sans/files/instrument-sans-latin-wght-normal.woff2) format("woff2");font-weight:400 700}
+:root{--navy:#091944;--cream:#ffeaa7;--cyan:#2a7b88;--coral:#e05a47;--off:#f8f6f0;--slate:#4a5568;--line:#ddd8ca}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1350px}
+body{background:#fff;font-family:"Instrument Sans",sans-serif;color:var(--navy);position:relative;overflow:hidden}
+.circle{position:absolute;width:820px;height:820px;border-radius:50%;background:var(--cream);right:-330px;top:-380px}
+.kicker{position:absolute;left:80px;top:66px;font-size:24px;font-weight:600;letter-spacing:.12em;color:var(--cyan);text-transform:uppercase}
+h1{position:absolute;left:80px;top:108px;width:940px;font-family:"Newsreader",serif;font-weight:400;font-size:58px;line-height:1.06;letter-spacing:-.02em}
+h1 em{font-style:italic}
+.m{position:absolute;left:80px;right:80px;top:326px;display:grid;grid-template-columns:236px 1fr 1fr;column-gap:32px}
+.h{align-self:end;padding-bottom:16px;border-bottom:2px solid var(--navy)}
+.h b{display:block;font-size:28px;line-height:1.15;font-weight:600}
+.h span{display:block;font-size:22px;line-height:1.3;color:var(--slate);margin-top:6px}
+.r{display:contents}
+.r>div{padding:30px 0 32px;border-bottom:1px solid var(--line)}
+.r:last-child>div{border-bottom:0}
+.r>div{position:relative;z-index:1}
+.r.hl>div{border-bottom-color:transparent}
+.band{position:absolute;left:0;right:0;background:var(--off);z-index:0}
+.lab .n{display:block;font-family:"Newsreader",serif;font-size:40px;line-height:1;color:var(--navy)}
+.lab .t{display:block;hyphens:auto;font-size:22px;line-height:1.25;font-weight:600;margin-top:8px}
+.c{font-size:28px;line-height:1.22}
+.c .s{display:block;font-size:22px;line-height:1.3;color:var(--slate);margin-top:6px}
+.c.key{position:relative}
+.c.key p{border-left:4px solid var(--coral);padding-left:18px}
+.foot{position:absolute;left:80px;right:80px;bottom:50px;display:flex;justify-content:space-between;align-items:flex-end}
+.src{font-size:20px;line-height:1.35;color:var(--slate)}
+.foot img{width:230px}
+</style></head><body>
+<div class="circle"></div>
+<div class="band"></div>
+<div class="kicker">Proving marketing ROI</div>
+<h1>SaaS Metrics Run on Volume.<br><em>Large-Deal Business Has None.</em></h1>
+
+<div class="m">
+  <div></div>
+  <div class="h"><b>Volume Business</b><span>SaaS, products with short sales cycles</span></div>
+  <div class="h"><b>Large-Deal Business</b><span>Capital goods, major projects</span></div>
+
+  <div class="r">
+    <div class="lab"><span class="n">1</span><span class="t">Deals</span></div>
+    <div class="c">Many, with short sales cycles</div>
+    <div class="c">A few large orders, decided over months or years</div>
+  </div>
+  <div class="r hl">
+    <div class="lab"><span class="n">2</span><span class="t">Sample Size</span></div>
+    <div class="c">Reliable averages<span class="s">built on many deals</span></div>
+    <div class="c key"><p>No reliable average<span class="s">A single order shifts it sharply.</span></p></div>
+  </div>
+  <div class="r">
+    <div class="lab"><span class="n">3</span><span class="t">Proof of Impact</span></div>
+    <div class="c">CAC, LTV:CAC, payback period, marketing‑influenced pipeline and revenue<span class="s">month by month</span></div>
+    <div class="c">Marketing‑influenced pipeline and revenue<span class="s">over several quarters</span></div>
+  </div>
+  <div class="r">
+    <div class="lab"><span class="n">4</span><span class="t">CAC and LTV:CAC</span></div>
+    <div class="c">Prove success and guide planning<span class="s">SaaS benchmark: LTV:CAC above 3</span></div>
+    <div class="c">Guide planning only<span class="s">What can a new customer cost? And a lead?</span></div>
+  </div>
+</div>
+
+<div class="foot"><div class="src">Benchmark: David Skok, SaaS Metrics 2.0</div><img src="../logo/svg/aimind-logo.svg" alt="aimind.marketing"></div>
+<script>
+document.fonts.ready.then(()=>{
+const c=[...document.querySelectorAll(".r.hl>div")],prev=document.querySelector(".r.hl").previousElementSibling;
+const y0=Math.min(...c.map(e=>e.getBoundingClientRect().top)),bot=Math.max(...c.map(e=>e.getBoundingClientRect().bottom));
+const b=document.querySelector(".band");b.style.top=(y0-1)+"px";b.style.height=(bot-y0+1)+"px";
+});
+</script>
+</body></html>
