@@ -248,8 +248,8 @@ h1 .hl > span { display: inline-block; position: relative; padding-right: .12em;
 /* Article */
 .a-head { background: var(--offwhite); }
 .a-head .inner { max-width: 1040px; margin: 0 auto; padding: 120px 32px 96px; display: flex; flex-direction: column; }
-/* Same header height for every article on wide screens: room for a three-line title and a three-line dek; shorter content sits at the bottom, so the meta line and the article start at the same height. */
-@media (min-width: 1280px) { .a-head .inner { min-height: 722px; justify-content: flex-end; } }
+/* Same header height for every article on wide screens: room for a three-line title and a three-line dek; shorter content is centered vertically, so the article always starts at the same height. */
+@media (min-width: 1280px) { .a-head .inner { min-height: 722px; padding-top: 108px; padding-bottom: 108px; justify-content: center; } }
 .a-head .kick { margin: 0 0 24px; letter-spacing: .16em; }
 .a-head h1 { margin: 0; font-family: var(--font-serif); font-weight: 400; font-size: clamp(44px, 6vw, 76px); line-height: 1.04; letter-spacing: -0.025em; text-wrap: balance; }
 .a-dek { margin: 32px 0 0; max-width: 34em; font-family: var(--font-serif); font-weight: 400; font-size: 26px; line-height: 1.4; color: var(--navy); text-wrap: pretty; }
