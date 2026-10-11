@@ -251,9 +251,8 @@ h1 .hl > span { display: inline-block; position: relative; padding-right: .12em;
 .a-head .kick { margin: 0 0 24px; letter-spacing: .16em; }
 .a-head h1 { margin: 0; font-family: var(--font-serif); font-weight: 400; font-size: clamp(44px, 6vw, 76px); line-height: 1.04; letter-spacing: -0.025em; text-wrap: balance; }
 .a-meta { margin-top: 36px; font-size: 15px; color: var(--slate); }
-.a-meta strong { color: var(--navy); font-weight: 600; }
-.a-bio { margin: 20px 0 0; max-width: 68ch; font-size: 15px; line-height: 1.55; color: var(--slate); }
-.a-bio span { display: block; margin-bottom: 4px; font-size: 13px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--cyan); }
+.a-meta a { color: var(--navy); font-weight: 600; text-decoration: underline; text-decoration-color: var(--yellow); text-decoration-thickness: 2px; text-underline-offset: .2em; }
+.a-meta a:hover { text-decoration-color: var(--navy); }
 .a-body { max-width: var(--wide); margin: 0 auto; padding: 72px 32px; display: flex; flex-wrap: wrap; gap: 64px; align-items: flex-start; }
 .a-body.page-body { max-width: 1040px; }
 .toc { flex: 1 1 220px; max-width: 260px; position: sticky; top: 96px; }
@@ -286,9 +285,6 @@ h1 .hl > span { display: inline-block; position: relative; padding-right: .12em;
 .faq summary { list-style: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 20px; font-weight: 600; font-size: 22px; line-height: 1.35; }
 .faq summary::-webkit-details-marker { display: none; }
 .faq details p { margin: 12px 0 0; color: var(--body); }
-.author { margin-top: 64px; background: var(--offwhite); border-radius: 16px; padding: 32px; }
-.author p { margin: 0 0 14px; font-size: 16px; color: var(--slate); }
-.author p.name { margin-bottom: 6px; font-size: 18px; font-weight: 600; color: var(--navy); }
 .sources { margin-top: 56px; }
 .sources h2 { margin: 0 0 16px; font-size: 13px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--slate); }
 .sources ul { margin: 0; padding: 0; list-style: none; font-size: 15px; display: flex; flex-direction: column; gap: 8px; color: var(--slate); }

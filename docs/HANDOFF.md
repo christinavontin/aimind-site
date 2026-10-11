@@ -1,6 +1,6 @@
 # Handoff · aimind.marketing website
 
-Status on October 10, 2026. Read this file first in every new chat.
+Status on October 11, 2026. Read this file first in every new chat.
 
 **The site is live at https://aimind.marketing/** (since October 10, 2026). WordPress.com is no longer serving the domain.
 
@@ -25,13 +25,13 @@ Status on October 10, 2026. Read this file first in every new chat.
 - Privacy Policy and AI Ethics and Data Protection (EN/DE).
 - 404 pages per language; `public/llms.txt`; `public/robots.txt` (all crawlers allowed, AI crawlers listed); sitemap.
 - All other WordPress URLs are retired: 301 to the closest hub (`public/_redirects`), 410 where nothing fits (`functions/[[path]].js` + `public/_routes.json`). 294 local checks passed before launch; on the live domain a retired article was confirmed to land on its hub.
-- Author text from WordPress sits under the title of every article ("About the Author" / "Über die Autorin").
+- Articles: the author name in the line under the title links to the author page `/about/` (DE `/de/about/`), which shows the author text and a LinkedIn link. Articles end with FAQ and sources; there is no author box or booking button at the end. A booking call to action goes into an article only when the article is about selling a service, written individually in its text.
 - Profile photo for LinkedIn (own cutout on cream) and banners: in the private brand guide only, never in this public repository.
 
 ## How the site is built (short)
 
 - Articles: `src/content/posts/en|de/`, one file per language, paired by `key`; `permalink` is the full path. `.mdx` when a component is needed (ROI calculator: `<RoiCalculator lang="de" />`). SEO fields, `faq` and `sources` in the frontmatter; the layout renders FAQ, sources and JSON-LD.
-- Pages: `src/content/pages/en|de/`. Homepage `src/components/Home.astro`, contact `src/components/Contact.astro`, shared labels `src/lib/site.ts`.
+- Pages: `src/content/pages/en|de/`. Homepage `src/components/Home.astro`, contact `src/components/Contact.astro`, author page `src/components/About.astro` (its text is `authorBio` in `src/lib/site.ts`, also used in the article schema), shared labels `src/lib/site.ts`.
 - Tables: Markdown tables are wrapped automatically; in MDX wrap them by hand in `<figure class="aim-tbl">`.
 - Before every push: `npm run build`, read changed pages in both languages, open every new external link. Redirect changes: test with `npx wrangler@3 pages dev dist`.
 
@@ -85,8 +85,8 @@ Done on October 10: `www` redirects permanently to the root domain (Cloudflare r
 ### 2. Site enhancements
 
 - German recommendations on the homepage: four quotes were completed and Magnolia Restrepo's translated by Claude; Christina may refine the wording (`de.refs` in `src/components/Home.astro`). André Labadie's quote says "Tina" in both languages (his original wording).
-- Handwritten signature for the author box, About and email.
-- About page and Glossary are retired for now; they come back later (About as its own page, Glossary after the hubs).
+- Handwritten signature for the author page and email.
+- The author page `/about/` is short for now (author text and LinkedIn link); it grows into the full About page later. The Glossary comes back after the hubs.
 - When a design decision changes anything: update the private brand guide (plus decisions log), the code, the board in `design/style-guide/` and `design/screens/` in the same step (rule in `CLAUDE.md`).
 
 ### 3. Blog posts (agreed clusters, keep it simple)
@@ -105,4 +105,4 @@ The ROI topic is strongest; German AI queries rank around position 80; demand ex
 
 ## Prompt for the next chat
 
-> I'm continuing work on my website aimind.marketing (Astro on Cloudflare Pages, live since October 10, 2026). Repository: christinavontin/aimind-site, branch main; every push deploys to the live site. First read `CLAUDE.md`, `docs/HANDOFF.md` and the `project/README.md` of my private brand guide (https://claude.ai/artifact/YF53i9hKw85J8WeKjGjGmP), which is the only place for design rules. Apply the skill "schreibstil" to every text, German first, English as a rewrite. Keep only final versions in the repository. Next task: [for example "the GEO article, start with an outline in German" or "the signature for the author box"].
+> I'm continuing work on my website aimind.marketing (Astro on Cloudflare Pages, live since October 10, 2026). Repository: christinavontin/aimind-site, branch main; every push deploys to the live site. First read `CLAUDE.md`, `docs/HANDOFF.md` and the `project/README.md` of my private brand guide (https://claude.ai/artifact/YF53i9hKw85J8WeKjGjGmP), which is the only place for design rules. Apply the skill "schreibstil" to every text, German first, English as a rewrite. Keep only final versions in the repository. Next task: [for example "the GEO article, start with an outline in German" or "the signature for the author page"].

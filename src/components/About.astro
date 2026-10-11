@@ -1,0 +1,54 @@
+---
+// Author page, EN and DE. The author text lives in src/lib/site.ts (authorBio) and is also used in the article schema.
+// It grows into the full About page later.
+import Base from '../layouts/Base.astro';
+import { SITE, UI, abs, type Lang } from '../lib/site';
+
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const t = UI[lang];
+const linkedin = 'https://www.linkedin.com/in/christinavontin/';
+
+const c = {
+  en: {
+    seoTitle: 'About Christina Vontin – aimind.marketing',
+    description: 'Christina Vontin turns complex technology and regulatory change into clear go-to-market strategies for B2B technology companies.',
+    linkedin: 'Full career on LinkedIn',
+  },
+  de: {
+    seoTitle: 'Über Christina Vontin – aimind.marketing',
+    description: 'Christina Vontin übersetzt komplexe Technologien und regulatorische Veränderungen in klare Go-To-Market-Strategien für B2B-Technologieunternehmen.',
+    linkedin: 'Werdegang auf LinkedIn',
+  },
+}[lang];
+
+const url = abs(t.about.href);
+const jsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'ProfilePage',
+    url,
+    inLanguage: t.htmlLang,
+    mainEntity: { '@type': 'Person', name: SITE.author, url, sameAs: [linkedin], description: t.authorBio },
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: SITE.name, item: abs(t.home) },
+      { '@type': 'ListItem', position: 2, name: t.about.label, item: url },
+    ],
+  },
+];
+---
+<Base lang={lang} seoTitle={c.seoTitle} description={c.description} permalink={t.about.href} alternates={[{ lang: 'en', href: UI.en.about.href }, { lang: 'de', href: UI.de.about.href }]} jsonLd={jsonLd}>
+  <section class="a-head"><div class="inner"><h1>{t.about.label}</h1></div></section>
+  <div class="a-body page-body">
+    <article class="article">
+      <div class="prose page-prose">
+        <p>{t.authorBio}</p>
+        <p><a href={linkedin} rel="me noopener" target="_blank">{c.linkedin}</a></p>
+      </div>
+    </article>
+  </div>
+</Base>

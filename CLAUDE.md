@@ -10,7 +10,7 @@ Built with Astro, hosted on Cloudflare Pages. Every push to `main` deploys.
 - `permalink` is the full URL path. German paths start with `/de/`. URLs from the WordPress site stay unchanged.
 - SEO fields live in the frontmatter of each language file: `seoTitle` (max. ~60 characters), `description` (max. ~155 characters), `keyphrase`.
 - FAQ and sources live in the frontmatter (`faq`, `sources`). The layout renders them after the article and generates the FAQPage JSON-LD.
-- Pages (About, Contact, Privacy Policy, Glossary) go in `src/content/pages/` with the same frontmatter logic.
+- Text pages (Privacy Policy, AI Ethics, later the Glossary) go in `src/content/pages/` with the same frontmatter logic. Contact and the author page (`/about/`) are components (`src/components/Contact.astro`, `About.astro`); the author text is `authorBio` in `src/lib/site.ts`.
 - The homepage is `src/components/Home.astro`.
 
 ## Writing rules

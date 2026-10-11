@@ -39,8 +39,8 @@ export const UI = {
     privacy: { label: 'Privacy Policy', href: '/privacy-policy/' },
     switchTo: 'Deutsch',
     tagline: 'Technology to Market',
-    aboutAuthor: 'About the Author',
-    authorBio: 'Christina Vontin is a B2B technology marketing strategist and former marketing leader at Cognizant, TomTom, and CGI. She translates complex technology, regulatory change, and industry transformation into clear market narratives and thought leadership for executive audiences. Her work combines thought leadership strategy, LLM optimization, and AI-enabled marketing workflows to help technology companies build visibility with both decision makers and AI-driven discovery platforms.',
+    about: { label: 'About Christina Vontin', href: '/about/' },
+    authorBio: 'Christina Vontin has held senior marketing roles at Cognizant, TomTom, and GFT Technologies. She turns complex technology, regulatory change, and industry-wide transformation into clear go-to-market strategies. Her work brings together positioning, thought leadership, and generative engine optimization (GEO), making technology companies visible to decision makers and in AI search alike.',
   },
   de: {
     htmlLang: 'de-DE',
@@ -69,8 +69,8 @@ export const UI = {
     privacy: { label: 'Datenschutz', href: '/de/privacy-policy/' },
     switchTo: 'English',
     tagline: 'Technologie im Markt',
-    aboutAuthor: 'Über die Autorin',
-    authorBio: 'Christina Vontin ist B2B-Marketingstrategin für Technologieunternehmen und war in leitenden Marketingpositionen bei Cognizant, TomTom und CGI tätig. Sie übersetzt komplexe Technologien, regulatorische Veränderungen und den Wandel ganzer Branchen in klare Marktbotschaften und Fachbeiträge für Führungskräfte. Ihre Arbeit verbindet Strategien für Thought Leadership, die Optimierung von Inhalten für Sprachmodelle (LLMO) und Marketingabläufe mit KI, und macht Technologieunternehmen sichtbar, bei Entscheidern ebenso wie in Suchsystemen, die mit KI arbeiten.',
+    about: { label: 'Über Christina Vontin', href: '/de/about/' },
+    authorBio: 'Christina Vontin war in leitenden Marketingpositionen bei Cognizant, TomTom und GFT Technologies tätig. Sie übersetzt komplexe Technologien, regulatorische Veränderungen und den Wandel ganzer Branchen in klare Go-To-Market-Strategien. Ihre Arbeit verbindet Positionierung, Thought Leadership und die Optimierung von Inhalten für Sprachmodelle (GEO). Damit macht sie Technologieunternehmen sichtbar, bei Entscheidern ebenso wie in der KI-Suche.',
   },
 } as const;
 
