@@ -3,9 +3,9 @@ key: cmo-hub
 lang: de
 permalink: /de/2025/07/31/challenges-for-b2b-cmo/
 title: "B2B-CMO: Die sechs Kernaufgaben strategischer Führung"
-dek: "An sechs Aufgaben messen Vorstand und Vertrieb heute die Arbeit eines B2B-CMO, vom Kapitaleinsatz bis zur Gestaltung des Marktes. Je billiger KI den Output macht, desto mehr zählt dabei das Urteilsvermögen."
+dek: "An sechs Aufgaben messen Vorstand und Vertrieb heute die Arbeit eines B2B-CMO, vom Kapitaleinsatz bis zur Gestaltung des Marktes. Je günstiger KI Analysen und Inhalte macht, desto mehr zählt dabei das Urteilsvermögen."
 seoTitle: "B2B-CMO: Sechs Kernaufgaben strategischer Führung"
-description: Sechs Kernaufgaben des B2B-CMO, vom Kapitaleinsatz bis zur Marktgestaltung, und warum Urteilsvermögen zählt, wenn KI Output billig macht.
+description: Sechs Kernaufgaben des B2B-CMO, vom Kapitaleinsatz bis zur Marktgestaltung, und warum Urteilsvermögen zählt, wenn KI Inhalte günstig macht.
 keyphrase: B2B-CMO Aufgaben
 published: 2025-07-31
 updated: 2026-10-08

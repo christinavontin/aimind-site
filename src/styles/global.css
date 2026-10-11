@@ -247,11 +247,11 @@ h1 .hl > span { display: inline-block; position: relative; padding-right: .12em;
 
 /* Article */
 .a-head { background: var(--offwhite); }
-.a-head .inner { max-width: 1040px; margin: 0 auto; padding: 88px 32px 64px; }
+.a-head .inner { max-width: 1040px; margin: 0 auto; padding: 120px 32px 96px; }
 .a-head .kick { margin: 0 0 24px; letter-spacing: .16em; }
 .a-head h1 { margin: 0; font-family: var(--font-serif); font-weight: 400; font-size: clamp(44px, 6vw, 76px); line-height: 1.04; letter-spacing: -0.025em; text-wrap: balance; }
-.a-dek { margin: 28px 0 0; max-width: 34em; font-family: var(--font-serif); font-style: italic; font-weight: 400; font-size: 24px; line-height: 1.4; color: var(--navy); text-wrap: pretty; }
-.a-meta { margin-top: 36px; font-size: 15px; color: var(--slate); }
+.a-dek { margin: 32px 0 0; max-width: 34em; font-family: var(--font-serif); font-weight: 400; font-size: 26px; line-height: 1.4; color: var(--navy); text-wrap: pretty; }
+.a-meta { margin-top: 44px; font-size: 15px; color: var(--slate); }
 .a-meta .nw { white-space: nowrap; }
 .a-meta a { color: var(--navy); font-weight: 600; text-decoration: underline; text-decoration-color: var(--yellow); text-decoration-thickness: 2px; text-underline-offset: .2em; }
 .a-meta a:hover { text-decoration-color: var(--navy); }
@@ -366,8 +366,8 @@ h1 .hl > span { display: inline-block; position: relative; padding-right: .12em;
   .aud-lead { font-size: 18px; margin-bottom: 14px; }
   .aud ul { font-size: 15px; gap: 8px; }
   .aud-note { font-size: 15px; }
-  .a-head .inner { padding: 56px 20px 48px; }
-  .a-dek { font-size: 20px; }
+  .a-head .inner { padding: 72px 20px 56px; }
+  .a-dek { font-size: 21px; }
   .a-body { padding: 48px 20px; }
   .prose:not(.page-prose) > p:first-child { font-size: 20px; }
   .prose h2, .faq h2 { font-size: 32px; }
