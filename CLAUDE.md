@@ -33,6 +33,10 @@ with `<tr class="hl">` or `<span class="pill pill-out">`.
 Retired articles without a successor get `410`: Cloudflare's redirect file cannot send 410, so these paths are listed in `functions/[[path]].js` and `public/_routes.json` (the function runs only on those paths).
 When a retired article comes back, delete its redirect lines. Test locally before pushing: `npx wrangler@3 pages dev dist`.
 
+## Approval before going live
+
+Christina approves every change to the live site first. Until then, changes go to the branch `for-review` (Cloudflare builds only a preview from it). After her approval, merge `for-review` into `main`, which deploys.
+
 ## Checks before every push
 
 1. `npm run build` must finish without errors.
