@@ -60,8 +60,8 @@ sources:
     title: Guidelines on AI Transparency Obligations
     url: https://digital-strategy.ec.europa.eu/en/policies/guidelines-ai-transparency-obligations
   - author: High-Level Expert Group on Artificial Intelligence, European Commission
-    title: Requirements of Trustworthy AI
-    url: https://ec.europa.eu/futurium/en/ai-alliance-consultation/guidelines/1
+    title: Ethics guidelines for trustworthy AI
+    url: https://digital-strategy.ec.europa.eu/en/library/ethics-guidelines-trustworthy-ai
   - author: McKinsey
     title: AI Is Everywhere. The Agentic Organization Isn’t—Yet
     url: https://www.mckinsey.com/capabilities/people-and-organization/our-insights/ai-is-everywhere-the-agentic-organization-isnt-yet
@@ -149,7 +149,7 @@ Wirksam wird Governance erst, wenn sie in die Arbeitsabläufe eingebaut ist: als
 
 Bisher haben wir beleuchtet, welche Arbeit KI im Marketing übernimmt. Jetzt wenden wir uns den Menschen und den Rollen zu, die diese Arbeit steuern. McKinsey schätzt, dass [75 % aller Rollen grundlegend neu zugeschnitten werden müssen](https://www.mckinsey.com/capabilities/people-and-organization/our-insights/ai-is-everywhere-the-agentic-organization-isnt-yet). Die meisten verschwinden dabei nicht. Sie verändern sich.
 
-Wie Menschen KI beaufsichtigen, beschreibt die Expertengruppe für KI der EU-Kommission in ihren [Ethik-Leitlinien](https://ec.europa.eu/futurium/en/ai-alliance-consultation/guidelines/1) auf drei Ebenen. Wer „in the loop“ arbeitet, kann in jeden einzelnen Arbeitsschritt eingreifen und prüft jedes Ergebnis, bevor es weitergeht. Wer „on the loop“ arbeitet, gestaltet das System und überwacht, wie es läuft. Wer „in command“ ist, überblickt den gesamten Einsatz der KI und entscheidet, wann und wofür sie genutzt wird. Die Leitlinien beschreiben damit Formen der Aufsicht und keine Rollen. Übertragen auf das Marketing, nimmt jede der folgenden Rollen eine dieser Positionen ein.
+Wie Menschen KI beaufsichtigen, beschreibt die Expertengruppe für KI der EU-Kommission in ihren [Ethik-Leitlinien](https://digital-strategy.ec.europa.eu/en/library/ethics-guidelines-trustworthy-ai) auf drei Ebenen. Wer „in the loop“ arbeitet, kann in jeden einzelnen Arbeitsschritt eingreifen und prüft jedes Ergebnis, bevor es weitergeht. Wer „on the loop“ arbeitet, gestaltet das System und überwacht, wie es läuft. Wer „in command“ ist, überblickt den gesamten Einsatz der KI und entscheidet, wann und wofür sie genutzt wird. Die Leitlinien beschreiben damit Formen der Aufsicht und keine Rollen. Übertragen auf das Marketing, nimmt jede der folgenden Rollen eine dieser Positionen ein.
 
 ### Der Architekt
 

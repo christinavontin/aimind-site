@@ -60,8 +60,8 @@ sources:
     title: Guidelines on AI Transparency Obligations
     url: https://digital-strategy.ec.europa.eu/en/policies/guidelines-ai-transparency-obligations
   - author: High-Level Expert Group on Artificial Intelligence, European Commission
-    title: Requirements of Trustworthy AI
-    url: https://ec.europa.eu/futurium/en/ai-alliance-consultation/guidelines/1
+    title: Ethics guidelines for trustworthy AI
+    url: https://digital-strategy.ec.europa.eu/en/library/ethics-guidelines-trustworthy-ai
   - author: McKinsey
     title: AI Is Everywhere. The Agentic Organization Isn’t—Yet
     url: https://www.mckinsey.com/capabilities/people-and-organization/our-insights/ai-is-everywhere-the-agentic-organization-isnt-yet
@@ -149,7 +149,7 @@ Governance only takes effect when it is built into workflows: as an approval ste
 
 So far, we have looked at the work AI takes on in marketing. Now we turn to the people and roles that steer this work. McKinsey estimates that [75% of all roles need fundamental reshaping](https://www.mckinsey.com/capabilities/people-and-organization/our-insights/ai-is-everywhere-the-agentic-organization-isnt-yet). Most of them will not disappear. They will change.
 
-The European Commission’s High-Level Expert Group on AI describes three levels of human oversight in its [ethics guidelines](https://ec.europa.eu/futurium/en/ai-alliance-consultation/guidelines/1). People who work “in the loop” can intervene in every single step and review each result before it moves on. People who work “on the loop” design the system and monitor how it runs. Whoever is “in command” oversees the entire use of AI and decides when and for what it is used. The guidelines describe forms of oversight, not roles. Applied to marketing, each of the following roles takes one of these positions.
+The European Commission’s High-Level Expert Group on AI describes three levels of human oversight in its [ethics guidelines](https://digital-strategy.ec.europa.eu/en/library/ethics-guidelines-trustworthy-ai). People who work “in the loop” can intervene in every single step and review each result before it moves on. People who work “on the loop” design the system and monitor how it runs. Whoever is “in command” oversees the entire use of AI and decides when and for what it is used. The guidelines describe forms of oversight, not roles. Applied to marketing, each of the following roles takes one of these positions.
 
 ### The Architect
 
