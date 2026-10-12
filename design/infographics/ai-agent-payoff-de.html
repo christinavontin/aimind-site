@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="de"><head><meta charset="utf-8">
+<style>
+@font-face{font-family:"Newsreader";src:url(../../node_modules/@fontsource-variable/newsreader/files/newsreader-latin-opsz-normal.woff2) format("woff2");font-weight:200 800;font-style:normal}
+@font-face{font-family:"Newsreader";src:url(../../node_modules/@fontsource-variable/newsreader/files/newsreader-latin-opsz-italic.woff2) format("woff2");font-weight:200 800;font-style:italic}
+@font-face{font-family:"Instrument Sans";src:url(../../node_modules/@fontsource-variable/instrument-sans/files/instrument-sans-latin-wght-normal.woff2) format("woff2");font-weight:400 700}
+:root{--navy:#091944;--cream:#ffeaa7;--cyan:#2a7b88;--coral:#e05a47;--off:#f8f6f0;--slate:#4a5568;--line:#ddd8ca}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1350px}
+body{background:#fff;font-family:"Instrument Sans",sans-serif;color:var(--navy);position:relative;overflow:hidden}
+.circle{position:absolute;width:820px;height:820px;border-radius:50%;background:var(--cream);right:-330px;top:-380px}
+.kicker{position:absolute;left:80px;top:66px;font-size:24px;font-weight:600;letter-spacing:.12em;color:var(--cyan);text-transform:uppercase}
+h1{position:absolute;left:80px;top:108px;width:900px;font-family:"Newsreader",serif;font-weight:400;font-size:64px;line-height:1.06;letter-spacing:-.02em}
+h1 em{font-style:italic}
+.m{position:absolute;left:80px;right:80px;top:340px;display:grid;grid-template-columns:236px 1fr 1fr;column-gap:40px}
+.h{align-self:end;padding-bottom:16px;border-bottom:2px solid var(--navy)}
+.h b{display:block;font-size:28px;line-height:1.15;font-weight:600}
+.h span{display:block;font-size:22px;line-height:1.3;color:var(--slate);margin-top:6px}
+.r{display:contents}
+.r>div{padding:30px 0 32px;border-bottom:1px solid var(--line);position:relative;z-index:1}
+.r:last-child>div{border-bottom:0}
+.r.hl>div{border-bottom-color:transparent}
+.band{position:absolute;left:0;right:0;background:var(--off);z-index:0}
+.lab .n{display:block;font-family:"Newsreader",serif;font-size:40px;line-height:1}
+.lab .t{display:block;font-size:22px;line-height:1.25;font-weight:600;margin-top:8px}
+.c{font-size:28px;line-height:1.22}
+.c .s{display:block;font-size:22px;line-height:1.3;color:var(--slate);margin-top:8px}
+.bar{position:relative;height:14px;border-radius:7px;background:var(--line);margin-top:18px}
+.bar i{position:absolute;left:0;top:0;bottom:0;border-radius:7px;background:var(--navy)}
+.bar+.s{margin-top:10px}
+.num{font-family:"Newsreader",serif;font-size:84px;line-height:.95;letter-spacing:-.02em}
+.num.key{color:var(--coral)}
+.note{position:absolute;left:80px;right:80px;top:1018px;font-size:28px;line-height:1.3}
+.note .s{display:block;font-size:22px;line-height:1.35;color:var(--slate);margin-top:14px}
+.foot{position:absolute;left:80px;right:80px;bottom:50px;display:flex;justify-content:space-between;align-items:flex-end;gap:40px}
+.src{font-size:20px;line-height:1.35;color:var(--slate)}
+.foot img{width:230px;flex:none}
+</style></head><body>
+<div class="circle"></div>
+<div class="band"></div>
+<div class="kicker">Wann sich KI-Agenten lohnen</div>
+<h1>Ob ein KI-Agent Zeit spart, <em>entscheidet die Prüfzeit</em></h1>
+
+<div class="m">
+  <div></div>
+  <div class="h"><b>Beispiel A</b><span>schnelle Prüfung</span></div>
+  <div class="h"><b>Beispiel B</b><span>aufwendige Prüfung</span></div>
+
+  <div class="r">
+    <div class="lab"><span class="n">1</span><span class="t">Arbeitszeit pro Aufgabe</span></div>
+    <div class="c">2 Stunden</div>
+    <div class="c">2 Stunden</div>
+  </div>
+  <div class="r">
+    <div class="lab"><span class="n">2</span><span class="t">Prüfzeit pro Ergebnis des Agenten</span></div>
+    <div class="c">6 Minuten<div class="bar"><i style="width:5%"></i></div><span class="s">Anteil an der Arbeitszeit</span></div>
+    <div class="c">1 Stunde<div class="bar"><i style="width:50%"></i></div><span class="s">Anteil an der Arbeitszeit</span></div>
+  </div>
+  <div class="r hl">
+    <div class="lab"><span class="n">3</span><span class="t">Der Agent lohnt sich ab einer Erfolgsquote von</span></div>
+    <div class="c"><span class="num">5 %</span><span class="s">5 von 100 Aufgaben gelingen</span></div>
+    <div class="c"><span class="num key">50 %</span><span class="s">50 von 100 Aufgaben gelingen</span></div>
+  </div>
+</div>
+
+<div class="note">Die Schwelle entspricht dem Anteil der Prüfzeit an der Arbeitszeit.<span class="s">Ein Mensch prüft jedes Ergebnis. Was der Agent nicht schafft, erledigt der Mensch wie bisher. Rechenbeispiele.</span></div>
+
+<div class="foot"><div class="src">Beispiel A nach David Tepper (Pay-i) im McKinsey Quarterly, Juli 2026;<br>Beispiel B zum Vergleich</div><img src="../logo/svg/aimind-logo.svg" alt="aimind.marketing"></div>
+<script>
+document.fonts.ready.then(()=>{
+const c=[...document.querySelectorAll(".r.hl>div")];
+const y0=Math.min(...c.map(e=>e.getBoundingClientRect().top)),bot=Math.max(...c.map(e=>e.getBoundingClientRect().bottom));
+const b=document.querySelector(".band");b.style.top=(y0-1)+"px";b.style.height=(bot-y0+1)+"px";
+});
+</script>
+</body></html>
