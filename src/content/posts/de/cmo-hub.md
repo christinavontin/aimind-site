@@ -44,9 +44,6 @@ sources:
   - author: Gartner
     title: Over 40% of Agentic AI Projects Will Be Canceled by End of 2027
     url: https://www.gartner.com/en/newsroom/press-releases/2025-06-25-gartner-predicts-over-40-percent-of-agentic-ai-projects-will-be-canceled-by-end-of-2027
-  - author: Dell’Acqua et al., Harvard Business School
-    title: Navigating the Jagged Technological Frontier
-    url: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4573321
   - author: Outcomes Rocket
     title: The 2026 State of B2B Go-to-Market (GTM) Strategy
     url: https://cdn.prod.website-files.com/67f6cac53493cca03c180dc3/69cac1d66eb28d4c11d9d410_The%202026%20State%20of%20B2B%20Go-to-Market%20(GTM)%20Strategy%20Report%20(2).pdf
@@ -94,11 +91,15 @@ KI sollte Output preiswert machen. Die Rechnungen erzählen etwas anderes. In Mc
 
 ### Wo Erfahrung ihr Geld verdient
 
-Eine [Feldstudie der Harvard Business School mit BCG](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4573321) zeigt: Bei Aufgaben, die KI gut beherrscht, rücken weniger erfahrene Berater deutlich an die Spitzenkräfte heran. Bei Aufgaben jenseits dieser Grenze lagen Berater mit KI um 19 Prozentpunkte seltener richtig. Plausibel und trotzdem falsch – diesen Fehler bemerkt nur, wer Erfahrung mitbringt: Urteilsvermögen, das aus Entscheidungen gewachsen ist, deren Folgen man selbst tragen musste. Wer Budget in KI-Credits steckt, ohne in dieses Urteilsvermögen zu investieren, kauft Menge ohne Richtung. Und wenn KI genau die Arbeit übernimmt, an der Einsteiger bisher gelernt haben, verlieren Unternehmen den Weg, auf dem die Experten von morgen entstehen.
+Eine KI liefert Entwürfe, die plausibel klingen, und gerade deshalb fallen ihre Fehler nicht von selbst auf. Ob eine Aussage über das Produkt vor dem Einkauf des Kunden standhält, ob ein Vergleich mit dem Wettbewerb belegt ist oder ob eine Botschaft im Zielmarkt anders verstanden wird, kann beurteilen, wer solche Situationen selbst erlebt hat. Dieses Urteilsvermögen entsteht aus Entscheidungen, deren Folgen man selbst tragen musste.
 
-Unternehmen, die das richtig machen, investieren anders. Laut Gartner fließen bei Unternehmen, die sich bereit sehen, KI zu skalieren, 21,3 % des Marketingbudgets in KI, und ihre Marketingbudgets liegen im Schnitt bei 8,9 % des Umsatzes. Das ist deutlich über dem Durchschnitt von 7,8 %. Diese Unternehmen verbinden ihre KI-Ausgaben mit den Datengrundlagen, der Governance und den erfahrenen Menschen, die es zum Skalieren braucht.
+Erfahrene Mitarbeitende gewinnen deshalb mit KI an Wert. Je mehr Entwürfe eine KI liefert, desto mehr hängt an dem Urteil, welcher davon trägt. Wer Budget in KI-Credits steckt, ohne in dieses Urteilsvermögen zu investieren, kauft Menge ohne Richtung. Und wer gerade jetzt auf erfahrene Leute verzichtet, weil sie teurer sind als jüngere, spart an der Stelle, an der KI am wenigsten ersetzen kann.
 
-> Unser Leitfaden zum [Aufbau eines KI-Betriebsmodells im Marketing](/de/2025/10/11/ai-in-b2b-marketing-guide/) gliedert dieses Zusammenspiel in die Arbeit, die KI übernimmt, und die Rollen, die sie steuern.
+Dazu kommt eine Frage, die über das laufende Budget hinausreicht. Junge Mitarbeitende haben ihr Urteilsvermögen bisher an genau der Arbeit entwickelt, die KI jetzt übernimmt: an ersten Entwürfen, Recherchen und Zusammenfassungen. Fällt diese Arbeit weg, braucht ein Unternehmen einen anderen Weg, auf dem sie die Erfahrung sammeln, die sie zu Fachleuten macht.
+
+Unternehmen, die das richtig machen, investieren anders. Laut Gartner fließen bei Unternehmen, die sich bereit sehen, KI zu skalieren, 21,3 % des Marketingbudgets in KI, und ihre Marketingbudgets liegen im Schnitt bei 8,9 % des Umsatzes. Das ist deutlich über dem Durchschnitt von 7,8 %. Diese Unternehmen verbinden ihre KI-Ausgaben mit beweglichen Budgets, der Bereitschaft zur Innovation und einer Organisation, die darauf vorbereitet ist.
+
+> Wie sich die Arbeit zwischen KI und erfahrenen Menschen aufteilen lässt, beschreibt unser Leitfaden zum [Aufbau eines KI-Betriebsmodells im Marketing](/de/2025/10/11/ai-in-b2b-marketing-guide/).
 
 ## Wie können CMOs messbare Wirkung nachweisen?
 

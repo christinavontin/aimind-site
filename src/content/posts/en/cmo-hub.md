@@ -44,9 +44,6 @@ sources:
   - author: Gartner
     title: Over 40% of Agentic AI Projects Will Be Canceled by End of 2027
     url: https://www.gartner.com/en/newsroom/press-releases/2025-06-25-gartner-predicts-over-40-percent-of-agentic-ai-projects-will-be-canceled-by-end-of-2027
-  - author: Dell’Acqua et al., Harvard Business School
-    title: Navigating the Jagged Technological Frontier
-    url: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4573321
   - author: Outcomes Rocket
     title: The 2026 State of B2B Go-to-Market (GTM) Strategy
     url: https://cdn.prod.website-files.com/67f6cac53493cca03c180dc3/69cac1d66eb28d4c11d9d410_The%202026%20State%20of%20B2B%20Go-to-Market%20(GTM)%20Strategy%20Report%20(2).pdf
@@ -94,11 +91,15 @@ AI was sold as a way to make output cheap. The bills tell a different story. In 
 
 ### Where Experience Earns Its Cost
 
-A [Harvard Business School and BCG field study](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4573321) found that on tasks within AI’s capabilities, less experienced consultants moved much closer to top performers. On tasks beyond them, consultants using AI were 19 percentage points less likely to reach the correct answer. Plausible and wrong is the error only experience catches: judgment built by owning decisions and living with their results. A budget that funds AI credits without funding that judgment buys volume without direction. And when AI takes over the work juniors used to learn on, companies lose the path that produces tomorrow’s experts.
+AI produces drafts that sound plausible, which is exactly why its errors don't announce themselves. Someone who has been in those situations can judge whether a product claim holds up with the customer's procurement team, whether a comparison with a competitor can be backed up, or whether a message lands differently in the target market. That judgment comes from making decisions and living with their consequences.
 
-The organizations that get this right invest differently. Gartner found that AI-ready organizations allocate 21.3% of their marketing budget to AI and run marketing budgets averaging 8.9% of revenue, well above the 7.8% average. They pair AI spend with the data foundations, governance, and experienced people needed to scale it.
+Experienced people gain value as AI takes on more of the work. The more drafts AI produces, the more depends on deciding which one holds up. A budget that funds AI credits without funding that judgment buys volume without direction. And cutting experienced staff now because they cost more than younger hires saves money exactly where AI is least able to step in.
 
-> Our guide to [building an AI marketing operating model](/2025/10/11/ai-in-b2b-marketing-guide/) breaks that pairing into the work AI takes on and the roles that steer it.
+There is also a question that reaches beyond this year's budget. Junior staff have built their judgment on the very work AI now takes over: first drafts, research and summaries. If that work disappears, companies need another way for them to gain the experience that turns them into experts.
+
+The organizations that get this right invest differently. Gartner found that AI-ready organizations allocate 21.3% of their marketing budget to AI and run marketing budgets averaging 8.9% of revenue, well above the 7.8% average. These organizations pair their AI spend with budget agility, a commitment to innovation, and organizational readiness.
+
+> Our guide to [building an AI marketing operating model](/2025/10/11/ai-in-b2b-marketing-guide/) shows how to divide the work between AI and experienced people.
 
 ## How Can CMOs Prove Measurable Impact?
 
