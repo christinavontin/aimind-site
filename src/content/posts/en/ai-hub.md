@@ -153,7 +153,7 @@ The European Commission’s High-Level Expert Group on AI describes three levels
 
 ### The Architect
 
-The Architect is in command, a role that usually falls to the CMO or a senior marketing leader. As AI takes on more of the work, the job shifts from shaping individual pieces of content to shaping the system that produces them. Strategy sits at its core: which target customers marketing pursues, which messages apply, which campaigns take priority. So do the limits for AI, from the decisions agents may make on their own to those that stay with people. Where AI is used and where the budget goes are decisions for this role as well, and accountability for the result stays with it, even when AI did the work. The team itself is the last piece to redesign. Gartner ranks building [hybrid teams of people and agents](https://www.gartner.com/en/marketing/insights/top-priorities-for-cmos-in-2026) among the top priorities for CMOs.
+The Architect is in command, a role that usually falls to the CMO or a senior marketing leader. As AI takes on more of the work, the job shifts from shaping individual pieces of content to shaping the system that produces them. Strategy sits at its core: which target customers marketing pursues, which messages apply, which campaigns take priority. So do the limits for AI, from the decisions agents may make on their own to those that stay with people. Deciding where AI is used and where the budget goes is part of the role, and so is redesigning the team. Gartner ranks building [hybrid teams of people and agents](https://www.gartner.com/en/marketing/insights/top-priorities-for-cmos-in-2026) among the top priorities for CMOs. Accountability for the result stays with the Architect, even when AI did the work.
 
 ### The Orchestrator
 
