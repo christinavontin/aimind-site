@@ -8,7 +8,7 @@ seoTitle: How AI in B2B Marketing Delivers Results
 description: Most companies use AI in B2B marketing, few see results. An operating model for analyzing, creating, and executing turns AI into value.
 keyphrase: AI in B2B marketing
 published: 2025-10-11
-updated: 2026-10-11
+updated: 2026-10-12
 socialImage: /images/social/ai-hub.jpg
 socialImageAlt: "Three colleagues review an AI-supported marketing workflow on a laptop"
 role: hub
@@ -59,6 +59,9 @@ sources:
   - author: European Commission
     title: Guidelines on AI Transparency Obligations
     url: https://digital-strategy.ec.europa.eu/en/policies/guidelines-ai-transparency-obligations
+  - author: High-Level Expert Group on Artificial Intelligence, European Commission
+    title: Requirements of Trustworthy AI
+    url: https://ec.europa.eu/futurium/en/ai-alliance-consultation/guidelines/1
   - author: McKinsey
     title: AI Is Everywhere. The Agentic Organization Isn’t—Yet
     url: https://www.mckinsey.com/capabilities/people-and-organization/our-insights/ai-is-everywhere-the-agentic-organization-isnt-yet
@@ -146,19 +149,19 @@ Governance only takes effect when it is built into workflows: as an approval ste
 
 So far, we have looked at the work AI takes on in marketing. Now we turn to the people and roles that steer this work. McKinsey estimates that [75% of all roles need fundamental reshaping](https://www.mckinsey.com/capabilities/people-and-organization/our-insights/ai-is-everywhere-the-agentic-organization-isnt-yet). Most of them will not disappear. They will change.
 
-For working with AI, McKinsey distinguishes between two positions. People who work “in the loop” are part of the workflow itself and review and edit what the AI delivers. People who work “above the loop” stand over the workflow and define how it runs. Each of the following roles takes one of these two positions.
+The European Commission’s High-Level Expert Group on AI describes three levels of human oversight in its [ethics guidelines](https://ec.europa.eu/futurium/en/ai-alliance-consultation/guidelines/1). People who work “in the loop” can intervene in every single step and review each result before it moves on. People who work “on the loop” design the system and monitor how it runs. Whoever is “in command” oversees the entire use of AI and decides when and for what it is used. The guidelines describe forms of oversight, not roles. Applied to marketing, each of the following roles takes one of these positions.
 
 ### The Architect
 
-The Architect works above the loop. This is usually the CMO or a senior marketing leader. The more work AI takes on, the less the Architect decides about individual pieces of content and the more about the system in which they are created. The Architect sets the strategy: which target customers marketing addresses, which messages apply, and which campaigns take priority. The Architect defines the limits for AI, meaning which decisions agents may make on their own and which stay with people. The Architect decides where AI is used and where the budget goes, and remains accountable for the result, even when AI did the work. And the Architect redesigns the team. Gartner ranks building [hybrid teams of people and agents](https://www.gartner.com/en/marketing/insights/top-priorities-for-cmos-in-2026) among the top priorities for CMOs.
+The Architect is in command. This is usually the CMO or a senior marketing leader. The more work AI takes on, the less the Architect decides about individual pieces of content and the more about the system in which they are created. The Architect sets the strategy: which target customers marketing addresses, which messages apply, and which campaigns take priority. The Architect defines the limits for AI, meaning which decisions agents may make on their own and which stay with people. The Architect decides where AI is used and where the budget goes, and remains accountable for the result, even when AI did the work. And the Architect redesigns the team. Gartner ranks building [hybrid teams of people and agents](https://www.gartner.com/en/marketing/insights/top-priorities-for-cmos-in-2026) among the top priorities for CMOs.
 
 ### The Orchestrator
 
-The Orchestrator also works above the loop and turns the Architect’s guidelines into workflows in which people, AI tools, and agents work together. The closest role today is the marketing automation manager, who also builds workflows and connects systems. What is new is that AI does not follow fixed rules and produces a different result with every run. For each workflow, the Orchestrator therefore defines which data the AI may access, which instructions it follows, what agents may do on their own, and at which point a person reviews the result before it moves on.
+The Orchestrator works on the loop and turns the Architect’s guidelines into workflows in which people, AI tools, and agents work together. The closest role today is the marketing automation manager, who also builds workflows and connects systems. What is new is that AI does not follow fixed rules and produces a different result with every run. For each workflow, the Orchestrator therefore defines which data the AI may access, which instructions it follows, what agents may do on their own, and at which point a person reviews the result before it moves on. The Orchestrator also monitors whether the workflows deliver reliable results, so that errors surface early.
 
 ### The Content Engineer
 
-The Content Engineer takes on this task for content, building and maintaining the blueprint described in the section on how generative AI creates content: building blocks, templates, instructions for the AI, and verified facts. In midsize companies, this is often the same person as the Orchestrator. In larger organizations, specialists fill these roles.
+The Content Engineer also works on the loop and takes on this task for content, building and maintaining the blueprint described in the section on how generative AI creates content: building blocks, templates, instructions for the AI, and verified facts. In midsize companies, this is often the same person as the Orchestrator. In larger organizations, specialists fill these roles.
 
 ### The Production Team
 
@@ -166,9 +169,9 @@ The Production Team works in the loop. It creates campaigns and content, increas
 
 | Role | Position | Task | Result |
 | --- | --- | --- | --- |
-| Architect | Above the loop | Sets strategy, limits for AI, budget, and team structure | A framework that all workflows align with |
-| Orchestrator | Above the loop | Designs workflows of people, AI, and agents and defines where review happens | Workflows that deliver reliable results |
-| Content Engineer | Above the loop | Builds and maintains building blocks, templates, instructions, and verified facts | A content system that produces coherent content |
+| Architect | In command | Sets strategy, limits for AI, budget, and team structure | A framework that all workflows align with |
+| Orchestrator | On the loop | Designs and monitors workflows of people, AI, and agents and defines where review happens | Workflows that deliver reliable results |
+| Content Engineer | On the loop | Builds and maintains building blocks, templates, instructions, and verified facts | A content system that produces coherent content |
 | Production Team | In the loop | Works with AI and agents, reviews, adapts, approves | Campaigns and content at speed, within the brand |
 
 In this model, marketing work shifts. Less time goes into producing individual pieces of content, and more goes into strategy, designing workflows, and reviewing results. This raises familiar questions of organization in a new way. Does it still make sense to split in-depth content and the short-form copy derived from it, such as a white paper and its social media posts, between different teams or agencies, when AI can derive the posts directly from the white paper? And which tasks [stay in the regions and which move to headquarters](/2025/07/31/challenges-for-b2b-cmo/) when AI can translate and adapt content, but review still requires people who know the market?

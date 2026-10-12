@@ -8,7 +8,7 @@ seoTitle: Wie KI im B2B-Marketing Ergebnisse liefert
 description: Die meisten Unternehmen nutzen KI im B2B-Marketing, doch nur wenige sehen Ergebnisse. Ein Betriebsmodell für Auswerten, Erstellen und Ausführen ändert das.
 keyphrase: KI im B2B-Marketing
 published: 2025-10-11
-updated: 2026-10-11
+updated: 2026-10-12
 socialImage: /images/social/ai-hub.jpg
 socialImageAlt: "Drei Kolleginnen und Kollegen prüfen am Laptop einen KI-gestützten Arbeitsablauf im Marketing"
 role: hub
@@ -59,6 +59,9 @@ sources:
   - author: European Commission
     title: Guidelines on AI Transparency Obligations
     url: https://digital-strategy.ec.europa.eu/en/policies/guidelines-ai-transparency-obligations
+  - author: High-Level Expert Group on Artificial Intelligence, European Commission
+    title: Requirements of Trustworthy AI
+    url: https://ec.europa.eu/futurium/en/ai-alliance-consultation/guidelines/1
   - author: McKinsey
     title: AI Is Everywhere. The Agentic Organization Isn’t—Yet
     url: https://www.mckinsey.com/capabilities/people-and-organization/our-insights/ai-is-everywhere-the-agentic-organization-isnt-yet
@@ -146,29 +149,29 @@ Wirksam wird Governance erst, wenn sie in die Arbeitsabläufe eingebaut ist: als
 
 Bisher haben wir beleuchtet, welche Arbeit KI im Marketing übernimmt. Jetzt wenden wir uns den Menschen und den Rollen zu, die diese Arbeit steuern. McKinsey schätzt, dass [75 % aller Rollen grundlegend neu zugeschnitten werden müssen](https://www.mckinsey.com/capabilities/people-and-organization/our-insights/ai-is-everywhere-the-agentic-organization-isnt-yet). Die meisten verschwinden dabei nicht. Sie verändern sich.
 
-Für die Zusammenarbeit mit KI unterscheidet McKinsey zwei Positionen. Wer „in the loop“ arbeitet, ist direkt Teil des Ablaufs und prüft und bearbeitet, was die KI liefert. Wer „above the loop“ arbeitet, steht über dem Ablauf und legt fest, wie er funktioniert. Jede der folgenden Rollen nimmt eine dieser beiden Positionen ein.
+Wie Menschen KI beaufsichtigen, beschreibt die Expertengruppe für KI der EU-Kommission in ihren [Ethik-Leitlinien](https://ec.europa.eu/futurium/en/ai-alliance-consultation/guidelines/1) auf drei Ebenen. Wer „in the loop“ arbeitet, kann in jeden einzelnen Arbeitsschritt eingreifen und prüft jedes Ergebnis, bevor es weitergeht. Wer „on the loop“ arbeitet, gestaltet das System und überwacht, wie es läuft. Wer „in command“ ist, überblickt den gesamten Einsatz der KI und entscheidet, wann und wofür sie genutzt wird. Die Leitlinien beschreiben damit Formen der Aufsicht und keine Rollen. Übertragen auf das Marketing, nimmt jede der folgenden Rollen eine dieser Positionen ein.
 
 ### Der Architekt
 
-Der Architekt arbeitet above the loop. Meist ist es der CMO oder eine erfahrene Führungskraft im Marketing. Je mehr Arbeit die KI übernimmt, desto weniger entscheidet der Architekt über einzelne Inhalte und desto mehr über das System, in dem sie entstehen. Er legt die Strategie fest: welche Zielkunden das Marketing anspricht, welche Botschaften gelten und welche Kampagnen Vorrang haben. Er bestimmt die Grenzen für KI, also welche Entscheidungen Agenten allein treffen dürfen und welche bei Menschen bleiben. Er entscheidet, wo KI eingesetzt wird und wohin das Budget fließt, und er verantwortet das Ergebnis, auch wenn eine KI die Arbeit erledigt hat. Und er gestaltet das Team neu. Gartner zählt den Aufbau [hybrider Teams aus Menschen und Agenten](https://www.gartner.com/en/marketing/insights/top-priorities-for-cmos-in-2026) zu den obersten Prioritäten von CMOs.
+Der Architekt ist „in command“. Meist ist es der CMO oder eine erfahrene Führungskraft im Marketing. Je mehr Arbeit die KI übernimmt, desto weniger entscheidet der Architekt über einzelne Inhalte und desto mehr über das System, in dem sie entstehen. Er legt die Strategie fest: welche Zielkunden das Marketing anspricht, welche Botschaften gelten und welche Kampagnen Vorrang haben. Er bestimmt die Grenzen für KI, also welche Entscheidungen Agenten allein treffen dürfen und welche bei Menschen bleiben. Er entscheidet, wo KI eingesetzt wird und wohin das Budget fließt, und er verantwortet das Ergebnis, auch wenn eine KI die Arbeit erledigt hat. Und er gestaltet das Team neu. Gartner zählt den Aufbau [hybrider Teams aus Menschen und Agenten](https://www.gartner.com/en/marketing/insights/top-priorities-for-cmos-in-2026) zu den obersten Prioritäten von CMOs.
 
 ### Der Orchestrator
 
-Der Orchestrator arbeitet ebenfalls above the loop. Er setzt die Vorgaben des Architekten in Arbeitsabläufe um, in denen Menschen, KI-Werkzeuge und Agenten zusammenarbeiten. Am nächsten kommt ihm heute der Marketing Automation Manager, der ebenfalls Abläufe baut und Systeme verbindet. Neu ist, dass KI nicht nach festen Regeln arbeitet und bei jedem Durchlauf ein anderes Ergebnis liefert. Der Orchestrator legt deshalb für jeden Ablauf fest, auf welche Daten die KI zugreifen darf, nach welchen Anweisungen sie arbeitet, was Agenten allein erledigen dürfen und an welcher Stelle ein Mensch das Ergebnis prüft, bevor es weitergeht.
+Der Orchestrator arbeitet „on the loop“. Er setzt die Vorgaben des Architekten in Arbeitsabläufe um, in denen Menschen, KI-Werkzeuge und Agenten zusammenarbeiten. Am nächsten kommt ihm heute der Marketing Automation Manager, der ebenfalls Abläufe baut und Systeme verbindet. Neu ist, dass KI nicht nach festen Regeln arbeitet und bei jedem Durchlauf ein anderes Ergebnis liefert. Der Orchestrator legt deshalb für jeden Ablauf fest, auf welche Daten die KI zugreifen darf, nach welchen Anweisungen sie arbeitet, was Agenten allein erledigen dürfen und an welcher Stelle ein Mensch das Ergebnis prüft, bevor es weitergeht. Und er überwacht, ob die Abläufe verlässliche Ergebnisse liefern, damit Fehler früh auffallen.
 
 ### Der Content Engineer
 
-Der Content Engineer übernimmt diese Aufgabe für Inhalte. Er baut und pflegt den Blueprint aus dem Abschnitt zur Erstellung von Inhalten: Bausteine, Vorlagen, Anweisungen für die KI und geprüfte Fakten. In mittelständischen Unternehmen ist das oft dieselbe Person wie der Orchestrator, in größeren Organisationen arbeiten hier Spezialisten.
+Der Content Engineer arbeitet ebenfalls „on the loop“ und übernimmt diese Aufgabe für Inhalte. Er baut und pflegt den Blueprint aus dem Abschnitt zur Erstellung von Inhalten: Bausteine, Vorlagen, Anweisungen für die KI und geprüfte Fakten. In mittelständischen Unternehmen ist das oft dieselbe Person wie der Orchestrator, in größeren Organisationen arbeiten hier Spezialisten.
 
 ### Das Produktionsteam
 
-Das Produktionsteam arbeitet in the loop. Es erstellt Kampagnen und Inhalte, zunehmend gemeinsam mit KI-Agenten. Es prüft die Ergebnisse, passt sie an Märkte und Kunden an, bearbeitet Ausnahmen und gibt frei. Im Beispiel der Fachmesse ist es das Team, das jede E-Mail prüft, bevor sie das Haus verlässt.
+Das Produktionsteam arbeitet „in the loop“. Es erstellt Kampagnen und Inhalte, zunehmend gemeinsam mit KI-Agenten. Es prüft die Ergebnisse, passt sie an Märkte und Kunden an, bearbeitet Ausnahmen und gibt frei. Im Beispiel der Fachmesse ist es das Team, das jede E-Mail prüft, bevor sie das Haus verlässt.
 
 | Rolle | Position | Aufgabe | Ergebnis |
 | --- | --- | --- | --- |
-| Architekt | Above the loop | Legt Strategie, Grenzen für KI, Budget und den Aufbau des Teams fest | Ein Rahmen, an dem sich alle Abläufe ausrichten |
-| Orchestrator | Above the loop | Gestaltet die Abläufe aus Menschen, KI und Agenten und legt fest, wo geprüft wird | Abläufe, die verlässliche Ergebnisse liefern |
-| Content Engineer | Above the loop | Baut und pflegt Bausteine, Vorlagen, Anweisungen und geprüfte Fakten | Ein Content-System, aus dem stimmige Inhalte entstehen |
+| Architekt | In command | Legt Strategie, Grenzen für KI, Budget und den Aufbau des Teams fest | Ein Rahmen, an dem sich alle Abläufe ausrichten |
+| Orchestrator | On the loop | Gestaltet und überwacht die Abläufe aus Menschen, KI und Agenten und legt fest, wo geprüft wird | Abläufe, die verlässliche Ergebnisse liefern |
+| Content Engineer | On the loop | Baut und pflegt Bausteine, Vorlagen, Anweisungen und geprüfte Fakten | Ein Content-System, aus dem stimmige Inhalte entstehen |
 | Produktionsteam | In the loop | Arbeitet mit KI und Agenten, prüft, passt an, gibt frei | Kampagnen und Inhalte in hoher Geschwindigkeit, im Rahmen der Marke |
 
 In diesem Modell verlagert sich die Arbeit im Marketing. Weniger Zeit fließt in die Herstellung einzelner Inhalte, mehr in die Strategie, in die Gestaltung von Abläufen und in die Prüfung von Ergebnissen. Damit stellen sich bekannte Fragen der Organisation neu. Lohnt es sich noch, ausführliche Inhalte und die kurzen Texte, die daraus entstehen, etwa ein Whitepaper und die Beiträge für Social Media, auf verschiedene Teams oder Agenturen zu verteilen, wenn KI die Beiträge direkt aus dem Whitepaper ableiten kann? Und welche Aufgaben bleiben [in den Regionen und welche wandern in die Zentrale](/de/2025/07/31/challenges-for-b2b-cmo/), wenn KI Inhalte übersetzen und anpassen kann, die Prüfung aber Menschen braucht, die den Markt kennen?
