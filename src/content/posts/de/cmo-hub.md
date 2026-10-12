@@ -97,9 +97,9 @@ Erfahrene Mitarbeitende gewinnen deshalb mit KI an Wert. Je mehr Entwürfe eine 
 
 Dazu kommt eine Frage, die über das laufende Budget hinausreicht. Junge Mitarbeitende haben ihr Urteilsvermögen bisher an genau der Arbeit entwickelt, die KI jetzt übernimmt: an ersten Entwürfen, Recherchen und Zusammenfassungen. Fällt diese Arbeit weg, braucht ein Unternehmen einen anderen Weg, auf dem sie die Erfahrung sammeln, die sie zu Fachleuten macht.
 
-Unternehmen, die das richtig machen, investieren anders. Laut Gartner fließen bei Unternehmen, die sich bereit sehen, KI zu skalieren, 21,3 % des Marketingbudgets in KI, und ihre Marketingbudgets liegen im Schnitt bei 8,9 % des Umsatzes. Das ist deutlich über dem Durchschnitt von 7,8 %. Diese Unternehmen verbinden ihre KI-Ausgaben mit beweglichen Budgets, der Bereitschaft zur Innovation und einer Organisation, die darauf vorbereitet ist.
+Unternehmen, die das richtig machen, investieren anders. Laut Gartner fließen bei Unternehmen, die sich bereit sehen, KI zu skalieren, 21,3 % des Marketingbudgets in KI, und ihre Marketingbudgets liegen im Schnitt bei 8,9 % des Umsatzes. Das ist deutlich über dem Durchschnitt von 7,8 %.
 
-> Wie sich die Arbeit zwischen KI und erfahrenen Menschen aufteilen lässt, beschreibt unser Leitfaden zum [Aufbau eines KI-Betriebsmodells im Marketing](/de/2025/10/11/ai-in-b2b-marketing-guide/).
+> Wie sich die Arbeit zwischen KI und Menschen aufteilen lässt, beschreibt unser Leitfaden zum [Aufbau eines KI-Betriebsmodells im Marketing](/de/2025/10/11/ai-in-b2b-marketing-guide/).
 
 ## Wie können CMOs messbare Wirkung nachweisen?
 

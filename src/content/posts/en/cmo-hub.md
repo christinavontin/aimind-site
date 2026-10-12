@@ -97,9 +97,9 @@ Experienced people gain value as AI takes on more of the work. The more drafts A
 
 There is also a question that reaches beyond this year's budget. Junior staff have built their judgment on the very work AI now takes over: first drafts, research and summaries. If that work disappears, companies need another way for them to gain the experience that turns them into experts.
 
-The organizations that get this right invest differently. Gartner found that AI-ready organizations allocate 21.3% of their marketing budget to AI and run marketing budgets averaging 8.9% of revenue, well above the 7.8% average. These organizations pair their AI spend with budget agility, a commitment to innovation, and organizational readiness.
+The organizations that get this right invest differently. Gartner found that AI-ready organizations allocate 21.3% of their marketing budget to AI and run marketing budgets averaging 8.9% of revenue, well above the 7.8% average.
 
-> Our guide to [building an AI marketing operating model](/2025/10/11/ai-in-b2b-marketing-guide/) shows how to divide the work between AI and experienced people.
+> Our guide to [building an AI marketing operating model](/2025/10/11/ai-in-b2b-marketing-guide/) shows how to divide the work between AI and people.
 
 ## How Can CMOs Prove Measurable Impact?
 
