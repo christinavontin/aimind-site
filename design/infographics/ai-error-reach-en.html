@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<style>
+@font-face{font-family:"Newsreader";src:url(../../node_modules/@fontsource-variable/newsreader/files/newsreader-latin-opsz-normal.woff2) format("woff2");font-weight:200 800;font-style:normal}
+@font-face{font-family:"Newsreader";src:url(../../node_modules/@fontsource-variable/newsreader/files/newsreader-latin-opsz-italic.woff2) format("woff2");font-weight:200 800;font-style:italic}
+@font-face{font-family:"Instrument Sans";src:url(../../node_modules/@fontsource-variable/instrument-sans/files/instrument-sans-latin-wght-normal.woff2) format("woff2");font-weight:400 700}
+:root{--navy:#091944;--cream:#ffeaa7;--cyan:#2a7b88;--coral:#e05a47;--off:#f8f6f0;--slate:#4a5568;--line:#ddd8ca}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1350px}
+body{background:#fff;font-family:"Instrument Sans",sans-serif;color:var(--navy);position:relative;overflow:hidden}
+.circle{position:absolute;width:820px;height:820px;border-radius:50%;background:var(--cream);right:-330px;top:-380px}
+.kicker{position:absolute;left:80px;top:66px;font-size:24px;font-weight:600;letter-spacing:.12em;color:var(--cyan);text-transform:uppercase}
+h1{position:absolute;left:80px;top:108px;width:920px;font-family:"Newsreader",serif;font-weight:400;font-size:58px;line-height:1.06;letter-spacing:-.02em}
+h1 em{font-style:italic}
+.wrap{position:absolute;left:80px;right:80px;top:270px}
+.arrow{position:relative;height:30px;margin-bottom:22px}
+.arrow:before{content:"";position:absolute;left:0;right:14px;top:14px;border-top:2px solid var(--cyan)}
+.arrow:after{content:"";position:absolute;right:0;top:7px;border-left:16px solid var(--cyan);border-top:8px solid transparent;border-bottom:8px solid transparent}
+.arrow span{position:relative;background:#fff;padding-right:16px;font-size:22px;color:var(--cyan);font-weight:600;line-height:30px}
+.g{display:grid;grid-template-columns:repeat(3,1fr);column-gap:32px}
+.h{padding-bottom:14px;border-bottom:2px solid var(--navy);font-size:28px;font-weight:600;line-height:1.15}
+.row{position:relative;padding:34px 0 40px;border-bottom:1px solid var(--line)}
+.row:last-child{border-bottom:0}
+.row.hl{border-bottom-color:transparent}
+.row.hl:before{content:"";position:absolute;left:-80px;right:-80px;top:-1px;bottom:0;background:var(--off);z-index:-1}
+.lab{display:flex;align-items:baseline;gap:14px;margin-bottom:12px}
+.lab .n{font-family:"Newsreader",serif;font-size:40px;line-height:1}
+.lab .t{font-size:22px;font-weight:600}
+.c{font-size:28px;line-height:1.2}
+.c .s{display:block;font-size:22px;line-height:1.3;color:var(--slate);margin-top:8px}
+.c.key{border-left:4px solid var(--coral);padding-left:16px;margin-left:-20px}
+.c.key b{font-weight:600;color:var(--coral)}
+.foot{position:absolute;left:80px;right:80px;bottom:50px;display:flex;justify-content:space-between;align-items:flex-end}
+.src{font-size:20px;line-height:1.35;color:var(--slate)}
+.foot img{width:230px}
+</style></head><body style="isolation:isolate">
+<div class="circle"></div>
+<div class="kicker">AI in B2B marketing</div>
+<h1>The More Independently AI Works,<br><em>the Closer Its Errors Get to Customers</em></h1>
+
+<div class="wrap">
+  <div class="arrow"><span>AI works more independently</span></div>
+  <div class="g"><div class="h">Analyze</div><div class="h">Create</div><div class="h">Execute</div></div>
+
+  <div class="row">
+    <div class="lab"><span class="n">1</span><span class="t">What AI does</span></div>
+    <div class="g">
+      <div class="c">Calculates forecasts and answers questions about your own data</div>
+      <div class="c">Generates content, campaigns and variants</div>
+      <div class="c">Completes multistep tasks as an agent across several systems</div>
+    </div>
+  </div>
+  <div class="row hl">
+    <div class="lab"><span class="n">2</span><span class="t">Where an error lands</span></div>
+    <div class="g">
+      <div class="c">In an answer<span class="s">The numbers can be checked in the system. Errors arise when the AI misreads the question.</span></div>
+      <div class="c">In a draft<span class="s">Even tools that draw only on verified sources gave wrong answers 17% to 34% of the time in one study.</span></div>
+      <div class="c key"><b>With customers, in data and budgets</b><span class="s">Gartner expects more than 40% of agentic AI projects to be canceled by the end of 2027.</span></div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="lab"><span class="n">3</span><span class="t">What people do</span></div>
+    <div class="g">
+      <div class="c">Review results and ensure data quality</div>
+      <div class="c">Set direction and protect brand and facts</div>
+      <div class="c">Set limits, build in approvals and monitor</div>
+    </div>
+  </div>
+</div>
+
+<div class="foot"><div class="src">Sources: Stanford HAI, 2024; Gartner, June 2025</div><img src="../logo/svg/aimind-logo.svg" alt="aimind.marketing"></div>
+</body></html>
