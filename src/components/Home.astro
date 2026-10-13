@@ -228,6 +228,24 @@ const jsonLd = [
         </div>
       </aside>
     </div>
+    <script>
+      // Hero depth on wide screens: the audience circle scrolls a little slower than the page. The lens moves back by the
+      // same amount, so it always stays the true overlap with the white circle. Off when the visitor reduces motion.
+      const aud = document.querySelector<HTMLElement>('.aud');
+      const lens = aud?.querySelector<HTMLElement>('.lens');
+      const wide = matchMedia('(min-width: 1181px) and (prefers-reduced-motion: no-preference)');
+      let ticking = false;
+      const move = () => {
+        ticking = false;
+        if (!aud || !lens) return;
+        const y = wide.matches ? Math.min(scrollY, 900) * 0.14 : 0;
+        aud.style.translate = `0 ${y.toFixed(1)}px`;
+        lens.style.translate = `0 ${(-y).toFixed(1)}px`;
+      };
+      addEventListener('scroll', () => { if (!ticking) { ticking = true; requestAnimationFrame(move); } }, { passive: true });
+      wide.addEventListener('change', move);
+      move();
+    </script>
   </section>
 
   <section id="approach" class="wrap sec" style="padding-bottom: 24px">
