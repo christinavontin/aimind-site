@@ -106,7 +106,9 @@ header.site { position: sticky; top: 0; z-index: 20; background: #fff; }
 
 /* Hero */
 .hero-sec { background: var(--offwhite); position: relative; overflow: hidden; }
-.hero { position: relative; z-index: 1; padding-top: 72px; padding-bottom: 72px; min-height: 720px; display: flex; align-items: center; }
+/* Hero circles: the audience circle (--aud) aligns with the right content edge, the white circle overlaps it by 40px
+   and both share the vertical center. The yellow lens is that overlap, so its offset stays constant at every width. */
+.hero { --aud: clamp(540px, calc(100vw - 640px), 640px); --cw: 780px; position: relative; z-index: 1; padding-top: 72px; padding-bottom: 72px; min-height: 760px; display: flex; align-items: center; }
 .htext { position: relative; z-index: 2; max-width: 600px; }
 .hero h1 .hl { white-space: nowrap; }
 .hero h1 { margin: 0; font-family: var(--font-head); font-weight: 700; font-size: clamp(44px, 6vw, 88px); line-height: 1; letter-spacing: -0.035em; }
@@ -119,17 +121,18 @@ h1 .hl .le { letter-spacing: 0; }
 h1 .hl > span { display: inline-block; position: relative; padding-right: .12em; margin-right: -.12em; } /* room for glyph ink: Safari clips it on animated layers */
 .hero .lead { margin: 28px 0 0; max-width: 30ch; font-size: clamp(19px, 2vw, 22px); line-height: 1.45; color: var(--body); }
 .hero .cta { margin-top: 36px; }
-.c-white { position: absolute; left: -150px; top: -60px; width: 800px; height: 800px; border-radius: 50%; background: #fff; z-index: 0; pointer-events: none; }
-.aud { position: absolute; z-index: 1; left: 600px; top: 88px; width: 544px; height: 544px; border-radius: 50%; background: var(--cream); overflow: hidden; display: flex; align-items: center; justify-content: center; }
-.aud .lens { position: absolute; left: -750px; top: -148px; width: 800px; height: 800px; border-radius: 50%; background: var(--yellow); opacity: .75; }
-.aud-in { position: relative; padding: 0 80px 0 104px; }
-.aud-lead { margin: 0 0 20px; font-size: 22px; line-height: 1.35; color: var(--navy); max-width: 16em; }
-.aud ul { list-style: none; margin: 0; padding: 2px 0 2px 20px; border-left: 2px solid var(--navy); font-size: 16px; font-weight: 500; color: var(--navy); display: flex; flex-direction: column; gap: 7px; }
+.c-white { position: absolute; left: calc(100% - 32px - var(--aud) + 40px - var(--cw)); top: calc(50% - var(--cw) / 2); width: var(--cw); height: var(--cw); border-radius: 50%; background: #fff; z-index: 0; pointer-events: none; }
+.aud { position: absolute; z-index: 1; left: calc(100% - 32px - var(--aud)); top: calc(50% - var(--aud) / 2); width: var(--aud); height: var(--aud); border-radius: 50%; background: var(--cream); overflow: hidden; display: flex; align-items: center; justify-content: center; }
+.aud .lens { position: absolute; left: calc(40px - var(--cw)); top: calc((var(--aud) - var(--cw)) / 2); width: var(--cw); height: var(--cw); border-radius: 50%; background: var(--yellow); opacity: .75; }
+.aud-in { position: relative; padding: 0 84px 0 100px; }
+.aud-lead { margin: 0 0 24px; font-size: 25px; line-height: 1.35; color: var(--navy); max-width: 16em; }
+.aud ul { list-style: none; margin: 0; padding: 2px 0 2px 20px; border-left: 2px solid var(--navy); font-size: 18px; font-weight: 500; color: var(--navy); display: flex; flex-direction: column; gap: 10px; }
 .aud li { line-height: 1.3; }
-.aud-note { margin: 20px 0 0; font-size: 15px; line-height: 1.45; color: var(--body); max-width: 24em; }
+.aud-note { margin: 24px 0 0; font-size: 16px; line-height: 1.45; color: var(--body); max-width: 24em; }
 @media (max-width: 1180px) {
-  .hero { min-height: 0; display: block; padding-top: 104px; padding-bottom: 104px; }
-  .aud { position: relative; left: auto; top: auto; margin: 56px 0 0 auto; width: 510px; height: 510px; }
+  .hero { --aud: 560px; min-height: 0; display: block; padding-top: 104px; padding-bottom: 104px; }
+  .c-white { left: -150px; top: -60px; width: 800px; height: 800px; }
+  .aud { position: relative; left: auto; top: auto; margin: 56px 0 0 auto; }
   .aud .lens { display: none; }
   .aud-in { padding: 0 82px; }
 }
