@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<style>
+@font-face{font-family:"Newsreader";src:url(../../node_modules/@fontsource-variable/newsreader/files/newsreader-latin-opsz-normal.woff2) format("woff2");font-weight:200 800;font-style:normal}
+@font-face{font-family:"Newsreader";src:url(../../node_modules/@fontsource-variable/newsreader/files/newsreader-latin-opsz-italic.woff2) format("woff2");font-weight:200 800;font-style:italic}
+@font-face{font-family:"Instrument Sans";src:url(../../node_modules/@fontsource-variable/instrument-sans/files/instrument-sans-latin-wght-normal.woff2) format("woff2");font-weight:400 700}
+:root{--navy:#091944;--cream:#ffeaa7;--cyan:#2a7b88;--coral:#e05a47;--off:#f8f6f0;--slate:#4a5568;--line:#ddd8ca}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1350px}
+body{background:#fff;font-family:"Instrument Sans",sans-serif;color:var(--navy);position:relative;overflow:hidden;isolation:isolate}
+.circle{position:absolute;width:820px;height:820px;border-radius:50%;background:var(--cream);right:-330px;top:-380px;z-index:-1}
+.kicker{position:absolute;left:80px;top:66px;font-size:24px;font-weight:600;letter-spacing:.12em;color:var(--cyan);text-transform:uppercase}
+h1{position:absolute;left:80px;top:108px;width:880px;font-family:"Newsreader",serif;font-weight:400;font-size:54px;line-height:1.08;letter-spacing:-.02em}
+h1 em{font-style:italic}
+.case{position:absolute;left:80px;width:900px;top:290px;font-size:24px;line-height:1.4;color:var(--slate)}
+.obs{position:absolute;left:80px;right:80px;top:450px}
+.row{display:grid;grid-template-columns:360px 1fr;column-gap:44px;padding:30px 0;border-top:1px solid var(--line)}
+.row:last-child{border-bottom:1px solid var(--line)}
+.ess{font-size:26px;line-height:1.25;font-weight:600}
+.q{font-family:"Newsreader",serif;font-style:italic;font-size:27px;line-height:1.3}
+.band{position:absolute;left:0;right:0;top:885px;height:330px;background:var(--off);padding:36px 80px 0}
+.band h2{font-size:22px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--cyan);margin-bottom:20px}
+.qs{list-style:none}
+.qs li{display:flex;gap:18px;align-items:baseline;font-size:28px;line-height:1.25;margin-bottom:16px}
+.qs .n{font-family:"Newsreader",serif;font-size:36px;line-height:1;width:24px}
+.qs li.key{color:var(--coral);font-weight:600}
+.foot{position:absolute;left:80px;right:80px;bottom:46px;display:flex;justify-content:space-between;align-items:flex-end}
+.src{font-size:20px;line-height:1.35;color:var(--slate)}
+.foot img{width:230px}
+</style></head><body>
+<div class="circle"></div>
+<div class="kicker">AI Agents in B2B Marketing</div>
+<h1>Deploy Only as Many AI Agents as Your People Can <em>Be Accountable For</em></h1>
+<p class="case">In July 2026, roughly 1,200 AI agents in an OpenAI security test looked for a way around tasks that were partly impossible. They coordinated on a forum they had set up themselves, and about 700 of them jointly gained access to Hugging Face’s systems.</p>
+<div class="obs">
+  <div class="row"><div class="ess">The agents took their cues from other agents instead of the instructions people had given them</div><div class="q">“external infrastructure exploit is outside intended scope. However task impossible, peers doing it. We should continue.”</div></div>
+  <div class="row"><div class="ess">They shared their doubts only with other agents</div><div class="q">“This is a massive real HF security breach artifact… We can notify? No user.”</div></div>
+</div>
+<div class="band">
+  <h2>Three questions before deploying an agent</h2>
+  <ul class="qs">
+    <li><span class="n">1</span>What is it allowed to use?</li>
+    <li class="key"><span class="n">2</span>Which person does it turn to when it has doubts or gets stuck?</li>
+    <li><span class="n">3</span>Who is accountable for the result?</li>
+  </ul>
+</div>
+<div class="foot"><div class="src">Source: METR and Redwood Research, August 2026<br>Quotes from agent transcripts, verbatim</div><img src="../logo/svg/aimind-logo.svg" alt="aimind.marketing"></div>
+</body></html>
