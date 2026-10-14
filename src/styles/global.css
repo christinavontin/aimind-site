@@ -274,7 +274,10 @@ h1 .hl > span { display: inline-block; position: relative; padding-right: .12em;
 .article-hero img { display: block; width: 100%; border-radius: 16px; }
 .prose { color: var(--navy); }
 .prose:not(.page-prose) > p:first-child { font-size: 22px; line-height: 1.6; }
-.prose:not(.page-prose) > p:first-child::first-letter { float: left; margin: .085em .08em 0 -.02em; font-family: var(--font-serif); font-weight: 400; font-size: 4.6em; line-height: .78; color: var(--cyan); }
+.prose:not(.page-prose) > p:first-child:not(:has(> .lead-figure:first-child))::first-letter { float: left; margin: .085em .08em 0 -.02em; font-family: var(--font-serif); font-weight: 400; font-size: 4.6em; line-height: .78; color: var(--cyan); }
+/* An article that opens with a figure: the whole figure is the drop cap. */
+.prose:not(.page-prose) > p:first-child > .lead-figure:first-child { float: left; margin: .085em .12em 0 -.02em; font-family: var(--font-serif); font-weight: 400; font-size: 4.6em; line-height: .78; color: var(--cyan); white-space: nowrap; }
+@media (max-width: 600px) { .prose:not(.page-prose) > p:first-child > .lead-figure:first-child { font-size: 3.4em; } }
 .prose p, .prose ul, .prose ol { margin: 0 0 24px; }
 .prose li { margin-bottom: 8px; }
 .prose a, .faq a, .sources a { color: var(--navy); text-decoration: underline; text-decoration-color: var(--yellow); text-decoration-thickness: 2px; text-underline-offset: .2em; }

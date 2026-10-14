@@ -3,6 +3,7 @@ import { defineConfig } from 'astro/config';
 import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
 import { rehypeTables } from './src/lib/rehype-tables.mjs';
+import { rehypeLeadFigure } from './src/lib/rehype-lead-figure.mjs';
 
 export default defineConfig({
   site: 'https://aimind.marketing',
@@ -11,7 +12,7 @@ export default defineConfig({
   // CSS is inlined into each page: no render-blocking stylesheet request (Lighthouse, mobile).
   build: { format: 'directory', inlineStylesheets: 'always' },
   markdown: {
-    rehypePlugins: [rehypeTables],
+    rehypePlugins: [rehypeTables, rehypeLeadFigure],
   },
   integrations: [
     mdx(),
