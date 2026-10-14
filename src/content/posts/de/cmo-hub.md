@@ -44,6 +44,9 @@ sources:
   - author: Gartner
     title: Over 40% of Agentic AI Projects Will Be Canceled by End of 2027
     url: https://www.gartner.com/en/newsroom/press-releases/2025-06-25-gartner-predicts-over-40-percent-of-agentic-ai-projects-will-be-canceled-by-end-of-2027
+  - author: Gartner
+    title: Gartner Predicts Over 40% of CMOs Who Push for Larger Brand Budgets Will Lose Influence With the C‑Suite
+    url: https://www.gartner.com/en/newsroom/press-releases/2026-2-12-gartner-predicts-over-40-percent-of-cmos-who-push-for-larger-brand-budgets-will-lose-influence-with-the-c-suite
   - author: Outcomes Rocket
     title: The 2026 State of B2B Go-to-Market (GTM) Strategy
     url: https://cdn.prod.website-files.com/67f6cac53493cca03c180dc3/69cac1d66eb28d4c11d9d410_The%202026%20State%20of%20B2B%20Go-to-Market%20(GTM)%20Strategy%20Report%20(2).pdf
@@ -55,7 +58,7 @@ sources:
     url: https://www.nature.com/articles/s41586-024-07566-y
 ---
 
-Die Rolle des B2B-CMO hat sich im Laufe des letzten Jahrzehnts grundlegend gewandelt. Waren CMOs früher in erster Linie für Marke und Kommunikation zuständig, tragen sie heute zunehmend die Verantwortung für Umsatzwachstum, Marktanalysen, die KI-Transformation und die geschäftliche Performance. Dies erfordert ein sorgfältiges Gleichgewicht zwischen strategischer Weitsicht, operativer Umsetzung und greifbaren Geschäftsergebnissen. Aktuelle Erkenntnisse aus [Gartners CMO Spend Survey 2026](https://www.gartner.com/en/newsroom/press-releases/2026-05-11-gartner-2026-cmo-spend-survey-finds-cmos-allocate-15-point-3-percent-of-marketing-budgets-to-ai-but-only-30-percent-are-ready-to-scale-ai-capabilities) zeigen die entscheidenden Herausforderungen für B2B-CMOs: Die Marketingbudgets liegen weiterhin bei 7,8 % des Unternehmensumsatzes, und 56 % der CMOs geben an, dass ihnen das nötige Budget fehlt, um ihre Strategie umzusetzen. Das setzt CMOs unter Druck, mit weniger mehr zu erreichen.
+56 % der CMOs geben in [Gartners CMO Spend Survey 2026](https://www.gartner.com/en/newsroom/press-releases/2026-05-11-gartner-2026-cmo-spend-survey-finds-cmos-allocate-15-point-3-percent-of-marketing-budgets-to-ai-but-only-30-percent-are-ready-to-scale-ai-capabilities) an, dass ihnen das Budget fehlt, um ihre Strategie umzusetzen. Die Marketingbudgets liegen dabei weiterhin bei 7,8 % des Unternehmensumsatzes. Zugleich erwarten Vorstände von ihnen Umsatzwachstum, belastbare Marktanalysen und die Führung der KI-Transformation, also deutlich mehr als Marke und Kommunikation. Das setzt CMOs unter Druck, mit weniger mehr zu erreichen.
 
 Die erfolgreichsten CMOs agieren als Wachstumstreiber für das gesamte Unternehmen und verbinden Kundenwissen, Umsatzgenerierung, Wettbewerbspositionierung und geschäftliche Transformation. Indem sie sich diesem Druck direkt stellen, etablieren sie Marketing als Motor für Unternehmenswachstum und Wertschöpfung.
 
@@ -103,7 +106,7 @@ Unternehmen, die das richtig machen, investieren anders. Laut Gartner fließen b
 
 ## Wie können CMOs messbare Wirkung nachweisen?
 
-Marketingwirkung nachzuweisen bleibt schwierig, besonders in der B2B-Technologie, wo lange Verkaufszyklen und große Buying Groups eine direkte Zuordnung erschweren. Laut dem [2026 State of B2B Go-to-Market Report von Outcomes Rocket](https://cdn.prod.website-files.com/67f6cac53493cca03c180dc3/69cac1d66eb28d4c11d9d410_The%202026%20State%20of%20B2B%20Go-to-Market%20(GTM)%20Strategy%20Report%20(2).pdf) fließen im Schnitt 24 % der GTM-Budgets in Initiativen ohne nachvollziehbares kommerzielles Ergebnis. Ein Teil davon ist Markenarbeit, deren Wirkung sich keinem einzelnen Abschluss zuordnen lässt. Auch diese Wirkung hinterlässt Spuren in der Pipeline: in Anfragen, die ohne Kampagne kommen, und in Abschlussquoten und Verkaufszyklen von Accounts, die die Marke bereits kennen. Prüfen lässt sich das allerdings nur mit Daten, die Marketing und Vertrieb gemeinsam erfassen.
+Marketingwirkung nachzuweisen bleibt schwierig, besonders in der B2B-Technologie, wo lange Verkaufszyklen und große Buying Groups eine direkte Zuordnung erschweren. [Laut Gartner stecken 84 % der Unternehmen in einem Kreislauf, den Gartner „brand doom loop“ nennt](https://www.gartner.com/en/newsroom/press-releases/2026-2-12-gartner-predicts-over-40-percent-of-cmos-who-push-for-larger-brand-budgets-will-lose-influence-with-the-c-suite). Für die Messung fehlt das Budget, die Wirkung des Marketings bleibt unklar, der Vorstand wird skeptisch, und das Budget wird gekürzt. Diese Unternehmen übertreffen ihre Wachstumsziele nur halb so oft wie Unternehmen, die den Wert ihrer Marke belegen können. Besonders schwer zu belegen ist Markenarbeit, deren Wirkung sich keinem einzelnen Abschluss zuordnen lässt. Auch diese Wirkung hinterlässt Spuren in der Pipeline: in Anfragen, die ohne Kampagne kommen, und in Abschlussquoten und Verkaufszyklen von Accounts, die die Marke bereits kennen. Prüfen lässt sich das allerdings nur mit Daten, die Marketing und Vertrieb gemeinsam erfassen.
 
 ### Warum Messung mit CRM-Disziplin beginnt
 
@@ -115,7 +118,7 @@ Ich habe erlebt, wie schnell diese Lücke teuer wird. Die Ergebnisse meines Team
 
 Wie weit die Verknüpfung gehen muss, hängt von der Komplexität ab. Liefern mehrere Kanäle Leads, arbeiten mehrere Verkäufer oder Partner daran und hängen Budgetentscheidungen davon ab, welche Programme Pipeline erzeugen, gehört die Marketing-Automation direkt an das CRM angebunden. Wenig hilft dagegen Attribution, die einen Abschluss einzelnen Kontaktpunkten zuschreibt. Eine Buying Group mit vielen Beteiligten informiert sich über Monate, vieles davon außerhalb jedes Systems. Aussagekräftiger ist der Einfluss: An welchen gewonnenen Deals war Marketing beteiligt, und wie unterscheiden sie sich in Abschlussquote, Dealgröße und Geschwindigkeit? Ergänzt um die Frage an Neukunden, wie sie auf das Unternehmen aufmerksam wurden, entsteht ein Bild, das der Vorstand nachvollziehen kann.
 
-Auf dieser Grundlage kann ein CMO über die Zahlen sprechen, die im Vorstand zählen. Unser Beitrag zu [Marketing-ROI und den KPIs für die Geschäftsführung](/de/2025/10/13/b2b-marketing-roi-and-kpis/) erklärt fünf davon, von CAC bis Marketing-Influenced Revenue, und enthält einen Rechner, mit dem sich die eigenen Werte durchspielen lassen.
+Auf dieser Grundlage kann ein CMO über die Zahlen sprechen, die im Vorstand zählen. Unser Beitrag zu [Marketing-ROI und den KPIs für die Geschäftsführung](/de/2025/10/13/b2b-marketing-roi-and-kpis/) erklärt fünf davon, von den Kosten der Kundengewinnung bis zum marketingbeeinflussten Umsatz, und enthält einen Rechner, mit dem sich die eigenen Werte durchspielen lassen.
 
 ## Warum die Verzahnung von Vertrieb und Marketing die KI-Shortlist mitbestimmt
 
@@ -125,9 +128,9 @@ Marketing und Vertrieb arbeiten am selben Umsatzziel, oft aber mit unterschiedli
 
 Die Grundlage ist eine kommerzielle Einigung, die für beide Teams verbindlich ist. Welche Unternehmen und Rollen sind das Ziel? Ab wann ist ein Lead reif für den Vertrieb? Wie läuft die Übergabe? Sind diese Fragen gemeinsam beantwortet, wird das Feedback des Vertriebs zur direkten Arbeitsgrundlage für das Marketing: Welche Leads führen zu Gesprächen und Abschlüssen, und was folgt daraus für die nächste Kampagne?
 
-### Ein Narrativ für Website, Vertrieb und Partner
+### Gemeinsame Kernbotschaften für Website, Vertrieb und Partner
 
-Ebenso wichtig ist eine gemeinsame Botschaft. Marketing, Vertrieb und Produkt brauchen ein Narrativ, das erklärt, wofür das Unternehmen steht, wodurch es sich unterscheidet und welchen Wert es liefert. Und das in derselben Sprache auf der Website, im Verkaufsgespräch und im Angebot. Mit der KI-Suche wird das zur Voraussetzung. Käufer recherchieren heute mit ChatGPT, Perplexity oder Googles AI Overviews, bevor sie den ersten Kontakt aufnehmen. Damit hat sich der Kaufprozess im B2B grundlegend verändert.
+Ebenso wichtig ist eine gemeinsame Botschaft. Marketing, Vertrieb und Produkt brauchen gemeinsame Kernbotschaften, die erklären, wofür das Unternehmen steht, wodurch es sich unterscheidet und welchen Wert es liefert. Und das in derselben Sprache auf der Website, im Verkaufsgespräch und im Angebot. Mit der KI-Suche wird das zur Voraussetzung. Käufer recherchieren heute mit ChatGPT, Perplexity oder Googles AI Overviews, bevor sie den ersten Kontakt aufnehmen. Damit hat sich der Kaufprozess im B2B grundlegend verändert.
 
 KI-Systeme setzen ihre Antworten aus vielen Quellen zusammen: Websites, Datenblätter, Fachartikel und Partnerseiten. Je einheitlicher diese Quellen ein Unternehmen beschreiben, desto präziser kann die KI es einordnen. Das entscheidet mit darüber, wer auf der Shortlist steht, bevor ein Käufer zum ersten Mal mit dem Vertrieb spricht.
 
@@ -149,7 +152,7 @@ Eine B2B-Marketingorganisation umfasst heute ein breites Spektrum: Strategie, Po
 
 ### Zentral oder regional
 
-Zentral organisiert wird, was einheitlich sein muss: Marke, Narrativ, Daten und Plattformen. In den Ländern bleibt, was Marktnähe braucht: Events, Partner, Sprache und der direkte Kontakt zu Kunden. Schwieriger ist die Zuordnung im digitalen Marketing. Für SEO und die Sichtbarkeit in KI-Antworten gelten überall dieselben Regeln, und das Wissen darüber gehört zentral gebündelt. Die Inhalte selbst brauchen Muttersprachler, die den regionalen Markt kennen, denn Suchbegriffe, Fragen und Fachsprache unterscheiden sich von Land zu Land. Die Lösung ist eine zentrale Kompetenz mit regionaler Umsetzung: Das Zentrum setzt Standards, Werkzeuge und Schulung, die Länder liefern Sprache und Marktkenntnis.
+Zentral organisiert wird, was einheitlich sein muss: Marke, Kernbotschaften, Daten und Plattformen. In den Ländern bleibt, was Marktnähe braucht: Events, Partner, Sprache und der direkte Kontakt zu Kunden. Schwieriger ist die Zuordnung im digitalen Marketing. Für SEO und die Sichtbarkeit in KI-Antworten gelten überall dieselben Regeln, und das Wissen darüber gehört zentral gebündelt. Die Inhalte selbst brauchen Muttersprachler, die den regionalen Markt kennen, denn Suchbegriffe, Fragen und Fachsprache unterscheiden sich von Land zu Land. Die Lösung ist eine zentrale Kompetenz mit regionaler Umsetzung: Das Zentrum setzt Standards, Werkzeuge und Schulung, die Länder liefern Sprache und Marktkenntnis.
 
 ### Im Haus oder ausgelagert
 
@@ -188,4 +191,4 @@ Sechs Fragen helfen bei der Standortbestimmung:
 - **Marketingorganisation:** Ist jeder externe Partner so eng eingebunden, dass sich die Auslagerung rechnet?
 - **Marktgestaltung:** Welches unerfüllte Kundenbedürfnis könnte Ihr Unternehmen als Erstes besetzen?
 
-Wenn Sie diese Fragen für Ihr Unternehmen durchgehen möchten, [buchen Sie ein Erstgespräch](/de/contact/).
+Wenn Sie diese Fragen für Ihr Unternehmen durchgehen möchten, [buchen Sie einen Strategietermin](/de/contact/).

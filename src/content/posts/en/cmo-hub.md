@@ -44,6 +44,9 @@ sources:
   - author: Gartner
     title: Over 40% of Agentic AI Projects Will Be Canceled by End of 2027
     url: https://www.gartner.com/en/newsroom/press-releases/2025-06-25-gartner-predicts-over-40-percent-of-agentic-ai-projects-will-be-canceled-by-end-of-2027
+  - author: Gartner
+    title: Gartner Predicts Over 40% of CMOs Who Push for Larger Brand Budgets Will Lose Influence With the C‑Suite
+    url: https://www.gartner.com/en/newsroom/press-releases/2026-2-12-gartner-predicts-over-40-percent-of-cmos-who-push-for-larger-brand-budgets-will-lose-influence-with-the-c-suite
   - author: Outcomes Rocket
     title: The 2026 State of B2B Go-to-Market (GTM) Strategy
     url: https://cdn.prod.website-files.com/67f6cac53493cca03c180dc3/69cac1d66eb28d4c11d9d410_The%202026%20State%20of%20B2B%20Go-to-Market%20(GTM)%20Strategy%20Report%20(2).pdf
@@ -55,7 +58,7 @@ sources:
     url: https://www.nature.com/articles/s41586-024-07566-y
 ---
 
-The responsibilities of the B2B CMO have fundamentally shifted over the past decade. Today’s marketing leaders are increasingly accountable for revenue growth, market intelligence, AI transformation, and commercial performance. This demands a careful balance between strategic vision, operational execution, and tangible business outcomes. Recent insights from [Gartner’s 2026 CMO Spend Survey](https://www.gartner.com/en/newsroom/press-releases/2026-05-11-gartner-2026-cmo-spend-survey-finds-cmos-allocate-15-point-3-percent-of-marketing-budgets-to-ai-but-only-30-percent-are-ready-to-scale-ai-capabilities) reveal the defining challenges for B2B CMOs. Marketing budgets remain stuck at 7.8% of company revenue. And 56% of CMOs say they lack the budget required to deliver their strategy. This puts pressure on CMOs to do more with less.
+According to [Gartner’s 2026 CMO Spend Survey](https://www.gartner.com/en/newsroom/press-releases/2026-05-11-gartner-2026-cmo-spend-survey-finds-cmos-allocate-15-point-3-percent-of-marketing-budgets-to-ai-but-only-30-percent-are-ready-to-scale-ai-capabilities), 56% of CMOs say they lack the budget to deliver their strategy. Marketing budgets remain at 7.8% of company revenue. At the same time, executive teams expect CMOs to drive revenue growth, deliver reliable market intelligence and lead the AI transformation, a mandate that reaches well beyond brand and communications. That puts pressure on CMOs to do more with less.
 
 The most effective CMOs act as enterprise growth leaders, connecting customer insight, revenue generation, competitive positioning, and business transformation. Taking on these pressures directly is how they establish marketing as a driver of enterprise growth and value.
 
@@ -103,7 +106,7 @@ The organizations that get this right invest differently. Gartner found that AI-
 
 ## How Can CMOs Prove Measurable Impact?
 
-Proving marketing’s impact remains difficult, particularly in B2B technology, where long sales cycles and large buying groups complicate direct attribution. The [2026 State of B2B Go-to-Market report by Outcomes Rocket](https://cdn.prod.website-files.com/67f6cac53493cca03c180dc3/69cac1d66eb28d4c11d9d410_The%202026%20State%20of%20B2B%20Go-to-Market%20(GTM)%20Strategy%20Report%20(2).pdf) found that on average 24% of go-to-market budgets go to initiatives with no traceable commercial outcome. Part of that is brand work, whose effect cannot be tied to any single deal. That effect still leaves traces in the pipeline: in inquiries that arrive without a campaign, and in the win rates and sales cycles of accounts that already know the brand. Testing this requires data that marketing and sales capture together.
+Proving marketing’s impact remains difficult, particularly in B2B technology, where long sales cycles and large buying groups complicate direct attribution. [According to Gartner, 84% of companies are caught in what it calls a brand doom loop](https://www.gartner.com/en/newsroom/press-releases/2026-2-12-gartner-predicts-over-40-percent-of-cmos-who-push-for-larger-brand-budgets-will-lose-influence-with-the-c-suite). Measurement is underfunded, marketing’s impact stays unclear, the C-suite grows skeptical, and budgets get cut. These companies are half as likely to exceed their growth targets as those that can evaluate brand value. Brand work is especially hard to prove, because its effect can’t be tied to any single deal. That effect still leaves traces in the pipeline: in inquiries that arrive without a campaign, and in the win rates and sales cycles of accounts that already know the brand. Testing this requires data that marketing and sales capture together.
 
 ### Why Measurement Starts with CRM Discipline
 
@@ -188,4 +191,4 @@ Six questions help you assess where you stand:
 - **Org design:** Is every external partner integrated closely enough to make outsourcing pay off?
 - **Market shaping:** Which unmet customer need could your company claim first?
 
-If you’d like to work through these questions for your company, [book an initial conversation](/contact/).
+If you’d like to work through these questions for your company, [book a strategy call](/contact/).
