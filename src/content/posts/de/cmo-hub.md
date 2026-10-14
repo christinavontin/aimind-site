@@ -44,9 +44,6 @@ sources:
   - author: Gartner
     title: Over 40% of Agentic AI Projects Will Be Canceled by End of 2027
     url: https://www.gartner.com/en/newsroom/press-releases/2025-06-25-gartner-predicts-over-40-percent-of-agentic-ai-projects-will-be-canceled-by-end-of-2027
-  - author: Gartner
-    title: Gartner Predicts Over 40% of CMOs Who Push for Larger Brand Budgets Will Lose Influence With the C‑Suite
-    url: https://www.gartner.com/en/newsroom/press-releases/2026-2-12-gartner-predicts-over-40-percent-of-cmos-who-push-for-larger-brand-budgets-will-lose-influence-with-the-c-suite
   - author: Outcomes Rocket
     title: The 2026 State of B2B Go-to-Market (GTM) Strategy
     url: https://cdn.prod.website-files.com/67f6cac53493cca03c180dc3/69cac1d66eb28d4c11d9d410_The%202026%20State%20of%20B2B%20Go-to-Market%20(GTM)%20Strategy%20Report%20(2).pdf
@@ -106,7 +103,7 @@ Unternehmen, die das richtig machen, investieren anders. Laut Gartner fließen b
 
 ## Wie können CMOs messbare Wirkung nachweisen?
 
-Marketingwirkung nachzuweisen bleibt schwierig, besonders in der B2B-Technologie, wo lange Verkaufszyklen und große Buying Groups eine direkte Zuordnung erschweren. [Laut Gartner stecken 84 % der Unternehmen in einem Kreislauf, den Gartner „brand doom loop“ nennt](https://www.gartner.com/en/newsroom/press-releases/2026-2-12-gartner-predicts-over-40-percent-of-cmos-who-push-for-larger-brand-budgets-will-lose-influence-with-the-c-suite). Für die Messung fehlt das Budget, die Wirkung des Marketings bleibt unklar, der Vorstand wird skeptisch, und das Budget wird gekürzt. Diese Unternehmen übertreffen ihre Wachstumsziele nur halb so oft wie Unternehmen, die den Wert ihrer Marke belegen können. Besonders schwer zu belegen ist Markenarbeit, deren Wirkung sich keinem einzelnen Abschluss zuordnen lässt. Auch diese Wirkung hinterlässt Spuren in der Pipeline: in Anfragen, die ohne Kampagne kommen, und in Abschlussquoten und Verkaufszyklen von Accounts, die die Marke bereits kennen. Prüfen lässt sich das allerdings nur mit Daten, die Marketing und Vertrieb gemeinsam erfassen.
+Marketingwirkung nachzuweisen bleibt schwierig, besonders in der B2B-Technologie, wo lange Verkaufszyklen und große Buying Groups eine direkte Zuordnung erschweren. Laut dem [2026 State of B2B Go-to-Market Report von Outcomes Rocket](https://cdn.prod.website-files.com/67f6cac53493cca03c180dc3/69cac1d66eb28d4c11d9d410_The%202026%20State%20of%20B2B%20Go-to-Market%20(GTM)%20Strategy%20Report%20(2).pdf) fließen im Schnitt 24 % der GTM-Budgets in Initiativen ohne nachvollziehbares kommerzielles Ergebnis. Ein Teil davon ist Markenarbeit, deren Wirkung sich keinem einzelnen Abschluss zuordnen lässt. Auch diese Wirkung hinterlässt Spuren in der Pipeline: in Anfragen, die ohne Kampagne kommen, und in Abschlussquoten und Verkaufszyklen von Accounts, die die Marke bereits kennen. Prüfen lässt sich das allerdings nur mit Daten, die Marketing und Vertrieb gemeinsam erfassen.
 
 ### Warum Messung mit CRM-Disziplin beginnt
 
