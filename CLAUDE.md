@@ -35,7 +35,13 @@ When a retired article comes back, delete its redirect lines. Test locally befor
 
 ## Approval before going live
 
-Christina approves every change to the live site first. Until then, changes go to the branch `for-review` (Cloudflare builds only a preview from it). After her approval, merge `for-review` into `main`, which deploys.
+Christina approves every change to the live site first, in the chat. There is no preview branch: she cannot see in a preview what changed.
+
+1. Before changing anything, show her a change table: page, section, old, new (for text: Original | Vorschlag | Begründung). Only what is in the table changes.
+2. After her OK, edit on `main` and compare the whole page with the live version (`git diff`). Confirm in one line that only the approved spots changed. Anything else in the diff is a red flag: stop and ask.
+3. Push to `main` (deploys), then send a direct link to each changed spot (with `#anchor`).
+
+The hubs were approved as a whole after many correction rounds. Change only what is necessary, keep the reading flow, and never let an "improvement" slip into a hub without a line in the change table.
 
 ## Checks before every push
 
