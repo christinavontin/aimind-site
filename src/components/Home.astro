@@ -238,7 +238,7 @@ const jsonLd = [
       const move = () => {
         ticking = false;
         if (!aud || !lens) return;
-        const y = wide.matches ? Math.min(scrollY, 900) * 0.14 : 0;
+        const y = wide.matches ? Math.min(scrollY, 900) * 0.28 : 0;
         aud.style.translate = `0 ${y.toFixed(1)}px`;
         lens.style.translate = `0 ${(-y).toFixed(1)}px`;
       };

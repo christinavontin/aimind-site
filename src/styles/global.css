@@ -90,8 +90,13 @@ header.site { position: sticky; top: 0; z-index: 20; background: #fff; }
 .mpanel { position: absolute; right: 0; top: calc(100% + 12px); width: min(330px, calc(100vw - 40px)); background: #fff; border-radius: 16px; box-shadow: 0 16px 40px -12px rgba(9, 25, 68, .25); padding: 20px 24px; display: flex; flex-direction: column; gap: 14px; font-size: 17px; font-weight: 500; }
 
 /* Footer */
-.site-footer { background: var(--offwhite); }
-.footer-inner { padding-top: 32px; padding-bottom: 32px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px 32px; font-size: 14px; color: var(--slate); }
+.site-footer { background: var(--navy); }
+/* Navy footer on every page: white logo and links, the wordmark dot stays yellow. */
+.site-footer .logo svg path:first-child { fill: #fff; }
+.site-footer .wordmark { color: #fff; }
+.site-footer .nl { color: #fff; }
+.site-footer .nl:hover { color: var(--yellow); }
+.footer-inner { padding-top: 32px; padding-bottom: 32px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px 32px; font-size: 14px; color: rgba(255, 255, 255, .75); }
 .footer-brand { display: flex; flex-direction: column; gap: 14px; }
 .footer-brand .nl { text-decoration: underline; text-decoration-color: var(--yellow); }
 .footer-links { display: flex; flex-wrap: wrap; gap: 12px 24px; align-items: flex-start; }
@@ -221,16 +226,13 @@ h1 .hl > span { display: inline-block; position: relative; padding-right: .12em;
 .ref figcaption span { color: var(--slate); }
 
 /* Contact band */
-.band { border-radius: 20px; background: var(--navy); color: #fff; padding: clamp(32px, 6vw, 72px); display: flex; flex-wrap: wrap; gap: 28px; align-items: flex-end; justify-content: space-between; position: relative; overflow: hidden; }
-.band .deco1 { position: absolute; right: -90px; bottom: -170px; width: 420px; height: 420px; border-radius: 50%; background: #fff; opacity: .08; }
-.band .deco2 { position: absolute; right: 230px; top: -110px; width: 230px; height: 230px; border-radius: 50%; background: #fff; opacity: .05; }
+.band { border-radius: 20px; background: var(--cream); padding: clamp(32px, 6vw, 72px); display: flex; flex-wrap: wrap; gap: 28px; align-items: flex-end; justify-content: space-between; position: relative; overflow: hidden; }
+.band .deco1 { position: absolute; right: -90px; bottom: -170px; width: 420px; height: 420px; border-radius: 50%; background: var(--yellow); opacity: .55; }
+.band .deco2 { position: absolute; right: 230px; top: -110px; width: 230px; height: 230px; border-radius: 50%; background: #fff; opacity: .45; }
 .band-text { position: relative; flex: 999 1 440px; min-width: 0; }
-.band-text .h2 { color: #fff; margin-bottom: 12px; font-size: clamp(32px, 4.5vw, 56px); }
-.band-text p { margin: 0; color: rgba(255, 255, 255, .82); }
-/* On navy the booking action turns around: white text, yellow circle with a navy arrow; white circle on hover. */
-.band .btn { color: #fff; }
-.band .btn::after { background: var(--yellow) var(--arrow-n) center/13px no-repeat; }
-.band .btn:hover::after { background: #fff var(--arrow-n) center/13px no-repeat; }
+.band-text .h2 { margin-bottom: 12px; font-size: clamp(32px, 4.5vw, 56px); }
+.band-text p { margin: 0; color: var(--body); }
+.band .btn { position: relative; }
 .band .btn { position: relative; }
 
 /* Contact page */
@@ -397,6 +399,7 @@ h1 .hl > span { display: inline-block; position: relative; padding-right: .12em;
 @keyframes grow { to { transform: scaleX(1); } }
 @keyframes marq { to { transform: translateX(calc(-50% - 20px)); } }
 @keyframes glow { from { opacity: 0; transform: scale(.94); } to { opacity: 1; transform: none; } }
+@keyframes audIn { from { opacity: 0; transform: translateY(90px) scale(.97); } to { opacity: 1; transform: none; } }
 @keyframes lensOn { from { opacity: 0; } to { opacity: 1; } }
 @media (prefers-reduced-motion: no-preference) {
   .in { animation: up .9s var(--ease) both; }
@@ -405,7 +408,7 @@ h1 .hl > span { display: inline-block; position: relative; padding-right: .12em;
   h1 .hl > span { animation: rise 1s var(--ease) both; }
   h1 .hl + .hl > span { animation-delay: .14s; }
   .c-white { animation: glow 1.8s cubic-bezier(.16, 1, .3, 1) both .1s; }
-  .aud { animation: glow 1.8s cubic-bezier(.16, 1, .3, 1) both .6s; }
+  .aud { animation: audIn 2.2s cubic-bezier(.16, 1, .3, 1) both .5s; }
   .aud .lens { animation: lensOn 1.2s ease-out both 1.5s; }
   .aud-in { animation: up 1s var(--ease) both 1.1s; }
   .track { animation: marq 70s linear infinite; }
