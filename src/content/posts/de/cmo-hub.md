@@ -79,7 +79,7 @@ Zusammen bilden diese sechs Kernaufgaben einen nützlichen Maßstab für die Rei
 | Traditioneller CMO | Markenbekanntheit | Share of Voice |
 | CMO für Nachfragegenerierung | Pipeline-Aufbau | Marketing Qualified Leads |
 | CMO mit Umsatzverantwortung | Umsatzwachstum | Pipeline und Umsatzbeitrag |
-| Der moderne strategische CMO | Marktgestaltung | Unternehmenswachstum und Wettbewerbsvorteil |
+| Der moderne strategische CMO | Marktgestaltung | Marktanteil |
 
 ## Kapitaleinsatz und die wahren Kosten der KI
 

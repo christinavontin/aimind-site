@@ -79,7 +79,7 @@ Together, these six responsibilities form a useful benchmark for evaluating mark
 | Traditional CMO | Brand Awareness | Share of Voice |
 | Demand Generation CMO | Pipeline Creation | Marketing Qualified Leads |
 | Revenue CMO | Revenue Growth | Pipeline and Revenue Contribution |
-| Modern Strategic CMO | Market Shaping | Enterprise Growth and Competitive Advantage |
+| Modern Strategic CMO | Market Shaping | Market Share |
 
 ## Capital Allocation and the Real Cost of AI
 
