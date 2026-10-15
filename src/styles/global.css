@@ -227,8 +227,18 @@ h1 .hl > span { display: inline-block; position: relative; padding-right: .12em;
 
 /* Contact band */
 .band { border-radius: 20px; background: var(--cream); padding: clamp(32px, 6vw, 72px); display: flex; flex-wrap: wrap; gap: 28px; align-items: flex-end; justify-content: space-between; position: relative; overflow: hidden; }
-.band .deco1 { position: absolute; right: -90px; bottom: -170px; width: 420px; height: 420px; border-radius: 50%; background: var(--yellow); opacity: .55; }
-.band .deco2 { position: absolute; right: 230px; top: -110px; width: 230px; height: 230px; border-radius: 50%; background: #fff; opacity: .45; }
+/* The logo sign, mirrored: navy circle (technology) at the lower right carries the booking action, the yellow circle (market,
+   70 % of its size, as in the logo) sits to its upper left, and their overlap is cut out to the cream ground. Wide screens only;
+   below 1280px the band is a plain cream card with the normal booking action. */
+.band .deco1, .band .deco2 { display: none; }
+@media (min-width: 1280px) {
+  .band .deco2 { display: block; position: absolute; right: -434px; top: -140px; width: 760px; height: 760px; border-radius: 50%; background: var(--navy); }
+  .band .deco1 { display: block; position: absolute; z-index: 1; right: -79px; top: -385px; width: 528px; height: 528px; border-radius: 50%; background: var(--yellow); overflow: hidden; }
+  .band .deco1::after { content: ""; position: absolute; left: 123px; top: 245px; width: 760px; height: 760px; border-radius: 50%; background: var(--cream); }
+  .band .btn { z-index: 2; color: #fff; }
+  .band .btn::after { background: var(--yellow) var(--arrow-n) center/13px no-repeat; }
+  .band .btn:hover::after { background: #fff var(--arrow-n) center/13px no-repeat; }
+}
 .band-text { position: relative; flex: 999 1 440px; min-width: 0; }
 .band-text .h2 { margin-bottom: 12px; font-size: clamp(32px, 4.5vw, 56px); }
 .band-text p { margin: 0; color: var(--body); }
@@ -374,7 +384,6 @@ h1 .hl > span { display: inline-block; position: relative; padding-right: .12em;
   .hero { padding-top: 48px; padding-bottom: 56px; }
   .sec { padding-top: 64px; padding-bottom: 64px; }
   .svc { padding: 24px; }
-  .band .deco1, .band .deco2 { display: none; }
   .c-white { left: -200px; top: -80px; width: 620px; height: 620px; }
   .aud { margin: 40px 0 0; width: auto; height: auto; border-radius: 24px; padding: 28px 24px; }
   .aud-in { padding: 0; }
