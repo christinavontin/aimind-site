@@ -105,7 +105,7 @@ header.site { position: sticky; top: 0; z-index: 20; background: #fff; }
 .intro p { margin: 0; color: var(--body); max-width: 58ch; }
 
 /* Hero */
-.hero-sec { background: var(--offwhite); position: relative; overflow: hidden; }
+.hero-sec { background: var(--navy); position: relative; overflow: hidden; }
 /* Hero circles in the geometry of the logo: the audience circle (--aud, market) aligns with the right content edge and sits
    --drop lower than the white circle (technology), so the hero's bottom edge crops it. The circles overlap by --ov; the yellow
    lens is exactly that overlap, so it stays in place at every width. */
@@ -221,12 +221,16 @@ h1 .hl > span { display: inline-block; position: relative; padding-right: .12em;
 .ref figcaption span { color: var(--slate); }
 
 /* Contact band */
-.band { border-radius: 20px; background: var(--cream); padding: clamp(32px, 6vw, 72px); display: flex; flex-wrap: wrap; gap: 28px; align-items: flex-end; justify-content: space-between; position: relative; overflow: hidden; }
-.band .deco1 { position: absolute; right: -90px; bottom: -170px; width: 420px; height: 420px; border-radius: 50%; background: var(--yellow); opacity: .55; }
-.band .deco2 { position: absolute; right: 230px; top: -110px; width: 230px; height: 230px; border-radius: 50%; background: #fff; opacity: .45; }
+.band { border-radius: 20px; background: var(--navy); color: #fff; padding: clamp(32px, 6vw, 72px); display: flex; flex-wrap: wrap; gap: 28px; align-items: flex-end; justify-content: space-between; position: relative; overflow: hidden; }
+.band .deco1 { position: absolute; right: -90px; bottom: -170px; width: 420px; height: 420px; border-radius: 50%; background: #fff; opacity: .08; }
+.band .deco2 { position: absolute; right: 230px; top: -110px; width: 230px; height: 230px; border-radius: 50%; background: #fff; opacity: .05; }
 .band-text { position: relative; flex: 999 1 440px; min-width: 0; }
-.band-text .h2 { margin-bottom: 12px; font-size: clamp(32px, 4.5vw, 56px); }
-.band-text p { margin: 0; color: var(--body); }
+.band-text .h2 { color: #fff; margin-bottom: 12px; font-size: clamp(32px, 4.5vw, 56px); }
+.band-text p { margin: 0; color: rgba(255, 255, 255, .82); }
+/* On navy the booking action turns around: white text, yellow circle with a navy arrow; white circle on hover. */
+.band .btn { color: #fff; }
+.band .btn::after { background: var(--yellow) var(--arrow-n) center/13px no-repeat; }
+.band .btn:hover::after { background: #fff var(--arrow-n) center/13px no-repeat; }
 .band .btn { position: relative; }
 
 /* Contact page */
