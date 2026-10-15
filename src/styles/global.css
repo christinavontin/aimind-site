@@ -225,24 +225,27 @@ h1 .hl > span { display: inline-block; position: relative; padding-right: .12em;
 .ref figcaption strong { display: block; font-weight: 600; }
 .ref figcaption span { color: var(--slate); }
 
-/* Contact band */
-.band { border-radius: 20px; background: var(--cream); padding: clamp(32px, 6vw, 72px); display: flex; flex-wrap: wrap; gap: 28px; align-items: flex-end; justify-content: space-between; position: relative; overflow: hidden; }
+/* Contact band: a full-width cream section directly above the navy footer. --g is the page gutter outside the content column. */
+#contact { padding-bottom: 0; }
+.band { --g: max(32px, calc((100vw - 1216px) / 2)); margin-left: calc(50% - 50vw); margin-right: calc(50% - 50vw); background: var(--cream); padding: 96px calc(var(--g) + 72px); display: flex; flex-wrap: wrap; gap: 28px; align-items: flex-end; justify-content: space-between; position: relative; overflow: hidden; }
 /* The logo sign, mirrored: navy circle (technology) at the lower right carries the booking action, the yellow circle (market,
-   70 % of its size, as in the logo) sits to its upper left, and their overlap is cut out to the cream ground. Wide screens only;
-   below 1280px the band is a plain cream card with the normal booking action. */
+   70 % of its size, as in the logo) sits to its upper left, and their overlap is cut out to the cream ground. The yellow circle is cut
+   by the top edge, the navy one by the right edge and the footer; both meeting points of the circles lie well inside the band, so no
+   thin slivers appear at an edge. Wide screens only; below 1280px the band shows no circles and the normal booking action. */
 .band .deco1, .band .deco2 { display: none; }
 @media (min-width: 1280px) {
-  .band .deco2 { display: block; position: absolute; right: -434px; top: -140px; width: 760px; height: 760px; border-radius: 50%; background: var(--navy); }
-  .band .deco1 { display: block; position: absolute; z-index: 1; right: -79px; top: -385px; width: 528px; height: 528px; border-radius: 50%; background: var(--yellow); overflow: hidden; }
-  .band .deco1::after { content: ""; position: absolute; left: 123px; top: 245px; width: 760px; height: 760px; border-radius: 50%; background: var(--cream); }
+  .band { padding-top: 152px; padding-bottom: 152px; }
+  .band .deco2 { display: block; position: absolute; right: calc(var(--g) - 154px); top: 100px; width: 480px; height: 480px; border-radius: 50%; background: var(--navy); }
+  .band .deco1 { display: block; position: absolute; z-index: 1; right: calc(var(--g) + 28px); top: -78px; width: 334px; height: 334px; border-radius: 50%; background: var(--yellow); overflow: hidden; }
+  .band .deco1::after { content: ""; position: absolute; left: 36px; top: 178px; width: 480px; height: 480px; border-radius: 50%; background: var(--cream); }
   .band .btn { z-index: 2; color: #fff; }
   .band .btn::after { background: var(--yellow) var(--arrow-n) center/13px no-repeat; }
   .band .btn:hover::after { background: #fff var(--arrow-n) center/13px no-repeat; }
 }
+@media (max-width: 760px) { .band { padding: 64px 20px; } }
 .band-text { position: relative; flex: 999 1 440px; min-width: 0; }
 .band-text .h2 { margin-bottom: 12px; font-size: clamp(32px, 4.5vw, 56px); }
 .band-text p { margin: 0; color: var(--body); }
-.band .btn { position: relative; }
 .band .btn { position: relative; }
 
 /* Contact page */
