@@ -124,7 +124,7 @@ h1 .hl > span { display: inline-block; position: relative; padding-right: .12em;
 .hero .cta { margin-top: 36px; }
 .c-white { position: absolute; left: calc(100% - 32px - var(--aud) + var(--ov) - var(--cw)); top: calc(50% - var(--cw) / 2); width: var(--cw); height: var(--cw); border-radius: 50%; background: #fff; z-index: 0; pointer-events: none; }
 .aud { position: absolute; z-index: 1; left: calc(100% - 32px - var(--aud)); top: calc(50% - var(--aud) / 2 + var(--drop)); width: var(--aud); height: var(--aud); border-radius: 50%; background: var(--cream); overflow: hidden; display: flex; align-items: center; justify-content: center; }
-.aud .lens { position: absolute; left: calc(var(--ov) - var(--cw)); top: calc((var(--aud) - var(--cw)) / 2 - var(--drop)); width: var(--cw); height: var(--cw); border-radius: 50%; background: var(--yellow); opacity: .75; }
+.aud .lens { position: absolute; left: calc(var(--ov) - var(--cw)); top: calc((var(--aud) - var(--cw)) / 2 - var(--drop)); width: var(--cw); height: var(--cw); border-radius: 50%; background: var(--yellow); }
 .aud-in { position: relative; padding: 0 76px 0 156px; }
 .aud-lead { margin: 0 0 24px; font-size: 25px; line-height: 1.35; color: var(--navy); max-width: 16em; }
 .aud ul { list-style: none; margin: 0; padding: 2px 0 2px 20px; border-left: 2px solid var(--navy); font-size: 18px; font-weight: 500; color: var(--navy); display: flex; flex-direction: column; gap: 10px; }
@@ -397,7 +397,7 @@ h1 .hl > span { display: inline-block; position: relative; padding-right: .12em;
 @keyframes grow { to { transform: scaleX(1); } }
 @keyframes marq { to { transform: translateX(calc(-50% - 20px)); } }
 @keyframes glow { from { opacity: 0; transform: scale(.94); } to { opacity: 1; transform: none; } }
-@keyframes lensOn { from { opacity: 0; } to { opacity: .75; } }
+@keyframes lensOn { from { opacity: 0; } to { opacity: 1; } }
 @media (prefers-reduced-motion: no-preference) {
   .in { animation: up .9s var(--ease) both; }
   .in.d1 { animation-delay: .15s; }
