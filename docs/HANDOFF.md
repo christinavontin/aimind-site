@@ -1,6 +1,6 @@
 # Handoff · aimind.marketing website
 
-Status on October 11, 2026. Read this file first in every new chat.
+Status on October 21, 2026. Read this file first in every new chat.
 
 **The site is live at https://aimind.marketing/** (since October 10, 2026). WordPress.com is no longer serving the domain.
 
@@ -15,7 +15,7 @@ Status on October 11, 2026. Read this file first in every new chat.
 | Email | Google Workspace, info@aimind.marketing (MX/TXT records in Cloudflare DNS, never touch them) |
 | **Design and brand rules (the one place)** | Private brand guide https://claude.ai/artifact/YF53i9hKw85J8WeKjGjGmP — read `project/README.md` first. Includes website specifics, tokens, components, logos, social images and the decisions log. `docs/design-guide.md` only points here. |
 | Design files (logo set, boards, screenshots, banners) | `design/` (file list in `design/README.md`) |
-| Writing rules | Skill "schreibstil" and `CLAUDE.md` |
+| Writing rules | `schreibstil.md` and `glossary.md` in the private brand guide (the skill "schreibstil" only points there) and `CLAUDE.md` |
 | Homepage texts DE/EN (history of Christina's comments) | Google Doc https://docs.google.com/document/d/1tgTjJd0rT7fu_y7nhdMj5vF5rMV23Xj-3MW23rAoAUI/edit — the code is newer and wins |
 
 ## What is live
@@ -32,14 +32,16 @@ Status on October 11, 2026. Read this file first in every new chat.
 
 ## LinkedIn campaign, infographics and article illustrations
 
-Started October 11, 2026: a LinkedIn campaign per hub (hub post, Pulse article, infographic posts) that brings executives to the hubs. Three places, one job each:
+First campaign: 12 LinkedIn posts from October 20 to November 26, 2026 (hub posts, German Pulse articles with a companion post, infographic posts) that bring executives to the hubs. One place for each job:
 
 | What | Where |
 | --- | --- |
-| Strategy, formats, languages, workflow, measurement, status per hub | Private document "LinkedIn Campaign aimind.marketing" https://claude.ai/artifact/QT3CPmmuhRYpmhxFeF9DpB (contains performance figures, so it stays out of this public repository) |
+| Method for every campaign (strategy, assets, steps, templates, UTM scheme) | Google Doc "Kampagnen-Anleitung LinkedIn" https://docs.google.com/document/d/1BtA27NbN2xpJ6e2sTAnUhCFCXJykrshjh8OW91HT0S4/edit, the only place for the method. Performance figures stay out of this public repository. |
+| Verified findings from primary sources for new content | Google Sheet "Inhaltsdatenbank Befunde" https://docs.google.com/spreadsheets/d/1eeD3Pk_O0079-xGkF4UGbGVnMhA63teOk39HZPWW4u8/edit |
+| Archive | Private document "LinkedIn Campaign aimind.marketing" (strategy as of October 11) and the Drive folder "Archiv LinkedIn Campaign Entwürfe"; both are no longer updated |
 | Design rules for infographics and article illustrations | Private brand guide, section "Infographics" |
 | Final files | `design/infographics/` (HTML, PNG, `render.py`); article illustrations as components in `src/components/` |
-| Ready-to-post assets (images, post texts, Pulse articles) | Folder `~/Documents/aimind LinkedIn Campaign/<article>/` on Christina's iMac, reached through the device bridge. ROI is complete (October 11, 2026); AI and CMO follow. |
+| Ready-to-post assets (images, post texts, Pulse articles) and the posting calendar with UTM links | Google Drive folder "LinkedIn Campaign Final" (subfolders AI, ROI, CMO; calendar "00 Posting-Kalender"). Edited in place with the Google Docs and Sheets connectors, so links stay the same. |
 
 **Production in this repository**
 
@@ -115,6 +117,8 @@ Done on October 10: `www` redirects permanently to the root domain (Cloudflare r
 2. **B2B content for technology companies** — with the Digital Product Passport as the compliance example the content must meet (Christina writes about content marketing, not law). Links to the CMO hub.
 3. Go-To-Market topics stay in the CMO hub for now.
 
+The next round of three articles starts with a market scan of current topics; it checks whether these two topics still fit before new ones are added. The assets for those articles follow the Kampagnen-Anleitung and the results of the first campaign.
+
 Workflow per article: German first (discussed and drafted in chat), then the English rewrite; SEO fields per language; primary sources only, every link opened and checked; FAQ and sources in the frontmatter. When a new article covers a retired topic, repoint the matching lines in `public/_redirects` to it (EN and DE, with and without trailing slash). When an old article comes back under its old URL, delete its redirect lines.
 
 After launch, the DPP article and about 25 older articles are reworked one at a time; each returns only when it is reworked.
@@ -125,4 +129,4 @@ The ROI topic is strongest; German AI queries rank around position 80; demand ex
 
 ## Prompt for the next chat
 
-> I'm continuing work on my website aimind.marketing (Astro on Cloudflare Pages, live since October 10, 2026). Repository: christinavontin/aimind-site, branch main; every push deploys to the live site. First read `CLAUDE.md`, `docs/HANDOFF.md` and the `project/README.md` of my private brand guide (https://claude.ai/artifact/YF53i9hKw85J8WeKjGjGmP), which is the only place for design rules. Apply the skill "schreibstil" to every text, German first, English as a rewrite. Keep only final versions in the repository. Next task: [for example "the GEO article, start with an outline in German" "the signature for the author page" or "the LinkedIn campaign for the AI hub, starting with the campaign map; workflow and finished ROI example in the campaign document"].
+> I'm continuing work on aimind.marketing. First read `CLAUDE.md` and `docs/HANDOFF.md` in the repository christinavontin/aimind-site, the `project/README.md`, `schreibstil.md` and `glossary.md` of my private brand guide (https://claude.ai/artifact/YF53i9hKw85J8WeKjGjGmP) and, for LinkedIn work, the Google Doc "Kampagnen-Anleitung LinkedIn". Next task: [for example "the market scan for the next three articles" or "the GEO article, start with an outline in German"].
