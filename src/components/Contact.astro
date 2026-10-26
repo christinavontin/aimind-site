@@ -63,7 +63,7 @@ const permalink = lang === 'de' ? '/de/contact/' : '/contact/';
             <span class="h">{c.calTitle}</span>
             <p class="note">{c.calNote[0]}<a href={t.privacy.href} class="nl" style="text-decoration: underline">{c.privacyLabel}</a>{c.calNote[1]}</p>
             <span class="btn cal-desk">{c.calBtn}</span>
-            <a class="btn cal-phone" href={SITE.bookingUrl} target="_blank" rel="noopener">{c.calBtnPhone}</a>
+            <a class="btn cal-phone" href={SITE.bookingUrl}>{c.calBtnPhone}</a>
           </summary>
           <iframe data-src={SITE.bookingUrl} title={c.iframeTitle}></iframe>
         </details>
@@ -78,7 +78,7 @@ const permalink = lang === 'de' ? '/de/contact/' : '/contact/';
     // GDPR: the Google calendar gets its address only when the visitor opens it.
     // (An iframe inside a closed <details> would otherwise still be loaded by the browser.)
     const cal = document.querySelector<HTMLDetailsElement>('details.calwrap');
-    // Phones: the booking page opens full screen at Google in a new tab instead of the narrow embedded calendar.
+    // Phones: the booking page opens full screen at Google in the same tab (the back arrow returns here) instead of the narrow embedded calendar.
     const phone = window.matchMedia('(max-width: 820px)');
     cal?.querySelector('summary')?.addEventListener('click', (e) => {
       if (!phone.matches || (e.target as HTMLElement).closest('a')) return;
