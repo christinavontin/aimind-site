@@ -16,6 +16,7 @@ const c = {
     calTitle: 'Choose a Time',
     calNote: ['The booking calendar is provided by Google. It loads only after you click, and Google then receives your connection data. Details are in the ', '.'],
     calBtn: 'Show the calendar',
+    calBtnPhone: 'Open the Calendar on Google',
     privacyLabel: 'Privacy Policy',
     iframeTitle: 'Book a Strategy Call with Christina Vontin',
     factsTitle: 'What to expect',
@@ -33,6 +34,7 @@ const c = {
     calTitle: 'Termin wählen',
     calNote: ['Der Buchungskalender kommt von Google. Er lädt erst nach Ihrem Klick, und Google erhält dann Ihre Verbindungsdaten. Details stehen in der ', '.'],
     calBtn: 'Kalender anzeigen',
+    calBtnPhone: 'Kalender bei Google öffnen',
     privacyLabel: 'Datenschutzerklärung',
     iframeTitle: 'Strategietermin mit Christina Vontin buchen',
     factsTitle: 'Was Sie erwartet',
@@ -60,7 +62,8 @@ const permalink = lang === 'de' ? '/de/contact/' : '/contact/';
             <svg width="44" height="44" viewBox="0 0 32 32" aria-hidden="true"><path d="M18.263 23.933A11.5 11.5 0 1 0 8.150 14.353A8 8 0 0 1 18.263 23.933Z" fill="#091944" /><path d="M18.263 23.933A8 8 0 1 1 8.150 14.353A11.5 11.5 0 0 0 18.263 23.933Z" fill="#FBC737" /></svg>
             <span class="h">{c.calTitle}</span>
             <p class="note">{c.calNote[0]}<a href={t.privacy.href} class="nl" style="text-decoration: underline">{c.privacyLabel}</a>{c.calNote[1]}</p>
-            <span class="btn">{c.calBtn}</span>
+            <span class="btn cal-desk">{c.calBtn}</span>
+            <a class="btn cal-phone" href={SITE.bookingUrl} target="_blank" rel="noopener">{c.calBtnPhone}</a>
           </summary>
           <iframe data-src={SITE.bookingUrl} title={c.iframeTitle}></iframe>
         </details>
@@ -75,6 +78,13 @@ const permalink = lang === 'de' ? '/de/contact/' : '/contact/';
     // GDPR: the Google calendar gets its address only when the visitor opens it.
     // (An iframe inside a closed <details> would otherwise still be loaded by the browser.)
     const cal = document.querySelector<HTMLDetailsElement>('details.calwrap');
+    // Phones: the booking page opens full screen at Google in a new tab instead of the narrow embedded calendar.
+    const phone = window.matchMedia('(max-width: 820px)');
+    cal?.querySelector('summary')?.addEventListener('click', (e) => {
+      if (!phone.matches || (e.target as HTMLElement).closest('a')) return;
+      e.preventDefault();
+      cal.querySelector<HTMLAnchorElement>('a.cal-phone')?.click();
+    });
     cal?.addEventListener('toggle', () => {
       const f = cal.querySelector<HTMLIFrameElement>('iframe[data-src]');
       if (cal.open && f && !f.src) f.src = f.dataset.src!;
