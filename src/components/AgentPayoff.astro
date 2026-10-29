@@ -1,57 +1,91 @@
 ---
-// Article illustration for the AI hub, EN and DE: David Tepper's calculation of when an AI agent pays off.
-// Built in HTML so the text stays readable for search and AI; shows only the figures the article text names.
+// Article illustration for the AI hub, EN and DE: when an AI agent pays off.
+// Same content as the LinkedIn infographic ai-agent-payoff, built in HTML so the text stays readable for search and AI.
 // Design rules: private brand guide, section "Infographics" → "On the website".
 interface Props { lang: 'en' | 'de' }
 const { lang } = Astro.props;
 
 const t = {
   de: {
-    kick: 'Beispiel',
+    kick: 'Wann sich KI-Agenten lohnen',
     title: 'Ob ein KI-Agent Zeit spart, entscheidet die Prüfzeit',
-    items: [
-      { n: '200 Stunden', p: 'Arbeitszeit ohne Agenten: 100 Aufgaben zu je zwei Stunden' },
-      { n: '10 Stunden', p: 'Prüfzeit: sechs Minuten je Ergebnis des Agenten' },
-      { n: '5\u00a0%', p: 'Erfolgsquote, ab der sich der Agent lohnt', hl: true },
-      { n: '110 Stunden', p: 'Aufwand bei einer Erfolgsquote von 50\u00a0% statt 200 Stunden' },
+    cols: [{ h: 'Beispiel A', s: 'schnelle Prüfung' }, { h: 'Beispiel B', s: 'aufwendige Prüfung' }],
+    rows: [
+      { k: 'Arbeitszeit pro Aufgabe', a: '2 Stunden', b: '2 Stunden' },
+      { k: 'Prüfzeit pro Ergebnis des Agenten', a: '6 Minuten', b: '1 Stunde', share: 'Anteil an der Arbeitszeit' },
+      { k: 'Der Agent lohnt sich ab einer Erfolgsquote von', a: '5 %', b: '50 %', as: '5 von 100 Aufgaben gelingen', bs: '50 von 100 Aufgaben gelingen' },
     ],
-    caption: 'Quelle: David Tepper (Pay-i), McKinsey Quarterly',
+    rule: 'Die Schwelle entspricht dem Anteil der Prüfzeit an der Arbeitszeit.',
+    note: 'Ein Mensch prüft jedes Ergebnis. Misslingt dem Agenten eine Aufgabe, kommt zur Prüfzeit die volle Arbeitszeit des Menschen hinzu. Rechenbeispiele.',
+    caption: 'Beispiel A nach David Tepper (Pay-i) im McKinsey Quarterly, Juli 2026; Beispiel B zum Vergleich',
   },
   en: {
-    kick: 'Example',
+    kick: 'When AI agents pay off',
     title: 'Whether an AI Agent Saves Time Comes Down to Review Time',
-    items: [
-      { n: '200 hours', p: 'Work time without an agent: 100 tasks of two hours each' },
-      { n: '10 hours', p: 'Review time: six minutes per agent output' },
-      { n: '5%', p: 'Success rate at which the agent pays off', hl: true },
-      { n: '110 hours', p: 'Total effort at a 50% success rate, instead of 200 hours' },
+    cols: [{ h: 'Example A', s: 'quick review' }, { h: 'Example B', s: 'time-consuming review' }],
+    rows: [
+      { k: 'Work time per task', a: '2 hours', b: '2 hours' },
+      { k: 'Review time per agent output', a: '6 minutes', b: '1 hour', share: 'Share of work time' },
+      { k: 'The agent pays off at a success rate of', a: '5%', b: '50%', as: '5 of 100 tasks succeed', bs: '50 of 100 tasks succeed' },
     ],
-    caption: 'Source: David Tepper (Pay-i), McKinsey Quarterly',
+    rule: 'The threshold equals review time as a share of work time.',
+    note: 'A person reviews every output. When the agent fails a task, the person’s full working time comes on top of the review time. Illustrative calculations.',
+    caption: 'Example A: David Tepper (Pay-i), McKinsey Quarterly, July 2026; Example B: for comparison',
   },
 }[lang];
+const [r1, r2, r3] = t.rows;
 ---
 <figure class="ap" aria-labelledby={`ap-title-${lang}`}>
   <p class="kick">{t.kick}</p>
   <h4 id={`ap-title-${lang}`} class="ap-title">{t.title}</h4>
-  <ol class="ap-grid">
-    {t.items.map((i, k) => (
-      <li class={i.hl ? 'hl' : ''}><span class="ap-k">{k + 1}</span><span class="ap-n">{i.n}</span><span class="ap-p">{i.p}</span></li>
-    ))}
-  </ol>
+  <div class="ap-grid">
+    <div class="ap-k ap-head"></div>
+    {t.cols.map((c) => <div class="ap-col"><span class="ap-h">{c.h}</span><span class="ap-s">{c.s}</span></div>)}
+
+    <div class="ap-k"><span class="ap-i">1</span>{r1.k}</div>
+    <div class="ap-v">{r1.a}</div><div class="ap-v">{r1.b}</div>
+
+    <div class="ap-k"><span class="ap-i">2</span>{r2.k}</div>
+    <div class="ap-v">{r2.a}<span class="ap-bar"><span style="width:5%"></span></span><span class="ap-s">{r2.share}</span></div>
+    <div class="ap-v">{r2.b}<span class="ap-bar"><span style="width:50%"></span></span><span class="ap-s">{r2.share}</span></div>
+
+    <div class="ap-band">
+      <div class="ap-k"><span class="ap-i">3</span>{r3.k}</div>
+      <div class="ap-v"><span class="ap-n">{r3.a}</span><span class="ap-s">{r3.as}</span></div>
+      <div class="ap-v"><span class="ap-n hl">{r3.b}</span><span class="ap-s">{r3.bs}</span></div>
+    </div>
+  </div>
+  <p class="ap-rule">{t.rule}</p>
+  <p class="ap-note">{t.note}</p>
   <figcaption class="ap-cap">{t.caption}</figcaption>
 </figure>
 
 <style>
-  .ap { margin: 48px 0; background: var(--offwhite); border-radius: 16px; padding: clamp(24px, 4vw, 40px); }
+  .ap { margin: 48px 0; background: var(--offwhite); border-radius: 16px; padding: clamp(24px, 4vw, 40px) 0; overflow: hidden; }
+  .ap > .kick, .ap-title, .ap-rule, .ap-note, .ap-cap { margin-left: clamp(24px, 4vw, 40px); margin-right: clamp(24px, 4vw, 40px); }
   .ap > .kick { margin-top: 0; margin-bottom: 10px; }
-  .ap-title { margin: 0 0 28px; font-family: var(--font-serif); font-weight: 400; font-size: clamp(24px, 3vw, 30px); line-height: 1.2; letter-spacing: -0.01em; color: var(--navy); }
-  .ap-grid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px 28px; }
-  .ap-grid li { margin: 0; padding-left: 20px; border-left: 2px solid var(--line-step); display: flex; flex-direction: column; }
-  .ap-grid li.hl { border-left-color: var(--coral); }
-  .ap-k { font-size: 13px; font-weight: 600; letter-spacing: .1em; color: var(--cyan); }
-  .ap-n { margin-top: 4px; font-family: var(--font-serif); font-size: clamp(34px, 4.4vw, 46px); line-height: 1.05; letter-spacing: -0.02em; color: var(--navy); }
-  .ap-grid li.hl .ap-n { color: var(--coral); }
-  .ap-p { margin-top: 6px; font-size: 16px; line-height: 1.45; color: var(--navy); }
-  .ap-cap { margin-top: 24px; font-size: 14px; line-height: 1.5; color: var(--slate); }
-  @media (max-width: 640px) { .ap-grid { grid-template-columns: 1fr; } }
+  .ap-title { margin-top: 0; margin-bottom: 28px; font-family: var(--font-serif); font-weight: 400; font-size: clamp(24px, 3vw, 30px); line-height: 1.2; letter-spacing: -0.01em; color: var(--navy); }
+  .ap-grid { display: grid; grid-template-columns: 30% 1fr 1fr; column-gap: 24px; padding: 0 clamp(24px, 4vw, 40px); }
+  .ap-band { grid-column: 1 / -1; display: grid; grid-template-columns: subgrid; background: #fff; margin: 0 calc(-1 * clamp(24px, 4vw, 40px)); padding: 16px clamp(24px, 4vw, 40px); }
+  .ap-col { display: flex; flex-direction: column; padding-bottom: 12px; border-bottom: 2px solid var(--navy); }
+  .ap-h { font-size: 18px; font-weight: 600; color: var(--navy); }
+  .ap-k { font-size: 16px; font-weight: 600; line-height: 1.35; color: var(--navy); padding: 14px 0; border-bottom: 1px solid var(--line); }
+  .ap-head { border-bottom: 0; }
+  .ap-i { display: block; font-family: var(--font-serif); font-weight: 400; font-size: 24px; line-height: 1; margin-bottom: 6px; }
+  .ap-v { display: flex; flex-direction: column; padding: 14px 0; border-bottom: 1px solid var(--line); font-size: 19px; color: var(--navy); }
+  .ap-band .ap-k, .ap-band .ap-v { border-bottom: 0; padding: 0; }
+  .ap-s { font-size: 15px; line-height: 1.4; color: var(--slate); margin-top: 4px; }
+  .ap-bar { display: block; height: 8px; margin-top: 10px; border-radius: 4px; background: var(--line-strong); overflow: hidden; }
+  .ap-bar span { display: block; height: 100%; min-width: 8px; border-radius: 4px; background: var(--navy); }
+  .ap-n { font-family: var(--font-serif); font-size: clamp(40px, 5vw, 52px); line-height: 1; letter-spacing: -0.02em; color: var(--navy); }
+  .ap-n.hl { color: var(--coral); }
+  .ap-rule { margin-top: 24px; margin-bottom: 6px; font-size: 18px; line-height: 1.4; color: var(--navy); }
+  .ap-note { margin-top: 0; margin-bottom: 14px; font-size: 15px; line-height: 1.5; color: var(--slate); }
+  .ap-cap { margin-top: 0; margin-bottom: 0; font-size: 14px; line-height: 1.5; color: var(--slate); }
+  @media (max-width: 640px) {
+    .ap-grid { grid-template-columns: 1fr 1fr; }
+    .ap-head { display: none; }
+    .ap-grid > .ap-k, .ap-band > .ap-k { grid-column: 1 / -1; border-bottom: 0; padding-bottom: 4px; }
+    .ap-band > .ap-k { padding-bottom: 10px; }
+  }
 </style>
