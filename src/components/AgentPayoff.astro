@@ -1,0 +1,57 @@
+---
+// Article illustration for the AI hub, EN and DE: David Tepper's calculation of when an AI agent pays off.
+// Built in HTML so the text stays readable for search and AI; shows only the figures the article text names.
+// Design rules: private brand guide, section "Infographics" → "On the website".
+interface Props { lang: 'en' | 'de' }
+const { lang } = Astro.props;
+
+const t = {
+  de: {
+    kick: 'Beispiel',
+    title: 'Ob ein KI-Agent Zeit spart, entscheidet die Prüfzeit',
+    items: [
+      { n: '200 Stunden', p: 'Arbeitszeit ohne Agenten: 100 Aufgaben zu je zwei Stunden' },
+      { n: '10 Stunden', p: 'Prüfzeit: sechs Minuten je Ergebnis des Agenten' },
+      { n: '5\u00a0%', p: 'Erfolgsquote, ab der sich der Agent lohnt', hl: true },
+      { n: '110 Stunden', p: 'Aufwand bei einer Erfolgsquote von 50\u00a0% statt 200 Stunden' },
+    ],
+    caption: 'Quelle: David Tepper (Pay-i), McKinsey Quarterly',
+  },
+  en: {
+    kick: 'Example',
+    title: 'Whether an AI Agent Saves Time Comes Down to Review Time',
+    items: [
+      { n: '200 hours', p: 'Work time without an agent: 100 tasks of two hours each' },
+      { n: '10 hours', p: 'Review time: six minutes per agent output' },
+      { n: '5%', p: 'Success rate at which the agent pays off', hl: true },
+      { n: '110 hours', p: 'Total effort at a 50% success rate, instead of 200 hours' },
+    ],
+    caption: 'Source: David Tepper (Pay-i), McKinsey Quarterly',
+  },
+}[lang];
+---
+<figure class="ap" aria-labelledby={`ap-title-${lang}`}>
+  <p class="kick">{t.kick}</p>
+  <h4 id={`ap-title-${lang}`} class="ap-title">{t.title}</h4>
+  <ol class="ap-grid">
+    {t.items.map((i, k) => (
+      <li class={i.hl ? 'hl' : ''}><span class="ap-k">{k + 1}</span><span class="ap-n">{i.n}</span><span class="ap-p">{i.p}</span></li>
+    ))}
+  </ol>
+  <figcaption class="ap-cap">{t.caption}</figcaption>
+</figure>
+
+<style>
+  .ap { margin: 48px 0; background: var(--offwhite); border-radius: 16px; padding: clamp(24px, 4vw, 40px); }
+  .ap > .kick { margin-top: 0; margin-bottom: 10px; }
+  .ap-title { margin: 0 0 28px; font-family: var(--font-serif); font-weight: 400; font-size: clamp(24px, 3vw, 30px); line-height: 1.2; letter-spacing: -0.01em; color: var(--navy); }
+  .ap-grid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px 28px; }
+  .ap-grid li { margin: 0; padding-left: 20px; border-left: 2px solid var(--line-step); display: flex; flex-direction: column; }
+  .ap-grid li.hl { border-left-color: var(--coral); }
+  .ap-k { font-size: 13px; font-weight: 600; letter-spacing: .1em; color: var(--cyan); }
+  .ap-n { margin-top: 4px; font-family: var(--font-serif); font-size: clamp(34px, 4.4vw, 46px); line-height: 1.05; letter-spacing: -0.02em; color: var(--navy); }
+  .ap-grid li.hl .ap-n { color: var(--coral); }
+  .ap-p { margin-top: 6px; font-size: 16px; line-height: 1.45; color: var(--navy); }
+  .ap-cap { margin-top: 24px; font-size: 14px; line-height: 1.5; color: var(--slate); }
+  @media (max-width: 640px) { .ap-grid { grid-template-columns: 1fr; } }
+</style>
