@@ -1,0 +1,50 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><style>
+@font-face{font-family:"Newsreader";src:url(../../node_modules/@fontsource-variable/newsreader/files/newsreader-latin-opsz-normal.woff2) format("woff2");font-weight:200 800;font-style:normal}
+@font-face{font-family:"Newsreader";src:url(../../node_modules/@fontsource-variable/newsreader/files/newsreader-latin-opsz-italic.woff2) format("woff2");font-weight:200 800;font-style:italic}
+@font-face{font-family:"Instrument Sans";src:url(../../node_modules/@fontsource-variable/instrument-sans/files/instrument-sans-latin-wght-normal.woff2) format("woff2");font-weight:400 700}
+:root{--navy:#091944;--cream:#ffeaa7;--cyan:#287683;--coral:#e05a47;--slate:#4a5568;--off:#eef1f7;--line:#dde2ec}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1350px}
+body{background:#fff;font-family:"Instrument Sans",sans-serif;color:var(--navy);position:relative;overflow:hidden}
+.kicker{position:absolute;left:80px;top:66px;font-size:24px;font-weight:600;letter-spacing:.12em;color:var(--cyan);text-transform:uppercase}
+h1{position:absolute;left:80px;top:108px;width:940px;font-family:"Newsreader",serif;font-weight:400;font-size:62px;line-height:1.05;letter-spacing:-.02em}
+h1 em{font-style:italic}
+.frame{position:absolute;left:60px;top:300px;width:960px;height:650px;border:1.5px solid var(--navy);border-radius:18px}
+.lab{font-size:16px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--cyan)}
+.gov{position:absolute;left:100px;top:330px}
+.govq{position:absolute;left:100px;right:100px;top:902px;font-size:18px;color:var(--navy)}
+.step{position:absolute;width:272px;bottom:520px;background:var(--off);border-top:3px solid var(--navy);padding:22px 22px 0}
+.step.s3{border-top-color:var(--coral)}
+.step .v{font-family:"Newsreader",serif;font-size:42px;line-height:1;margin-bottom:16px}
+.step .k{font-size:14px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--cyan);margin-top:12px}
+.step p{font-size:18px;line-height:1.35;margin-top:3px}
+.arrow{position:absolute;left:100px;width:880px;top:872px}
+.arrow svg{display:block}
+.arrowt{position:absolute;left:100px;top:842px;font-style:italic;font-family:"Newsreader",serif;font-size:22px}
+.roles{position:absolute;left:80px;right:80px;top:1000px}
+.roles .cols{display:flex;gap:30px;margin-top:16px}
+.roles .c{flex:1;border-top:1.5px solid var(--line);padding-top:14px}
+.roles .p{font-family:"Newsreader",serif;font-size:28px;line-height:1}
+.roles .r{font-size:18px;font-weight:600;margin-top:10px}
+.roles .d{font-size:17px;line-height:1.35;color:var(--slate);margin-top:4px}
+.foot{position:absolute;left:80px;right:80px;bottom:46px;display:flex;justify-content:space-between;align-items:flex-end}
+.src{font-size:16px;line-height:1.35;color:var(--slate);max-width:640px}
+.foot img{width:220px}
+</style></head><body>
+<div class="kicker">AI in B2B marketing</div>
+<h1>The More Independently AI Works,<br>the More <em>Control</em> It Needs</h1>
+<div class="frame"></div>
+<div class="gov lab">Governance</div>
+<div class="step" style="left:100px;height:310px"><div class="v">Analyze</div><div class="k">AI</div><p>forecasts, scores, answers about own data</p><div class="k">People</div><p>review results, keep data clean</p></div>
+<div class="step" style="left:404px;height:380px"><div class="v">Create</div><div class="k">AI</div><p>content, campaigns, variants</p><div class="k">People</div><p>set direction, protect brand and facts</p></div>
+<div class="step s3" style="left:708px;height:450px"><div class="v">Execute</div><div class="k">AI agents</div><p>multistep tasks across systems</p><div class="k">People</div><p>set limits, approve, monitor</p></div>
+<div class="arrowt">AI works more independently, and the need for control grows</div>
+<svg style="position:absolute;left:100px;top:872px" width="880" height="14" viewBox="0 0 880 14"><line x1="0" y1="7" x2="868" y2="7" stroke="#091944" stroke-width="1.5"/><path d="M866 1 L878 7 L866 13" fill="none" stroke="#091944" stroke-width="1.5"/></svg>
+<div class="govq">Approved tools · Which data goes where · Where a person approves · Who is accountable</div>
+<div class="roles"><div class="lab">Who steers</div><div class="cols">
+<div class="c"><div class="p">In command</div><div class="r">Architect, usually the CMO</div><div class="d">strategy, limits for AI, budget</div></div>
+<div class="c"><div class="p">On the loop</div><div class="r">Orchestrator, Content Engineer</div><div class="d">workflows, building blocks, verified facts</div></div>
+<div class="c"><div class="p">In the loop</div><div class="r">Production Team</div><div class="d">reviews, adapts, approves</div></div>
+</div></div>
+<div class="foot"><div class="src">Oversight levels: European Commission, High-Level Expert Group on AI, Ethics Guidelines for Trustworthy AI</div><img src="../logo/svg/aimind-logo.svg" alt="aimind.marketing"></div>
+</body></html>
