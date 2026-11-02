@@ -92,6 +92,7 @@ const en = {
     { q: 'Under Christina’s leadership, I was able to fully harness and expand my skills and expertise as a Marketeer, significantly enhancing my professional growth.', n: 'Magnolia Restrepo', r: 'Colleague at TomTom' },
   ],
   bandTitle: 'Where Does Your Technology Need to Be Understood?',
+  bandMail: 'Prefer to write first?',
 };
 
 const de: typeof en = {
@@ -176,6 +177,7 @@ const de: typeof en = {
     { q: 'Unter Christinas Führung konnte ich meine Fähigkeiten und mein Fachwissen im Marketing voll entfalten und ausbauen. Das hat meine berufliche Entwicklung deutlich vorangebracht.', n: 'Magnolia Restrepo', r: 'Kollegin bei TomTom' },
   ],
   bandTitle: 'Wo muss Ihre Technologie verstanden werden?',
+  bandMail: 'Lieber zuerst schreiben?',
 };
 
 const c = lang === 'de' ? de : en;
@@ -364,13 +366,15 @@ const jsonLd = [
     </div>
   </section>
 
-  <section id="contact" class="wrap sec" style="padding-top: 24px">
-    <div class="band rv">
-      <span class="deco1" aria-hidden="true"></span><span class="deco2" aria-hidden="true"></span>
-      <div class="band-text">
+  <section id="contact" class="cband">
+    <div class="wrap">
+      <div class="cband-text rv">
         <h2 class="h2">{c.bandTitle}</h2>
+        <a href={t.cta.href} class="btn">{t.cta.label}</a>
+        <p class="cband-mail">{c.bandMail} <a href="mailto:Christina.Vontin@aimind.marketing" class="txt">Christina.Vontin@aimind.marketing</a></p>
       </div>
-      <a href={t.cta.href} class="btn">{t.cta.label}</a>
     </div>
+    {/* The logo sign as the one graphic element: original form and colors, cropped by the right page edge and the footer */}
+    <svg class="cband-sign" viewBox="17.97 7.19 204.84 208.44" aria-hidden="true" focusable="false"><path d="M131.265 172.020 A82.656 82.656 0 1 0 58.580 103.161 A57.500 57.500 0 0 1 131.265 172.020 Z" fill="#091944"/><path d="M131.265 172.020 A57.500 57.500 0 1 1 58.580 103.161 A82.656 82.656 0 0 0 131.265 172.020 Z" fill="#FBC737"/></svg>
   </section>
 </Base>
