@@ -233,8 +233,8 @@ h1 .hl > span { display: inline-block; position: relative; padding-right: .12em;
 .cband .wrap { position: relative; z-index: 1; min-height: calc(var(--sw) * 0.73 + 110px); padding-top: clamp(64px, 6vw, 88px); padding-bottom: 120px; }
 .cband-text { max-width: min(640px, calc(100vw - var(--sw) * 0.935 - max(32px, (100vw - var(--wide)) / 2 + 32px) - 48px)); }
 .cband-text .h2 { font-size: clamp(34px, 4.5vw, 56px); text-wrap: wrap; }
-/* Fixed line breaks on wider screens, so the question reads as a compact block in both languages */
-@media (min-width: 821px) { .cband-text .h2 .cb-l { display: block; } }
+/* Fixed line breaks, so the question reads as a compact block in both languages */
+.cband-text .h2 .cb-l { display: block; }
 .cband-text .btn { margin-top: 36px; }
 .cband-mail { margin: 22px 0 0; font-size: 16px; line-height: 1.5; color: var(--body); }
 .cband-mail .txt { font-size: 16px; }
