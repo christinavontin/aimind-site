@@ -244,6 +244,8 @@ h1 .hl > span { display: inline-block; position: relative; padding-right: .12em;
 @media (max-width: 820px) {
   .cband .wrap { min-height: 0; padding-top: 64px; padding-bottom: calc(var(--sw) * 0.73 + 48px); }
   .cband-text { max-width: none; }
+  /* On phones the type scales with the screen, so each fixed line fits and the question stays a three-line block */
+  .cband-text .h2 { font-size: min(34px, 8.4vw); }
   .cband-mail .txt { display: inline; }
 }
 
